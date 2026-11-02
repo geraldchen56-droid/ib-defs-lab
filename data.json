@@ -1,0 +1,4267 @@
+{
+  "version": 1,
+  "updated": "2026-11-02",
+  "subjects": {
+    "Economics": [
+      "Introduction to Economics",
+      "Microeconomics",
+      "Macroeconomics",
+      "International Economics",
+      "Development Economics"
+    ],
+    "Business Management": [
+      "Unit 1: Introduction to Business Management",
+      "Unit 2: Human Resource Management",
+      "Unit 3: Finance and Accounts",
+      "Unit 4: Marketing",
+      "Unit 5: Operations Management"
+    ]
+  },
+  "terms": [
+    {
+      "id": "ec-scarcity",
+      "term": "Scarcity",
+      "subject": "Economics",
+      "unit": "Introduction to Economics",
+      "topic": "Foundations of economics",
+      "definition": "The fundamental economic problem: human wants are unlimited, but the resources (factors of production) available to satisfy them are limited, so choices must be made.",
+      "relatedTerms": [
+        "ec-opportunity-cost",
+        "ec-factors-of-production",
+        "ec-ppc"
+      ],
+      "whyTested": "Core concept that every Paper 1 'define' answer chain starts from."
+    },
+    {
+      "id": "ec-opportunity-cost",
+      "term": "Opportunity cost",
+      "subject": "Economics",
+      "unit": "Introduction to Economics",
+      "topic": "Foundations of economics",
+      "definition": "The value of the next best alternative forgone when a choice is made.",
+      "relatedTerms": [
+        "ec-scarcity",
+        "ec-ppc",
+        "ec-comparative-advantage"
+      ],
+      "whyTested": "Examiners want 'next best alternative forgone', not just 'what you give up'."
+    },
+    {
+      "id": "ec-factors-of-production",
+      "term": "Factors of production",
+      "subject": "Economics",
+      "unit": "Introduction to Economics",
+      "topic": "Foundations of economics",
+      "definition": "The resources used to produce goods and services: land (natural resources), labour (human effort), capital (man-made aids to production) and entrepreneurship (organising the other factors and bearing risk).",
+      "relatedTerms": [
+        "ec-scarcity",
+        "ec-ppc",
+        "bm-entrepreneurship"
+      ]
+    },
+    {
+      "id": "ec-ppc",
+      "term": "Production possibilities curve (PPC)",
+      "subject": "Economics",
+      "unit": "Introduction to Economics",
+      "topic": "Foundations of economics",
+      "definition": "A curve showing the maximum combinations of two goods or services an economy can produce when all its resources are fully and efficiently employed, given the state of technology.",
+      "relatedTerms": [
+        "ec-scarcity",
+        "ec-opportunity-cost",
+        "ec-economic-growth",
+        "ec-factors-of-production"
+      ],
+      "whyTested": "Used to illustrate scarcity, choice, opportunity cost, unemployment and growth on one diagram."
+    },
+    {
+      "id": "ec-ceteris-paribus",
+      "term": "Ceteris paribus",
+      "subject": "Economics",
+      "unit": "Introduction to Economics",
+      "topic": "Foundations of economics",
+      "definition": "Latin for 'all other things being equal'; the assumption that only the variable being studied changes while all other influencing factors are held constant.",
+      "relatedTerms": [
+        "ec-law-of-demand",
+        "ec-law-of-supply"
+      ]
+    },
+    {
+      "id": "ec-positive-normative",
+      "term": "Positive vs normative statements",
+      "subject": "Economics",
+      "unit": "Introduction to Economics",
+      "topic": "Foundations of economics",
+      "definition": "Positive statements are objective claims about what is, which can be tested against evidence; normative statements are subjective value judgements about what ought to be.",
+      "relatedTerms": [
+        "ec-keynesian",
+        "ec-new-classical"
+      ]
+    },
+    {
+      "id": "ec-demand",
+      "term": "Demand",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Demand and supply",
+      "definition": "The quantity of a good or service that consumers are willing and able to buy at each possible price, over a given time period, ceteris paribus.",
+      "relatedTerms": [
+        "ec-law-of-demand",
+        "ec-supply",
+        "ec-market-equilibrium",
+        "ec-ped"
+      ],
+      "whyTested": "'Willing AND able' is the phrase examiners look for."
+    },
+    {
+      "id": "ec-law-of-demand",
+      "term": "Law of demand",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Demand and supply",
+      "definition": "As the price of a good falls, the quantity demanded rises, and vice versa, ceteris paribus; there is an inverse (negative) relationship between price and quantity demanded.",
+      "relatedTerms": [
+        "ec-demand",
+        "ec-ceteris-paribus"
+      ]
+    },
+    {
+      "id": "ec-supply",
+      "term": "Supply",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Demand and supply",
+      "definition": "The quantity of a good or service that producers are willing and able to offer for sale at each possible price, over a given time period, ceteris paribus.",
+      "relatedTerms": [
+        "ec-law-of-supply",
+        "ec-demand",
+        "ec-market-equilibrium",
+        "ec-pes"
+      ]
+    },
+    {
+      "id": "ec-law-of-supply",
+      "term": "Law of supply",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Demand and supply",
+      "definition": "As the price of a good rises, the quantity supplied rises, and vice versa, ceteris paribus; there is a direct (positive) relationship between price and quantity supplied.",
+      "relatedTerms": [
+        "ec-supply",
+        "ec-ceteris-paribus"
+      ]
+    },
+    {
+      "id": "ec-market-equilibrium",
+      "term": "Market equilibrium",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Demand and supply",
+      "definition": "The point where quantity demanded equals quantity supplied, so there is no tendency for price to change.",
+      "relatedTerms": [
+        "ec-demand",
+        "ec-supply",
+        "ec-excess-demand",
+        "ec-excess-supply",
+        "ec-allocative-efficiency"
+      ]
+    },
+    {
+      "id": "ec-excess-demand",
+      "term": "Excess demand (shortage)",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Demand and supply",
+      "definition": "A situation where quantity demanded exceeds quantity supplied at the current price, creating upward pressure on price.",
+      "relatedTerms": [
+        "ec-market-equilibrium",
+        "ec-excess-supply",
+        "ec-price-ceiling"
+      ]
+    },
+    {
+      "id": "ec-excess-supply",
+      "term": "Excess supply (surplus)",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Demand and supply",
+      "definition": "A situation where quantity supplied exceeds quantity demanded at the current price, creating downward pressure on price.",
+      "relatedTerms": [
+        "ec-market-equilibrium",
+        "ec-excess-demand",
+        "ec-price-floor"
+      ]
+    },
+    {
+      "id": "ec-consumer-surplus",
+      "term": "Consumer surplus",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Demand and supply",
+      "definition": "The difference between the highest price consumers are willing to pay for a good and the price they actually pay; shown as the area below the demand curve and above the market price.",
+      "relatedTerms": [
+        "ec-producer-surplus",
+        "ec-allocative-efficiency",
+        "ec-welfare-loss"
+      ],
+      "whyTested": "Needed to identify welfare areas on intervention diagrams."
+    },
+    {
+      "id": "ec-producer-surplus",
+      "term": "Producer surplus",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Demand and supply",
+      "definition": "The difference between the price producers receive and the lowest price they are willing to accept; shown as the area above the supply curve and below the market price.",
+      "relatedTerms": [
+        "ec-consumer-surplus",
+        "ec-allocative-efficiency",
+        "ec-welfare-loss"
+      ]
+    },
+    {
+      "id": "ec-allocative-efficiency",
+      "term": "Allocative efficiency",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Demand and supply",
+      "definition": "Producing the combination of goods and services most wanted by society, where marginal social benefit equals marginal social cost (MSB = MSC), maximising social/community surplus.",
+      "relatedTerms": [
+        "ec-market-equilibrium",
+        "ec-consumer-surplus",
+        "ec-producer-surplus",
+        "ec-market-failure",
+        "ec-welfare-loss",
+        "ec-perfect-competition"
+      ],
+      "whyTested": "MSB = MSC is the condition examiners expect."
+    },
+    {
+      "id": "ec-normal-good",
+      "term": "Normal good",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Elasticity",
+      "definition": "A good whose demand increases as consumer income increases (positive YED).",
+      "relatedTerms": [
+        "ec-yed",
+        "ec-inferior-good"
+      ]
+    },
+    {
+      "id": "ec-inferior-good",
+      "term": "Inferior good",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Elasticity",
+      "definition": "A good whose demand decreases as consumer income increases (negative YED).",
+      "relatedTerms": [
+        "ec-yed",
+        "ec-normal-good"
+      ]
+    },
+    {
+      "id": "ec-substitutes",
+      "term": "Substitute goods",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Elasticity",
+      "definition": "Goods that can be used in place of each other to satisfy the same want; a rise in the price of one increases demand for the other (positive XED).",
+      "relatedTerms": [
+        "ec-complements",
+        "ec-xed",
+        "ec-ped"
+      ]
+    },
+    {
+      "id": "ec-complements",
+      "term": "Complementary goods",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Elasticity",
+      "definition": "Goods that are consumed together; a rise in the price of one decreases demand for the other (negative XED).",
+      "relatedTerms": [
+        "ec-substitutes",
+        "ec-xed"
+      ]
+    },
+    {
+      "id": "ec-ped",
+      "term": "Price elasticity of demand (PED)",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Elasticity",
+      "definition": "A measure of the responsiveness of quantity demanded of a good to a change in its price: PED = %ΔQd / %ΔP.",
+      "relatedTerms": [
+        "ec-demand",
+        "ec-substitutes",
+        "ec-indirect-tax",
+        "ec-tax-incidence",
+        "ec-yed",
+        "ec-pes",
+        "bm-price-elasticity-bm",
+        "ec-xed",
+        "ec-marshall-lerner"
+      ],
+      "whyTested": "Formula + 'responsiveness' are both required for full marks."
+    },
+    {
+      "id": "ec-pes",
+      "term": "Price elasticity of supply (PES)",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Elasticity",
+      "definition": "A measure of the responsiveness of quantity supplied of a good to a change in its price: PES = %ΔQs / %ΔP.",
+      "relatedTerms": [
+        "ec-supply",
+        "ec-ped",
+        "ec-tax-incidence"
+      ]
+    },
+    {
+      "id": "ec-yed",
+      "term": "Income elasticity of demand (YED)",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Elasticity",
+      "definition": "A measure of the responsiveness of demand for a good to a change in consumer income: YED = %ΔQd / %ΔY.",
+      "relatedTerms": [
+        "ec-normal-good",
+        "ec-inferior-good",
+        "ec-ped",
+        "ec-economic-development"
+      ],
+      "whyTested": "Links to sectoral change in development (primary products have low YED)."
+    },
+    {
+      "id": "ec-xed",
+      "term": "Cross price elasticity of demand (XED)",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Elasticity",
+      "definition": "A measure of the responsiveness of demand for one good to a change in the price of another good: XED = %ΔQd of good X / %ΔP of good Y.",
+      "relatedTerms": [
+        "ec-substitutes",
+        "ec-complements",
+        "ec-ped"
+      ],
+      "hl": true
+    },
+    {
+      "id": "ec-indirect-tax",
+      "term": "Indirect tax",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Government intervention",
+      "definition": "A tax imposed on expenditure on goods and services, paid to the government by producers, which increases their costs and shifts the supply curve upwards/left.",
+      "relatedTerms": [
+        "ec-specific-tax",
+        "ec-ad-valorem-tax",
+        "ec-tax-incidence",
+        "ec-ped",
+        "ec-negative-externality-production",
+        "ec-demerit-good",
+        "ec-subsidy",
+        "ec-negative-externality-consumption",
+        "ec-carbon-tax",
+        "ec-regressive-tax",
+        "ec-tariff"
+      ]
+    },
+    {
+      "id": "ec-specific-tax",
+      "term": "Specific (unit) tax",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Government intervention",
+      "definition": "An indirect tax that is a fixed amount per unit of the good sold; the supply curve shifts upward in parallel by the amount of the tax.",
+      "relatedTerms": [
+        "ec-indirect-tax",
+        "ec-ad-valorem-tax"
+      ]
+    },
+    {
+      "id": "ec-ad-valorem-tax",
+      "term": "Ad valorem tax",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Government intervention",
+      "definition": "An indirect tax levied as a percentage of the price of the good; the supply curve shifts upward and becomes steeper (non-parallel shift).",
+      "relatedTerms": [
+        "ec-indirect-tax",
+        "ec-specific-tax"
+      ]
+    },
+    {
+      "id": "ec-tax-incidence",
+      "term": "Tax incidence",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Government intervention",
+      "definition": "The distribution of the burden of an indirect tax between consumers and producers, which depends on the relative price elasticities of demand and supply.",
+      "relatedTerms": [
+        "ec-indirect-tax",
+        "ec-ped",
+        "ec-pes"
+      ],
+      "hl": true
+    },
+    {
+      "id": "ec-subsidy",
+      "term": "Subsidy",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Government intervention",
+      "definition": "A payment by the government to producers per unit of output, lowering their costs and shifting the supply curve downwards/right.",
+      "relatedTerms": [
+        "ec-indirect-tax",
+        "ec-merit-good",
+        "ec-positive-externality-production",
+        "ec-export-subsidy",
+        "ec-positive-externality-consumption"
+      ]
+    },
+    {
+      "id": "ec-price-ceiling",
+      "term": "Price ceiling (maximum price)",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Government intervention",
+      "definition": "A legally set maximum price, set below the equilibrium price, that sellers may not charge; it creates excess demand (a shortage).",
+      "relatedTerms": [
+        "ec-price-floor",
+        "ec-excess-demand",
+        "ec-welfare-loss"
+      ]
+    },
+    {
+      "id": "ec-price-floor",
+      "term": "Price floor (minimum price)",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Government intervention",
+      "definition": "A legally set minimum price, set above the equilibrium price, below which goods may not be sold; it creates excess supply (a surplus). A minimum wage is a price floor in the labour market.",
+      "relatedTerms": [
+        "ec-price-ceiling",
+        "ec-excess-supply",
+        "ec-welfare-loss",
+        "ec-fair-trade"
+      ]
+    },
+    {
+      "id": "ec-market-failure",
+      "term": "Market failure",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Market failure",
+      "definition": "A situation where the free market fails to allocate resources efficiently, so that MSB ≠ MSC and the socially optimal quantity is not produced, resulting in welfare loss.",
+      "relatedTerms": [
+        "ec-allocative-efficiency",
+        "ec-externality",
+        "ec-public-good",
+        "ec-asymmetric-information",
+        "ec-welfare-loss",
+        "ec-monopoly"
+      ]
+    },
+    {
+      "id": "ec-externality",
+      "term": "Externality",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Market failure",
+      "definition": "A cost or benefit arising from the production or consumption of a good that affects third parties not directly involved in the transaction and is not reflected in the market price.",
+      "relatedTerms": [
+        "ec-market-failure",
+        "ec-negative-externality-production",
+        "ec-negative-externality-consumption",
+        "ec-positive-externality-production",
+        "ec-positive-externality-consumption"
+      ],
+      "whyTested": "Must mention 'third parties' for the mark."
+    },
+    {
+      "id": "ec-negative-externality-production",
+      "term": "Negative externality of production",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Market failure",
+      "definition": "An external cost imposed on third parties by the production of a good, so that marginal social cost exceeds marginal private cost (MSC > MPC), leading to over-production.",
+      "relatedTerms": [
+        "ec-externality",
+        "ec-indirect-tax",
+        "ec-carbon-tax",
+        "ec-tradable-permits",
+        "ec-welfare-loss"
+      ]
+    },
+    {
+      "id": "ec-negative-externality-consumption",
+      "term": "Negative externality of consumption",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Market failure",
+      "definition": "An external cost imposed on third parties by the consumption of a good, so that marginal social benefit is less than marginal private benefit (MSB < MPB), leading to over-consumption.",
+      "relatedTerms": [
+        "ec-externality",
+        "ec-demerit-good",
+        "ec-indirect-tax",
+        "ec-nudge"
+      ]
+    },
+    {
+      "id": "ec-positive-externality-production",
+      "term": "Positive externality of production",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Market failure",
+      "definition": "An external benefit enjoyed by third parties from the production of a good, so that marginal social cost is less than marginal private cost (MSC < MPC), leading to under-production.",
+      "relatedTerms": [
+        "ec-externality",
+        "ec-subsidy"
+      ]
+    },
+    {
+      "id": "ec-positive-externality-consumption",
+      "term": "Positive externality of consumption",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Market failure",
+      "definition": "An external benefit enjoyed by third parties from the consumption of a good, so that marginal social benefit exceeds marginal private benefit (MSB > MPB), leading to under-consumption.",
+      "relatedTerms": [
+        "ec-externality",
+        "ec-merit-good",
+        "ec-subsidy"
+      ]
+    },
+    {
+      "id": "ec-merit-good",
+      "term": "Merit good",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Market failure",
+      "definition": "A good that is beneficial for consumers but is under-provided and under-consumed in a free market, often because of positive consumption externalities or imperfect information (e.g. education, healthcare).",
+      "relatedTerms": [
+        "ec-positive-externality-consumption",
+        "ec-subsidy",
+        "ec-demerit-good",
+        "ec-asymmetric-information"
+      ]
+    },
+    {
+      "id": "ec-demerit-good",
+      "term": "Demerit good",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Market failure",
+      "definition": "A good that is harmful to consumers and is over-provided and over-consumed in a free market, often because of negative consumption externalities or imperfect information (e.g. cigarettes).",
+      "relatedTerms": [
+        "ec-negative-externality-consumption",
+        "ec-indirect-tax",
+        "ec-merit-good",
+        "ec-nudge"
+      ]
+    },
+    {
+      "id": "ec-public-good",
+      "term": "Public good",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Market failure",
+      "definition": "A good that is non-rivalrous (one person's consumption does not reduce availability to others) and non-excludable (people cannot be prevented from consuming it), so it is not provided by the free market due to the free-rider problem.",
+      "relatedTerms": [
+        "ec-market-failure",
+        "ec-free-rider",
+        "ec-common-pool-resource"
+      ],
+      "whyTested": "Both properties + free-rider problem = full marks."
+    },
+    {
+      "id": "ec-free-rider",
+      "term": "Free-rider problem",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Market failure",
+      "definition": "The situation where people benefit from a good without paying for it, because they cannot be excluded, so private firms have no incentive to provide it.",
+      "relatedTerms": [
+        "ec-public-good"
+      ]
+    },
+    {
+      "id": "ec-common-pool-resource",
+      "term": "Common pool resource",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Market failure",
+      "definition": "A resource that is rivalrous but non-excludable (e.g. fish stocks, forests), and so tends to be over-used and depleted, threatening sustainability ('tragedy of the commons').",
+      "relatedTerms": [
+        "ec-public-good",
+        "ec-tradable-permits",
+        "ec-sustainable-development"
+      ]
+    },
+    {
+      "id": "ec-welfare-loss",
+      "term": "Welfare loss (deadweight loss)",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Market failure",
+      "definition": "The loss of social/community surplus that occurs when output is not at the allocatively efficient level (MSB = MSC).",
+      "relatedTerms": [
+        "ec-allocative-efficiency",
+        "ec-market-failure",
+        "ec-consumer-surplus",
+        "ec-producer-surplus",
+        "ec-price-ceiling",
+        "ec-price-floor",
+        "ec-negative-externality-production",
+        "ec-monopoly"
+      ]
+    },
+    {
+      "id": "ec-asymmetric-information",
+      "term": "Asymmetric information",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Market failure",
+      "definition": "A situation where one party to a transaction (buyer or seller) has more or better information than the other, leading to market failure.",
+      "relatedTerms": [
+        "ec-market-failure",
+        "ec-merit-good"
+      ],
+      "hl": true
+    },
+    {
+      "id": "ec-carbon-tax",
+      "term": "Carbon tax",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Market failure",
+      "definition": "A tax per unit of carbon emitted by fossil fuel use, intended to internalise the negative externality of production by raising the cost of emissions.",
+      "relatedTerms": [
+        "ec-negative-externality-production",
+        "ec-indirect-tax",
+        "ec-tradable-permits"
+      ]
+    },
+    {
+      "id": "ec-tradable-permits",
+      "term": "Tradable permits (cap and trade)",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Market failure",
+      "definition": "A market-based policy in which the government caps total pollution and issues permits to emit up to that limit; firms can buy and sell permits, so pollution is reduced where it is cheapest to do so.",
+      "relatedTerms": [
+        "ec-negative-externality-production",
+        "ec-carbon-tax",
+        "ec-common-pool-resource"
+      ]
+    },
+    {
+      "id": "ec-bounded-rationality",
+      "term": "Bounded rationality",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Behavioural economics",
+      "definition": "The idea that consumers' ability to make rational decisions is limited by the information available, their cognitive capacity and the time available to decide.",
+      "relatedTerms": [
+        "ec-rational-consumer-choice",
+        "ec-nudge",
+        "ec-choice-architecture"
+      ]
+    },
+    {
+      "id": "ec-rational-consumer-choice",
+      "term": "Rational consumer choice",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Behavioural economics",
+      "definition": "The assumption that consumers have consistent preferences, perfect information and aim to maximise their utility.",
+      "relatedTerms": [
+        "ec-bounded-rationality"
+      ]
+    },
+    {
+      "id": "ec-nudge",
+      "term": "Nudge",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Behavioural economics",
+      "definition": "A subtle change in the way choices are presented that influences people's behaviour in a predictable way without restricting options or changing economic incentives.",
+      "relatedTerms": [
+        "ec-choice-architecture",
+        "ec-bounded-rationality",
+        "ec-demerit-good",
+        "ec-negative-externality-consumption"
+      ]
+    },
+    {
+      "id": "ec-choice-architecture",
+      "term": "Choice architecture",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Behavioural economics",
+      "definition": "The design of the environment in which people make choices (e.g. default options, restricted or mandated choices) so as to influence the decisions they make.",
+      "relatedTerms": [
+        "ec-nudge",
+        "ec-bounded-rationality"
+      ]
+    },
+    {
+      "id": "ec-perfect-competition",
+      "term": "Perfect competition",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Market power (HL)",
+      "definition": "A market structure with a very large number of small firms selling identical (homogeneous) products, with perfect information and no barriers to entry or exit, so each firm is a price taker.",
+      "relatedTerms": [
+        "ec-monopoly",
+        "ec-monopolistic-competition",
+        "ec-normal-profit",
+        "ec-allocative-efficiency"
+      ],
+      "hl": true
+    },
+    {
+      "id": "ec-monopoly",
+      "term": "Monopoly",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Market power (HL)",
+      "definition": "A market structure with a single firm (or a firm with significant market power) supplying the whole market, protected by high barriers to entry, giving it the ability to set price.",
+      "relatedTerms": [
+        "ec-perfect-competition",
+        "ec-barriers-to-entry",
+        "ec-natural-monopoly",
+        "ec-abnormal-profit",
+        "ec-welfare-loss",
+        "ec-market-failure",
+        "ec-monopolistic-competition"
+      ],
+      "hl": true
+    },
+    {
+      "id": "ec-oligopoly",
+      "term": "Oligopoly",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Market power (HL)",
+      "definition": "A market structure dominated by a few large, interdependent firms, with high barriers to entry; firms' decisions depend on rivals' expected reactions.",
+      "relatedTerms": [
+        "ec-collusion",
+        "ec-game-theory",
+        "ec-concentration-ratio",
+        "ec-barriers-to-entry"
+      ],
+      "hl": true
+    },
+    {
+      "id": "ec-monopolistic-competition",
+      "term": "Monopolistic competition",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Market power (HL)",
+      "definition": "A market structure with many firms selling differentiated products, with low barriers to entry, giving each firm a small degree of price-setting power.",
+      "relatedTerms": [
+        "ec-perfect-competition",
+        "ec-monopoly",
+        "ec-normal-profit"
+      ],
+      "hl": true
+    },
+    {
+      "id": "ec-barriers-to-entry",
+      "term": "Barriers to entry",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Market power (HL)",
+      "definition": "Obstacles that make it difficult or impossible for new firms to enter a market, such as economies of scale, legal barriers (patents, licences) and brand loyalty.",
+      "relatedTerms": [
+        "ec-monopoly",
+        "ec-oligopoly",
+        "ec-economies-of-scale"
+      ],
+      "hl": true
+    },
+    {
+      "id": "ec-natural-monopoly",
+      "term": "Natural monopoly",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Market power (HL)",
+      "definition": "A market in which economies of scale are so large that one firm can supply the entire market at a lower average cost than two or more firms could.",
+      "relatedTerms": [
+        "ec-monopoly",
+        "ec-economies-of-scale"
+      ],
+      "hl": true
+    },
+    {
+      "id": "ec-economies-of-scale",
+      "term": "Economies of scale",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Market power (HL)",
+      "definition": "Falls in long-run average cost that occur as a firm increases its scale of production.",
+      "relatedTerms": [
+        "ec-barriers-to-entry",
+        "ec-natural-monopoly",
+        "bm-economies-of-scale"
+      ],
+      "hl": true
+    },
+    {
+      "id": "ec-normal-profit",
+      "term": "Normal profit",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Market power (HL)",
+      "definition": "The minimum amount of revenue a firm must receive to keep it in business, where total revenue equals total economic cost (including opportunity cost); zero economic profit.",
+      "relatedTerms": [
+        "ec-abnormal-profit",
+        "ec-perfect-competition",
+        "ec-monopolistic-competition"
+      ],
+      "hl": true
+    },
+    {
+      "id": "ec-abnormal-profit",
+      "term": "Abnormal (economic) profit",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Market power (HL)",
+      "definition": "Profit in excess of normal profit, earned when total revenue exceeds total economic cost.",
+      "relatedTerms": [
+        "ec-normal-profit",
+        "ec-monopoly",
+        "ec-profit-maximisation"
+      ],
+      "hl": true
+    },
+    {
+      "id": "ec-profit-maximisation",
+      "term": "Profit maximisation",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Market power (HL)",
+      "definition": "The goal of producing the output at which marginal cost equals marginal revenue (MC = MR), maximising the difference between total revenue and total cost.",
+      "relatedTerms": [
+        "ec-marginal-cost",
+        "ec-marginal-revenue",
+        "ec-abnormal-profit"
+      ],
+      "whyTested": "MC = MR is examined on every market-structure diagram.",
+      "hl": true
+    },
+    {
+      "id": "ec-marginal-cost",
+      "term": "Marginal cost (MC)",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Market power (HL)",
+      "definition": "The additional cost of producing one more unit of output.",
+      "relatedTerms": [
+        "ec-marginal-revenue",
+        "ec-profit-maximisation"
+      ],
+      "hl": true
+    },
+    {
+      "id": "ec-marginal-revenue",
+      "term": "Marginal revenue (MR)",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Market power (HL)",
+      "definition": "The additional revenue gained from selling one more unit of output.",
+      "relatedTerms": [
+        "ec-marginal-cost",
+        "ec-profit-maximisation"
+      ],
+      "hl": true
+    },
+    {
+      "id": "ec-collusion",
+      "term": "Collusion",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Market power (HL)",
+      "definition": "An agreement among firms in an oligopoly to limit competition, e.g. by fixing prices or output; formal collusion (a cartel) is illegal in most countries.",
+      "relatedTerms": [
+        "ec-oligopoly",
+        "ec-game-theory"
+      ],
+      "hl": true
+    },
+    {
+      "id": "ec-game-theory",
+      "term": "Game theory",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Market power (HL)",
+      "definition": "The study of strategic decision-making where each player's outcome depends on the choices of others; used to explain interdependent behaviour in oligopoly (e.g. the prisoner's dilemma).",
+      "relatedTerms": [
+        "ec-oligopoly",
+        "ec-collusion"
+      ],
+      "hl": true
+    },
+    {
+      "id": "ec-concentration-ratio",
+      "term": "Concentration ratio",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Market power (HL)",
+      "definition": "The combined market share of the largest firms in an industry (e.g. CR4 = share of the four largest firms); a high ratio indicates oligopoly.",
+      "relatedTerms": [
+        "ec-oligopoly",
+        "bm-market-share"
+      ],
+      "hl": true
+    },
+    {
+      "id": "ec-gdp",
+      "term": "Gross domestic product (GDP)",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Measuring economic activity",
+      "definition": "The total market value of all final goods and services produced within a country in a given time period, usually one year.",
+      "relatedTerms": [
+        "ec-gni",
+        "ec-real-gdp",
+        "ec-gdp-per-capita",
+        "ec-circular-flow",
+        "ec-economic-growth",
+        "ec-informal-economy"
+      ],
+      "whyTested": "'Within a country' distinguishes GDP from GNI."
+    },
+    {
+      "id": "ec-gni",
+      "term": "Gross national income (GNI)",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Measuring economic activity",
+      "definition": "The total income earned by a country's factors of production, regardless of where they are located: GDP plus net income from abroad.",
+      "relatedTerms": [
+        "ec-gdp",
+        "ec-gdp-per-capita",
+        "ec-hdi"
+      ]
+    },
+    {
+      "id": "ec-real-gdp",
+      "term": "Real GDP",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Measuring economic activity",
+      "definition": "GDP adjusted for changes in the price level (inflation), so it measures changes in the actual volume of output: real GDP = nominal GDP ÷ price deflator × 100.",
+      "relatedTerms": [
+        "ec-gdp",
+        "ec-inflation",
+        "ec-economic-growth"
+      ]
+    },
+    {
+      "id": "ec-gdp-per-capita",
+      "term": "GDP per capita",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Measuring economic activity",
+      "definition": "GDP divided by the population; an indicator of average output/income per person, often adjusted for purchasing power parity (PPP) for international comparison.",
+      "relatedTerms": [
+        "ec-gdp",
+        "ec-gni",
+        "ec-hdi"
+      ]
+    },
+    {
+      "id": "ec-circular-flow",
+      "term": "Circular flow of income",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Measuring economic activity",
+      "definition": "A model showing the flow of income, expenditure and output between households and firms, with leakages (savings, taxes, imports) and injections (investment, government spending, exports).",
+      "relatedTerms": [
+        "ec-gdp",
+        "ec-aggregate-demand",
+        "ec-multiplier"
+      ]
+    },
+    {
+      "id": "ec-business-cycle",
+      "term": "Business cycle",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Measuring economic activity",
+      "definition": "Short-term fluctuations in real GDP around the long-term growth trend, consisting of expansion, peak, contraction (recession) and trough.",
+      "relatedTerms": [
+        "ec-recession",
+        "ec-output-gap",
+        "ec-economic-growth",
+        "ec-automatic-stabilisers"
+      ]
+    },
+    {
+      "id": "ec-recession",
+      "term": "Recession",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Measuring economic activity",
+      "definition": "A period of at least two consecutive quarters of negative real GDP growth.",
+      "relatedTerms": [
+        "ec-business-cycle",
+        "ec-cyclical-unemployment",
+        "ec-deflationary-gap"
+      ]
+    },
+    {
+      "id": "ec-output-gap",
+      "term": "Output gap",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Measuring economic activity",
+      "definition": "The difference between actual real GDP and potential (full-employment) real GDP.",
+      "relatedTerms": [
+        "ec-business-cycle",
+        "ec-deflationary-gap",
+        "ec-inflationary-gap"
+      ]
+    },
+    {
+      "id": "ec-aggregate-demand",
+      "term": "Aggregate demand (AD)",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Aggregate demand and aggregate supply",
+      "definition": "The total spending on goods and services in an economy at each possible price level in a given time period: AD = C + I + G + (X − M).",
+      "relatedTerms": [
+        "ec-sras",
+        "ec-lras",
+        "ec-fiscal-policy",
+        "ec-monetary-policy",
+        "ec-circular-flow",
+        "ec-demand-pull-inflation",
+        "ec-multiplier"
+      ],
+      "whyTested": "Write out C + I + G + (X − M) explicitly."
+    },
+    {
+      "id": "ec-sras",
+      "term": "Short-run aggregate supply (SRAS)",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Aggregate demand and aggregate supply",
+      "definition": "The total quantity of output firms are willing and able to produce at each price level in the short run, when the prices of factors of production (e.g. wages) are fixed.",
+      "relatedTerms": [
+        "ec-aggregate-demand",
+        "ec-lras",
+        "ec-cost-push-inflation"
+      ]
+    },
+    {
+      "id": "ec-lras",
+      "term": "Long-run aggregate supply (LRAS)",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Aggregate demand and aggregate supply",
+      "definition": "The total output an economy can produce in the long run when all factor prices are flexible; Monetarist/New Classical economists draw it vertical at potential output, while Keynesians draw an AS curve with horizontal, upward-sloping and vertical sections.",
+      "relatedTerms": [
+        "ec-sras",
+        "ec-aggregate-demand",
+        "ec-new-classical",
+        "ec-keynesian",
+        "ec-economic-growth",
+        "ec-market-supply-side",
+        "ec-interventionist-supply-side"
+      ],
+      "whyTested": "The two LRAS shapes are the core of the Keynesian vs Monetarist/New Classical debate."
+    },
+    {
+      "id": "ec-new-classical",
+      "term": "Monetarist / New Classical view",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Aggregate demand and aggregate supply",
+      "definition": "The non-interventionist view that the economy self-corrects to full employment in the long run through flexible wages and prices; the LRAS is vertical at potential output, so demand-side intervention only changes the price level in the long run.",
+      "relatedTerms": [
+        "ec-keynesian",
+        "ec-lras",
+        "ec-natural-rate-unemployment",
+        "ec-monetary-policy",
+        "ec-crowding-out",
+        "ec-positive-normative",
+        "ec-phillips-curve",
+        "ec-market-supply-side"
+      ],
+      "whyTested": "Only contrast with Keynesian; no other schools are in the IB guide."
+    },
+    {
+      "id": "ec-keynesian",
+      "term": "Keynesian view",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Aggregate demand and aggregate supply",
+      "definition": "The interventionist view that the economy can remain stuck in a deflationary gap with high unemployment for long periods, because wages and prices are 'sticky' downwards; government should use demand-side policy (especially fiscal policy) to restore full employment.",
+      "relatedTerms": [
+        "ec-new-classical",
+        "ec-lras",
+        "ec-deflationary-gap",
+        "ec-fiscal-policy",
+        "ec-multiplier",
+        "ec-positive-normative",
+        "ec-interventionist-supply-side"
+      ],
+      "whyTested": "Only contrast with Monetarist/New Classical."
+    },
+    {
+      "id": "ec-deflationary-gap",
+      "term": "Deflationary (recessionary) gap",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Aggregate demand and aggregate supply",
+      "definition": "A situation where equilibrium real GDP is below potential (full-employment) output, so there is unemployment.",
+      "relatedTerms": [
+        "ec-output-gap",
+        "ec-inflationary-gap",
+        "ec-keynesian",
+        "ec-recession",
+        "ec-cyclical-unemployment"
+      ]
+    },
+    {
+      "id": "ec-inflationary-gap",
+      "term": "Inflationary gap",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Aggregate demand and aggregate supply",
+      "definition": "A situation where equilibrium real GDP is above potential (full-employment) output, creating upward pressure on the price level.",
+      "relatedTerms": [
+        "ec-output-gap",
+        "ec-deflationary-gap",
+        "ec-demand-pull-inflation"
+      ]
+    },
+    {
+      "id": "ec-multiplier",
+      "term": "Multiplier",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Aggregate demand and aggregate supply",
+      "definition": "The process by which an initial change in an injection (G, I or X) leads to a larger final change in real GDP: k = 1 / (1 − MPC) = 1 / MPW.",
+      "relatedTerms": [
+        "ec-mpc",
+        "ec-aggregate-demand",
+        "ec-keynesian",
+        "ec-fiscal-policy",
+        "ec-circular-flow"
+      ],
+      "hl": true
+    },
+    {
+      "id": "ec-mpc",
+      "term": "Marginal propensity to consume (MPC)",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Aggregate demand and aggregate supply",
+      "definition": "The fraction of additional income that is spent on consumption: MPC = ΔC / ΔY.",
+      "relatedTerms": [
+        "ec-multiplier"
+      ],
+      "hl": true
+    },
+    {
+      "id": "ec-economic-growth",
+      "term": "Economic growth",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Macroeconomic objectives",
+      "definition": "An increase in real GDP (actual growth) or an increase in an economy's productive capacity (potential growth), shown as an outward shift of the PPC or LRAS.",
+      "relatedTerms": [
+        "ec-real-gdp",
+        "ec-ppc",
+        "ec-lras",
+        "ec-business-cycle",
+        "ec-economic-development",
+        "ec-gdp"
+      ],
+      "whyTested": "Distinguish actual vs potential growth."
+    },
+    {
+      "id": "ec-unemployment",
+      "term": "Unemployment",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Macroeconomic objectives",
+      "definition": "The situation where people of working age who are willing and able to work, and actively seeking work, cannot find a job. Unemployment rate = unemployed ÷ labour force × 100.",
+      "relatedTerms": [
+        "ec-cyclical-unemployment",
+        "ec-structural-unemployment",
+        "ec-frictional-unemployment",
+        "ec-seasonal-unemployment",
+        "ec-natural-rate-unemployment",
+        "ec-phillips-curve"
+      ]
+    },
+    {
+      "id": "ec-cyclical-unemployment",
+      "term": "Cyclical (demand-deficient) unemployment",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Macroeconomic objectives",
+      "definition": "Unemployment caused by a fall in aggregate demand during a downturn in the business cycle.",
+      "relatedTerms": [
+        "ec-unemployment",
+        "ec-recession",
+        "ec-deflationary-gap",
+        "ec-fiscal-policy"
+      ]
+    },
+    {
+      "id": "ec-structural-unemployment",
+      "term": "Structural unemployment",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Macroeconomic objectives",
+      "definition": "Long-term unemployment caused by changes in the structure of the economy (e.g. changing demand, technology or location of industries) creating a mismatch between workers' skills/location and available jobs.",
+      "relatedTerms": [
+        "ec-unemployment",
+        "ec-natural-rate-unemployment",
+        "ec-interventionist-supply-side"
+      ]
+    },
+    {
+      "id": "ec-frictional-unemployment",
+      "term": "Frictional unemployment",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Macroeconomic objectives",
+      "definition": "Short-term unemployment that occurs when workers are between jobs.",
+      "relatedTerms": [
+        "ec-unemployment",
+        "ec-natural-rate-unemployment"
+      ]
+    },
+    {
+      "id": "ec-seasonal-unemployment",
+      "term": "Seasonal unemployment",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Macroeconomic objectives",
+      "definition": "Unemployment that occurs when demand for labour falls in certain industries at particular times of the year.",
+      "relatedTerms": [
+        "ec-unemployment",
+        "ec-natural-rate-unemployment"
+      ]
+    },
+    {
+      "id": "ec-natural-rate-unemployment",
+      "term": "Natural rate of unemployment",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Macroeconomic objectives",
+      "definition": "The rate of unemployment that exists when the economy is producing at potential output; the sum of structural, frictional and seasonal unemployment.",
+      "relatedTerms": [
+        "ec-unemployment",
+        "ec-structural-unemployment",
+        "ec-frictional-unemployment",
+        "ec-seasonal-unemployment",
+        "ec-new-classical",
+        "ec-phillips-curve"
+      ]
+    },
+    {
+      "id": "ec-inflation",
+      "term": "Inflation",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Macroeconomic objectives",
+      "definition": "A sustained increase in the general price level in an economy over a period of time.",
+      "relatedTerms": [
+        "ec-deflation",
+        "ec-disinflation",
+        "ec-cpi",
+        "ec-demand-pull-inflation",
+        "ec-cost-push-inflation",
+        "ec-real-gdp",
+        "ec-monetary-policy",
+        "ec-phillips-curve"
+      ],
+      "whyTested": "'Sustained' and 'general price level' are both required."
+    },
+    {
+      "id": "ec-deflation",
+      "term": "Deflation",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Macroeconomic objectives",
+      "definition": "A sustained decrease in the general price level in an economy over a period of time.",
+      "relatedTerms": [
+        "ec-inflation",
+        "ec-disinflation"
+      ]
+    },
+    {
+      "id": "ec-disinflation",
+      "term": "Disinflation",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Macroeconomic objectives",
+      "definition": "A fall in the rate of inflation; prices are still rising, but more slowly.",
+      "relatedTerms": [
+        "ec-inflation",
+        "ec-deflation"
+      ],
+      "whyTested": "Commonly confused with deflation."
+    },
+    {
+      "id": "ec-cpi",
+      "term": "Consumer price index (CPI)",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Macroeconomic objectives",
+      "definition": "A weighted index measuring changes in the average prices of a representative basket of goods and services bought by a typical household, relative to a base year.",
+      "relatedTerms": [
+        "ec-inflation"
+      ]
+    },
+    {
+      "id": "ec-demand-pull-inflation",
+      "term": "Demand-pull inflation",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Macroeconomic objectives",
+      "definition": "Inflation caused by increases in aggregate demand that are not matched by increases in aggregate supply.",
+      "relatedTerms": [
+        "ec-inflation",
+        "ec-aggregate-demand",
+        "ec-inflationary-gap",
+        "ec-cost-push-inflation"
+      ]
+    },
+    {
+      "id": "ec-cost-push-inflation",
+      "term": "Cost-push inflation",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Macroeconomic objectives",
+      "definition": "Inflation caused by increases in costs of production (e.g. wages, raw materials, energy) that shift the SRAS curve to the left.",
+      "relatedTerms": [
+        "ec-inflation",
+        "ec-sras",
+        "ec-demand-pull-inflation"
+      ]
+    },
+    {
+      "id": "ec-phillips-curve",
+      "term": "Phillips curve",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Macroeconomic objectives",
+      "definition": "The short-run Phillips curve shows an inverse relationship between inflation and unemployment; the long-run Phillips curve (Monetarist/New Classical view) is vertical at the natural rate of unemployment, implying no long-run trade-off.",
+      "relatedTerms": [
+        "ec-inflation",
+        "ec-unemployment",
+        "ec-natural-rate-unemployment",
+        "ec-new-classical"
+      ],
+      "hl": true
+    },
+    {
+      "id": "ec-equity",
+      "term": "Equity in income distribution",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Macroeconomic objectives",
+      "definition": "The idea of fairness in the distribution of income and wealth; not the same as equality.",
+      "relatedTerms": [
+        "ec-lorenz-curve",
+        "ec-gini-coefficient",
+        "ec-progressive-tax",
+        "ec-transfer-payments",
+        "ec-relative-poverty"
+      ]
+    },
+    {
+      "id": "ec-lorenz-curve",
+      "term": "Lorenz curve",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Macroeconomic objectives",
+      "definition": "A curve showing the cumulative percentage of income received by cumulative percentages of the population; the further it lies from the line of perfect equality, the greater the inequality.",
+      "relatedTerms": [
+        "ec-gini-coefficient",
+        "ec-equity"
+      ]
+    },
+    {
+      "id": "ec-gini-coefficient",
+      "term": "Gini coefficient",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Macroeconomic objectives",
+      "definition": "A measure of income inequality calculated as the ratio of the area between the line of perfect equality and the Lorenz curve to the total area under the line of equality; ranges from 0 (perfect equality) to 1 (perfect inequality).",
+      "relatedTerms": [
+        "ec-lorenz-curve",
+        "ec-equity"
+      ]
+    },
+    {
+      "id": "ec-absolute-poverty",
+      "term": "Absolute poverty",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Macroeconomic objectives",
+      "definition": "A situation where income is below the level needed to meet basic needs; measured by the World Bank's international poverty line (income per day at PPP).",
+      "relatedTerms": [
+        "ec-relative-poverty",
+        "ec-multidimensional-poverty",
+        "ec-economic-development"
+      ]
+    },
+    {
+      "id": "ec-relative-poverty",
+      "term": "Relative poverty",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Macroeconomic objectives",
+      "definition": "A situation where income is below a certain proportion (e.g. 50%) of the median income in a country.",
+      "relatedTerms": [
+        "ec-absolute-poverty",
+        "ec-equity"
+      ]
+    },
+    {
+      "id": "ec-progressive-tax",
+      "term": "Progressive tax",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Macroeconomic objectives",
+      "definition": "A tax where the percentage of income paid in tax (the average tax rate) rises as income rises.",
+      "relatedTerms": [
+        "ec-regressive-tax",
+        "ec-equity",
+        "ec-automatic-stabilisers"
+      ]
+    },
+    {
+      "id": "ec-regressive-tax",
+      "term": "Regressive tax",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Macroeconomic objectives",
+      "definition": "A tax where the percentage of income paid in tax falls as income rises; indirect taxes are usually regressive.",
+      "relatedTerms": [
+        "ec-progressive-tax",
+        "ec-indirect-tax"
+      ]
+    },
+    {
+      "id": "ec-transfer-payments",
+      "term": "Transfer payments",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Macroeconomic objectives",
+      "definition": "Payments made by the government to individuals for which no good or service is produced in return (e.g. unemployment benefits, pensions); they redistribute income.",
+      "relatedTerms": [
+        "ec-equity",
+        "ec-automatic-stabilisers"
+      ]
+    },
+    {
+      "id": "ec-fiscal-policy",
+      "term": "Fiscal policy",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Demand-side and supply-side policies",
+      "definition": "The use of government spending and taxation to influence aggregate demand and the level of economic activity.",
+      "relatedTerms": [
+        "ec-aggregate-demand",
+        "ec-budget-deficit",
+        "ec-automatic-stabilisers",
+        "ec-crowding-out",
+        "ec-multiplier",
+        "ec-keynesian",
+        "ec-monetary-policy",
+        "ec-cyclical-unemployment"
+      ],
+      "whyTested": "Keynesians favour active fiscal policy; Monetarists/New Classicals stress crowding out."
+    },
+    {
+      "id": "ec-monetary-policy",
+      "term": "Monetary policy",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Demand-side and supply-side policies",
+      "definition": "The use of interest rates and the money supply by the central bank to influence aggregate demand, usually to achieve a low and stable inflation target.",
+      "relatedTerms": [
+        "ec-central-bank",
+        "ec-interest-rate",
+        "ec-quantitative-easing",
+        "ec-aggregate-demand",
+        "ec-inflation",
+        "ec-new-classical",
+        "ec-fiscal-policy",
+        "ec-monetary-union"
+      ]
+    },
+    {
+      "id": "ec-central-bank",
+      "term": "Central bank",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Demand-side and supply-side policies",
+      "definition": "The institution responsible for a country's monetary policy, acting as banker to the government and commercial banks and as lender of last resort.",
+      "relatedTerms": [
+        "ec-monetary-policy",
+        "ec-interest-rate",
+        "ec-quantitative-easing"
+      ]
+    },
+    {
+      "id": "ec-interest-rate",
+      "term": "Interest rate",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Demand-side and supply-side policies",
+      "definition": "The cost of borrowing money and the reward for saving, expressed as a percentage of the amount borrowed or saved.",
+      "relatedTerms": [
+        "ec-monetary-policy",
+        "ec-central-bank",
+        "ec-exchange-rate"
+      ]
+    },
+    {
+      "id": "ec-quantitative-easing",
+      "term": "Quantitative easing (QE)",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Demand-side and supply-side policies",
+      "definition": "A form of monetary policy in which the central bank creates money to buy financial assets (e.g. government bonds) from commercial banks, increasing the money supply and lowering long-term interest rates.",
+      "relatedTerms": [
+        "ec-monetary-policy",
+        "ec-central-bank"
+      ]
+    },
+    {
+      "id": "ec-budget-deficit",
+      "term": "Budget deficit",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Demand-side and supply-side policies",
+      "definition": "The situation where government expenditure exceeds tax revenue in a given year.",
+      "relatedTerms": [
+        "ec-fiscal-policy",
+        "ec-government-debt",
+        "ec-crowding-out"
+      ]
+    },
+    {
+      "id": "ec-government-debt",
+      "term": "Government (public) debt",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Demand-side and supply-side policies",
+      "definition": "The total accumulated amount owed by the government as a result of past budget deficits; often expressed as a percentage of GDP.",
+      "relatedTerms": [
+        "ec-budget-deficit",
+        "ec-debt-relief"
+      ],
+      "hl": true
+    },
+    {
+      "id": "ec-automatic-stabilisers",
+      "term": "Automatic stabilisers",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Demand-side and supply-side policies",
+      "definition": "Features of fiscal policy (e.g. progressive taxes and unemployment benefits) that automatically reduce fluctuations in the business cycle without deliberate government action.",
+      "relatedTerms": [
+        "ec-fiscal-policy",
+        "ec-progressive-tax",
+        "ec-transfer-payments",
+        "ec-business-cycle"
+      ]
+    },
+    {
+      "id": "ec-crowding-out",
+      "term": "Crowding out",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Demand-side and supply-side policies",
+      "definition": "The argument, made by Monetarist/New Classical economists, that increased government borrowing raises interest rates and so reduces private investment, offsetting the effect of expansionary fiscal policy.",
+      "relatedTerms": [
+        "ec-fiscal-policy",
+        "ec-budget-deficit",
+        "ec-new-classical"
+      ]
+    },
+    {
+      "id": "ec-market-supply-side",
+      "term": "Market-based supply-side policies",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Demand-side and supply-side policies",
+      "definition": "Syllabus policies that aim to increase LRAS by making markets more competitive and flexible (e.g. deregulation, privatisation, labour market reforms, lower income/corporate taxes).",
+      "relatedTerms": [
+        "ec-lras",
+        "ec-interventionist-supply-side",
+        "ec-new-classical"
+      ],
+      "whyTested": "Listed in the IB guide as policy tools, not a school of thought — evaluate them through the Keynesian vs Monetarist/New Classical debate."
+    },
+    {
+      "id": "ec-interventionist-supply-side",
+      "term": "Interventionist supply-side policies",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Demand-side and supply-side policies",
+      "definition": "Syllabus policies in which the government directly invests to increase LRAS (e.g. spending on education and training, healthcare, infrastructure, R&D, industrial policy).",
+      "relatedTerms": [
+        "ec-lras",
+        "ec-market-supply-side",
+        "ec-structural-unemployment",
+        "ec-keynesian"
+      ],
+      "whyTested": "Listed in the IB guide as policy tools, not a school of thought — evaluate them through the Keynesian vs Monetarist/New Classical debate."
+    },
+    {
+      "id": "ec-free-trade",
+      "term": "Free trade",
+      "subject": "Economics",
+      "unit": "International Economics",
+      "topic": "Benefits of international trade",
+      "definition": "International trade without government-imposed barriers such as tariffs, quotas or subsidies.",
+      "relatedTerms": [
+        "ec-comparative-advantage",
+        "ec-protectionism",
+        "ec-wto",
+        "ec-free-trade-area"
+      ]
+    },
+    {
+      "id": "ec-absolute-advantage",
+      "term": "Absolute advantage",
+      "subject": "Economics",
+      "unit": "International Economics",
+      "topic": "Benefits of international trade",
+      "definition": "The ability of a country to produce more of a good than another country with the same quantity of resources.",
+      "relatedTerms": [
+        "ec-comparative-advantage"
+      ]
+    },
+    {
+      "id": "ec-comparative-advantage",
+      "term": "Comparative advantage",
+      "subject": "Economics",
+      "unit": "International Economics",
+      "topic": "Benefits of international trade",
+      "definition": "The ability of a country to produce a good at a lower opportunity cost than another country.",
+      "relatedTerms": [
+        "ec-absolute-advantage",
+        "ec-opportunity-cost",
+        "ec-free-trade"
+      ],
+      "whyTested": "'Lower opportunity cost' — never 'more efficiently'.",
+      "hl": true
+    },
+    {
+      "id": "ec-wto",
+      "term": "World Trade Organization (WTO)",
+      "subject": "Economics",
+      "unit": "International Economics",
+      "topic": "Benefits of international trade",
+      "definition": "An international organisation that sets the rules of global trade, promotes trade liberalisation and settles trade disputes between member countries.",
+      "relatedTerms": [
+        "ec-free-trade",
+        "ec-protectionism"
+      ]
+    },
+    {
+      "id": "ec-protectionism",
+      "term": "Protectionism",
+      "subject": "Economics",
+      "unit": "International Economics",
+      "topic": "Types of trade protection",
+      "definition": "Government policies that restrict international trade in order to protect domestic producers from foreign competition.",
+      "relatedTerms": [
+        "ec-tariff",
+        "ec-quota",
+        "ec-export-subsidy",
+        "ec-free-trade",
+        "ec-dumping",
+        "ec-wto"
+      ]
+    },
+    {
+      "id": "ec-tariff",
+      "term": "Tariff",
+      "subject": "Economics",
+      "unit": "International Economics",
+      "topic": "Types of trade protection",
+      "definition": "A tax on imported goods, which raises their price and reduces the quantity imported.",
+      "relatedTerms": [
+        "ec-protectionism",
+        "ec-quota",
+        "ec-indirect-tax"
+      ]
+    },
+    {
+      "id": "ec-quota",
+      "term": "Import quota",
+      "subject": "Economics",
+      "unit": "International Economics",
+      "topic": "Types of trade protection",
+      "definition": "A legal limit on the quantity or value of a good that can be imported over a given time period.",
+      "relatedTerms": [
+        "ec-protectionism",
+        "ec-tariff"
+      ]
+    },
+    {
+      "id": "ec-export-subsidy",
+      "term": "Production / export subsidy",
+      "subject": "Economics",
+      "unit": "International Economics",
+      "topic": "Types of trade protection",
+      "definition": "A payment by the government to domestic producers that lowers their costs, making them more competitive against imports or in export markets.",
+      "relatedTerms": [
+        "ec-protectionism",
+        "ec-subsidy"
+      ]
+    },
+    {
+      "id": "ec-dumping",
+      "term": "Dumping",
+      "subject": "Economics",
+      "unit": "International Economics",
+      "topic": "Arguments for and against trade control",
+      "definition": "Selling goods in a foreign market at a price below their cost of production (or below the price in the domestic market).",
+      "relatedTerms": [
+        "ec-protectionism"
+      ]
+    },
+    {
+      "id": "ec-trading-bloc",
+      "term": "Trading bloc",
+      "subject": "Economics",
+      "unit": "International Economics",
+      "topic": "Economic integration",
+      "definition": "A group of countries that agree to reduce or eliminate trade barriers among themselves.",
+      "relatedTerms": [
+        "ec-free-trade-area",
+        "ec-customs-union",
+        "ec-common-market",
+        "ec-monetary-union"
+      ]
+    },
+    {
+      "id": "ec-free-trade-area",
+      "term": "Free trade area",
+      "subject": "Economics",
+      "unit": "International Economics",
+      "topic": "Economic integration",
+      "definition": "A trading bloc in which members eliminate trade barriers among themselves but each keeps its own trade policy towards non-members.",
+      "relatedTerms": [
+        "ec-trading-bloc",
+        "ec-customs-union",
+        "ec-free-trade"
+      ]
+    },
+    {
+      "id": "ec-customs-union",
+      "term": "Customs union",
+      "subject": "Economics",
+      "unit": "International Economics",
+      "topic": "Economic integration",
+      "definition": "A trading bloc in which members eliminate trade barriers among themselves and adopt a common external trade policy (e.g. common external tariff) towards non-members.",
+      "relatedTerms": [
+        "ec-trading-bloc",
+        "ec-free-trade-area",
+        "ec-common-market"
+      ]
+    },
+    {
+      "id": "ec-common-market",
+      "term": "Common market",
+      "subject": "Economics",
+      "unit": "International Economics",
+      "topic": "Economic integration",
+      "definition": "A customs union that also allows the free movement of factors of production (labour and capital) among member countries.",
+      "relatedTerms": [
+        "ec-trading-bloc",
+        "ec-customs-union",
+        "ec-monetary-union"
+      ]
+    },
+    {
+      "id": "ec-monetary-union",
+      "term": "Monetary union",
+      "subject": "Economics",
+      "unit": "International Economics",
+      "topic": "Economic integration",
+      "definition": "A common market whose members adopt a common currency and a common central bank with a single monetary policy (e.g. the eurozone).",
+      "relatedTerms": [
+        "ec-trading-bloc",
+        "ec-common-market",
+        "ec-monetary-policy",
+        "ec-fixed-exchange-rate"
+      ]
+    },
+    {
+      "id": "ec-exchange-rate",
+      "term": "Exchange rate",
+      "subject": "Economics",
+      "unit": "International Economics",
+      "topic": "Exchange rates",
+      "definition": "The value of one currency expressed in terms of another currency.",
+      "relatedTerms": [
+        "ec-floating-exchange-rate",
+        "ec-fixed-exchange-rate",
+        "ec-appreciation",
+        "ec-depreciation",
+        "ec-interest-rate"
+      ]
+    },
+    {
+      "id": "ec-floating-exchange-rate",
+      "term": "Floating exchange rate",
+      "subject": "Economics",
+      "unit": "International Economics",
+      "topic": "Exchange rates",
+      "definition": "An exchange rate determined by the forces of demand for and supply of the currency in the foreign exchange market, without government intervention.",
+      "relatedTerms": [
+        "ec-exchange-rate",
+        "ec-fixed-exchange-rate",
+        "ec-managed-exchange-rate",
+        "ec-appreciation",
+        "ec-depreciation"
+      ]
+    },
+    {
+      "id": "ec-fixed-exchange-rate",
+      "term": "Fixed exchange rate",
+      "subject": "Economics",
+      "unit": "International Economics",
+      "topic": "Exchange rates",
+      "definition": "An exchange rate set by the government or central bank at a particular value against another currency and maintained through intervention in the foreign exchange market.",
+      "relatedTerms": [
+        "ec-exchange-rate",
+        "ec-floating-exchange-rate",
+        "ec-devaluation",
+        "ec-monetary-union",
+        "ec-managed-exchange-rate"
+      ]
+    },
+    {
+      "id": "ec-managed-exchange-rate",
+      "term": "Managed exchange rate",
+      "subject": "Economics",
+      "unit": "International Economics",
+      "topic": "Exchange rates",
+      "definition": "An exchange rate that floats within a range or is influenced by periodic central bank intervention to prevent large fluctuations.",
+      "relatedTerms": [
+        "ec-floating-exchange-rate",
+        "ec-fixed-exchange-rate"
+      ]
+    },
+    {
+      "id": "ec-appreciation",
+      "term": "Appreciation",
+      "subject": "Economics",
+      "unit": "International Economics",
+      "topic": "Exchange rates",
+      "definition": "An increase in the value of a currency against another currency in a floating exchange rate system.",
+      "relatedTerms": [
+        "ec-depreciation",
+        "ec-floating-exchange-rate",
+        "ec-exchange-rate"
+      ]
+    },
+    {
+      "id": "ec-depreciation",
+      "term": "Depreciation (currency)",
+      "subject": "Economics",
+      "unit": "International Economics",
+      "topic": "Exchange rates",
+      "definition": "A decrease in the value of a currency against another currency in a floating exchange rate system.",
+      "relatedTerms": [
+        "ec-appreciation",
+        "ec-floating-exchange-rate",
+        "ec-marshall-lerner",
+        "ec-j-curve",
+        "ec-exchange-rate",
+        "ec-devaluation",
+        "ec-current-account-deficit",
+        "bm-depreciation-bm"
+      ]
+    },
+    {
+      "id": "ec-devaluation",
+      "term": "Devaluation",
+      "subject": "Economics",
+      "unit": "International Economics",
+      "topic": "Exchange rates",
+      "definition": "A deliberate decrease in the value of a currency by the government or central bank under a fixed exchange rate system.",
+      "relatedTerms": [
+        "ec-fixed-exchange-rate",
+        "ec-depreciation"
+      ]
+    },
+    {
+      "id": "ec-balance-of-payments",
+      "term": "Balance of payments",
+      "subject": "Economics",
+      "unit": "International Economics",
+      "topic": "Balance of payments",
+      "definition": "A record of all transactions between the residents of a country and the rest of the world over a given time period, made up of the current account, capital account and financial account.",
+      "relatedTerms": [
+        "ec-current-account",
+        "ec-financial-account"
+      ]
+    },
+    {
+      "id": "ec-current-account",
+      "term": "Current account",
+      "subject": "Economics",
+      "unit": "International Economics",
+      "topic": "Balance of payments",
+      "definition": "The part of the balance of payments that records trade in goods, trade in services, primary income (e.g. interest, profits, dividends) and secondary income (current transfers).",
+      "relatedTerms": [
+        "ec-balance-of-payments",
+        "ec-financial-account",
+        "ec-current-account-deficit",
+        "ec-terms-of-trade"
+      ]
+    },
+    {
+      "id": "ec-financial-account",
+      "term": "Financial account",
+      "subject": "Economics",
+      "unit": "International Economics",
+      "topic": "Balance of payments",
+      "definition": "The part of the balance of payments that records flows of direct investment, portfolio investment and changes in reserve assets.",
+      "relatedTerms": [
+        "ec-balance-of-payments",
+        "ec-current-account",
+        "ec-fdi"
+      ]
+    },
+    {
+      "id": "ec-current-account-deficit",
+      "term": "Current account deficit",
+      "subject": "Economics",
+      "unit": "International Economics",
+      "topic": "Balance of payments",
+      "definition": "A situation where the value of a country's debits (outflows) on the current account exceeds its credits (inflows).",
+      "relatedTerms": [
+        "ec-current-account",
+        "ec-depreciation",
+        "ec-marshall-lerner"
+      ]
+    },
+    {
+      "id": "ec-marshall-lerner",
+      "term": "Marshall–Lerner condition",
+      "subject": "Economics",
+      "unit": "International Economics",
+      "topic": "Balance of payments",
+      "definition": "The condition that a depreciation (or devaluation) will improve the current account balance only if the sum of the price elasticities of demand for exports and imports is greater than one (PEDx + PEDm > 1).",
+      "relatedTerms": [
+        "ec-j-curve",
+        "ec-depreciation",
+        "ec-current-account-deficit",
+        "ec-ped"
+      ],
+      "hl": true
+    },
+    {
+      "id": "ec-j-curve",
+      "term": "J-curve effect",
+      "subject": "Economics",
+      "unit": "International Economics",
+      "topic": "Balance of payments",
+      "definition": "The tendency for a current account deficit to worsen at first after a depreciation, before improving, because demand for exports and imports is price-inelastic in the short run.",
+      "relatedTerms": [
+        "ec-marshall-lerner",
+        "ec-depreciation"
+      ],
+      "hl": true
+    },
+    {
+      "id": "ec-terms-of-trade",
+      "term": "Terms of trade",
+      "subject": "Economics",
+      "unit": "International Economics",
+      "topic": "Balance of payments",
+      "definition": "The ratio of an index of average export prices to an index of average import prices, × 100.",
+      "relatedTerms": [
+        "ec-current-account",
+        "ec-economic-development"
+      ],
+      "hl": true
+    },
+    {
+      "id": "ec-economic-development",
+      "term": "Economic development",
+      "subject": "Economics",
+      "unit": "Development Economics",
+      "topic": "Measuring development",
+      "definition": "A multidimensional process involving improvements in standards of living, reduction of poverty and inequality, and increased freedom and economic choice.",
+      "relatedTerms": [
+        "ec-economic-growth",
+        "ec-sustainable-development",
+        "ec-hdi",
+        "ec-absolute-poverty",
+        "ec-yed",
+        "ec-terms-of-trade",
+        "ec-poverty-trap",
+        "ec-informal-economy",
+        "ec-fdi",
+        "ec-foreign-aid",
+        "ec-microfinance",
+        "ec-fair-trade"
+      ],
+      "whyTested": "Distinguish from growth: development is multidimensional."
+    },
+    {
+      "id": "ec-sustainable-development",
+      "term": "Sustainable development",
+      "subject": "Economics",
+      "unit": "Development Economics",
+      "topic": "Measuring development",
+      "definition": "Development that meets the needs of the present without compromising the ability of future generations to meet their own needs.",
+      "relatedTerms": [
+        "ec-economic-development",
+        "ec-sdgs",
+        "ec-common-pool-resource"
+      ],
+      "whyTested": "The Brundtland definition is expected word-for-word."
+    },
+    {
+      "id": "ec-sdgs",
+      "term": "Sustainable Development Goals (SDGs)",
+      "subject": "Economics",
+      "unit": "Development Economics",
+      "topic": "Measuring development",
+      "definition": "The 17 goals adopted by the United Nations in 2015, to be achieved by 2030, that aim to end poverty, protect the planet and improve lives worldwide.",
+      "relatedTerms": [
+        "ec-sustainable-development"
+      ]
+    },
+    {
+      "id": "ec-hdi",
+      "term": "Human Development Index (HDI)",
+      "subject": "Economics",
+      "unit": "Development Economics",
+      "topic": "Measuring development",
+      "definition": "A composite indicator of development, published by the UNDP, that measures three dimensions: a long and healthy life (life expectancy), knowledge (education) and a decent standard of living (GNI per capita at PPP).",
+      "relatedTerms": [
+        "ec-economic-development",
+        "ec-gni",
+        "ec-gdp-per-capita",
+        "ec-multidimensional-poverty"
+      ]
+    },
+    {
+      "id": "ec-multidimensional-poverty",
+      "term": "Multidimensional Poverty Index (MPI)",
+      "subject": "Economics",
+      "unit": "Development Economics",
+      "topic": "Measuring development",
+      "definition": "An index that measures deprivation across health, education and living standards at the household level, capturing poverty beyond income alone.",
+      "relatedTerms": [
+        "ec-hdi",
+        "ec-absolute-poverty"
+      ]
+    },
+    {
+      "id": "ec-poverty-trap",
+      "term": "Poverty trap (cycle)",
+      "subject": "Economics",
+      "unit": "Development Economics",
+      "topic": "Barriers to development",
+      "definition": "A self-reinforcing cycle in which low income leads to low savings and investment, low productivity and hence low income again.",
+      "relatedTerms": [
+        "ec-economic-development",
+        "ec-microfinance",
+        "ec-foreign-aid"
+      ]
+    },
+    {
+      "id": "ec-informal-economy",
+      "term": "Informal economy",
+      "subject": "Economics",
+      "unit": "Development Economics",
+      "topic": "Barriers to development",
+      "definition": "Economic activity that is not officially registered or regulated by the government, and so is not taxed or recorded in GDP.",
+      "relatedTerms": [
+        "ec-economic-development",
+        "ec-gdp"
+      ]
+    },
+    {
+      "id": "ec-fdi",
+      "term": "Foreign direct investment (FDI)",
+      "subject": "Economics",
+      "unit": "Development Economics",
+      "topic": "Strategies for development",
+      "definition": "Long-term investment by a firm in one country in productive assets in another country, usually by a multinational corporation (MNC).",
+      "relatedTerms": [
+        "ec-financial-account",
+        "bm-multinational",
+        "ec-economic-development"
+      ]
+    },
+    {
+      "id": "ec-foreign-aid",
+      "term": "Foreign aid",
+      "subject": "Economics",
+      "unit": "Development Economics",
+      "topic": "Strategies for development",
+      "definition": "Assistance in the form of grants, concessional loans, goods or technical help given by governments (official aid) or NGOs to developing countries.",
+      "relatedTerms": [
+        "ec-poverty-trap",
+        "ec-debt-relief",
+        "ec-economic-development",
+        "bm-ngo"
+      ]
+    },
+    {
+      "id": "ec-microfinance",
+      "term": "Microfinance",
+      "subject": "Economics",
+      "unit": "Development Economics",
+      "topic": "Strategies for development",
+      "definition": "The provision of small loans and other financial services to people on low incomes who lack access to conventional banking, to support small-scale entrepreneurship.",
+      "relatedTerms": [
+        "ec-poverty-trap",
+        "ec-economic-development"
+      ]
+    },
+    {
+      "id": "ec-fair-trade",
+      "term": "Fair trade",
+      "subject": "Economics",
+      "unit": "Development Economics",
+      "topic": "Strategies for development",
+      "definition": "A certification scheme that guarantees producers in developing countries a minimum price above the market price and a premium for community investment.",
+      "relatedTerms": [
+        "ec-price-floor",
+        "ec-economic-development"
+      ]
+    },
+    {
+      "id": "ec-debt-relief",
+      "term": "Debt relief",
+      "subject": "Economics",
+      "unit": "Development Economics",
+      "topic": "Strategies for development",
+      "definition": "The partial or total cancellation of debt owed by developing countries, freeing resources for development spending.",
+      "relatedTerms": [
+        "ec-government-debt",
+        "ec-foreign-aid"
+      ]
+    },
+    {
+      "id": "bm-business",
+      "term": "Business",
+      "subject": "Business Management",
+      "unit": "Unit 1: Introduction to Business Management",
+      "topic": "1.1 Introduction to business management",
+      "definition": "An organisation that uses resources (inputs) to produce goods or services (outputs) to satisfy the needs and wants of customers.",
+      "relatedTerms": [
+        "bm-primary-sector",
+        "bm-entrepreneurship",
+        "bm-stakeholder"
+      ]
+    },
+    {
+      "id": "bm-primary-sector",
+      "term": "Primary sector",
+      "subject": "Business Management",
+      "unit": "Unit 1: Introduction to Business Management",
+      "topic": "1.1 Introduction to business management",
+      "definition": "The sector of the economy that extracts or harvests natural resources (e.g. agriculture, fishing, mining).",
+      "relatedTerms": [
+        "bm-secondary-sector",
+        "bm-tertiary-sector",
+        "bm-quaternary-sector",
+        "bm-business"
+      ]
+    },
+    {
+      "id": "bm-secondary-sector",
+      "term": "Secondary sector",
+      "subject": "Business Management",
+      "unit": "Unit 1: Introduction to Business Management",
+      "topic": "1.1 Introduction to business management",
+      "definition": "The sector of the economy that manufactures or constructs goods from raw materials.",
+      "relatedTerms": [
+        "bm-primary-sector",
+        "bm-tertiary-sector",
+        "bm-quaternary-sector"
+      ]
+    },
+    {
+      "id": "bm-tertiary-sector",
+      "term": "Tertiary sector",
+      "subject": "Business Management",
+      "unit": "Unit 1: Introduction to Business Management",
+      "topic": "1.1 Introduction to business management",
+      "definition": "The sector of the economy that provides services to consumers and other businesses.",
+      "relatedTerms": [
+        "bm-primary-sector",
+        "bm-secondary-sector",
+        "bm-quaternary-sector"
+      ]
+    },
+    {
+      "id": "bm-quaternary-sector",
+      "term": "Quaternary sector",
+      "subject": "Business Management",
+      "unit": "Unit 1: Introduction to Business Management",
+      "topic": "1.1 Introduction to business management",
+      "definition": "A sub-section of the tertiary sector involving knowledge-based, intellectual activities such as research and development, ICT and consultancy.",
+      "relatedTerms": [
+        "bm-tertiary-sector",
+        "bm-research-development",
+        "bm-primary-sector",
+        "bm-secondary-sector"
+      ]
+    },
+    {
+      "id": "bm-entrepreneurship",
+      "term": "Entrepreneurship",
+      "subject": "Business Management",
+      "unit": "Unit 1: Introduction to Business Management",
+      "topic": "1.1 Introduction to business management",
+      "definition": "The process of identifying a business opportunity, organising resources to exploit it and bearing the risks of the venture.",
+      "relatedTerms": [
+        "bm-intrapreneurship",
+        "bm-business",
+        "bm-sole-trader",
+        "ec-factors-of-production"
+      ]
+    },
+    {
+      "id": "bm-intrapreneurship",
+      "term": "Intrapreneurship",
+      "subject": "Business Management",
+      "unit": "Unit 1: Introduction to Business Management",
+      "topic": "1.1 Introduction to business management",
+      "definition": "Entrepreneurial behaviour by employees within an existing organisation, developing new ideas or products for the business.",
+      "relatedTerms": [
+        "bm-entrepreneurship",
+        "bm-innovation"
+      ]
+    },
+    {
+      "id": "bm-sole-trader",
+      "term": "Sole trader",
+      "subject": "Business Management",
+      "unit": "Unit 1: Introduction to Business Management",
+      "topic": "1.2 Types of business entities",
+      "definition": "A business owned by one person, who has unlimited liability for its debts.",
+      "relatedTerms": [
+        "bm-partnership",
+        "bm-unlimited-liability",
+        "bm-entrepreneurship"
+      ]
+    },
+    {
+      "id": "bm-partnership",
+      "term": "Partnership",
+      "subject": "Business Management",
+      "unit": "Unit 1: Introduction to Business Management",
+      "topic": "1.2 Types of business entities",
+      "definition": "A business owned by two or more people who share responsibility, profits and (usually) unlimited liability.",
+      "relatedTerms": [
+        "bm-sole-trader",
+        "bm-unlimited-liability",
+        "bm-private-limited-company"
+      ]
+    },
+    {
+      "id": "bm-unlimited-liability",
+      "term": "Unlimited liability",
+      "subject": "Business Management",
+      "unit": "Unit 1: Introduction to Business Management",
+      "topic": "1.2 Types of business entities",
+      "definition": "The legal situation where business owners are personally responsible for all the debts of the business, so their personal assets may be used to pay them.",
+      "relatedTerms": [
+        "bm-limited-liability",
+        "bm-sole-trader",
+        "bm-partnership"
+      ]
+    },
+    {
+      "id": "bm-limited-liability",
+      "term": "Limited liability",
+      "subject": "Business Management",
+      "unit": "Unit 1: Introduction to Business Management",
+      "topic": "1.2 Types of business entities",
+      "definition": "The legal situation where shareholders' liability for the debts of a company is limited to the amount they have invested; their personal assets are protected.",
+      "relatedTerms": [
+        "bm-unlimited-liability",
+        "bm-private-limited-company",
+        "bm-public-limited-company"
+      ]
+    },
+    {
+      "id": "bm-private-limited-company",
+      "term": "Privately held company",
+      "subject": "Business Management",
+      "unit": "Unit 1: Introduction to Business Management",
+      "topic": "1.2 Types of business entities",
+      "definition": "An incorporated business with limited liability whose shares cannot be sold to the general public and can only be transferred with the agreement of other shareholders.",
+      "relatedTerms": [
+        "bm-public-limited-company",
+        "bm-limited-liability",
+        "bm-partnership"
+      ]
+    },
+    {
+      "id": "bm-public-limited-company",
+      "term": "Publicly held company",
+      "subject": "Business Management",
+      "unit": "Unit 1: Introduction to Business Management",
+      "topic": "1.2 Types of business entities",
+      "definition": "An incorporated business with limited liability whose shares are traded on a stock exchange and can be bought by the general public.",
+      "relatedTerms": [
+        "bm-private-limited-company",
+        "bm-limited-liability",
+        "bm-share-capital"
+      ]
+    },
+    {
+      "id": "bm-social-enterprise",
+      "term": "Social enterprise",
+      "subject": "Business Management",
+      "unit": "Unit 1: Introduction to Business Management",
+      "topic": "1.2 Types of business entities",
+      "definition": "A revenue-earning business whose primary aim is to achieve social and/or environmental objectives, reinvesting surpluses to meet those objectives rather than maximising profit for owners.",
+      "relatedTerms": [
+        "bm-cooperative",
+        "bm-ngo",
+        "bm-csr"
+      ]
+    },
+    {
+      "id": "bm-cooperative",
+      "term": "Cooperative",
+      "subject": "Business Management",
+      "unit": "Unit 1: Introduction to Business Management",
+      "topic": "1.2 Types of business entities",
+      "definition": "A social enterprise owned and democratically run by its members (workers, customers or producers), who share the benefits.",
+      "relatedTerms": [
+        "bm-social-enterprise"
+      ]
+    },
+    {
+      "id": "bm-ngo",
+      "term": "Non-governmental organisation (NGO)",
+      "subject": "Business Management",
+      "unit": "Unit 1: Introduction to Business Management",
+      "topic": "1.2 Types of business entities",
+      "definition": "A non-profit organisation that operates independently of government to pursue social, humanitarian or environmental goals.",
+      "relatedTerms": [
+        "bm-social-enterprise",
+        "ec-foreign-aid"
+      ]
+    },
+    {
+      "id": "bm-mission-statement",
+      "term": "Mission statement",
+      "subject": "Business Management",
+      "unit": "Unit 1: Introduction to Business Management",
+      "topic": "1.3 Business objectives",
+      "definition": "A qualitative statement of an organisation's purpose and core values, describing what it does and why, in the present.",
+      "relatedTerms": [
+        "bm-vision-statement",
+        "bm-aims",
+        "bm-objectives"
+      ],
+      "whyTested": "Mission = purpose now; vision = where it wants to be."
+    },
+    {
+      "id": "bm-vision-statement",
+      "term": "Vision statement",
+      "subject": "Business Management",
+      "unit": "Unit 1: Introduction to Business Management",
+      "topic": "1.3 Business objectives",
+      "definition": "A statement of an organisation's long-term aspirations — what it would ideally like to become or achieve in the future.",
+      "relatedTerms": [
+        "bm-mission-statement",
+        "bm-aims"
+      ]
+    },
+    {
+      "id": "bm-aims",
+      "term": "Aims",
+      "subject": "Business Management",
+      "unit": "Unit 1: Introduction to Business Management",
+      "topic": "1.3 Business objectives",
+      "definition": "The long-term, general goals of a business, usually expressed qualitatively.",
+      "relatedTerms": [
+        "bm-objectives",
+        "bm-mission-statement",
+        "bm-vision-statement"
+      ]
+    },
+    {
+      "id": "bm-objectives",
+      "term": "Objectives",
+      "subject": "Business Management",
+      "unit": "Unit 1: Introduction to Business Management",
+      "topic": "1.3 Business objectives",
+      "definition": "Specific, measurable, medium- to short-term targets set to achieve the aims of a business; ideally SMART (specific, measurable, achievable, relevant, time-bound).",
+      "relatedTerms": [
+        "bm-aims",
+        "bm-strategy",
+        "bm-tactics",
+        "bm-mission-statement",
+        "bm-ethical-objectives"
+      ]
+    },
+    {
+      "id": "bm-strategy",
+      "term": "Strategy",
+      "subject": "Business Management",
+      "unit": "Unit 1: Introduction to Business Management",
+      "topic": "1.3 Business objectives",
+      "definition": "A long-term plan of action designed to achieve the aims and objectives of a business.",
+      "relatedTerms": [
+        "bm-tactics",
+        "bm-objectives",
+        "bm-ansoff-matrix",
+        "bm-swot"
+      ]
+    },
+    {
+      "id": "bm-tactics",
+      "term": "Tactics",
+      "subject": "Business Management",
+      "unit": "Unit 1: Introduction to Business Management",
+      "topic": "1.3 Business objectives",
+      "definition": "Short-term methods or actions used to implement a strategy.",
+      "relatedTerms": [
+        "bm-strategy",
+        "bm-objectives"
+      ]
+    },
+    {
+      "id": "bm-csr",
+      "term": "Corporate social responsibility (CSR)",
+      "subject": "Business Management",
+      "unit": "Unit 1: Introduction to Business Management",
+      "topic": "1.3 Business objectives",
+      "definition": "The obligation of a business to act ethically and consider the impact of its activities on society and the environment, beyond legal requirements.",
+      "relatedTerms": [
+        "bm-stakeholder",
+        "bm-social-enterprise",
+        "bm-ethical-objectives"
+      ]
+    },
+    {
+      "id": "bm-ethical-objectives",
+      "term": "Ethical objectives",
+      "subject": "Business Management",
+      "unit": "Unit 1: Introduction to Business Management",
+      "topic": "1.3 Business objectives",
+      "definition": "Objectives based on moral principles that guide business decision-making, such as fair treatment of workers or environmental protection.",
+      "relatedTerms": [
+        "bm-csr",
+        "bm-objectives"
+      ]
+    },
+    {
+      "id": "bm-swot",
+      "term": "SWOT analysis",
+      "subject": "Business Management",
+      "unit": "Unit 1: Introduction to Business Management",
+      "topic": "Business management toolkit",
+      "definition": "A strategic tool that analyses a business's internal Strengths and Weaknesses and its external Opportunities and Threats.",
+      "relatedTerms": [
+        "bm-steeple",
+        "bm-strategy",
+        "bm-ansoff-matrix",
+        "bm-decision-tree"
+      ],
+      "whyTested": "Classic Paper 1 tool; internal vs external split is essential."
+    },
+    {
+      "id": "bm-steeple",
+      "term": "STEEPLE analysis",
+      "subject": "Business Management",
+      "unit": "Unit 1: Introduction to Business Management",
+      "topic": "Business management toolkit",
+      "definition": "A tool for analysing the external environment of a business through Social, Technological, Economic, Environmental, Political, Legal and Ethical factors.",
+      "relatedTerms": [
+        "bm-swot"
+      ]
+    },
+    {
+      "id": "bm-ansoff-matrix",
+      "term": "Ansoff matrix",
+      "subject": "Business Management",
+      "unit": "Unit 1: Introduction to Business Management",
+      "topic": "Business management toolkit",
+      "definition": "A strategic planning tool showing four growth strategies — market penetration, product development, market development and diversification — according to whether products and markets are existing or new.",
+      "relatedTerms": [
+        "bm-strategy",
+        "bm-swot",
+        "bm-organic-growth"
+      ]
+    },
+    {
+      "id": "bm-stakeholder",
+      "term": "Stakeholder",
+      "subject": "Business Management",
+      "unit": "Unit 1: Introduction to Business Management",
+      "topic": "1.4 Stakeholders",
+      "definition": "An individual or group with an interest in, or that is affected by, the activities of a business. Internal stakeholders are within the business (employees, managers, shareholders); external stakeholders are outside it (customers, suppliers, government, local community).",
+      "relatedTerms": [
+        "bm-stakeholder-conflict",
+        "bm-csr",
+        "bm-business"
+      ]
+    },
+    {
+      "id": "bm-stakeholder-conflict",
+      "term": "Stakeholder conflict",
+      "subject": "Business Management",
+      "unit": "Unit 1: Introduction to Business Management",
+      "topic": "1.4 Stakeholders",
+      "definition": "Disagreement between stakeholder groups whose objectives differ (e.g. shareholders wanting higher dividends vs employees wanting higher wages).",
+      "relatedTerms": [
+        "bm-stakeholder"
+      ]
+    },
+    {
+      "id": "bm-economies-of-scale",
+      "term": "Economies of scale",
+      "subject": "Business Management",
+      "unit": "Unit 1: Introduction to Business Management",
+      "topic": "1.5 Growth and evolution",
+      "definition": "Reductions in average costs of production that result from increasing the scale of operations. Internal economies arise within the firm; external economies arise from growth of the industry.",
+      "relatedTerms": [
+        "bm-diseconomies-of-scale",
+        "ec-economies-of-scale",
+        "bm-organic-growth",
+        "bm-mass-production"
+      ]
+    },
+    {
+      "id": "bm-diseconomies-of-scale",
+      "term": "Diseconomies of scale",
+      "subject": "Business Management",
+      "unit": "Unit 1: Introduction to Business Management",
+      "topic": "1.5 Growth and evolution",
+      "definition": "Increases in average costs of production that result when a business grows beyond its optimum scale (e.g. due to poor communication or coordination).",
+      "relatedTerms": [
+        "bm-economies-of-scale"
+      ]
+    },
+    {
+      "id": "bm-organic-growth",
+      "term": "Internal (organic) growth",
+      "subject": "Business Management",
+      "unit": "Unit 1: Introduction to Business Management",
+      "topic": "1.5 Growth and evolution",
+      "definition": "Growth achieved by a business expanding its own operations, using its own resources (e.g. opening new stores, launching new products).",
+      "relatedTerms": [
+        "bm-external-growth",
+        "bm-economies-of-scale",
+        "bm-ansoff-matrix"
+      ]
+    },
+    {
+      "id": "bm-external-growth",
+      "term": "External (inorganic) growth",
+      "subject": "Business Management",
+      "unit": "Unit 1: Introduction to Business Management",
+      "topic": "1.5 Growth and evolution",
+      "definition": "Growth achieved through dealing with other businesses, via mergers, acquisitions, takeovers, joint ventures, strategic alliances or franchising.",
+      "relatedTerms": [
+        "bm-organic-growth",
+        "bm-merger",
+        "bm-takeover",
+        "bm-joint-venture",
+        "bm-strategic-alliance",
+        "bm-franchise",
+        "bm-multinational"
+      ]
+    },
+    {
+      "id": "bm-merger",
+      "term": "Merger",
+      "subject": "Business Management",
+      "unit": "Unit 1: Introduction to Business Management",
+      "topic": "1.5 Growth and evolution",
+      "definition": "The agreement of two or more businesses to combine to form a single new business.",
+      "relatedTerms": [
+        "bm-takeover",
+        "bm-external-growth",
+        "bm-culture-clash"
+      ]
+    },
+    {
+      "id": "bm-takeover",
+      "term": "Takeover (acquisition)",
+      "subject": "Business Management",
+      "unit": "Unit 1: Introduction to Business Management",
+      "topic": "1.5 Growth and evolution",
+      "definition": "The purchase of a controlling interest (over 50% of shares) in one business by another; it is hostile if done without the target's agreement.",
+      "relatedTerms": [
+        "bm-merger",
+        "bm-external-growth"
+      ]
+    },
+    {
+      "id": "bm-joint-venture",
+      "term": "Joint venture",
+      "subject": "Business Management",
+      "unit": "Unit 1: Introduction to Business Management",
+      "topic": "1.5 Growth and evolution",
+      "definition": "An arrangement in which two or more businesses agree to share resources and create a new, separate business entity for a specific project, sharing its costs, risks and profits.",
+      "relatedTerms": [
+        "bm-strategic-alliance",
+        "bm-external-growth"
+      ]
+    },
+    {
+      "id": "bm-strategic-alliance",
+      "term": "Strategic alliance",
+      "subject": "Business Management",
+      "unit": "Unit 1: Introduction to Business Management",
+      "topic": "1.5 Growth and evolution",
+      "definition": "An agreement between two or more businesses to cooperate and share resources towards a common goal while remaining independent organisations.",
+      "relatedTerms": [
+        "bm-joint-venture",
+        "bm-external-growth"
+      ]
+    },
+    {
+      "id": "bm-franchise",
+      "term": "Franchising",
+      "subject": "Business Management",
+      "unit": "Unit 1: Introduction to Business Management",
+      "topic": "1.5 Growth and evolution",
+      "definition": "An arrangement where a business (the franchisor) grants another (the franchisee) the right to use its brand, products and business model in return for fees and royalties.",
+      "relatedTerms": [
+        "bm-external-growth",
+        "bm-branding"
+      ]
+    },
+    {
+      "id": "bm-multinational",
+      "term": "Multinational company (MNC)",
+      "subject": "Business Management",
+      "unit": "Unit 1: Introduction to Business Management",
+      "topic": "1.6 Multinational companies",
+      "definition": "A business that operates (has productive facilities) in more than one country.",
+      "relatedTerms": [
+        "ec-fdi",
+        "bm-external-growth",
+        "bm-offshoring"
+      ]
+    },
+    {
+      "id": "bm-decision-tree",
+      "term": "Decision tree",
+      "subject": "Business Management",
+      "unit": "Unit 1: Introduction to Business Management",
+      "topic": "Business management toolkit",
+      "definition": "A diagram that sets out the options and possible outcomes of a decision, with probabilities and financial values, to calculate the expected value of each option.",
+      "relatedTerms": [
+        "bm-force-field",
+        "bm-swot"
+      ],
+      "hl": true
+    },
+    {
+      "id": "bm-force-field",
+      "term": "Force field analysis",
+      "subject": "Business Management",
+      "unit": "Unit 1: Introduction to Business Management",
+      "topic": "Business management toolkit",
+      "definition": "A decision-making tool that weighs the driving forces for a change against the restraining forces against it.",
+      "relatedTerms": [
+        "bm-decision-tree"
+      ],
+      "hl": true
+    },
+    {
+      "id": "bm-hr-planning",
+      "term": "Human resource planning",
+      "subject": "Business Management",
+      "unit": "Unit 2: Human Resource Management",
+      "topic": "2.1 Introduction to HRM",
+      "definition": "The process of forecasting an organisation's future workforce needs (number and skills of employees) and planning how to meet them.",
+      "relatedTerms": [
+        "bm-labour-turnover",
+        "bm-recruitment",
+        "bm-training"
+      ]
+    },
+    {
+      "id": "bm-labour-turnover",
+      "term": "Labour turnover",
+      "subject": "Business Management",
+      "unit": "Unit 2: Human Resource Management",
+      "topic": "2.1 Introduction to HRM",
+      "definition": "The rate at which employees leave an organisation over a period of time: number of staff leaving ÷ average number of staff × 100.",
+      "relatedTerms": [
+        "bm-hr-planning",
+        "bm-motivation"
+      ],
+      "whyTested": "Formula is regularly calculated in Paper 2."
+    },
+    {
+      "id": "bm-recruitment",
+      "term": "Recruitment",
+      "subject": "Business Management",
+      "unit": "Unit 2: Human Resource Management",
+      "topic": "2.1 Introduction to HRM",
+      "definition": "The process of identifying the need for, attracting and selecting suitable candidates to fill job vacancies; it may be internal (from within the organisation) or external.",
+      "relatedTerms": [
+        "bm-hr-planning",
+        "bm-training"
+      ]
+    },
+    {
+      "id": "bm-training",
+      "term": "Training",
+      "subject": "Business Management",
+      "unit": "Unit 2: Human Resource Management",
+      "topic": "2.1 Introduction to HRM",
+      "definition": "The process of developing employees' skills and knowledge. Induction training introduces new staff; on-the-job training happens in the workplace; off-the-job training happens away from it.",
+      "relatedTerms": [
+        "bm-recruitment",
+        "bm-appraisal",
+        "bm-hr-planning"
+      ]
+    },
+    {
+      "id": "bm-appraisal",
+      "term": "Appraisal",
+      "subject": "Business Management",
+      "unit": "Unit 2: Human Resource Management",
+      "topic": "2.1 Introduction to HRM",
+      "definition": "The process of evaluating an employee's performance against agreed targets. Formative appraisal is ongoing and developmental; summative appraisal is a final judgement at the end of a period.",
+      "relatedTerms": [
+        "bm-training",
+        "bm-motivation"
+      ]
+    },
+    {
+      "id": "bm-org-structure",
+      "term": "Organisational structure",
+      "subject": "Business Management",
+      "unit": "Unit 2: Human Resource Management",
+      "topic": "2.2 Organisational structure",
+      "definition": "The internal formal framework of a business, showing the lines of authority, communication and responsibility between its people.",
+      "relatedTerms": [
+        "bm-hierarchy",
+        "bm-span-of-control",
+        "bm-chain-of-command",
+        "bm-delayering"
+      ]
+    },
+    {
+      "id": "bm-hierarchy",
+      "term": "Levels of hierarchy",
+      "subject": "Business Management",
+      "unit": "Unit 2: Human Resource Management",
+      "topic": "2.2 Organisational structure",
+      "definition": "The number of layers of management and authority in an organisation, from the top to the bottom.",
+      "relatedTerms": [
+        "bm-org-structure",
+        "bm-span-of-control",
+        "bm-delayering",
+        "bm-chain-of-command"
+      ]
+    },
+    {
+      "id": "bm-span-of-control",
+      "term": "Span of control",
+      "subject": "Business Management",
+      "unit": "Unit 2: Human Resource Management",
+      "topic": "2.2 Organisational structure",
+      "definition": "The number of subordinates who report directly to a manager.",
+      "relatedTerms": [
+        "bm-hierarchy",
+        "bm-org-structure",
+        "bm-delayering"
+      ],
+      "whyTested": "Wide span = flat structure; narrow span = tall structure."
+    },
+    {
+      "id": "bm-chain-of-command",
+      "term": "Chain of command",
+      "subject": "Business Management",
+      "unit": "Unit 2: Human Resource Management",
+      "topic": "2.2 Organisational structure",
+      "definition": "The line of authority through which instructions are passed down from the top of the hierarchy and information passes up.",
+      "relatedTerms": [
+        "bm-org-structure",
+        "bm-hierarchy"
+      ]
+    },
+    {
+      "id": "bm-delegation",
+      "term": "Delegation",
+      "subject": "Business Management",
+      "unit": "Unit 2: Human Resource Management",
+      "topic": "2.2 Organisational structure",
+      "definition": "The passing of authority (but not ultimate responsibility) from a manager to a subordinate to carry out a task.",
+      "relatedTerms": [
+        "bm-decentralisation",
+        "bm-empowerment"
+      ]
+    },
+    {
+      "id": "bm-delayering",
+      "term": "Delayering",
+      "subject": "Business Management",
+      "unit": "Unit 2: Human Resource Management",
+      "topic": "2.2 Organisational structure",
+      "definition": "Removing one or more levels of hierarchy from an organisational structure, which typically widens spans of control.",
+      "relatedTerms": [
+        "bm-hierarchy",
+        "bm-span-of-control",
+        "bm-org-structure"
+      ]
+    },
+    {
+      "id": "bm-centralisation",
+      "term": "Centralisation",
+      "subject": "Business Management",
+      "unit": "Unit 2: Human Resource Management",
+      "topic": "2.2 Organisational structure",
+      "definition": "An organisational structure in which decision-making authority is concentrated at the top of the hierarchy.",
+      "relatedTerms": [
+        "bm-decentralisation"
+      ]
+    },
+    {
+      "id": "bm-decentralisation",
+      "term": "Decentralisation",
+      "subject": "Business Management",
+      "unit": "Unit 2: Human Resource Management",
+      "topic": "2.2 Organisational structure",
+      "definition": "An organisational structure in which decision-making authority is spread throughout the organisation, to lower levels of the hierarchy.",
+      "relatedTerms": [
+        "bm-centralisation",
+        "bm-delegation"
+      ]
+    },
+    {
+      "id": "bm-leadership",
+      "term": "Leadership",
+      "subject": "Business Management",
+      "unit": "Unit 2: Human Resource Management",
+      "topic": "2.3 Leadership and management",
+      "definition": "The ability to influence and inspire others to achieve the goals of an organisation. Styles include autocratic, paternalistic, democratic, laissez-faire and situational.",
+      "relatedTerms": [
+        "bm-autocratic",
+        "bm-democratic",
+        "bm-laissez-faire",
+        "bm-paternalistic",
+        "bm-situational",
+        "bm-management",
+        "bm-org-culture"
+      ]
+    },
+    {
+      "id": "bm-management",
+      "term": "Management",
+      "subject": "Business Management",
+      "unit": "Unit 2: Human Resource Management",
+      "topic": "2.3 Leadership and management",
+      "definition": "The process of planning, organising, commanding, coordinating and controlling resources to achieve organisational objectives.",
+      "relatedTerms": [
+        "bm-leadership"
+      ],
+      "whyTested": "Fayol's functions are the expected framework."
+    },
+    {
+      "id": "bm-autocratic",
+      "term": "Autocratic leadership",
+      "subject": "Business Management",
+      "unit": "Unit 2: Human Resource Management",
+      "topic": "2.3 Leadership and management",
+      "definition": "A leadership style in which the leader makes decisions alone, with little or no input from subordinates, and expects instructions to be followed.",
+      "relatedTerms": [
+        "bm-leadership",
+        "bm-democratic",
+        "bm-paternalistic"
+      ]
+    },
+    {
+      "id": "bm-paternalistic",
+      "term": "Paternalistic leadership",
+      "subject": "Business Management",
+      "unit": "Unit 2: Human Resource Management",
+      "topic": "2.3 Leadership and management",
+      "definition": "A leadership style in which the leader makes decisions but in what they believe are the best interests of employees, treating them like a family.",
+      "relatedTerms": [
+        "bm-leadership",
+        "bm-autocratic"
+      ]
+    },
+    {
+      "id": "bm-democratic",
+      "term": "Democratic leadership",
+      "subject": "Business Management",
+      "unit": "Unit 2: Human Resource Management",
+      "topic": "2.3 Leadership and management",
+      "definition": "A leadership style in which the leader involves subordinates in decision-making and encourages their participation.",
+      "relatedTerms": [
+        "bm-leadership",
+        "bm-autocratic",
+        "bm-laissez-faire"
+      ]
+    },
+    {
+      "id": "bm-laissez-faire",
+      "term": "Laissez-faire leadership",
+      "subject": "Business Management",
+      "unit": "Unit 2: Human Resource Management",
+      "topic": "2.3 Leadership and management",
+      "definition": "A leadership style in which the leader gives subordinates freedom to make their own decisions, with minimal direction.",
+      "relatedTerms": [
+        "bm-leadership",
+        "bm-democratic"
+      ]
+    },
+    {
+      "id": "bm-situational",
+      "term": "Situational leadership",
+      "subject": "Business Management",
+      "unit": "Unit 2: Human Resource Management",
+      "topic": "2.3 Leadership and management",
+      "definition": "A leadership approach in which the leader adapts their style to the situation, task and the needs and abilities of followers.",
+      "relatedTerms": [
+        "bm-leadership"
+      ]
+    },
+    {
+      "id": "bm-motivation",
+      "term": "Motivation",
+      "subject": "Business Management",
+      "unit": "Unit 2: Human Resource Management",
+      "topic": "2.4 Motivation and demotivation",
+      "definition": "The internal and external factors that stimulate people to work towards achieving a goal.",
+      "relatedTerms": [
+        "bm-maslow",
+        "bm-herzberg",
+        "bm-financial-rewards",
+        "bm-non-financial-rewards",
+        "bm-labour-turnover",
+        "bm-appraisal"
+      ]
+    },
+    {
+      "id": "bm-maslow",
+      "term": "Maslow's hierarchy of needs",
+      "subject": "Business Management",
+      "unit": "Unit 2: Human Resource Management",
+      "topic": "2.4 Motivation and demotivation",
+      "definition": "A motivation theory stating that people have five levels of needs — physiological, safety, social, esteem and self-actualisation — and are motivated to satisfy each level in turn once the lower level is met.",
+      "relatedTerms": [
+        "bm-motivation",
+        "bm-herzberg"
+      ]
+    },
+    {
+      "id": "bm-herzberg",
+      "term": "Herzberg's two-factor theory",
+      "subject": "Business Management",
+      "unit": "Unit 2: Human Resource Management",
+      "topic": "2.4 Motivation and demotivation",
+      "definition": "A motivation theory distinguishing hygiene factors (e.g. pay, working conditions), which cause dissatisfaction if absent but do not motivate, from motivators (e.g. achievement, recognition, responsibility), which generate job satisfaction.",
+      "relatedTerms": [
+        "bm-motivation",
+        "bm-maslow",
+        "bm-job-enrichment"
+      ]
+    },
+    {
+      "id": "bm-financial-rewards",
+      "term": "Financial rewards",
+      "subject": "Business Management",
+      "unit": "Unit 2: Human Resource Management",
+      "topic": "2.4 Motivation and demotivation",
+      "definition": "Monetary methods of motivation such as salary, wages (time and piece rate), commission, profit-related pay, performance-related pay, employee share ownership and fringe payments.",
+      "relatedTerms": [
+        "bm-motivation",
+        "bm-non-financial-rewards"
+      ]
+    },
+    {
+      "id": "bm-non-financial-rewards",
+      "term": "Non-financial rewards",
+      "subject": "Business Management",
+      "unit": "Unit 2: Human Resource Management",
+      "topic": "2.4 Motivation and demotivation",
+      "definition": "Non-monetary methods of motivation such as job enrichment, job rotation, job enlargement, empowerment, purpose/opportunity to make a difference and teamwork.",
+      "relatedTerms": [
+        "bm-motivation",
+        "bm-financial-rewards",
+        "bm-job-enrichment",
+        "bm-job-rotation",
+        "bm-empowerment"
+      ]
+    },
+    {
+      "id": "bm-job-enrichment",
+      "term": "Job enrichment",
+      "subject": "Business Management",
+      "unit": "Unit 2: Human Resource Management",
+      "topic": "2.4 Motivation and demotivation",
+      "definition": "Giving employees more challenging and complex tasks and greater responsibility, increasing the depth (vertical loading) of a job.",
+      "relatedTerms": [
+        "bm-non-financial-rewards",
+        "bm-herzberg",
+        "bm-job-rotation"
+      ]
+    },
+    {
+      "id": "bm-job-rotation",
+      "term": "Job rotation",
+      "subject": "Business Management",
+      "unit": "Unit 2: Human Resource Management",
+      "topic": "2.4 Motivation and demotivation",
+      "definition": "Moving employees between different tasks or jobs of a similar level, to reduce boredom and develop a wider range of skills.",
+      "relatedTerms": [
+        "bm-non-financial-rewards",
+        "bm-job-enrichment"
+      ]
+    },
+    {
+      "id": "bm-empowerment",
+      "term": "Empowerment",
+      "subject": "Business Management",
+      "unit": "Unit 2: Human Resource Management",
+      "topic": "2.4 Motivation and demotivation",
+      "definition": "Giving employees the authority and resources to make decisions and take control of their own work.",
+      "relatedTerms": [
+        "bm-non-financial-rewards",
+        "bm-delegation"
+      ]
+    },
+    {
+      "id": "bm-org-culture",
+      "term": "Organisational culture",
+      "subject": "Business Management",
+      "unit": "Unit 2: Human Resource Management",
+      "topic": "2.5 Organisational culture (HL)",
+      "definition": "The shared values, attitudes, norms and beliefs of the people in an organisation, which shape how things are done.",
+      "relatedTerms": [
+        "bm-culture-clash",
+        "bm-leadership"
+      ],
+      "hl": true
+    },
+    {
+      "id": "bm-culture-clash",
+      "term": "Culture clash",
+      "subject": "Business Management",
+      "unit": "Unit 2: Human Resource Management",
+      "topic": "2.5 Organisational culture (HL)",
+      "definition": "Conflict that arises when two or more organisational cultures come together (e.g. after a merger) or when individuals' values differ from the organisation's.",
+      "relatedTerms": [
+        "bm-org-culture",
+        "bm-merger"
+      ],
+      "hl": true
+    },
+    {
+      "id": "bm-industrial-relations",
+      "term": "Industrial / employee relations",
+      "subject": "Business Management",
+      "unit": "Unit 2: Human Resource Management",
+      "topic": "2.7 Industrial/employee relations (HL)",
+      "definition": "The relationship between management and employees (or their representatives, e.g. trade unions) in an organisation.",
+      "relatedTerms": [
+        "bm-collective-bargaining",
+        "bm-trade-union"
+      ],
+      "hl": true
+    },
+    {
+      "id": "bm-trade-union",
+      "term": "Trade union",
+      "subject": "Business Management",
+      "unit": "Unit 2: Human Resource Management",
+      "topic": "2.7 Industrial/employee relations (HL)",
+      "definition": "An organisation that represents the interests of a group of workers in negotiations with employers over pay and working conditions.",
+      "relatedTerms": [
+        "bm-industrial-relations",
+        "bm-collective-bargaining"
+      ],
+      "hl": true
+    },
+    {
+      "id": "bm-collective-bargaining",
+      "term": "Collective bargaining",
+      "subject": "Business Management",
+      "unit": "Unit 2: Human Resource Management",
+      "topic": "2.7 Industrial/employee relations (HL)",
+      "definition": "Negotiation between employers and employee representatives (e.g. trade unions) over pay, working conditions and other terms of employment.",
+      "relatedTerms": [
+        "bm-trade-union",
+        "bm-industrial-relations"
+      ],
+      "hl": true
+    },
+    {
+      "id": "bm-internal-finance",
+      "term": "Internal sources of finance",
+      "subject": "Business Management",
+      "unit": "Unit 3: Finance and Accounts",
+      "topic": "3.2 Sources of finance",
+      "definition": "Finance raised from within the business, such as retained earnings (profit), personal funds (for sole traders) and the sale of assets.",
+      "relatedTerms": [
+        "bm-external-finance",
+        "bm-retained-earnings"
+      ]
+    },
+    {
+      "id": "bm-external-finance",
+      "term": "External sources of finance",
+      "subject": "Business Management",
+      "unit": "Unit 3: Finance and Accounts",
+      "topic": "3.2 Sources of finance",
+      "definition": "Finance raised from outside the business, such as share capital, loan capital, overdrafts, trade credit, crowdfunding, leasing, microfinance and business angels.",
+      "relatedTerms": [
+        "bm-internal-finance",
+        "bm-share-capital",
+        "bm-loan-capital",
+        "bm-overdraft",
+        "bm-trade-credit",
+        "bm-crowdfunding",
+        "bm-leasing"
+      ]
+    },
+    {
+      "id": "bm-retained-earnings",
+      "term": "Retained earnings",
+      "subject": "Business Management",
+      "unit": "Unit 3: Finance and Accounts",
+      "topic": "3.2 Sources of finance",
+      "definition": "Profit kept in the business after tax and dividends have been paid, used as an internal source of finance.",
+      "relatedTerms": [
+        "bm-internal-finance",
+        "bm-income-statement"
+      ]
+    },
+    {
+      "id": "bm-share-capital",
+      "term": "Share capital",
+      "subject": "Business Management",
+      "unit": "Unit 3: Finance and Accounts",
+      "topic": "3.2 Sources of finance",
+      "definition": "Finance raised by a company through selling shares (ownership) to investors.",
+      "relatedTerms": [
+        "bm-external-finance",
+        "bm-public-limited-company",
+        "bm-loan-capital",
+        "bm-gearing"
+      ]
+    },
+    {
+      "id": "bm-loan-capital",
+      "term": "Loan capital",
+      "subject": "Business Management",
+      "unit": "Unit 3: Finance and Accounts",
+      "topic": "3.2 Sources of finance",
+      "definition": "Finance borrowed from a bank or other lender, repaid over time with interest; often secured against assets.",
+      "relatedTerms": [
+        "bm-external-finance",
+        "bm-share-capital",
+        "bm-gearing"
+      ]
+    },
+    {
+      "id": "bm-overdraft",
+      "term": "Overdraft",
+      "subject": "Business Management",
+      "unit": "Unit 3: Finance and Accounts",
+      "topic": "3.2 Sources of finance",
+      "definition": "A short-term facility allowing a business to withdraw more money from its bank account than it holds, up to an agreed limit.",
+      "relatedTerms": [
+        "bm-external-finance",
+        "bm-cash-flow"
+      ]
+    },
+    {
+      "id": "bm-trade-credit",
+      "term": "Trade credit",
+      "subject": "Business Management",
+      "unit": "Unit 3: Finance and Accounts",
+      "topic": "3.2 Sources of finance",
+      "definition": "An agreement allowing a business to buy goods or services from a supplier now and pay for them at a later date.",
+      "relatedTerms": [
+        "bm-external-finance",
+        "bm-cash-flow",
+        "bm-working-capital"
+      ]
+    },
+    {
+      "id": "bm-crowdfunding",
+      "term": "Crowdfunding",
+      "subject": "Business Management",
+      "unit": "Unit 3: Finance and Accounts",
+      "topic": "3.2 Sources of finance",
+      "definition": "Raising finance from a large number of people, each contributing a small amount, usually via an online platform.",
+      "relatedTerms": [
+        "bm-external-finance"
+      ]
+    },
+    {
+      "id": "bm-leasing",
+      "term": "Leasing",
+      "subject": "Business Management",
+      "unit": "Unit 3: Finance and Accounts",
+      "topic": "3.2 Sources of finance",
+      "definition": "Obtaining the use of an asset (e.g. equipment, vehicles) in return for regular payments, without owning it.",
+      "relatedTerms": [
+        "bm-external-finance"
+      ]
+    },
+    {
+      "id": "bm-fixed-costs",
+      "term": "Fixed costs",
+      "subject": "Business Management",
+      "unit": "Unit 3: Finance and Accounts",
+      "topic": "3.3 Costs and revenues",
+      "definition": "Costs that do not change with the level of output in the short run (e.g. rent, salaries).",
+      "relatedTerms": [
+        "bm-variable-costs",
+        "bm-break-even",
+        "bm-contribution"
+      ]
+    },
+    {
+      "id": "bm-variable-costs",
+      "term": "Variable costs",
+      "subject": "Business Management",
+      "unit": "Unit 3: Finance and Accounts",
+      "topic": "3.3 Costs and revenues",
+      "definition": "Costs that change directly with the level of output (e.g. raw materials, packaging).",
+      "relatedTerms": [
+        "bm-fixed-costs",
+        "bm-contribution",
+        "bm-break-even"
+      ]
+    },
+    {
+      "id": "bm-revenue",
+      "term": "Total revenue",
+      "subject": "Business Management",
+      "unit": "Unit 3: Finance and Accounts",
+      "topic": "3.3 Costs and revenues",
+      "definition": "The income a business receives from selling its goods or services: price × quantity sold.",
+      "relatedTerms": [
+        "bm-break-even",
+        "bm-income-statement"
+      ]
+    },
+    {
+      "id": "bm-contribution",
+      "term": "Contribution per unit",
+      "subject": "Business Management",
+      "unit": "Unit 5: Operations Management",
+      "topic": "5.5 Break-even analysis",
+      "definition": "The selling price per unit minus the variable cost per unit; the amount each unit contributes towards fixed costs and then profit.",
+      "relatedTerms": [
+        "bm-break-even",
+        "bm-fixed-costs",
+        "bm-variable-costs"
+      ]
+    },
+    {
+      "id": "bm-break-even",
+      "term": "Break-even",
+      "subject": "Business Management",
+      "unit": "Unit 5: Operations Management",
+      "topic": "5.5 Break-even analysis",
+      "definition": "The level of output at which total revenue equals total costs, so the business makes neither profit nor loss: break-even quantity = fixed costs ÷ contribution per unit.",
+      "relatedTerms": [
+        "bm-contribution",
+        "bm-margin-of-safety",
+        "bm-fixed-costs",
+        "bm-revenue",
+        "bm-variable-costs"
+      ],
+      "whyTested": "Calculation + diagram are near-certain on Paper 2."
+    },
+    {
+      "id": "bm-margin-of-safety",
+      "term": "Margin of safety",
+      "subject": "Business Management",
+      "unit": "Unit 5: Operations Management",
+      "topic": "5.5 Break-even analysis",
+      "definition": "The amount by which actual (or forecast) output exceeds the break-even level of output.",
+      "relatedTerms": [
+        "bm-break-even"
+      ]
+    },
+    {
+      "id": "bm-income-statement",
+      "term": "Income statement",
+      "subject": "Business Management",
+      "unit": "Unit 3: Finance and Accounts",
+      "topic": "3.4 Final accounts",
+      "definition": "A financial statement showing a business's revenue, costs and profit (or loss) over a period of time, usually one year.",
+      "relatedTerms": [
+        "bm-sofp",
+        "bm-gross-profit-margin",
+        "bm-retained-earnings",
+        "bm-revenue"
+      ]
+    },
+    {
+      "id": "bm-sofp",
+      "term": "Statement of financial position",
+      "subject": "Business Management",
+      "unit": "Unit 3: Finance and Accounts",
+      "topic": "3.4 Final accounts",
+      "definition": "A financial statement showing the value of a business's assets, liabilities and equity at a particular point in time.",
+      "relatedTerms": [
+        "bm-income-statement",
+        "bm-current-ratio",
+        "bm-depreciation-bm"
+      ]
+    },
+    {
+      "id": "bm-depreciation-bm",
+      "term": "Depreciation (accounting)",
+      "subject": "Business Management",
+      "unit": "Unit 3: Finance and Accounts",
+      "topic": "3.4 Final accounts",
+      "definition": "The fall in the value of a non-current asset over time due to wear and tear or obsolescence, calculated using the straight-line or units-of-production method.",
+      "relatedTerms": [
+        "bm-sofp",
+        "ec-depreciation"
+      ],
+      "whyTested": "Different from currency depreciation in Economics.",
+      "hl": true
+    },
+    {
+      "id": "bm-gross-profit-margin",
+      "term": "Gross profit margin (GPM)",
+      "subject": "Business Management",
+      "unit": "Unit 3: Finance and Accounts",
+      "topic": "3.5 Profitability and liquidity ratio analysis",
+      "definition": "Gross profit as a percentage of sales revenue: (gross profit ÷ sales revenue) × 100.",
+      "relatedTerms": [
+        "bm-profit-margin",
+        "bm-income-statement",
+        "bm-roce"
+      ]
+    },
+    {
+      "id": "bm-profit-margin",
+      "term": "Profit margin",
+      "subject": "Business Management",
+      "unit": "Unit 3: Finance and Accounts",
+      "topic": "3.5 Profitability and liquidity ratio analysis",
+      "definition": "Profit before interest and tax as a percentage of sales revenue: (profit before interest and tax ÷ sales revenue) × 100.",
+      "relatedTerms": [
+        "bm-gross-profit-margin",
+        "bm-roce"
+      ]
+    },
+    {
+      "id": "bm-roce",
+      "term": "Return on capital employed (ROCE)",
+      "subject": "Business Management",
+      "unit": "Unit 3: Finance and Accounts",
+      "topic": "3.5 Profitability and liquidity ratio analysis",
+      "definition": "A profitability ratio measuring how efficiently a business uses its capital: (profit before interest and tax ÷ capital employed) × 100, where capital employed = non-current liabilities + equity.",
+      "relatedTerms": [
+        "bm-profit-margin",
+        "bm-gross-profit-margin"
+      ]
+    },
+    {
+      "id": "bm-liquidity",
+      "term": "Liquidity",
+      "subject": "Business Management",
+      "unit": "Unit 3: Finance and Accounts",
+      "topic": "3.5 Profitability and liquidity ratio analysis",
+      "definition": "The ability of a business to pay its short-term debts (current liabilities) as they fall due.",
+      "relatedTerms": [
+        "bm-current-ratio",
+        "bm-acid-test",
+        "bm-working-capital",
+        "bm-cash-flow"
+      ]
+    },
+    {
+      "id": "bm-current-ratio",
+      "term": "Current ratio",
+      "subject": "Business Management",
+      "unit": "Unit 3: Finance and Accounts",
+      "topic": "3.5 Profitability and liquidity ratio analysis",
+      "definition": "A liquidity ratio: current assets ÷ current liabilities.",
+      "relatedTerms": [
+        "bm-acid-test",
+        "bm-liquidity",
+        "bm-sofp"
+      ]
+    },
+    {
+      "id": "bm-acid-test",
+      "term": "Acid-test (quick) ratio",
+      "subject": "Business Management",
+      "unit": "Unit 3: Finance and Accounts",
+      "topic": "3.5 Profitability and liquidity ratio analysis",
+      "definition": "A stricter liquidity ratio that excludes stock: (current assets − stock) ÷ current liabilities.",
+      "relatedTerms": [
+        "bm-current-ratio",
+        "bm-liquidity"
+      ]
+    },
+    {
+      "id": "bm-gearing",
+      "term": "Gearing ratio",
+      "subject": "Business Management",
+      "unit": "Unit 3: Finance and Accounts",
+      "topic": "3.6 Debt/equity ratio analysis (HL)",
+      "definition": "A measure of the proportion of a business's capital employed that is financed by long-term borrowing: (loan capital ÷ capital employed) × 100.",
+      "relatedTerms": [
+        "bm-loan-capital",
+        "bm-share-capital"
+      ],
+      "hl": true
+    },
+    {
+      "id": "bm-stock-turnover",
+      "term": "Stock turnover",
+      "subject": "Business Management",
+      "unit": "Unit 3: Finance and Accounts",
+      "topic": "3.6 Debt/equity ratio analysis (HL)",
+      "definition": "An efficiency ratio measuring how quickly a business sells its stock: cost of sales ÷ average stock (number of times), or (average stock ÷ cost of sales) × 365 (days).",
+      "relatedTerms": [
+        "bm-jit",
+        "bm-working-capital"
+      ],
+      "hl": true
+    },
+    {
+      "id": "bm-cash-flow",
+      "term": "Cash flow",
+      "subject": "Business Management",
+      "unit": "Unit 3: Finance and Accounts",
+      "topic": "3.7 Cash flow",
+      "definition": "The movement of money into (cash inflows) and out of (cash outflows) a business over a period of time.",
+      "relatedTerms": [
+        "bm-cash-flow-forecast",
+        "bm-working-capital",
+        "bm-liquidity",
+        "bm-overdraft",
+        "bm-trade-credit"
+      ],
+      "whyTested": "Cash ≠ profit is a favourite examiner distinction."
+    },
+    {
+      "id": "bm-cash-flow-forecast",
+      "term": "Cash flow forecast",
+      "subject": "Business Management",
+      "unit": "Unit 3: Finance and Accounts",
+      "topic": "3.7 Cash flow",
+      "definition": "A prediction of a business's future cash inflows and outflows, and its net cash flow and closing balance, over a period of time.",
+      "relatedTerms": [
+        "bm-cash-flow",
+        "bm-budget"
+      ]
+    },
+    {
+      "id": "bm-working-capital",
+      "term": "Working capital",
+      "subject": "Business Management",
+      "unit": "Unit 3: Finance and Accounts",
+      "topic": "3.7 Cash flow",
+      "definition": "The money available for the day-to-day running of a business: current assets − current liabilities.",
+      "relatedTerms": [
+        "bm-cash-flow",
+        "bm-liquidity",
+        "bm-trade-credit",
+        "bm-stock-turnover"
+      ]
+    },
+    {
+      "id": "bm-investment-appraisal",
+      "term": "Investment appraisal",
+      "subject": "Business Management",
+      "unit": "Unit 3: Finance and Accounts",
+      "topic": "3.8 Investment appraisal",
+      "definition": "The quantitative evaluation of whether an investment project is worthwhile, using methods such as payback period, average rate of return and net present value.",
+      "relatedTerms": [
+        "bm-payback",
+        "bm-arr",
+        "bm-npv"
+      ]
+    },
+    {
+      "id": "bm-payback",
+      "term": "Payback period",
+      "subject": "Business Management",
+      "unit": "Unit 3: Finance and Accounts",
+      "topic": "3.8 Investment appraisal",
+      "definition": "The length of time it takes for the net cash inflows from an investment to repay its initial cost.",
+      "relatedTerms": [
+        "bm-investment-appraisal",
+        "bm-arr"
+      ]
+    },
+    {
+      "id": "bm-arr",
+      "term": "Average rate of return (ARR)",
+      "subject": "Business Management",
+      "unit": "Unit 3: Finance and Accounts",
+      "topic": "3.8 Investment appraisal",
+      "definition": "The average annual profit of an investment as a percentage of its initial cost: ((total returns − capital cost) ÷ years of use) ÷ capital cost × 100.",
+      "relatedTerms": [
+        "bm-investment-appraisal",
+        "bm-payback",
+        "bm-npv"
+      ]
+    },
+    {
+      "id": "bm-npv",
+      "term": "Net present value (NPV)",
+      "subject": "Business Management",
+      "unit": "Unit 3: Finance and Accounts",
+      "topic": "3.8 Investment appraisal",
+      "definition": "The sum of the present (discounted) values of an investment's future net cash flows minus its initial cost; a positive NPV indicates a worthwhile investment.",
+      "relatedTerms": [
+        "bm-investment-appraisal",
+        "bm-arr"
+      ],
+      "hl": true
+    },
+    {
+      "id": "bm-budget",
+      "term": "Budget",
+      "subject": "Business Management",
+      "unit": "Unit 3: Finance and Accounts",
+      "topic": "3.9 Budgets (HL)",
+      "definition": "A financial plan of expected revenues and/or costs for a future time period, used for planning and control.",
+      "relatedTerms": [
+        "bm-variance",
+        "bm-cash-flow-forecast"
+      ],
+      "hl": true
+    },
+    {
+      "id": "bm-variance",
+      "term": "Variance",
+      "subject": "Business Management",
+      "unit": "Unit 3: Finance and Accounts",
+      "topic": "3.9 Budgets (HL)",
+      "definition": "The difference between a budgeted figure and the actual figure; favourable if it benefits profit, adverse if it reduces profit.",
+      "relatedTerms": [
+        "bm-budget"
+      ],
+      "hl": true
+    },
+    {
+      "id": "bm-marketing",
+      "term": "Marketing",
+      "subject": "Business Management",
+      "unit": "Unit 4: Marketing",
+      "topic": "4.1 Introduction to marketing",
+      "definition": "The management process of identifying, anticipating and satisfying customer needs and wants profitably.",
+      "relatedTerms": [
+        "bm-market-orientation",
+        "bm-marketing-mix",
+        "bm-market-research"
+      ]
+    },
+    {
+      "id": "bm-market-orientation",
+      "term": "Market orientation",
+      "subject": "Business Management",
+      "unit": "Unit 4: Marketing",
+      "topic": "4.1 Introduction to marketing",
+      "definition": "An outward-looking approach in which a business researches customer needs first and then develops products to meet them.",
+      "relatedTerms": [
+        "bm-product-orientation",
+        "bm-market-research",
+        "bm-marketing"
+      ]
+    },
+    {
+      "id": "bm-product-orientation",
+      "term": "Product orientation",
+      "subject": "Business Management",
+      "unit": "Unit 4: Marketing",
+      "topic": "4.1 Introduction to marketing",
+      "definition": "An inward-looking approach in which a business focuses on developing and producing the best product it can, then tries to find customers for it.",
+      "relatedTerms": [
+        "bm-market-orientation"
+      ]
+    },
+    {
+      "id": "bm-market-share",
+      "term": "Market share",
+      "subject": "Business Management",
+      "unit": "Unit 4: Marketing",
+      "topic": "4.1 Introduction to marketing",
+      "definition": "A firm's sales as a percentage of total sales in the market: (firm's sales ÷ total market sales) × 100.",
+      "relatedTerms": [
+        "bm-market-growth",
+        "ec-concentration-ratio",
+        "bm-boston-matrix"
+      ]
+    },
+    {
+      "id": "bm-market-growth",
+      "term": "Market growth",
+      "subject": "Business Management",
+      "unit": "Unit 4: Marketing",
+      "topic": "4.1 Introduction to marketing",
+      "definition": "The percentage change in the total size of a market (sales value or volume) over a period of time.",
+      "relatedTerms": [
+        "bm-market-share",
+        "bm-boston-matrix"
+      ]
+    },
+    {
+      "id": "bm-segmentation",
+      "term": "Market segmentation",
+      "subject": "Business Management",
+      "unit": "Unit 4: Marketing",
+      "topic": "4.2 Marketing planning",
+      "definition": "Dividing a market into distinct groups of consumers with similar characteristics or needs (e.g. demographic, geographic, psychographic).",
+      "relatedTerms": [
+        "bm-target-market",
+        "bm-position-map"
+      ]
+    },
+    {
+      "id": "bm-target-market",
+      "term": "Target market",
+      "subject": "Business Management",
+      "unit": "Unit 4: Marketing",
+      "topic": "4.2 Marketing planning",
+      "definition": "The specific group of consumers (segment) at which a business aims its products.",
+      "relatedTerms": [
+        "bm-segmentation",
+        "bm-niche-market",
+        "bm-mass-market"
+      ]
+    },
+    {
+      "id": "bm-niche-market",
+      "term": "Niche market",
+      "subject": "Business Management",
+      "unit": "Unit 4: Marketing",
+      "topic": "4.2 Marketing planning",
+      "definition": "A small, specialised segment of a larger market with specific needs.",
+      "relatedTerms": [
+        "bm-mass-market",
+        "bm-target-market"
+      ]
+    },
+    {
+      "id": "bm-mass-market",
+      "term": "Mass market",
+      "subject": "Business Management",
+      "unit": "Unit 4: Marketing",
+      "topic": "4.2 Marketing planning",
+      "definition": "A large market in which products are aimed at the majority of consumers, with little differentiation.",
+      "relatedTerms": [
+        "bm-niche-market",
+        "bm-target-market",
+        "bm-mass-production"
+      ]
+    },
+    {
+      "id": "bm-position-map",
+      "term": "Position (perception) map",
+      "subject": "Business Management",
+      "unit": "Unit 4: Marketing",
+      "topic": "4.2 Marketing planning",
+      "definition": "A diagram showing how consumers perceive a brand or product relative to competitors on two chosen attributes (e.g. price and quality).",
+      "relatedTerms": [
+        "bm-segmentation",
+        "bm-usp"
+      ]
+    },
+    {
+      "id": "bm-usp",
+      "term": "Unique selling point (USP)",
+      "subject": "Business Management",
+      "unit": "Unit 4: Marketing",
+      "topic": "4.2 Marketing planning",
+      "definition": "A feature of a product that differentiates it from competitors' products and gives customers a reason to buy it.",
+      "relatedTerms": [
+        "bm-position-map",
+        "bm-branding"
+      ]
+    },
+    {
+      "id": "bm-market-research",
+      "term": "Market research",
+      "subject": "Business Management",
+      "unit": "Unit 4: Marketing",
+      "topic": "4.4 Market research",
+      "definition": "The systematic collection, analysis and interpretation of information about a market, customers and competitors to support marketing decisions.",
+      "relatedTerms": [
+        "bm-primary-research",
+        "bm-secondary-research",
+        "bm-sampling",
+        "bm-market-orientation",
+        "bm-marketing"
+      ]
+    },
+    {
+      "id": "bm-primary-research",
+      "term": "Primary research",
+      "subject": "Business Management",
+      "unit": "Unit 4: Marketing",
+      "topic": "4.4 Market research",
+      "definition": "The collection of new, first-hand data for a specific purpose (e.g. surveys, interviews, focus groups, observation).",
+      "relatedTerms": [
+        "bm-secondary-research",
+        "bm-market-research",
+        "bm-sampling"
+      ]
+    },
+    {
+      "id": "bm-secondary-research",
+      "term": "Secondary research",
+      "subject": "Business Management",
+      "unit": "Unit 4: Marketing",
+      "topic": "4.4 Market research",
+      "definition": "The use of existing data that has already been collected by others for a different purpose (e.g. government statistics, market reports).",
+      "relatedTerms": [
+        "bm-primary-research",
+        "bm-market-research"
+      ]
+    },
+    {
+      "id": "bm-sampling",
+      "term": "Sampling",
+      "subject": "Business Management",
+      "unit": "Unit 4: Marketing",
+      "topic": "4.4 Market research",
+      "definition": "Selecting a representative group from a target population for primary research; methods include quota, random, stratified, cluster, snowballing and convenience sampling.",
+      "relatedTerms": [
+        "bm-primary-research",
+        "bm-market-research"
+      ]
+    },
+    {
+      "id": "bm-marketing-mix",
+      "term": "Marketing mix",
+      "subject": "Business Management",
+      "unit": "Unit 4: Marketing",
+      "topic": "4.5 The seven Ps of the marketing mix",
+      "definition": "The combination of elements a business uses to market a product: product, price, promotion and place (4 Ps), plus people, processes and physical evidence for services (7 Ps).",
+      "relatedTerms": [
+        "bm-marketing",
+        "bm-product-life-cycle",
+        "bm-pricing-strategy",
+        "bm-promotion",
+        "bm-distribution-channel"
+      ]
+    },
+    {
+      "id": "bm-product-life-cycle",
+      "term": "Product life cycle",
+      "subject": "Business Management",
+      "unit": "Unit 4: Marketing",
+      "topic": "4.5 The seven Ps of the marketing mix",
+      "definition": "The stages a product passes through over time: research and development, launch (introduction), growth, maturity, decline (and possibly extension).",
+      "relatedTerms": [
+        "bm-extension-strategies",
+        "bm-boston-matrix",
+        "bm-marketing-mix"
+      ]
+    },
+    {
+      "id": "bm-extension-strategies",
+      "term": "Extension strategies",
+      "subject": "Business Management",
+      "unit": "Unit 4: Marketing",
+      "topic": "4.5 The seven Ps of the marketing mix",
+      "definition": "Actions taken to prolong the maturity stage of a product's life cycle (e.g. new features, new markets, repackaging, price changes).",
+      "relatedTerms": [
+        "bm-product-life-cycle"
+      ]
+    },
+    {
+      "id": "bm-boston-matrix",
+      "term": "Boston Consulting Group (BCG) matrix",
+      "subject": "Business Management",
+      "unit": "Unit 4: Marketing",
+      "topic": "4.5 The seven Ps of the marketing mix",
+      "definition": "A tool for analysing a firm's product portfolio by market share and market growth, classifying products as stars, cash cows, question marks or dogs.",
+      "relatedTerms": [
+        "bm-product-life-cycle",
+        "bm-market-share",
+        "bm-market-growth"
+      ]
+    },
+    {
+      "id": "bm-branding",
+      "term": "Branding",
+      "subject": "Business Management",
+      "unit": "Unit 4: Marketing",
+      "topic": "4.5 The seven Ps of the marketing mix",
+      "definition": "The use of a name, symbol, design or image to differentiate a product from competitors and build customer recognition and loyalty.",
+      "relatedTerms": [
+        "bm-usp",
+        "bm-franchise"
+      ]
+    },
+    {
+      "id": "bm-pricing-strategy",
+      "term": "Pricing strategies",
+      "subject": "Business Management",
+      "unit": "Unit 4: Marketing",
+      "topic": "4.5 The seven Ps of the marketing mix",
+      "definition": "Methods used to set price, including cost-plus (mark-up), price penetration, loss leader, predatory, premium, dynamic, competitive, contribution and price skimming.",
+      "relatedTerms": [
+        "bm-penetration-pricing",
+        "bm-price-skimming",
+        "bm-cost-plus",
+        "bm-marketing-mix",
+        "bm-price-elasticity-bm"
+      ]
+    },
+    {
+      "id": "bm-cost-plus",
+      "term": "Cost-plus (mark-up) pricing",
+      "subject": "Business Management",
+      "unit": "Unit 4: Marketing",
+      "topic": "4.5 The seven Ps of the marketing mix",
+      "definition": "Setting price by adding a percentage mark-up to the average cost of producing the product.",
+      "relatedTerms": [
+        "bm-pricing-strategy"
+      ]
+    },
+    {
+      "id": "bm-penetration-pricing",
+      "term": "Penetration pricing",
+      "subject": "Business Management",
+      "unit": "Unit 4: Marketing",
+      "topic": "4.5 The seven Ps of the marketing mix",
+      "definition": "Setting a low initial price to enter a market and gain market share quickly, then raising it later.",
+      "relatedTerms": [
+        "bm-pricing-strategy",
+        "bm-price-skimming"
+      ]
+    },
+    {
+      "id": "bm-price-skimming",
+      "term": "Price skimming",
+      "subject": "Business Management",
+      "unit": "Unit 4: Marketing",
+      "topic": "4.5 The seven Ps of the marketing mix",
+      "definition": "Setting a high initial price for a new or innovative product to maximise revenue from early adopters, then lowering it over time.",
+      "relatedTerms": [
+        "bm-pricing-strategy",
+        "bm-penetration-pricing"
+      ]
+    },
+    {
+      "id": "bm-price-elasticity-bm",
+      "term": "Price elasticity of demand (BM)",
+      "subject": "Business Management",
+      "unit": "Unit 4: Marketing",
+      "topic": "4.5 The seven Ps of the marketing mix",
+      "definition": "The responsiveness of demand for a product to a change in its price, used by businesses to judge the effect of price changes on revenue.",
+      "relatedTerms": [
+        "ec-ped",
+        "bm-pricing-strategy"
+      ],
+      "whyTested": "Same concept as Econ PED — reuse the formula."
+    },
+    {
+      "id": "bm-promotion",
+      "term": "Promotion",
+      "subject": "Business Management",
+      "unit": "Unit 4: Marketing",
+      "topic": "4.5 The seven Ps of the marketing mix",
+      "definition": "Communicating with customers to inform, persuade and remind them about a product. Above-the-line promotion uses paid mass media; below-the-line promotion uses other targeted methods (e.g. direct mail, sales promotions); through-the-line combines both.",
+      "relatedTerms": [
+        "bm-marketing-mix",
+        "bm-social-media-marketing"
+      ]
+    },
+    {
+      "id": "bm-social-media-marketing",
+      "term": "Social media marketing",
+      "subject": "Business Management",
+      "unit": "Unit 4: Marketing",
+      "topic": "4.5 The seven Ps of the marketing mix",
+      "definition": "The use of social media platforms to promote products, engage with customers and build brand awareness.",
+      "relatedTerms": [
+        "bm-promotion",
+        "bm-e-commerce"
+      ]
+    },
+    {
+      "id": "bm-distribution-channel",
+      "term": "Distribution channel (place)",
+      "subject": "Business Management",
+      "unit": "Unit 4: Marketing",
+      "topic": "4.5 The seven Ps of the marketing mix",
+      "definition": "The route a product takes from producer to final consumer, e.g. direct, via retailers, or via wholesalers and retailers.",
+      "relatedTerms": [
+        "bm-marketing-mix",
+        "bm-e-commerce",
+        "bm-supply-chain"
+      ]
+    },
+    {
+      "id": "bm-e-commerce",
+      "term": "E-commerce",
+      "subject": "Business Management",
+      "unit": "Unit 4: Marketing",
+      "topic": "4.5 The seven Ps of the marketing mix",
+      "definition": "The buying and selling of goods and services using the internet. Types include business-to-business (B2B), business-to-consumer (B2C) and consumer-to-consumer (C2C).",
+      "relatedTerms": [
+        "bm-distribution-channel",
+        "bm-social-media-marketing"
+      ]
+    },
+    {
+      "id": "bm-operations-management",
+      "term": "Operations management",
+      "subject": "Business Management",
+      "unit": "Unit 5: Operations Management",
+      "topic": "5.1 Introduction to operations management",
+      "definition": "The management of the processes that convert inputs (resources) into outputs (goods and services) efficiently and effectively.",
+      "relatedTerms": [
+        "bm-productivity",
+        "bm-production-methods",
+        "bm-quality-management"
+      ]
+    },
+    {
+      "id": "bm-productivity",
+      "term": "Productivity",
+      "subject": "Business Management",
+      "unit": "Unit 5: Operations Management",
+      "topic": "5.6 Production planning",
+      "definition": "A measure of the efficiency of production: output per unit of input over a period of time (e.g. labour productivity = total output ÷ number of workers).",
+      "relatedTerms": [
+        "bm-operations-management",
+        "bm-capacity-utilisation",
+        "bm-lean-production"
+      ]
+    },
+    {
+      "id": "bm-production-methods",
+      "term": "Operations (production) methods",
+      "subject": "Business Management",
+      "unit": "Unit 5: Operations Management",
+      "topic": "5.2 Operations methods",
+      "definition": "The ways in which a business organises production: job, batch, mass/flow, mass customisation.",
+      "relatedTerms": [
+        "bm-job-production",
+        "bm-batch-production",
+        "bm-mass-production",
+        "bm-operations-management"
+      ]
+    },
+    {
+      "id": "bm-job-production",
+      "term": "Job production",
+      "subject": "Business Management",
+      "unit": "Unit 5: Operations Management",
+      "topic": "5.2 Operations methods",
+      "definition": "Producing a single, unique product to an individual customer's specification.",
+      "relatedTerms": [
+        "bm-production-methods",
+        "bm-batch-production"
+      ]
+    },
+    {
+      "id": "bm-batch-production",
+      "term": "Batch production",
+      "subject": "Business Management",
+      "unit": "Unit 5: Operations Management",
+      "topic": "5.2 Operations methods",
+      "definition": "Producing a limited number of identical products together as a group (batch), before switching to a different batch.",
+      "relatedTerms": [
+        "bm-production-methods",
+        "bm-job-production",
+        "bm-mass-production"
+      ]
+    },
+    {
+      "id": "bm-mass-production",
+      "term": "Mass / flow production",
+      "subject": "Business Management",
+      "unit": "Unit 5: Operations Management",
+      "topic": "5.2 Operations methods",
+      "definition": "Producing large quantities of standardised products on a continuous production line, often using automation.",
+      "relatedTerms": [
+        "bm-production-methods",
+        "bm-batch-production",
+        "bm-mass-market",
+        "bm-economies-of-scale"
+      ]
+    },
+    {
+      "id": "bm-lean-production",
+      "term": "Lean production",
+      "subject": "Business Management",
+      "unit": "Unit 5: Operations Management",
+      "topic": "5.3 Lean production and quality management (HL)",
+      "definition": "An approach to operations that aims to minimise all forms of waste (time, materials, space, labour) while maintaining or improving quality; methods include kaizen, JIT, kanban and andon.",
+      "relatedTerms": [
+        "bm-kaizen",
+        "bm-jit",
+        "bm-productivity",
+        "bm-tqm"
+      ],
+      "hl": true
+    },
+    {
+      "id": "bm-kaizen",
+      "term": "Kaizen",
+      "subject": "Business Management",
+      "unit": "Unit 5: Operations Management",
+      "topic": "5.3 Lean production and quality management (HL)",
+      "definition": "Continuous improvement: a philosophy of making small, incremental improvements to processes, involving all employees.",
+      "relatedTerms": [
+        "bm-lean-production",
+        "bm-tqm"
+      ],
+      "hl": true
+    },
+    {
+      "id": "bm-jit",
+      "term": "Just-in-time (JIT)",
+      "subject": "Business Management",
+      "unit": "Unit 5: Operations Management",
+      "topic": "5.6 Production planning",
+      "definition": "A stock control system in which materials and components arrive exactly when needed in production, so no buffer stock is held.",
+      "relatedTerms": [
+        "bm-jic",
+        "bm-lean-production",
+        "bm-stock-turnover",
+        "bm-supply-chain"
+      ]
+    },
+    {
+      "id": "bm-jic",
+      "term": "Just-in-case (JIC)",
+      "subject": "Business Management",
+      "unit": "Unit 5: Operations Management",
+      "topic": "5.6 Production planning",
+      "definition": "A stock control system in which a business holds buffer stock to cover unexpected demand or supply disruptions.",
+      "relatedTerms": [
+        "bm-jit",
+        "bm-supply-chain"
+      ]
+    },
+    {
+      "id": "bm-quality-management",
+      "term": "Quality",
+      "subject": "Business Management",
+      "unit": "Unit 5: Operations Management",
+      "topic": "5.3 Lean production and quality management (HL)",
+      "definition": "The degree to which a good or service meets or exceeds customer expectations and is fit for purpose.",
+      "relatedTerms": [
+        "bm-quality-control",
+        "bm-quality-assurance",
+        "bm-tqm",
+        "bm-benchmarking",
+        "bm-operations-management"
+      ]
+    },
+    {
+      "id": "bm-quality-control",
+      "term": "Quality control",
+      "subject": "Business Management",
+      "unit": "Unit 5: Operations Management",
+      "topic": "5.3 Lean production and quality management (HL)",
+      "definition": "Inspecting products at the end of production (or at stages) to detect and remove defects.",
+      "relatedTerms": [
+        "bm-quality-assurance",
+        "bm-quality-management"
+      ],
+      "whyTested": "Control = detect defects; assurance = prevent them.",
+      "hl": true
+    },
+    {
+      "id": "bm-quality-assurance",
+      "term": "Quality assurance",
+      "subject": "Business Management",
+      "unit": "Unit 5: Operations Management",
+      "topic": "5.3 Lean production and quality management (HL)",
+      "definition": "A system of preventing defects throughout the production process by setting and maintaining agreed quality standards.",
+      "relatedTerms": [
+        "bm-quality-control",
+        "bm-tqm",
+        "bm-quality-management"
+      ],
+      "hl": true
+    },
+    {
+      "id": "bm-tqm",
+      "term": "Total quality management (TQM)",
+      "subject": "Business Management",
+      "unit": "Unit 5: Operations Management",
+      "topic": "5.3 Lean production and quality management (HL)",
+      "definition": "A culture and approach in which every employee is responsible for quality at every stage of production, with the aim of zero defects.",
+      "relatedTerms": [
+        "bm-quality-assurance",
+        "bm-kaizen",
+        "bm-lean-production",
+        "bm-quality-management"
+      ],
+      "hl": true
+    },
+    {
+      "id": "bm-benchmarking",
+      "term": "Benchmarking",
+      "subject": "Business Management",
+      "unit": "Unit 5: Operations Management",
+      "topic": "5.3 Lean production and quality management (HL)",
+      "definition": "Comparing a business's processes and performance against those of the best in the industry, to identify areas for improvement.",
+      "relatedTerms": [
+        "bm-quality-management"
+      ],
+      "hl": true
+    },
+    {
+      "id": "bm-location",
+      "term": "Location decision",
+      "subject": "Business Management",
+      "unit": "Unit 5: Operations Management",
+      "topic": "5.4 Location",
+      "definition": "The choice of where to site business operations, based on quantitative factors (e.g. costs) and qualitative factors (e.g. infrastructure, local culture, government incentives).",
+      "relatedTerms": [
+        "bm-outsourcing",
+        "bm-offshoring",
+        "bm-reshoring"
+      ]
+    },
+    {
+      "id": "bm-outsourcing",
+      "term": "Outsourcing (subcontracting)",
+      "subject": "Business Management",
+      "unit": "Unit 5: Operations Management",
+      "topic": "5.4 Location",
+      "definition": "Transferring business activities that were done internally to an external provider.",
+      "relatedTerms": [
+        "bm-offshoring",
+        "bm-location"
+      ]
+    },
+    {
+      "id": "bm-offshoring",
+      "term": "Offshoring",
+      "subject": "Business Management",
+      "unit": "Unit 5: Operations Management",
+      "topic": "5.4 Location",
+      "definition": "Relocating business activities (or outsourcing them) to another country.",
+      "relatedTerms": [
+        "bm-outsourcing",
+        "bm-reshoring",
+        "bm-multinational",
+        "bm-location"
+      ]
+    },
+    {
+      "id": "bm-reshoring",
+      "term": "Reshoring (insourcing)",
+      "subject": "Business Management",
+      "unit": "Unit 5: Operations Management",
+      "topic": "5.4 Location",
+      "definition": "Bringing business activities that were previously offshored back to the home country.",
+      "relatedTerms": [
+        "bm-offshoring",
+        "bm-location"
+      ]
+    },
+    {
+      "id": "bm-supply-chain",
+      "term": "Supply chain",
+      "subject": "Business Management",
+      "unit": "Unit 5: Operations Management",
+      "topic": "5.6 Production planning",
+      "definition": "The network of organisations, activities and resources involved in moving a product from raw materials to the final consumer.",
+      "relatedTerms": [
+        "bm-jit",
+        "bm-jic",
+        "bm-distribution-channel"
+      ]
+    },
+    {
+      "id": "bm-capacity-utilisation",
+      "term": "Capacity utilisation",
+      "subject": "Business Management",
+      "unit": "Unit 5: Operations Management",
+      "topic": "5.6 Production planning",
+      "definition": "The extent to which a business uses its maximum possible output: (actual output ÷ productive capacity) × 100.",
+      "relatedTerms": [
+        "bm-productivity"
+      ],
+      "hl": true
+    },
+    {
+      "id": "bm-research-development",
+      "term": "Research and development (R&D)",
+      "subject": "Business Management",
+      "unit": "Unit 5: Operations Management",
+      "topic": "5.8 Research and development (HL)",
+      "definition": "The investigation and development of new ideas, products and processes.",
+      "relatedTerms": [
+        "bm-innovation",
+        "bm-quaternary-sector"
+      ],
+      "hl": true
+    },
+    {
+      "id": "bm-innovation",
+      "term": "Innovation",
+      "subject": "Business Management",
+      "unit": "Unit 5: Operations Management",
+      "topic": "5.8 Research and development (HL)",
+      "definition": "The commercial exploitation of a new idea: turning an invention into a product, process or service that can be sold. Types include product, process, positioning and paradigm innovation.",
+      "relatedTerms": [
+        "bm-research-development",
+        "bm-intrapreneurship"
+      ],
+      "hl": true
+    },
+    {
+      "id": "bm-crisis-management",
+      "term": "Crisis management",
+      "subject": "Business Management",
+      "unit": "Unit 5: Operations Management",
+      "topic": "5.7 Crisis management and contingency planning (HL)",
+      "definition": "The response of an organisation to an unexpected, threatening event, aiming to limit damage to the business and its stakeholders.",
+      "relatedTerms": [
+        "bm-contingency-planning"
+      ],
+      "hl": true
+    },
+    {
+      "id": "bm-contingency-planning",
+      "term": "Contingency planning",
+      "subject": "Business Management",
+      "unit": "Unit 5: Operations Management",
+      "topic": "5.7 Crisis management and contingency planning (HL)",
+      "definition": "Planning in advance for unexpected events or crises, so that the business can respond quickly and effectively.",
+      "relatedTerms": [
+        "bm-crisis-management"
+      ],
+      "hl": true
+    }
+  ]
+}

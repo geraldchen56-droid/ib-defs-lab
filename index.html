@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>IB Definitions Lab</title>
+  <meta name="description" content="AO1 definitions for IB HL Economics and HL Business Management — dictionary, flashcards and a concept graph.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='15' fill='%231e1b15'/%3E%3Ctext x='16' y='23' font-size='20' text-anchor='middle' fill='%23f4efe4' font-family='Georgia'%3E§%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    try { const t = localStorage.getItem('ibdefs.theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+  </script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true">§</span>
+      <div>
+        <h1>IB Definitions Lab</h1>
+        <p class="brand-sub">AO1 terms · HL Economics &amp; HL Business Management</p>
+      </div>
+    </div>
+    <nav class="tabs" role="tablist" aria-label="Mode">
+      <button role="tab" class="tab" data-mode="dict" aria-selected="true">Dictionary</button>
+      <button role="tab" class="tab" data-mode="cards" aria-selected="false">Flashcards</button>
+      <button role="tab" class="tab" data-mode="graph" aria-selected="false">Graph</button>
+    </nav>
+    <button class="icon-btn" id="themeToggle" title="Toggle light/dark" aria-label="Toggle light or dark theme">◐</button>
+  </header>
+
+  <main>
+    <!-- ============ DICTIONARY ============ -->
+    <section class="mode" id="mode-dict" role="tabpanel">
+      <aside class="dict-side">
+        <div class="field">
+          <input type="search" id="dictSearch" placeholder="Search terms or definitions…" autocomplete="off" aria-label="Search">
+        </div>
+        <div class="filters">
+          <select id="dictSubject" aria-label="Subject"></select>
+          <select id="dictUnit" aria-label="Unit"></select>
+          <select id="dictTopic" aria-label="Topic"></select>
+          <label class="check"><input type="checkbox" id="dictHL" checked> Include HL-only</label>
+        </div>
+        <p class="count" id="dictCount"></p>
+        <ul class="term-list" id="dictList" role="listbox" aria-label="Terms"></ul>
+      </aside>
+      <article class="dict-detail" id="dictDetail" aria-live="polite"></article>
+    </section>
+
+    <!-- ============ FLASHCARDS ============ -->
+    <section class="mode" id="mode-cards" role="tabpanel" hidden>
+      <div class="deck-builder" id="deckBuilder">
+        <div class="builder-head">
+          <h2>Build a deck</h2>
+          <p class="muted">Tick units or open them to pick individual topics. Progress is saved in this browser.</p>
+        </div>
+        <div class="builder-grid" id="builderGrid"></div>
+        <div class="builder-actions">
+          <label class="check"><input type="checkbox" id="deckHL" checked> Include HL-only</label>
+          <label class="check"><input type="checkbox" id="deckLearningOnly"> Only “still learning” &amp; unseen</label>
+          <label class="check"><input type="checkbox" id="deckShuffle" checked> Shuffle</label>
+          <span class="spacer"></span>
+          <span class="muted" id="deckSize"></span>
+          <button class="btn ghost" id="resetProgress">Reset progress</button>
+          <button class="btn primary" id="startDeck">Start deck</button>
+        </div>
+      </div>
+
+      <div class="study" id="study" hidden>
+        <div class="study-bar">
+          <button class="btn ghost" id="backToBuilder">← Decks</button>
+          <div class="progress"><div class="progress-fill" id="progressFill"></div></div>
+          <span class="counter" id="counter"></span>
+          <button class="btn ghost" id="shuffleNow" title="Shuffle remaining cards">Shuffle</button>
+        </div>
+        <div class="card-stage">
+          <button class="flashcard" id="flashcard" aria-label="Flip card">
+            <div class="card-face card-front">
+              <span class="card-meta" id="cardMetaFront"></span>
+              <h3 id="cardTerm"></h3>
+              <span class="hint">Click or press Space to flip</span>
+            </div>
+            <div class="card-face card-back">
+              <span class="card-meta" id="cardMetaBack"></span>
+              <p id="cardDef"></p>
+              <p class="card-why" id="cardWhy"></p>
+            </div>
+          </button>
+        </div>
+        <div class="grade">
+          <button class="btn learning" id="markLearning">Still learning <kbd>←</kbd></button>
+          <button class="btn known" id="markKnown">Know it <kbd>→</kbd></button>
+        </div>
+        <div class="done" id="deckDone" hidden>
+          <h3>Deck complete</h3>
+          <p id="doneStats"></p>
+          <div class="done-actions">
+            <button class="btn ghost" id="redoLearning">Redo “still learning”</button>
+            <button class="btn primary" id="redoAll">Restart deck</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ GRAPH ============ -->
+    <section class="mode" id="mode-graph" role="tabpanel" hidden>
+      <div class="graph-controls">
+        <input type="search" id="graphSearch" list="graphTerms" placeholder="Search to focus…" autocomplete="off" aria-label="Find term in graph">
+        <datalist id="graphTerms"></datalist>
+        <select id="graphSubject" aria-label="Subject filter"></select>
+        <select id="graphUnit" aria-label="Unit filter"></select>
+        <label class="check"><input type="checkbox" id="graphLabels"> All labels</label>
+        <button class="btn ghost" id="graphReset">Reset view</button>
+      </div>
+      <div class="graph-wrap">
+        <svg id="graph" aria-label="Concept graph"></svg>
+        <div class="legend" id="legend"></div>
+        <aside class="graph-panel" id="graphPanel" hidden></aside>
+      </div>
+    </section>
+  </main>
+
+  <div class="load-error" id="loadError" hidden></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
