@@ -28,6 +28,11 @@
       <button role="tab" class="tab" data-mode="cards" aria-selected="false">Flashcards</button>
       <button role="tab" class="tab" data-mode="graph" aria-selected="false">Graph</button>
     </nav>
+    <div class="subject-toggle" role="radiogroup" aria-label="Subject">
+      <button role="radio" data-subject="Economics" aria-checked="false"><span class="dot econ"></span>Economics</button>
+      <button role="radio" data-subject="Business Management" aria-checked="false"><span class="dot bm"></span>Business</button>
+      <button role="radio" data-subject="" aria-checked="true">Both</button>
+    </div>
     <button class="icon-btn" id="themeToggle" title="Toggle light/dark" aria-label="Toggle light or dark theme">◐</button>
   </header>
 
@@ -39,7 +44,6 @@
           <input type="search" id="dictSearch" placeholder="Search terms or definitions…" autocomplete="off" aria-label="Search">
         </div>
         <div class="filters">
-          <select id="dictSubject" aria-label="Subject"></select>
           <select id="dictUnit" aria-label="Unit"></select>
           <select id="dictTopic" aria-label="Topic"></select>
           <label class="check"><input type="checkbox" id="dictHL" checked> Include HL-only</label>
@@ -110,7 +114,6 @@
       <div class="graph-controls">
         <input type="search" id="graphSearch" list="graphTerms" placeholder="Search to focus…" autocomplete="off" aria-label="Find term in graph">
         <datalist id="graphTerms"></datalist>
-        <select id="graphSubject" aria-label="Subject filter"></select>
         <select id="graphUnit" aria-label="Unit filter"></select>
         <label class="check"><input type="checkbox" id="graphLabels"> All labels</label>
         <button class="btn ghost" id="graphReset">Reset view</button>

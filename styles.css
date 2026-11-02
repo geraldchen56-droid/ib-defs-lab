@@ -60,6 +60,7 @@ kbd { font: 11px var(--sans); border: 1px solid currentColor; border-radius: 4px
   background: var(--paper);
 }
 .brand { display: flex; align-items: center; gap: 12px; margin-right: auto; }
+@media (max-width: 1100px) and (min-width: 821px) { .brand-sub { display: none; } }
 .brand-mark {
   font: 600 28px/1 var(--serif); width: 40px; height: 40px; display: grid; place-items: center;
   border: 1.5px solid var(--ink); border-radius: 50%;
@@ -72,6 +73,27 @@ kbd { font: 11px var(--sans); border: 1px solid currentColor; border-radius: 4px
   font-weight: 500; color: var(--ink-2);
 }
 .tab[aria-selected="true"] { background: var(--card); color: var(--ink); box-shadow: var(--shadow); }
+.subject-toggle { display: flex; gap: 2px; padding: 3px; border-radius: 999px; border: 1px solid var(--rule); background: var(--card); }
+.subject-toggle button {
+  border: 0; background: transparent; padding: 6px 13px; border-radius: 999px; cursor: pointer;
+  font-weight: 500; font-size: 13px; color: var(--ink-2); display: inline-flex; align-items: center; gap: 7px;
+}
+.subject-toggle button:hover { color: var(--ink); }
+.subject-toggle button[aria-checked="true"] { background: var(--ink); color: var(--paper); }
+body[data-subject="econ"] .subject-toggle button[aria-checked="true"] { background: var(--econ); color: #fff; }
+body[data-subject="bm"] .subject-toggle button[aria-checked="true"] { background: var(--bm); color: #fff; }
+.subject-toggle button[aria-checked="true"] .dot { background: currentColor; }
+body[data-subject="econ"] .brand-mark { border-color: var(--econ); color: var(--econ); }
+body[data-subject="bm"] .brand-mark { border-color: var(--bm); color: var(--bm); }
+.term-list li.list-head {
+  position: sticky; top: 0; z-index: 1; cursor: default; justify-content: space-between;
+  background: var(--paper); border-radius: 0; margin-top: 6px; padding: 10px 10px 6px;
+  font: 600 11px var(--sans); letter-spacing: .08em; text-transform: uppercase; border-bottom: 1.5px solid currentColor;
+}
+.term-list li.list-head:hover { background: var(--paper); }
+.term-list li.list-head.econ { color: var(--econ); }
+.term-list li.list-head.bm { color: var(--bm); }
+.term-list li.list-head:first-child { margin-top: 0; }
 .icon-btn { border: 1px solid var(--rule); background: var(--card); width: 36px; height: 36px; border-radius: 50%; cursor: pointer; font-size: 16px; }
 
 main { flex: 1; min-height: 0; display: flex; }
@@ -241,8 +263,13 @@ input[type="search"]:focus, select:focus { border-color: var(--focus); }
   .brand { width: calc(100% - 50px); }
   .tabs { order: 3; width: 100%; justify-content: stretch; }
   .tab { flex: 1; }
+  .subject-toggle { order: 4; width: 100%; }
+  .subject-toggle button { flex: 1; justify-content: center; }
   #mode-dict { flex-direction: column; }
-  .dict-side { width: 100%; border-right: 0; border-bottom: 1px solid var(--rule); max-height: 46vh; padding: 12px 16px 0; }
+  .brand-sub { display: none; }
+  .dict-side { width: 100%; border-right: 0; border-bottom: 1px solid var(--rule); max-height: 62vh; padding: 12px 16px 0; }
+  .filters { grid-template-columns: 1fr 1fr; }
+  .filters .check { grid-column: 1 / -1; }
   .dict-detail { padding: 24px 16px 40px; }
   .definition { font-size: 18px; padding: 18px; }
   .deck-builder { padding: 20px 16px 0; }

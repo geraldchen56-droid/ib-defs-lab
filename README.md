@@ -8,6 +8,8 @@ AO1 definitions for **IB HL Economics** and **IB HL Business Management**, in on
 | **Flashcards** | Tick whole units or open them to pick individual topics, then start a deck. Click the card (or press <kbd>Space</kbd>) to flip it, then mark **Know it** (<kbd>→</kbd>) or **Still learning** (<kbd>←</kbd>). Progress is saved in your browser's `localStorage`, shown per unit, and you can build a deck of only "still learning" + unseen cards. |
 | **Graph** | A force-directed concept web (d3-force). Nodes are coloured by unit and clustered by unit; edges come from each term's `relatedTerms` (dashed edges cross between Economics and Business Management). Scroll to zoom, drag to pan, click a node to highlight its neighbours and read its definition, search to jump to a term, or filter to a single subject/unit (click a legend row as a shortcut). |
 
+The **Economics · Business · Both** switch in the top bar applies to all three modes and is remembered between visits. "Both" splits the dictionary list into a section per subject. Opening a term from the other subject (e.g. a cross-subject related term) switches the subject with it.
+
 Economics policy debates are framed only as **Monetarist/New Classical (non-interventionist) vs Keynesian (interventionist)**, matching the IB guide.
 
 ## Files

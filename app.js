@@ -16,6 +16,7 @@
 
   let DATA, TERMS = [], BY_ID = new Map(), SUBJECTS = {};
   let progress = store.get('ibdefs.progress', {}); // id -> 'known' | 'learning'
+  let SUBJECT = store.get('ibdefs.subject', ''); // '' = both subjects
 
   /* ---------------- boot ---------------- */
   fetch('data.json')
@@ -46,8 +47,10 @@
     }));
     TERMS.sort((a, b) => a.term.localeCompare(b.term));
 
+    if (SUBJECT && !SUBJECTS[SUBJECT]) SUBJECT = '';
     setupTheme();
     setupTabs();
+    setupSubjectToggle();
     Dict.init();
     Cards.init();
     Graph.init();
@@ -71,11 +74,37 @@
     const { mode, term } = parseHash();
     $$('.tab').forEach((b) => b.setAttribute('aria-selected', String(b.dataset.mode === mode)));
     $$('.mode').forEach((m) => { m.hidden = m.id !== `mode-${mode}`; });
-    if (mode === 'dict') Dict.show(term);
+    if (mode === 'dict') {
+      // opening a term from the other subject (e.g. a cross-subject chip) switches the subject with it
+      if (term && SUBJECT && BY_ID.get(term).subject !== SUBJECT) { Dict.current = term; setSubject(BY_ID.get(term).subject); }
+      Dict.show(term);
+    }
     if (mode === 'graph') Graph.activate(term);
   }
   function goTerm(id) { location.hash = `dict/${id}`; }
   function goGraph(id) { location.hash = `graph/${id}`; }
+
+  /* ---------------- subject switch (applies to every mode) ---------------- */
+  function paintSubjectToggle() {
+    $$('.subject-toggle button').forEach((b) => b.setAttribute('aria-checked', String(b.dataset.subject === SUBJECT)));
+    document.body.dataset.subject = SUBJECT ? subjClass(SUBJECT) : 'both';
+  }
+  function setupSubjectToggle() {
+    paintSubjectToggle();
+    $('.subject-toggle').addEventListener('click', (e) => {
+      const b = e.target.closest('button');
+      if (b) setSubject(b.dataset.subject);
+    });
+  }
+  function setSubject(s) {
+    if (s === SUBJECT) return;
+    SUBJECT = s;
+    store.set('ibdefs.subject', s);
+    paintSubjectToggle();
+    Dict.onSubject();
+    Cards.renderBuilder();
+    Graph.onSubject();
+  }
 
   function setupTheme() {
     $('#themeToggle').addEventListener('click', () => {
@@ -106,19 +135,17 @@
   const Dict = {
     current: null,
     init() {
-      const sub = $('#dictSubject'), unit = $('#dictUnit'), topic = $('#dictTopic');
-      fillSelect(sub, Object.keys(SUBJECTS), 'All subjects');
-      fillSelect(unit, unitsFor(''), 'All units');
-      fillSelect(topic, topicsFor('', ''), 'All topics');
-      sub.addEventListener('change', () => { fillSelect(unit, unitsFor(sub.value), 'All units'); fillSelect(topic, topicsFor(sub.value, ''), 'All topics'); this.render(); });
-      unit.addEventListener('change', () => { fillSelect(topic, topicsFor(sub.value, unit.value), 'All topics'); this.render(); });
+      const unit = $('#dictUnit'), topic = $('#dictTopic');
+      fillSelect(unit, unitsFor(SUBJECT), 'All units');
+      fillSelect(topic, topicsFor(SUBJECT, ''), 'All topics');
+      unit.addEventListener('change', () => { fillSelect(topic, topicsFor(SUBJECT, unit.value), 'All topics'); this.render(); });
       topic.addEventListener('change', () => this.render());
       $('#dictHL').addEventListener('change', () => this.render());
       $('#dictSearch').addEventListener('input', () => this.render());
       $('#dictSearch').addEventListener('keydown', (e) => {
-        if (e.key === 'Enter') { const first = $('#dictList li'); if (first) goTerm(first.dataset.id); }
+        if (e.key === 'Enter') { const first = $('#dictList li[data-id]'); if (first) goTerm(first.dataset.id); }
       });
-      $('#dictList').addEventListener('click', (e) => { const li = e.target.closest('li'); if (li) goTerm(li.dataset.id); });
+      $('#dictList').addEventListener('click', (e) => { const li = e.target.closest('li[data-id]'); if (li) goTerm(li.dataset.id); });
       $('#dictDetail').addEventListener('click', (e) => {
         const c = e.target.closest('.chip'); if (c) return goTerm(c.dataset.id);
         const g = e.target.closest('[data-graph]'); if (g) return goGraph(g.dataset.graph);
@@ -127,7 +154,7 @@
     },
     filtered() {
       const q = $('#dictSearch').value.trim().toLowerCase();
-      const s = $('#dictSubject').value, u = $('#dictUnit').value, tp = $('#dictTopic').value, hl = $('#dictHL').checked;
+      const s = SUBJECT, u = $('#dictUnit').value, tp = $('#dictTopic').value, hl = $('#dictHL').checked;
       let list = TERMS.filter((t) => (!s || t.subject === s) && (!u || t.unit === u) && (!tp || t.topic === tp) && (hl || !t.hl));
       if (q) {
         list = list.map((t) => {
@@ -149,15 +176,39 @@
         return i < 0 ? esc(s) : esc(s.slice(0, i)) + '<mark>' + esc(s.slice(i, i + q.length)) + '</mark>' + esc(s.slice(i + q.length));
       };
       $('#dictCount').textContent = `${list.length} term${list.length === 1 ? '' : 's'}`;
-      $('#dictList').innerHTML = list.map((t) => `
+      const item = (t) => `
         <li role="option" data-id="${t.id}" aria-selected="${t.id === this.current}">
           <span class="dot ${subjClass(t.subject)}"></span>
           <span><span class="t-name">${hi(t.term)}</span><span class="t-topic">${esc(t.topic)}</span></span>
-        </li>`).join('');
+        </li>`;
+      if (SUBJECT) {
+        $('#dictList').innerHTML = list.map(item).join('');
+      } else {
+        // "Both": keep the two subjects visibly separate
+        $('#dictList').innerHTML = Object.keys(SUBJECTS).map((s) => {
+          const part = list.filter((t) => t.subject === s);
+          if (!part.length) return '';
+          return `<li class="list-head ${subjClass(s)}" role="presentation"><span>${esc(s)}</span><span>${part.length}</span></li>` + part.map(item).join('');
+        }).join('');
+      }
+    },
+    onSubject() {
+      fillSelect($('#dictUnit'), unitsFor(SUBJECT), 'All units');
+      fillSelect($('#dictTopic'), topicsFor(SUBJECT, ''), 'All topics');
+      this.render();
+      $('#dictList').scrollTop = 0;
+      const cur = this.current && BY_ID.get(this.current);
+      if (cur && SUBJECT && cur.subject !== SUBJECT) {
+        this.current = null;
+        if (parseHash().mode === 'dict') location.hash = 'dict';
+        else this.show(null);
+      } else {
+        $$('#dictList li[data-id]').forEach((li) => li.setAttribute('aria-selected', String(li.dataset.id === this.current)));
+      }
     },
     show(id) {
       this.current = id;
-      $$('#dictList li').forEach((li) => li.setAttribute('aria-selected', String(li.dataset.id === id)));
+      $$('#dictList li[data-id]').forEach((li) => li.setAttribute('aria-selected', String(li.dataset.id === id)));
       const box = $('#dictDetail');
       if (!id) {
         box.innerHTML = `<div class="detail-inner"><p class="empty">Pick a term from the list, or start typing to search ${TERMS.length} definitions.</p></div>`;
@@ -236,7 +287,7 @@
     },
     renderBuilder() {
       const sel = new Set($$('.topic-check:checked').map((c) => c.value));
-      $('#builderGrid').innerHTML = Object.entries(SUBJECTS).map(([subject, units]) => `
+      $('#builderGrid').innerHTML = Object.entries(SUBJECTS).filter(([subject]) => !SUBJECT || subject === SUBJECT).map(([subject, units]) => `
         <div class="subject-col">
           <h3><span class="dot ${subjClass(subject)}"></span>${esc(subject)}</h3>
           ${units.map((unit) => {
@@ -341,10 +392,8 @@
   const Graph = {
     built: false, selected: null,
     init() {
-      fillSelect($('#graphSubject'), Object.keys(SUBJECTS), 'All subjects');
-      fillSelect($('#graphUnit'), unitsFor(''), 'All units');
-      $('#graphTerms').innerHTML = TERMS.map((t) => `<option value="${esc(t.term)}"></option>`).join('');
-      $('#graphSubject').addEventListener('change', () => { fillSelect($('#graphUnit'), unitsFor($('#graphSubject').value), 'All units'); this.build(); });
+      fillSelect($('#graphUnit'), unitsFor(SUBJECT), 'All units');
+      this.fillTerms();
       $('#graphUnit').addEventListener('change', () => this.build());
       $('#graphLabels').addEventListener('change', () => this.updateLabels());
       $('#graphReset').addEventListener('click', () => { this.select(null); this.fit(); });
@@ -363,9 +412,19 @@
         $('#graphPanel').innerHTML = '<p>The graph library (d3) failed to load — check your connection.</p>';
         return;
       }
-      if (!this.built) this.build();
+      if (!this.built || this.dirty) this.build();
       else this.resize();
       if (id) this.focusId(id);
+    },
+    fillTerms() {
+      $('#graphTerms').innerHTML = TERMS.filter((t) => !SUBJECT || t.subject === SUBJECT).map((t) => `<option value="${esc(t.term)}"></option>`).join('');
+    },
+    onSubject() {
+      fillSelect($('#graphUnit'), unitsFor(SUBJECT), 'All units');
+      this.fillTerms();
+      if (!this.built) return;
+      if ($('#mode-graph').hidden) this.dirty = true;
+      else this.build();
     },
     palette() {
       const css = getComputedStyle(document.documentElement);
@@ -385,7 +444,8 @@
     },
     build() {
       const svgEl = $('#graph');
-      const subj = $('#graphSubject').value, unit = $('#graphUnit').value;
+      this.dirty = false;
+      const subj = SUBJECT, unit = $('#graphUnit').value;
       const nodes = TERMS.filter((t) => (!subj || t.subject === subj) && (!unit || t.unit === unit)).map((t) => ({ id: t.id, t }));
       const keep = new Set(nodes.map((n) => n.id));
       const seen = new Set(), links = [];
@@ -485,7 +545,7 @@
       lg.onclick = (e) => {
         const r = e.target.closest('.lg-row'); if (!r) return;
         const s = Object.keys(SUBJECTS).find((k) => SUBJECTS[k].includes(r.dataset.unit));
-        $('#graphSubject').value = s; fillSelect($('#graphUnit'), unitsFor(s), 'All units');
+        setSubject(s);
         $('#graphUnit').value = r.dataset.unit; this.build();
       };
     },
@@ -529,9 +589,12 @@
     },
     focusId(id) {
       if (!this.nodes.some((n) => n.id === id)) {
-        // term is outside the current filter: clear filters and rebuild
-        $('#graphSubject').value = ''; fillSelect($('#graphUnit'), unitsFor(''), 'All units');
-        this.selected = id; this.build();
+        // term is outside the current filter: show its subject (or both) and rebuild
+        const s = BY_ID.get(id).subject;
+        this.selected = id;
+        if (SUBJECT && SUBJECT !== s) setSubject(s);
+        fillSelect($('#graphUnit'), unitsFor(SUBJECT), 'All units');
+        this.build();
       }
       this.select(id);
       const n = this.nodes.find((x) => x.id === id);
@@ -541,7 +604,9 @@
     },
     searchFocus(q) {
       q = q.trim().toLowerCase(); if (!q) return;
-      const t = TERMS.find((x) => x.term.toLowerCase() === q) || TERMS.find((x) => x.term.toLowerCase().startsWith(q)) || TERMS.find((x) => x.term.toLowerCase().includes(q));
+      const pool = TERMS.filter((x) => !SUBJECT || x.subject === SUBJECT);
+      const t = pool.find((x) => x.term.toLowerCase() === q) || pool.find((x) => x.term.toLowerCase().startsWith(q)) || pool.find((x) => x.term.toLowerCase().includes(q))
+        || TERMS.find((x) => x.term.toLowerCase() === q) || TERMS.find((x) => x.term.toLowerCase().startsWith(q)) || TERMS.find((x) => x.term.toLowerCase().includes(q));
       if (t) this.focusId(t.id);
     },
   };
