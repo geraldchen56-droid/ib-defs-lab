@@ -1,4 +1,4 @@
-/* IB Definitions Lab — dictionary, flashcards and concept graph.
+/* IB Definitions Lab — dictionary, flashcards, diagrams and concept graph.
    Plain JS, no build step. Data lives in data.json. */
 (() => {
   'use strict';
@@ -15,13 +15,14 @@
   };
 
   let DATA, TERMS = [], BY_ID = new Map(), SUBJECTS = {};
+  let DIAGRAMS = [], DG_BY_ID = new Map();
   let progress = store.get('ibdefs.progress', {}); // id -> 'known' | 'learning'
   let SUBJECT = store.get('ibdefs.subject', ''); // '' = both subjects
 
   /* ---------------- boot ---------------- */
-  fetch('data.json')
-    .then((r) => { if (!r.ok) throw new Error(r.status); return r.json(); })
-    .then(init)
+  const getJSON = (u) => fetch(u).then((r) => { if (!r.ok) throw new Error(`${u}: ${r.status}`); return r.json(); });
+  Promise.all([getJSON('data.json'), getJSON('diagrams.json').catch((e) => { console.warn('[diagrams]', e.message); return { diagrams: [] }; })])
+    .then(([data, dg]) => init(data, dg))
     .catch((err) => {
       const box = $('#loadError');
       box.hidden = false;
@@ -29,7 +30,7 @@
         (e.g. <code>python3 -m http.server</code> in this folder, then open <code>http://localhost:8000</code>). <span class="muted">(${esc(err.message)})</span>`;
     });
 
-  function init(data) {
+  function init(data, dg) {
     DATA = data;
     SUBJECTS = data.subjects;
     // Keep only links that point to real terms (guards against hand-edit mistakes).
@@ -46,6 +47,11 @@
       if (!o.relatedTerms.includes(t.id)) o.relatedTerms.push(t.id);
     }));
     TERMS.sort((a, b) => a.term.localeCompare(b.term));
+    DIAGRAMS = (dg.diagrams || []).map((d) => ({ ...d, relatedTerms: (d.relatedTerms || []).filter((r) => {
+      if (!BY_ID.has(r)) console.warn(`[diagrams] ${d.id} links to missing term ${r}`);
+      return BY_ID.has(r);
+    }) }));
+    DIAGRAMS.forEach((d) => DG_BY_ID.set(d.id, d));
 
     if (SUBJECT && !SUBJECTS[SUBJECT]) SUBJECT = '';
     setupTheme();
@@ -54,6 +60,7 @@
     Dict.init();
     Cards.init();
     Graph.init();
+    Diagrams.init();
     route();
     window.addEventListener('hashchange', route);
   }
@@ -63,12 +70,15 @@
     $$('.tab').forEach((b) => b.addEventListener('click', () => {
       const mode = b.dataset.mode;
       const cur = parseHash();
-      location.hash = mode === 'dict' && cur.term ? `dict/${cur.term}` : mode;
+      location.hash = mode === 'dict' && cur.term ? `dict/${cur.term}`
+        : mode === 'diagrams' && Diagrams.current ? `diagrams/${Diagrams.current}` : mode;
     }));
   }
   function parseHash() {
     const [mode, term] = location.hash.replace(/^#/, '').split('/');
-    return { mode: ['dict', 'cards', 'graph'].includes(mode) ? mode : 'dict', term: term && BY_ID.has(term) ? term : null };
+    const m = ['dict', 'cards', 'diagrams', 'graph'].includes(mode) ? mode : 'dict';
+    if (m === 'diagrams') return { mode: m, term: null, diagram: term && DG_BY_ID.has(term) ? term : null };
+    return { mode: m, term: term && BY_ID.has(term) ? term : null };
   }
   function route() {
     const { mode, term } = parseHash();
@@ -80,9 +90,11 @@
       Dict.show(term);
     }
     if (mode === 'graph') Graph.activate(term);
+    if (mode === 'diagrams') Diagrams.show(parseHash().diagram);
   }
   function goTerm(id) { location.hash = `dict/${id}`; }
   function goGraph(id) { location.hash = `graph/${id}`; }
+  function goDiagram(id) { location.hash = `diagrams/${id}`; }
 
   /* ---------------- subject switch (applies to every mode) ---------------- */
   function paintSubjectToggle() {
@@ -104,6 +116,7 @@
     Dict.onSubject();
     Cards.renderBuilder();
     Graph.onSubject();
+    Diagrams.onSubject();
   }
 
   function setupTheme() {
@@ -149,6 +162,7 @@
       $('#dictDetail').addEventListener('click', (e) => {
         const c = e.target.closest('.chip'); if (c) return goTerm(c.dataset.id);
         const g = e.target.closest('[data-graph]'); if (g) return goGraph(g.dataset.graph);
+        const dg = e.target.closest('[data-diagram]'); if (dg) return goDiagram(dg.dataset.diagram);
       });
       this.render();
     },
@@ -216,6 +230,7 @@
       }
       const t = BY_ID.get(id);
       const { same, cross } = relatedChips(t);
+      const dgs = DIAGRAMS.filter((d) => d.relatedTerms.includes(t.id));
       box.innerHTML = `
         <div class="detail-inner">
           <div class="crumbs">
@@ -231,6 +246,8 @@
             <div class="chips">${same.map(chip).join('')}</div>
             ${cross.length ? `<h3 style="margin-top:22px">Across subjects</h3><div class="chips">${cross.map(chip).join('')}</div>` : ''}
           </div>
+          ${dgs.length ? `<div class="related"><h3>Diagrams · ${dgs.length}</h3><div class="dg-thumbs">${dgs.map((d) => `
+            <button class="dg-thumb" data-diagram="${d.id}" title="${esc(d.title)}">${window.DiagramRenderer ? DiagramRenderer.render(d) : ''}<span>${esc(d.title)}</span></button>`).join('')}</div></div>` : ''}
           <div class="detail-actions">
             <button class="btn" data-graph="${t.id}">View in graph →</button>
           </div>
@@ -608,6 +625,149 @@
       const t = pool.find((x) => x.term.toLowerCase() === q) || pool.find((x) => x.term.toLowerCase().startsWith(q)) || pool.find((x) => x.term.toLowerCase().includes(q))
         || TERMS.find((x) => x.term.toLowerCase() === q) || TERMS.find((x) => x.term.toLowerCase().startsWith(q)) || TERMS.find((x) => x.term.toLowerCase().includes(q));
       if (t) this.focusId(t.id);
+    },
+  };
+
+  /* ================= DIAGRAMS ================= */
+  const Diagrams = {
+    current: null, step: 0,
+    init() {
+      const unit = $('#dgUnit');
+      fillSelect(unit, SUBJECTS.Economics || [], 'All units');
+      unit.addEventListener('change', () => this.renderList());
+      $('#dgHL').addEventListener('change', () => this.renderList());
+      $('#dgSearch').addEventListener('input', () => this.renderList());
+      $('#dgSearch').addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') { const first = $('#dgList li[data-id]'); if (first) goDiagram(first.dataset.id); }
+      });
+      $('#dgList').addEventListener('click', (e) => { const li = e.target.closest('li[data-id]'); if (li) goDiagram(li.dataset.id); });
+      $('#dgDetail').addEventListener('click', (e) => {
+        const c = e.target.closest('.chip'); if (c) return goTerm(c.dataset.id);
+        const st = e.target.closest('[data-step]'); if (st) return this.go(+st.dataset.step);
+        const a = e.target.closest('[data-act]'); if (!a) return;
+        const act = a.dataset.act;
+        if (act === 'prev') this.go(this.step - 1);
+        else if (act === 'next') this.go(this.step + 1);
+        else if (act === 'all') this.go(this.count() - 1);
+        else if (act === 'first') this.go(0);
+        else if (act === 'svg') this.download();
+        else if (act === 'econ') setSubject('Economics');
+      });
+      document.addEventListener('keydown', (e) => {
+        if ($('#mode-diagrams').hidden || !this.current || e.target.matches('input, select, textarea')) return;
+        if (e.key === 'ArrowRight') { e.preventDefault(); this.go(this.step + 1); }
+        else if (e.key === 'ArrowLeft') { e.preventDefault(); this.go(this.step - 1); }
+      });
+      this.renderList();
+    },
+    count() { const d = DG_BY_ID.get(this.current); return d ? DiagramRenderer.stepCount(d) : 1; },
+    filtered() {
+      const q = $('#dgSearch').value.trim().toLowerCase(), u = $('#dgUnit').value, hl = $('#dgHL').checked;
+      return DIAGRAMS.filter((d) => (!u || d.unit === u) && (hl || !d.hl) && (!q
+        || d.title.toLowerCase().includes(q) || d.topic.toLowerCase().includes(q) || (d.summary || '').toLowerCase().includes(q)
+        || d.relatedTerms.some((r) => BY_ID.get(r).term.toLowerCase().includes(q))));
+    },
+    renderList() {
+      const list = this.filtered();
+      $('#dgCount').textContent = `${list.length} diagram${list.length === 1 ? '' : 's'}`;
+      let lastUnit = null, lastTopic = null, html = '';
+      for (const d of list) {
+        if (d.unit !== lastUnit) { html += `<li class="list-head econ" role="presentation"><span>${esc(d.unit)}</span></li>`; lastUnit = d.unit; lastTopic = null; }
+        if (d.topic !== lastTopic) { html += `<li class="dg-topic" role="presentation">${esc(d.topic)}</li>`; lastTopic = d.topic; }
+        html += `<li role="option" data-id="${d.id}" aria-selected="${d.id === this.current}">
+          <span class="dg-ico" aria-hidden="true">${d.kind === 'flow' ? '⇄' : d.kind === 'matrix' ? '▦' : '⟋'}</span>
+          <span><span class="t-name">${esc(d.title)}</span>${d.hl ? '<span class="t-topic">HL only</span>' : ''}</span></li>`;
+      }
+      $('#dgList').innerHTML = html || '<li class="dg-topic" role="presentation">No diagrams match.</li>';
+    },
+    onSubject() { this.show(this.current); },
+    show(id) {
+      this.current = id;
+      $$('#dgList li[data-id]').forEach((li) => li.setAttribute('aria-selected', String(li.dataset.id === id)));
+      const box = $('#dgDetail');
+      if (SUBJECT === 'Business Management') {
+        box.innerHTML = `<div class="detail-inner"><p class="empty">Diagrams cover the Economics syllabus.</p>
+          <div class="detail-actions"><button class="btn" data-act="econ">Switch to Economics →</button></div></div>`;
+        return;
+      }
+      if (!id) {
+        const hl = DIAGRAMS.filter((d) => d.hl).length;
+        box.innerHTML = `<div class="detail-inner"><p class="empty">Pick a diagram — ${DIAGRAMS.length} in total, ${DIAGRAMS.length - hl} SL/HL and ${hl} HL-only. Each one builds step by step: use the buttons or the ← → keys.</p></div>`;
+        return;
+      }
+      this.step = 0;
+      const d = DG_BY_ID.get(id);
+      const rel = d.relatedTerms.map((r) => BY_ID.get(r));
+      box.innerHTML = `
+        <div class="detail-inner dg-inner">
+          <div class="crumbs">
+            <span class="tag econ">Economics</span>${d.hl ? '<span class="tag hl">HL only</span>' : ''}
+            <span>${esc(d.unit)}</span><span>›</span><span>${esc(d.topic)}</span>
+          </div>
+          <h2>${esc(d.title)}</h2>
+          ${d.summary ? `<p class="dg-summary">${esc(d.summary)}</p>` : ''}
+          <figure class="dg-figure" id="dgFigure"></figure>
+          <div class="dg-controls">
+            <button class="btn ghost" data-act="first" title="Back to start" aria-label="Back to start">⟲</button>
+            <button class="btn" data-act="prev" aria-label="Previous step">← Prev</button>
+            <span class="dg-stepnum" id="dgStepNum"></span>
+            <button class="btn primary" data-act="next" aria-label="Next step">Next →</button>
+            <button class="btn ghost" data-act="all">Show all</button>
+            <span class="spacer"></span>
+            <button class="btn ghost" data-act="svg" title="Download as SVG">Download SVG</button>
+          </div>
+          <ol class="dg-steps" id="dgSteps">${(d.steps || []).map((s, i) => `<li data-step="${i}">${esc(s)}</li>`).join('')}</ol>
+          ${d.examTips && d.examTips.length ? `<div class="dg-tips"><h3>Exam tips</h3><ul>${d.examTips.map((t) => `<li>${esc(t)}</li>`).join('')}</ul></div>` : ''}
+          ${rel.length ? `<div class="related"><h3>Terms on this diagram · ${rel.length}</h3><div class="chips">${rel.map(chip).join('')}</div></div>` : ''}
+        </div>`;
+      box.scrollTop = 0;
+      this.paint();
+      const sel = $(`#dgList li[data-id="${id}"]`);
+      if (sel) sel.scrollIntoView({ block: 'nearest' });
+    },
+    go(n) { this.step = Math.max(0, Math.min(this.count() - 1, n)); this.paint(); },
+    paint() {
+      const d = DG_BY_ID.get(this.current); if (!d) return;
+      const n = this.count();
+      $('#dgFigure').innerHTML = DiagramRenderer.render(d, this.step);
+      $('#dgStepNum').textContent = `Step ${this.step + 1} / ${n}`;
+      $('[data-act="prev"]').disabled = this.step === 0;
+      $('[data-act="next"]').disabled = this.step >= n - 1;
+      $$('#dgSteps li').forEach((li) => {
+        const i = +li.dataset.step;
+        li.classList.toggle('is-done', i < this.step);
+        li.classList.toggle('is-now', i === this.step);
+      });
+    },
+    download() {
+      const d = DG_BY_ID.get(this.current); if (!d) return;
+      // Render the finished diagram off-screen with the page's styles, then inline the computed
+      // styles so the file looks the same in any SVG viewer (no CSS variables or classes needed).
+      const host = document.createElement('div');
+      host.style.cssText = 'position:fixed;left:-9999px;top:0;width:900px';
+      host.innerHTML = DiagramRenderer.render(d);
+      document.body.appendChild(host);
+      const root = host.firstElementChild;
+      const PROPS = ['fill', 'fill-opacity', 'stroke', 'stroke-width', 'stroke-dasharray', 'stroke-linecap', 'stroke-linejoin', 'opacity',
+        'font-family', 'font-size', 'font-weight', 'font-style', 'paint-order'];
+      root.querySelectorAll('*').forEach((el) => {
+        const c = getComputedStyle(el);
+        if (c.display === 'none' && el.tagName !== 'marker' && !el.closest('marker')) { el.remove(); return; }
+        // color-mix() resolves to color(srgb r g b / a), which many SVG viewers don't understand
+        const rgb = (val) => val.replace(/color\(srgb ([\d.e-]+) ([\d.e-]+) ([\d.e-]+)(?: \/ ([\d.e-]+))?\)/g,
+          (m, r, g, bl, al) => `rgba(${Math.round(r * 255)},${Math.round(g * 255)},${Math.round(bl * 255)},${al === undefined ? 1 : al})`);
+        el.setAttribute('style', PROPS.map((k) => `${k}:${rgb(c.getPropertyValue(k))}`).join(';'));
+        el.removeAttribute('class');
+      });
+      root.removeAttribute('class');
+      root.setAttribute('style', `background:${getComputedStyle(document.documentElement).getPropertyValue('--card').trim()}`);
+      const svg = '<?xml version="1.0" encoding="UTF-8"?>\n' + new XMLSerializer().serializeToString(root);
+      host.remove();
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(new Blob([svg], { type: 'image/svg+xml' }));
+      a.download = `${d.id.replace(/^dg-/, '')}.svg`;
+      a.click();
+      setTimeout(() => URL.revokeObjectURL(a.href), 1000);
     },
   };
 })();

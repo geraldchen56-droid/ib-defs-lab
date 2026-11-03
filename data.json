@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-11-02",
+  "updated": "2026-11-03",
   "subjects": {
     "Economics": [
       "Introduction to Economics",
@@ -28,7 +28,12 @@
       "relatedTerms": [
         "ec-opportunity-cost",
         "ec-factors-of-production",
-        "ec-ppc"
+        "ec-ppc",
+        "ec-economics",
+        "ec-free-good",
+        "ec-economic-good",
+        "ec-basic-economic-questions",
+        "ec-sustainability"
       ],
       "whyTested": "Core concept that every Paper 1 'define' answer chain starts from."
     },
@@ -42,7 +47,14 @@
       "relatedTerms": [
         "ec-scarcity",
         "ec-ppc",
-        "ec-comparative-advantage"
+        "ec-comparative-advantage",
+        "ec-economics",
+        "ec-free-good",
+        "ec-economic-good",
+        "ec-competitive-supply",
+        "ec-economic-costs",
+        "ec-debt-servicing",
+        "ec-opportunity-cost-trade"
       ],
       "whyTested": "Examiners want 'next best alternative forgone', not just 'what you give up'."
     },
@@ -56,7 +68,12 @@
       "relatedTerms": [
         "ec-scarcity",
         "ec-ppc",
-        "bm-entrepreneurship"
+        "bm-entrepreneurship",
+        "ec-land",
+        "ec-labour",
+        "ec-capital",
+        "ec-entrepreneurship",
+        "ec-income-approach"
       ]
     },
     {
@@ -70,7 +87,12 @@
         "ec-scarcity",
         "ec-opportunity-cost",
         "ec-economic-growth",
-        "ec-factors-of-production"
+        "ec-factors-of-production",
+        "ec-economic-model",
+        "ec-productive-efficiency",
+        "ec-actual-growth",
+        "ec-potential-growth",
+        "ec-opportunity-cost-trade"
       ],
       "whyTested": "Used to illustrate scarcity, choice, opportunity cost, unemployment and growth on one diagram."
     },
@@ -83,7 +105,8 @@
       "definition": "Latin for 'all other things being equal'; the assumption that only the variable being studied changes while all other influencing factors are held constant.",
       "relatedTerms": [
         "ec-law-of-demand",
-        "ec-law-of-supply"
+        "ec-law-of-supply",
+        "ec-economic-model"
       ]
     },
     {
@@ -95,7 +118,263 @@
       "definition": "Positive statements are objective claims about what is, which can be tested against evidence; normative statements are subjective value judgements about what ought to be.",
       "relatedTerms": [
         "ec-keynesian",
-        "ec-new-classical"
+        "ec-new-classical",
+        "ec-economic-model"
+      ]
+    },
+    {
+      "id": "ec-economics",
+      "term": "Economics",
+      "subject": "Economics",
+      "unit": "Introduction to Economics",
+      "topic": "Foundations of economics",
+      "definition": "The study of how individuals, firms and governments make choices about the allocation of scarce resources to satisfy unlimited human needs and wants.",
+      "relatedTerms": [
+        "ec-scarcity",
+        "ec-opportunity-cost",
+        "ec-basic-economic-questions"
+      ]
+    },
+    {
+      "id": "ec-free-good",
+      "term": "Free good",
+      "subject": "Economics",
+      "unit": "Introduction to Economics",
+      "topic": "Foundations of economics",
+      "definition": "A good that is not scarce, so it has a zero opportunity cost: using it does not require giving up anything else (e.g. air).",
+      "relatedTerms": [
+        "ec-economic-good",
+        "ec-scarcity",
+        "ec-opportunity-cost"
+      ]
+    },
+    {
+      "id": "ec-economic-good",
+      "term": "Economic good",
+      "subject": "Economics",
+      "unit": "Introduction to Economics",
+      "topic": "Foundations of economics",
+      "definition": "A good that is scarce relative to the demand for it, so producing or consuming it involves an opportunity cost.",
+      "relatedTerms": [
+        "ec-free-good",
+        "ec-scarcity",
+        "ec-opportunity-cost"
+      ]
+    },
+    {
+      "id": "ec-land",
+      "term": "Land",
+      "subject": "Economics",
+      "unit": "Introduction to Economics",
+      "topic": "Foundations of economics",
+      "definition": "The factor of production consisting of all natural resources, including the earth's surface, minerals, forests, water and fish stocks; its reward is rent.",
+      "relatedTerms": [
+        "ec-factors-of-production",
+        "ec-labour",
+        "ec-capital",
+        "ec-entrepreneurship"
+      ]
+    },
+    {
+      "id": "ec-labour",
+      "term": "Labour",
+      "subject": "Economics",
+      "unit": "Introduction to Economics",
+      "topic": "Foundations of economics",
+      "definition": "The factor of production consisting of the physical and mental effort that people contribute to production; its reward is wages.",
+      "relatedTerms": [
+        "ec-factors-of-production",
+        "ec-land",
+        "ec-human-capital",
+        "ec-minimum-wage",
+        "ec-labour-force"
+      ]
+    },
+    {
+      "id": "ec-capital",
+      "term": "Capital (physical capital)",
+      "subject": "Economics",
+      "unit": "Introduction to Economics",
+      "topic": "Foundations of economics",
+      "definition": "The factor of production consisting of man-made goods used to produce other goods and services, such as machinery, tools and buildings; its reward is interest.",
+      "relatedTerms": [
+        "ec-factors-of-production",
+        "ec-human-capital",
+        "ec-investment",
+        "ec-land"
+      ]
+    },
+    {
+      "id": "ec-entrepreneurship",
+      "term": "Entrepreneurship",
+      "subject": "Economics",
+      "unit": "Introduction to Economics",
+      "topic": "Foundations of economics",
+      "definition": "The factor of production consisting of the ability to organise the other factors of production, innovate and take risks in order to produce goods and services; its reward is profit.",
+      "relatedTerms": [
+        "ec-factors-of-production",
+        "ec-land",
+        "ec-normal-profit"
+      ]
+    },
+    {
+      "id": "ec-human-capital",
+      "term": "Human capital",
+      "subject": "Economics",
+      "unit": "Introduction to Economics",
+      "topic": "Foundations of economics",
+      "definition": "The skills, knowledge, abilities and good health of the labour force, acquired through education, training and healthcare, which raise labour productivity.",
+      "relatedTerms": [
+        "ec-labour",
+        "ec-capital",
+        "ec-interventionist-supply-side",
+        "ec-economic-development",
+        "ec-equality-of-opportunity",
+        "ec-gender-inequality",
+        "ec-womens-empowerment"
+      ],
+      "whyTested": "Feeds both supply-side policy (LRAS shift) and development strategy answers."
+    },
+    {
+      "id": "ec-basic-economic-questions",
+      "term": "Basic economic questions",
+      "subject": "Economics",
+      "unit": "Introduction to Economics",
+      "topic": "Foundations of economics",
+      "definition": "The three questions every economy must answer because of scarcity: what to produce, how to produce it, and for whom to produce it.",
+      "relatedTerms": [
+        "ec-scarcity",
+        "ec-economics",
+        "ec-free-market-economy",
+        "ec-planned-economy"
+      ]
+    },
+    {
+      "id": "ec-free-market-economy",
+      "term": "Free market economy",
+      "subject": "Economics",
+      "unit": "Introduction to Economics",
+      "topic": "Foundations of economics",
+      "definition": "An economic system in which resources are privately owned and the basic economic questions are answered through the price mechanism, with minimal government intervention.",
+      "relatedTerms": [
+        "ec-planned-economy",
+        "ec-mixed-economy",
+        "ec-price-mechanism",
+        "ec-basic-economic-questions"
+      ]
+    },
+    {
+      "id": "ec-planned-economy",
+      "term": "Planned (command) economy",
+      "subject": "Economics",
+      "unit": "Introduction to Economics",
+      "topic": "Foundations of economics",
+      "definition": "An economic system in which resources are owned by the state and the government decides what, how and for whom to produce.",
+      "relatedTerms": [
+        "ec-free-market-economy",
+        "ec-mixed-economy",
+        "ec-basic-economic-questions"
+      ]
+    },
+    {
+      "id": "ec-mixed-economy",
+      "term": "Mixed economy",
+      "subject": "Economics",
+      "unit": "Introduction to Economics",
+      "topic": "Foundations of economics",
+      "definition": "An economic system in which both the price mechanism and the government allocate resources, with a private sector and a public sector operating side by side.",
+      "relatedTerms": [
+        "ec-free-market-economy",
+        "ec-planned-economy",
+        "ec-direct-provision"
+      ]
+    },
+    {
+      "id": "ec-economic-model",
+      "term": "Economic model",
+      "subject": "Economics",
+      "unit": "Introduction to Economics",
+      "topic": "Foundations of economics",
+      "definition": "A simplified representation of reality, built on assumptions such as ceteris paribus, used to explain and predict economic behaviour.",
+      "relatedTerms": [
+        "ec-ceteris-paribus",
+        "ec-ppc",
+        "ec-circular-flow",
+        "ec-positive-normative"
+      ]
+    },
+    {
+      "id": "ec-productive-efficiency",
+      "term": "Productive efficiency",
+      "subject": "Economics",
+      "unit": "Introduction to Economics",
+      "topic": "Foundations of economics",
+      "definition": "A situation where output is produced at the lowest possible cost: for an economy, any point on the PPC; for a firm, producing where average total cost is at its minimum (MC = ATC).",
+      "relatedTerms": [
+        "ec-ppc",
+        "ec-allocative-efficiency",
+        "ec-average-total-cost",
+        "ec-perfect-competition"
+      ],
+      "whyTested": "Often confused with allocative efficiency — productive is about cost, allocative is about what society wants (P = MC)."
+    },
+    {
+      "id": "ec-actual-growth",
+      "term": "Actual economic growth",
+      "subject": "Economics",
+      "unit": "Introduction to Economics",
+      "topic": "Foundations of economics",
+      "definition": "An increase in real output produced by an economy, shown by a movement from a point inside the PPC towards the PPC (or a rightward shift of AD).",
+      "relatedTerms": [
+        "ec-potential-growth",
+        "ec-economic-growth",
+        "ec-ppc",
+        "ec-real-gdp"
+      ]
+    },
+    {
+      "id": "ec-potential-growth",
+      "term": "Potential economic growth",
+      "subject": "Economics",
+      "unit": "Introduction to Economics",
+      "topic": "Foundations of economics",
+      "definition": "An increase in an economy's productive capacity resulting from an increase in the quantity or quality of factors of production, shown by an outward shift of the PPC (or a rightward shift of LRAS).",
+      "relatedTerms": [
+        "ec-actual-growth",
+        "ec-ppc",
+        "ec-lras",
+        "ec-potential-output",
+        "ec-supply-side-policies"
+      ]
+    },
+    {
+      "id": "ec-sustainability",
+      "term": "Sustainability",
+      "subject": "Economics",
+      "unit": "Introduction to Economics",
+      "topic": "Foundations of economics",
+      "definition": "The ability of the present generation to meet its needs without compromising the ability of future generations to meet their own needs, particularly with respect to the use of natural resources.",
+      "relatedTerms": [
+        "ec-sustainable-development",
+        "ec-common-pool-resource",
+        "ec-scarcity",
+        "ec-tragedy-of-commons",
+        "ec-green-gdp",
+        "ec-happy-planet-index"
+      ]
+    },
+    {
+      "id": "ec-economic-wellbeing",
+      "term": "Economic well-being",
+      "subject": "Economics",
+      "unit": "Introduction to Economics",
+      "topic": "Foundations of economics",
+      "definition": "The level of prosperity and quality of life enjoyed by people, including economic security, a reasonable standard of living and the ability to meet needs and wants.",
+      "relatedTerms": [
+        "ec-economic-development",
+        "ec-equity",
+        "ec-hdi",
+        "ec-happiness-index"
       ]
     },
     {
@@ -109,7 +388,12 @@
         "ec-law-of-demand",
         "ec-supply",
         "ec-market-equilibrium",
-        "ec-ped"
+        "ec-ped",
+        "ec-market",
+        "ec-determinants-of-demand",
+        "ec-linear-demand-function",
+        "ec-marginal-private-benefit",
+        "ec-average-revenue"
       ],
       "whyTested": "'Willing AND able' is the phrase examiners look for."
     },
@@ -122,7 +406,12 @@
       "definition": "As the price of a good falls, the quantity demanded rises, and vice versa, ceteris paribus; there is an inverse (negative) relationship between price and quantity demanded.",
       "relatedTerms": [
         "ec-demand",
-        "ec-ceteris-paribus"
+        "ec-ceteris-paribus",
+        "ec-movement-vs-shift",
+        "ec-marginal-utility",
+        "ec-diminishing-marginal-utility",
+        "ec-income-effect",
+        "ec-substitution-effect"
       ]
     },
     {
@@ -136,7 +425,12 @@
         "ec-law-of-supply",
         "ec-demand",
         "ec-market-equilibrium",
-        "ec-pes"
+        "ec-pes",
+        "ec-market",
+        "ec-determinants-of-supply",
+        "ec-linear-supply-function",
+        "ec-pes-determinants",
+        "ec-marginal-private-cost"
       ]
     },
     {
@@ -148,7 +442,10 @@
       "definition": "As the price of a good rises, the quantity supplied rises, and vice versa, ceteris paribus; there is a direct (positive) relationship between price and quantity supplied.",
       "relatedTerms": [
         "ec-supply",
-        "ec-ceteris-paribus"
+        "ec-ceteris-paribus",
+        "ec-movement-vs-shift",
+        "ec-diminishing-marginal-returns",
+        "ec-incentive-function"
       ]
     },
     {
@@ -163,7 +460,11 @@
         "ec-supply",
         "ec-excess-demand",
         "ec-excess-supply",
-        "ec-allocative-efficiency"
+        "ec-allocative-efficiency",
+        "ec-market",
+        "ec-linear-demand-function",
+        "ec-linear-supply-function",
+        "ec-price-mechanism"
       ]
     },
     {
@@ -176,7 +477,9 @@
       "relatedTerms": [
         "ec-market-equilibrium",
         "ec-excess-supply",
-        "ec-price-ceiling"
+        "ec-price-ceiling",
+        "ec-rationing-function",
+        "ec-parallel-market"
       ]
     },
     {
@@ -189,7 +492,9 @@
       "relatedTerms": [
         "ec-market-equilibrium",
         "ec-excess-demand",
-        "ec-price-floor"
+        "ec-price-floor",
+        "ec-minimum-wage",
+        "ec-price-support"
       ]
     },
     {
@@ -202,7 +507,8 @@
       "relatedTerms": [
         "ec-producer-surplus",
         "ec-allocative-efficiency",
-        "ec-welfare-loss"
+        "ec-welfare-loss",
+        "ec-social-surplus"
       ],
       "whyTested": "Needed to identify welfare areas on intervention diagrams."
     },
@@ -216,7 +522,8 @@
       "relatedTerms": [
         "ec-consumer-surplus",
         "ec-allocative-efficiency",
-        "ec-welfare-loss"
+        "ec-welfare-loss",
+        "ec-social-surplus"
       ]
     },
     {
@@ -232,9 +539,267 @@
         "ec-producer-surplus",
         "ec-market-failure",
         "ec-welfare-loss",
-        "ec-perfect-competition"
+        "ec-perfect-competition",
+        "ec-productive-efficiency",
+        "ec-social-surplus",
+        "ec-social-optimum"
       ],
       "whyTested": "MSB = MSC is the condition examiners expect."
+    },
+    {
+      "id": "ec-market",
+      "term": "Market",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Demand and supply",
+      "definition": "Any arrangement that allows buyers and sellers to interact and exchange goods, services or factors of production at an agreed price.",
+      "relatedTerms": [
+        "ec-demand",
+        "ec-supply",
+        "ec-market-equilibrium",
+        "ec-price-mechanism"
+      ]
+    },
+    {
+      "id": "ec-determinants-of-demand",
+      "term": "Non-price determinants of demand",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Demand and supply",
+      "definition": "Factors other than the good's own price that shift the demand curve: income, prices of related goods (substitutes and complements), tastes and preferences, future price expectations and the number of consumers.",
+      "relatedTerms": [
+        "ec-demand",
+        "ec-movement-vs-shift",
+        "ec-normal-good",
+        "ec-substitutes",
+        "ec-complements"
+      ],
+      "whyTested": "A change in own price is a movement, never a shift — the classic lost mark."
+    },
+    {
+      "id": "ec-determinants-of-supply",
+      "term": "Non-price determinants of supply",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Demand and supply",
+      "definition": "Factors other than the good's own price that shift the supply curve: costs of factors of production, technology, prices of related goods, producer expectations, indirect taxes and subsidies, the number of firms and supply shocks.",
+      "relatedTerms": [
+        "ec-supply",
+        "ec-movement-vs-shift",
+        "ec-indirect-tax",
+        "ec-subsidy",
+        "ec-joint-supply",
+        "ec-competitive-supply"
+      ]
+    },
+    {
+      "id": "ec-movement-vs-shift",
+      "term": "Movement along vs shift of a curve",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Demand and supply",
+      "definition": "A movement along a demand or supply curve is caused only by a change in the good's own price (a change in quantity demanded or supplied); a shift of the curve is caused by a change in a non-price determinant (a change in demand or supply).",
+      "relatedTerms": [
+        "ec-determinants-of-demand",
+        "ec-determinants-of-supply",
+        "ec-law-of-demand",
+        "ec-law-of-supply"
+      ]
+    },
+    {
+      "id": "ec-joint-supply",
+      "term": "Joint supply",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Demand and supply",
+      "definition": "A situation where producing one good automatically produces another (e.g. beef and leather), so an increase in the price of one increases the supply of the other.",
+      "relatedTerms": [
+        "ec-competitive-supply",
+        "ec-determinants-of-supply"
+      ]
+    },
+    {
+      "id": "ec-competitive-supply",
+      "term": "Competitive supply",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Demand and supply",
+      "definition": "A situation where producers can use the same resources to produce alternative goods, so an increase in the price of one good reduces the supply of the other.",
+      "relatedTerms": [
+        "ec-joint-supply",
+        "ec-determinants-of-supply",
+        "ec-opportunity-cost"
+      ]
+    },
+    {
+      "id": "ec-marginal-utility",
+      "term": "Marginal utility",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Demand and supply",
+      "definition": "The additional satisfaction (utility) a consumer gains from consuming one more unit of a good or service.",
+      "relatedTerms": [
+        "ec-diminishing-marginal-utility",
+        "ec-law-of-demand",
+        "ec-utility-maximisation"
+      ],
+      "hl": true
+    },
+    {
+      "id": "ec-diminishing-marginal-utility",
+      "term": "Law of diminishing marginal utility",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Demand and supply",
+      "definition": "As a consumer consumes more units of a good, ceteris paribus, the additional satisfaction gained from each extra unit falls, which helps explain the downward-sloping demand curve.",
+      "relatedTerms": [
+        "ec-marginal-utility",
+        "ec-law-of-demand",
+        "ec-income-effect"
+      ],
+      "hl": true
+    },
+    {
+      "id": "ec-income-effect",
+      "term": "Income effect",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Demand and supply",
+      "definition": "The change in quantity demanded resulting from a change in consumers' real income (purchasing power) caused by a change in the good's price.",
+      "relatedTerms": [
+        "ec-substitution-effect",
+        "ec-law-of-demand",
+        "ec-diminishing-marginal-utility"
+      ],
+      "hl": true
+    },
+    {
+      "id": "ec-substitution-effect",
+      "term": "Substitution effect",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Demand and supply",
+      "definition": "The change in quantity demanded resulting from a change in the good's price relative to substitutes: when its price falls it becomes relatively cheaper, so consumers switch towards it.",
+      "relatedTerms": [
+        "ec-income-effect",
+        "ec-law-of-demand",
+        "ec-substitutes"
+      ],
+      "hl": true
+    },
+    {
+      "id": "ec-linear-demand-function",
+      "term": "Linear demand function",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Demand and supply",
+      "definition": "An equation showing quantity demanded as a linear function of price, Qd = a − bP, where a is the quantity demanded at zero price (non-price determinants) and −b is the slope (ΔQd/ΔP).",
+      "relatedTerms": [
+        "ec-demand",
+        "ec-linear-supply-function",
+        "ec-market-equilibrium",
+        "ec-ped-linear-demand"
+      ],
+      "whyTested": "A change in a shifts the curve; a change in b changes its steepness.",
+      "hl": true
+    },
+    {
+      "id": "ec-linear-supply-function",
+      "term": "Linear supply function",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Demand and supply",
+      "definition": "An equation showing quantity supplied as a linear function of price, Qs = c + dP, where c is the quantity supplied at zero price and d is the slope (ΔQs/ΔP).",
+      "relatedTerms": [
+        "ec-supply",
+        "ec-linear-demand-function",
+        "ec-market-equilibrium",
+        "ec-pes-linear-supply"
+      ],
+      "hl": true
+    },
+    {
+      "id": "ec-diminishing-marginal-returns",
+      "term": "Law of diminishing marginal returns",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Demand and supply",
+      "definition": "In the short run, as more units of a variable factor are added to a fixed factor, the extra output (marginal product) from each additional unit eventually falls, causing marginal cost to rise.",
+      "relatedTerms": [
+        "ec-marginal-cost",
+        "ec-short-run",
+        "ec-law-of-supply"
+      ],
+      "hl": true
+    },
+    {
+      "id": "ec-price-mechanism",
+      "term": "Price mechanism",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Demand and supply",
+      "definition": "The system in which the forces of demand and supply determine prices, and those prices allocate scarce resources through their signalling, incentive and rationing functions.",
+      "relatedTerms": [
+        "ec-signalling-function",
+        "ec-incentive-function",
+        "ec-rationing-function",
+        "ec-market-equilibrium",
+        "ec-free-market-economy",
+        "ec-market"
+      ]
+    },
+    {
+      "id": "ec-signalling-function",
+      "term": "Signalling function of price",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Demand and supply",
+      "definition": "The role of price changes in communicating information to buyers and sellers about where resources are wanted (rising price) or not wanted (falling price).",
+      "relatedTerms": [
+        "ec-price-mechanism",
+        "ec-incentive-function",
+        "ec-rationing-function"
+      ]
+    },
+    {
+      "id": "ec-incentive-function",
+      "term": "Incentive function of price",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Demand and supply",
+      "definition": "The role of price changes in motivating producers and consumers to change their behaviour, e.g. a higher price gives producers an incentive to supply more.",
+      "relatedTerms": [
+        "ec-price-mechanism",
+        "ec-signalling-function",
+        "ec-law-of-supply"
+      ]
+    },
+    {
+      "id": "ec-rationing-function",
+      "term": "Rationing function of price",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Demand and supply",
+      "definition": "The role of price in allocating scarce goods to those who are willing and able to pay; a rising price reduces quantity demanded until it equals quantity supplied.",
+      "relatedTerms": [
+        "ec-price-mechanism",
+        "ec-excess-demand",
+        "ec-signalling-function"
+      ]
+    },
+    {
+      "id": "ec-social-surplus",
+      "term": "Social (community) surplus",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Demand and supply",
+      "definition": "The sum of consumer surplus and producer surplus; it is maximised at the competitive market equilibrium where MSB = MSC, indicating allocative efficiency.",
+      "relatedTerms": [
+        "ec-consumer-surplus",
+        "ec-producer-surplus",
+        "ec-allocative-efficiency",
+        "ec-welfare-loss"
+      ]
     },
     {
       "id": "ec-normal-good",
@@ -245,7 +810,10 @@
       "definition": "A good whose demand increases as consumer income increases (positive YED).",
       "relatedTerms": [
         "ec-yed",
-        "ec-inferior-good"
+        "ec-inferior-good",
+        "ec-determinants-of-demand",
+        "ec-necessity-good",
+        "ec-luxury-good"
       ]
     },
     {
@@ -270,7 +838,10 @@
       "relatedTerms": [
         "ec-complements",
         "ec-xed",
-        "ec-ped"
+        "ec-ped",
+        "ec-determinants-of-demand",
+        "ec-substitution-effect",
+        "ec-ped-determinants"
       ]
     },
     {
@@ -282,7 +853,8 @@
       "definition": "Goods that are consumed together; a rise in the price of one decreases demand for the other (negative XED).",
       "relatedTerms": [
         "ec-substitutes",
-        "ec-xed"
+        "ec-xed",
+        "ec-determinants-of-demand"
       ]
     },
     {
@@ -301,7 +873,15 @@
         "ec-pes",
         "bm-price-elasticity-bm",
         "ec-xed",
-        "ec-marshall-lerner"
+        "ec-marshall-lerner",
+        "ec-ped-determinants",
+        "ec-elastic-demand",
+        "ec-inelastic-demand",
+        "ec-unit-elastic-demand",
+        "ec-perfectly-elastic-demand",
+        "ec-perfectly-inelastic-demand",
+        "ec-ped-total-revenue",
+        "ec-ped-linear-demand"
       ],
       "whyTested": "Formula + 'responsiveness' are both required for full marks."
     },
@@ -315,7 +895,14 @@
       "relatedTerms": [
         "ec-supply",
         "ec-ped",
-        "ec-tax-incidence"
+        "ec-tax-incidence",
+        "ec-pes-determinants",
+        "ec-elastic-supply",
+        "ec-inelastic-supply",
+        "ec-unit-elastic-supply",
+        "ec-perfectly-elastic-supply",
+        "ec-perfectly-inelastic-supply",
+        "ec-pes-linear-supply"
       ]
     },
     {
@@ -329,7 +916,10 @@
         "ec-normal-good",
         "ec-inferior-good",
         "ec-ped",
-        "ec-economic-development"
+        "ec-economic-development",
+        "ec-necessity-good",
+        "ec-luxury-good",
+        "ec-sectoral-change"
       ],
       "whyTested": "Links to sectoral change in development (primary products have low YED)."
     },
@@ -346,6 +936,322 @@
         "ec-ped"
       ],
       "hl": true
+    },
+    {
+      "id": "ec-ped-determinants",
+      "term": "Determinants of PED",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Elasticity",
+      "definition": "The factors that affect how responsive quantity demanded is to a change in price: the number and closeness of substitutes, whether the good is a necessity or a luxury, the proportion of income spent on it, the time period and whether it is habit-forming.",
+      "relatedTerms": [
+        "ec-ped",
+        "ec-substitutes",
+        "ec-necessity-good"
+      ]
+    },
+    {
+      "id": "ec-elastic-demand",
+      "term": "Price elastic demand",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Elasticity",
+      "definition": "Demand where the percentage change in quantity demanded is greater than the percentage change in price, so PED > 1 (in absolute value).",
+      "relatedTerms": [
+        "ec-ped",
+        "ec-inelastic-demand",
+        "ec-ped-total-revenue",
+        "ec-perfectly-elastic-demand",
+        "ec-unit-elastic-demand"
+      ]
+    },
+    {
+      "id": "ec-inelastic-demand",
+      "term": "Price inelastic demand",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Elasticity",
+      "definition": "Demand where the percentage change in quantity demanded is smaller than the percentage change in price, so 0 < PED < 1 (in absolute value).",
+      "relatedTerms": [
+        "ec-ped",
+        "ec-elastic-demand",
+        "ec-ped-total-revenue",
+        "ec-perfectly-inelastic-demand"
+      ]
+    },
+    {
+      "id": "ec-unit-elastic-demand",
+      "term": "Unit elastic demand",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Elasticity",
+      "definition": "Demand where the percentage change in quantity demanded equals the percentage change in price, so PED = 1 and total revenue does not change when price changes; drawn as a rectangular hyperbola.",
+      "relatedTerms": [
+        "ec-ped",
+        "ec-ped-total-revenue",
+        "ec-elastic-demand",
+        "ec-ped-linear-demand"
+      ]
+    },
+    {
+      "id": "ec-perfectly-elastic-demand",
+      "term": "Perfectly elastic demand",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Elasticity",
+      "definition": "Demand where any increase in price causes quantity demanded to fall to zero, so PED = ∞; drawn as a horizontal demand curve.",
+      "relatedTerms": [
+        "ec-ped",
+        "ec-elastic-demand",
+        "ec-perfect-competition",
+        "ec-price-taker"
+      ]
+    },
+    {
+      "id": "ec-perfectly-inelastic-demand",
+      "term": "Perfectly inelastic demand",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Elasticity",
+      "definition": "Demand where a change in price causes no change in quantity demanded, so PED = 0; drawn as a vertical demand curve.",
+      "relatedTerms": [
+        "ec-ped",
+        "ec-inelastic-demand"
+      ]
+    },
+    {
+      "id": "ec-total-revenue",
+      "term": "Total revenue (TR)",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Elasticity",
+      "definition": "The total amount of money a firm receives from selling its output: TR = P × Q.",
+      "relatedTerms": [
+        "ec-ped-total-revenue",
+        "ec-average-revenue",
+        "ec-marginal-revenue"
+      ]
+    },
+    {
+      "id": "ec-ped-total-revenue",
+      "term": "PED and total revenue",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Elasticity",
+      "definition": "The relationship between price changes and total revenue: if demand is price elastic, a fall in price raises TR; if price inelastic, a rise in price raises TR; if unit elastic, TR is unchanged.",
+      "relatedTerms": [
+        "ec-ped",
+        "ec-total-revenue",
+        "ec-elastic-demand",
+        "ec-inelastic-demand",
+        "ec-unit-elastic-demand"
+      ],
+      "whyTested": "Firms and governments use this to set prices and choose goods to tax."
+    },
+    {
+      "id": "ec-ped-linear-demand",
+      "term": "PED along a linear demand curve",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Elasticity",
+      "definition": "Along a straight-line demand curve the slope is constant but PED varies: demand is price elastic above the midpoint, unit elastic at the midpoint and price inelastic below it.",
+      "relatedTerms": [
+        "ec-ped",
+        "ec-linear-demand-function",
+        "ec-unit-elastic-demand"
+      ],
+      "whyTested": "Slope ≠ elasticity — examiners test that students know the difference.",
+      "hl": true
+    },
+    {
+      "id": "ec-pes-determinants",
+      "term": "Determinants of PES",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Elasticity",
+      "definition": "The factors that affect how responsive quantity supplied is to a change in price: the length of time period, mobility of factors of production, spare capacity, and the ability to store stock.",
+      "relatedTerms": [
+        "ec-pes",
+        "ec-supply",
+        "ec-spare-capacity"
+      ]
+    },
+    {
+      "id": "ec-elastic-supply",
+      "term": "Price elastic supply",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Elasticity",
+      "definition": "Supply where the percentage change in quantity supplied is greater than the percentage change in price, so PES > 1.",
+      "relatedTerms": [
+        "ec-pes",
+        "ec-inelastic-supply",
+        "ec-perfectly-elastic-supply"
+      ]
+    },
+    {
+      "id": "ec-inelastic-supply",
+      "term": "Price inelastic supply",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Elasticity",
+      "definition": "Supply where the percentage change in quantity supplied is smaller than the percentage change in price, so 0 < PES < 1.",
+      "relatedTerms": [
+        "ec-pes",
+        "ec-elastic-supply",
+        "ec-perfectly-inelastic-supply",
+        "ec-primary-commodities"
+      ]
+    },
+    {
+      "id": "ec-unit-elastic-supply",
+      "term": "Unit elastic supply",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Elasticity",
+      "definition": "Supply where the percentage change in quantity supplied equals the percentage change in price, so PES = 1; any straight-line supply curve through the origin is unit elastic.",
+      "relatedTerms": [
+        "ec-pes",
+        "ec-pes-linear-supply"
+      ]
+    },
+    {
+      "id": "ec-perfectly-elastic-supply",
+      "term": "Perfectly elastic supply",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Elasticity",
+      "definition": "Supply where producers will supply any quantity at a given price but none below it, so PES = ∞; drawn as a horizontal supply curve.",
+      "relatedTerms": [
+        "ec-pes",
+        "ec-elastic-supply",
+        "ec-world-price"
+      ]
+    },
+    {
+      "id": "ec-perfectly-inelastic-supply",
+      "term": "Perfectly inelastic supply",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Elasticity",
+      "definition": "Supply where quantity supplied does not change when price changes, so PES = 0; drawn as a vertical supply curve.",
+      "relatedTerms": [
+        "ec-pes",
+        "ec-inelastic-supply",
+        "ec-tradable-permits"
+      ]
+    },
+    {
+      "id": "ec-pes-linear-supply",
+      "term": "PES along linear supply curves",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Elasticity",
+      "definition": "A straight-line supply curve through the origin has PES = 1; one that cuts the price axis has PES > 1 (elastic); one that cuts the quantity axis has PES < 1 (inelastic).",
+      "relatedTerms": [
+        "ec-pes",
+        "ec-unit-elastic-supply",
+        "ec-linear-supply-function"
+      ],
+      "hl": true
+    },
+    {
+      "id": "ec-necessity-good",
+      "term": "Necessity good",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Elasticity",
+      "definition": "A normal good with income inelastic demand (0 < YED < 1): demand rises as income rises, but by a smaller percentage.",
+      "relatedTerms": [
+        "ec-yed",
+        "ec-luxury-good",
+        "ec-normal-good",
+        "ec-ped-determinants"
+      ]
+    },
+    {
+      "id": "ec-luxury-good",
+      "term": "Luxury good",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Elasticity",
+      "definition": "A normal good with income elastic demand (YED > 1): demand rises by a greater percentage than the rise in income.",
+      "relatedTerms": [
+        "ec-yed",
+        "ec-necessity-good",
+        "ec-normal-good"
+      ]
+    },
+    {
+      "id": "ec-primary-commodities",
+      "term": "Primary commodities",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Elasticity",
+      "definition": "Raw materials and agricultural products from the primary sector, which tend to have low PED and low PES, making their prices volatile, and low YED, so demand grows slowly as incomes rise.",
+      "relatedTerms": [
+        "ec-inelastic-supply",
+        "ec-primary-sector",
+        "ec-commodity-dependence",
+        "ec-terms-of-trade",
+        "ec-price-support"
+      ],
+      "whyTested": "Links micro elasticity to development (commodity dependence) and HL terms of trade."
+    },
+    {
+      "id": "ec-primary-sector",
+      "term": "Primary sector",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Elasticity",
+      "definition": "The part of the economy that extracts or harvests natural resources, such as agriculture, fishing, forestry and mining.",
+      "relatedTerms": [
+        "ec-secondary-sector",
+        "ec-tertiary-sector",
+        "ec-primary-commodities",
+        "ec-sectoral-change"
+      ]
+    },
+    {
+      "id": "ec-secondary-sector",
+      "term": "Secondary sector",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Elasticity",
+      "definition": "The part of the economy that processes raw materials into manufactured goods, including manufacturing and construction.",
+      "relatedTerms": [
+        "ec-primary-sector",
+        "ec-tertiary-sector",
+        "ec-sectoral-change"
+      ]
+    },
+    {
+      "id": "ec-tertiary-sector",
+      "term": "Tertiary sector",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Elasticity",
+      "definition": "The part of the economy that provides services, such as retail, finance, education and healthcare.",
+      "relatedTerms": [
+        "ec-primary-sector",
+        "ec-secondary-sector",
+        "ec-sectoral-change"
+      ]
+    },
+    {
+      "id": "ec-sectoral-change",
+      "term": "Sectoral change",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Elasticity",
+      "definition": "The shift in the share of output and employment from the primary to the secondary and then the tertiary sector as an economy grows, explained by the differing YEDs of goods produced in each sector.",
+      "relatedTerms": [
+        "ec-yed",
+        "ec-primary-sector",
+        "ec-tertiary-sector",
+        "ec-structural-unemployment",
+        "ec-secondary-sector"
+      ]
     },
     {
       "id": "ec-indirect-tax",
@@ -365,7 +1271,11 @@
         "ec-negative-externality-consumption",
         "ec-carbon-tax",
         "ec-regressive-tax",
-        "ec-tariff"
+        "ec-tariff",
+        "ec-determinants-of-supply",
+        "ec-pigouvian-tax",
+        "ec-direct-tax",
+        "ec-government-revenue"
       ]
     },
     {
@@ -418,7 +1328,9 @@
         "ec-merit-good",
         "ec-positive-externality-production",
         "ec-export-subsidy",
-        "ec-positive-externality-consumption"
+        "ec-positive-externality-consumption",
+        "ec-determinants-of-supply",
+        "ec-industrial-policy"
       ]
     },
     {
@@ -431,7 +1343,9 @@
       "relatedTerms": [
         "ec-price-floor",
         "ec-excess-demand",
-        "ec-welfare-loss"
+        "ec-welfare-loss",
+        "ec-parallel-market",
+        "ec-government-failure"
       ]
     },
     {
@@ -445,7 +1359,89 @@
         "ec-price-ceiling",
         "ec-excess-supply",
         "ec-welfare-loss",
-        "ec-fair-trade"
+        "ec-fair-trade",
+        "ec-minimum-wage",
+        "ec-price-support"
+      ]
+    },
+    {
+      "id": "ec-parallel-market",
+      "term": "Parallel (black) market",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Government intervention",
+      "definition": "An illegal market where goods are sold above the legal maximum price, often arising from the shortage created by a price ceiling.",
+      "relatedTerms": [
+        "ec-price-ceiling",
+        "ec-excess-demand",
+        "ec-government-failure"
+      ]
+    },
+    {
+      "id": "ec-minimum-wage",
+      "term": "Minimum wage",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Government intervention",
+      "definition": "A price floor set in the labour market: a legal minimum wage rate above the equilibrium wage, which may create a surplus of labour (unemployment).",
+      "relatedTerms": [
+        "ec-price-floor",
+        "ec-excess-supply",
+        "ec-labour",
+        "ec-labour-market-reforms"
+      ]
+    },
+    {
+      "id": "ec-price-support",
+      "term": "Agricultural price support",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Government intervention",
+      "definition": "A price floor in an agricultural market where the government buys the resulting surplus to maintain the minimum price, aiming to stabilise and raise farmers' incomes.",
+      "relatedTerms": [
+        "ec-price-floor",
+        "ec-excess-supply",
+        "ec-primary-commodities"
+      ]
+    },
+    {
+      "id": "ec-direct-provision",
+      "term": "Direct provision",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Government intervention",
+      "definition": "The supply of goods and services by the government itself, financed through taxation, to ensure their provision (e.g. public goods and merit goods such as education).",
+      "relatedTerms": [
+        "ec-public-good",
+        "ec-merit-good",
+        "ec-mixed-economy",
+        "ec-contracting-out"
+      ]
+    },
+    {
+      "id": "ec-command-and-control",
+      "term": "Command and control regulation",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Government intervention",
+      "definition": "Government laws and regulations that directly restrict or require certain behaviour by firms or consumers (e.g. emission limits or bans), enforced through penalties.",
+      "relatedTerms": [
+        "ec-negative-externality-production",
+        "ec-carbon-tax",
+        "ec-nudge"
+      ]
+    },
+    {
+      "id": "ec-government-failure",
+      "term": "Government failure",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Government intervention",
+      "definition": "A situation where government intervention leads to a less efficient allocation of resources than before, or creates unintended negative consequences.",
+      "relatedTerms": [
+        "ec-market-failure",
+        "ec-price-ceiling",
+        "ec-parallel-market"
       ]
     },
     {
@@ -461,7 +1457,10 @@
         "ec-public-good",
         "ec-asymmetric-information",
         "ec-welfare-loss",
-        "ec-monopoly"
+        "ec-monopoly",
+        "ec-government-failure",
+        "ec-market-power",
+        "ec-market-inequity"
       ]
     },
     {
@@ -476,7 +1475,9 @@
         "ec-negative-externality-production",
         "ec-negative-externality-consumption",
         "ec-positive-externality-production",
-        "ec-positive-externality-consumption"
+        "ec-positive-externality-consumption",
+        "ec-external-cost",
+        "ec-external-benefit"
       ],
       "whyTested": "Must mention 'third parties' for the mark."
     },
@@ -492,7 +1493,12 @@
         "ec-indirect-tax",
         "ec-carbon-tax",
         "ec-tradable-permits",
-        "ec-welfare-loss"
+        "ec-welfare-loss",
+        "ec-command-and-control",
+        "ec-marginal-private-cost",
+        "ec-external-cost",
+        "ec-pigouvian-tax",
+        "ec-green-gdp"
       ]
     },
     {
@@ -531,7 +1537,9 @@
       "relatedTerms": [
         "ec-externality",
         "ec-merit-good",
-        "ec-subsidy"
+        "ec-subsidy",
+        "ec-marginal-private-benefit",
+        "ec-external-benefit"
       ]
     },
     {
@@ -545,7 +1553,8 @@
         "ec-positive-externality-consumption",
         "ec-subsidy",
         "ec-demerit-good",
-        "ec-asymmetric-information"
+        "ec-asymmetric-information",
+        "ec-direct-provision"
       ]
     },
     {
@@ -572,7 +1581,11 @@
       "relatedTerms": [
         "ec-market-failure",
         "ec-free-rider",
-        "ec-common-pool-resource"
+        "ec-common-pool-resource",
+        "ec-direct-provision",
+        "ec-rivalry",
+        "ec-excludability",
+        "ec-contracting-out"
       ],
       "whyTested": "Both properties + free-rider problem = full marks."
     },
@@ -584,7 +1597,8 @@
       "topic": "Market failure",
       "definition": "The situation where people benefit from a good without paying for it, because they cannot be excluded, so private firms have no incentive to provide it.",
       "relatedTerms": [
-        "ec-public-good"
+        "ec-public-good",
+        "ec-excludability"
       ]
     },
     {
@@ -597,7 +1611,11 @@
       "relatedTerms": [
         "ec-public-good",
         "ec-tradable-permits",
-        "ec-sustainable-development"
+        "ec-sustainable-development",
+        "ec-sustainability",
+        "ec-tragedy-of-commons",
+        "ec-rivalry",
+        "ec-collective-self-governance"
       ]
     },
     {
@@ -615,7 +1633,9 @@
         "ec-price-ceiling",
         "ec-price-floor",
         "ec-negative-externality-production",
-        "ec-monopoly"
+        "ec-monopoly",
+        "ec-social-surplus",
+        "ec-social-optimum"
       ]
     },
     {
@@ -627,7 +1647,12 @@
       "definition": "A situation where one party to a transaction (buyer or seller) has more or better information than the other, leading to market failure.",
       "relatedTerms": [
         "ec-market-failure",
-        "ec-merit-good"
+        "ec-merit-good",
+        "ec-adverse-selection",
+        "ec-moral-hazard",
+        "ec-signalling",
+        "ec-screening",
+        "ec-imperfect-information"
       ],
       "hl": true
     },
@@ -641,7 +1666,9 @@
       "relatedTerms": [
         "ec-negative-externality-production",
         "ec-indirect-tax",
-        "ec-tradable-permits"
+        "ec-tradable-permits",
+        "ec-command-and-control",
+        "ec-pigouvian-tax"
       ]
     },
     {
@@ -654,8 +1681,237 @@
       "relatedTerms": [
         "ec-negative-externality-production",
         "ec-carbon-tax",
+        "ec-common-pool-resource",
+        "ec-perfectly-inelastic-supply"
+      ]
+    },
+    {
+      "id": "ec-marginal-private-cost",
+      "term": "Marginal private cost (MPC)",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Market failure",
+      "definition": "The additional cost to a producer of producing one more unit of output; the supply curve represents MPC.",
+      "relatedTerms": [
+        "ec-marginal-social-cost",
+        "ec-supply",
+        "ec-negative-externality-production"
+      ]
+    },
+    {
+      "id": "ec-marginal-private-benefit",
+      "term": "Marginal private benefit (MPB)",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Market failure",
+      "definition": "The additional benefit to a consumer of consuming one more unit of a good; the demand curve represents MPB.",
+      "relatedTerms": [
+        "ec-marginal-social-benefit",
+        "ec-demand",
+        "ec-positive-externality-consumption"
+      ]
+    },
+    {
+      "id": "ec-marginal-social-cost",
+      "term": "Marginal social cost (MSC)",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Market failure",
+      "definition": "The total additional cost to society of producing one more unit of output: MSC = MPC + marginal external cost.",
+      "relatedTerms": [
+        "ec-marginal-private-cost",
+        "ec-marginal-social-benefit",
+        "ec-social-optimum",
+        "ec-external-cost",
+        "ec-pigouvian-tax"
+      ]
+    },
+    {
+      "id": "ec-marginal-social-benefit",
+      "term": "Marginal social benefit (MSB)",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Market failure",
+      "definition": "The total additional benefit to society of consuming one more unit of a good: MSB = MPB + marginal external benefit.",
+      "relatedTerms": [
+        "ec-marginal-private-benefit",
+        "ec-marginal-social-cost",
+        "ec-social-optimum",
+        "ec-external-benefit"
+      ]
+    },
+    {
+      "id": "ec-social-optimum",
+      "term": "Socially optimal output",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Market failure",
+      "definition": "The level of output where marginal social benefit equals marginal social cost (MSB = MSC), at which allocative efficiency is achieved and social surplus is maximised.",
+      "relatedTerms": [
+        "ec-marginal-social-benefit",
+        "ec-marginal-social-cost",
+        "ec-allocative-efficiency",
+        "ec-welfare-loss"
+      ]
+    },
+    {
+      "id": "ec-external-cost",
+      "term": "External cost",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Market failure",
+      "definition": "A cost of production or consumption that falls on third parties who are not involved in the transaction and is not paid for by the producer or consumer.",
+      "relatedTerms": [
+        "ec-externality",
+        "ec-marginal-social-cost",
+        "ec-negative-externality-production"
+      ]
+    },
+    {
+      "id": "ec-external-benefit",
+      "term": "External benefit",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Market failure",
+      "definition": "A benefit of production or consumption that is enjoyed by third parties who are not involved in the transaction and do not pay for it.",
+      "relatedTerms": [
+        "ec-externality",
+        "ec-marginal-social-benefit",
+        "ec-positive-externality-consumption"
+      ]
+    },
+    {
+      "id": "ec-pigouvian-tax",
+      "term": "Pigouvian tax",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Market failure",
+      "definition": "An indirect tax set equal to the marginal external cost of a good, shifting MPC up to MSC so that the market produces the socially optimal output.",
+      "relatedTerms": [
+        "ec-carbon-tax",
+        "ec-indirect-tax",
+        "ec-negative-externality-production",
+        "ec-marginal-social-cost"
+      ]
+    },
+    {
+      "id": "ec-tragedy-of-commons",
+      "term": "Tragedy of the commons",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Market failure",
+      "definition": "The overuse and depletion of a common pool resource that occurs because individuals acting in their own self-interest ignore the cost their use imposes on others and on future users.",
+      "relatedTerms": [
+        "ec-common-pool-resource",
+        "ec-sustainability",
+        "ec-collective-self-governance"
+      ]
+    },
+    {
+      "id": "ec-rivalry",
+      "term": "Rivalry",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Market failure",
+      "definition": "The characteristic of a good whereby its consumption by one person reduces the amount available for others.",
+      "relatedTerms": [
+        "ec-excludability",
+        "ec-public-good",
         "ec-common-pool-resource"
       ]
+    },
+    {
+      "id": "ec-excludability",
+      "term": "Excludability",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Market failure",
+      "definition": "The characteristic of a good whereby people who do not pay for it can be prevented from consuming it.",
+      "relatedTerms": [
+        "ec-rivalry",
+        "ec-public-good",
+        "ec-free-rider"
+      ]
+    },
+    {
+      "id": "ec-contracting-out",
+      "term": "Contracting out",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Market failure",
+      "definition": "An arrangement where the government pays private firms to provide goods or services (such as public goods), rather than producing them itself.",
+      "relatedTerms": [
+        "ec-direct-provision",
+        "ec-public-good"
+      ]
+    },
+    {
+      "id": "ec-collective-self-governance",
+      "term": "Collective self-governance",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Market failure",
+      "definition": "Management of a common pool resource by the community of its users through agreed rules, monitoring and sanctions, without relying on government or private ownership.",
+      "relatedTerms": [
+        "ec-common-pool-resource",
+        "ec-tragedy-of-commons"
+      ]
+    },
+    {
+      "id": "ec-adverse-selection",
+      "term": "Adverse selection",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Market failure",
+      "definition": "A form of asymmetric information that arises before a transaction, where one party has hidden information about quality or risk, so the market attracts the wrong buyers or sellers (e.g. high-risk customers buying insurance).",
+      "relatedTerms": [
+        "ec-asymmetric-information",
+        "ec-moral-hazard",
+        "ec-signalling",
+        "ec-screening"
+      ],
+      "hl": true
+    },
+    {
+      "id": "ec-moral-hazard",
+      "term": "Moral hazard",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Market failure",
+      "definition": "A form of asymmetric information that arises after a transaction, where one party changes their behaviour and takes more risk because the costs will be borne by another party.",
+      "relatedTerms": [
+        "ec-asymmetric-information",
+        "ec-adverse-selection"
+      ],
+      "hl": true
+    },
+    {
+      "id": "ec-signalling",
+      "term": "Signalling",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Market failure",
+      "definition": "A response to asymmetric information where the better-informed party reveals information to the less-informed party, e.g. warranties or qualifications.",
+      "relatedTerms": [
+        "ec-asymmetric-information",
+        "ec-screening",
+        "ec-adverse-selection"
+      ],
+      "hl": true
+    },
+    {
+      "id": "ec-screening",
+      "term": "Screening",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Market failure",
+      "definition": "A response to asymmetric information where the less-informed party takes steps to obtain information from the better-informed party, e.g. medical checks before insurance or credit checks.",
+      "relatedTerms": [
+        "ec-asymmetric-information",
+        "ec-signalling",
+        "ec-adverse-selection"
+      ],
+      "hl": true
     },
     {
       "id": "ec-bounded-rationality",
@@ -667,7 +1923,16 @@
       "relatedTerms": [
         "ec-rational-consumer-choice",
         "ec-nudge",
-        "ec-choice-architecture"
+        "ec-choice-architecture",
+        "ec-utility-maximisation",
+        "ec-imperfect-information",
+        "ec-bounded-self-control",
+        "ec-bounded-selfishness",
+        "ec-rule-of-thumb",
+        "ec-anchoring",
+        "ec-framing",
+        "ec-availability-bias",
+        "ec-satisficing"
       ]
     },
     {
@@ -678,7 +1943,10 @@
       "topic": "Behavioural economics",
       "definition": "The assumption that consumers have consistent preferences, perfect information and aim to maximise their utility.",
       "relatedTerms": [
-        "ec-bounded-rationality"
+        "ec-bounded-rationality",
+        "ec-utility-maximisation",
+        "ec-imperfect-information",
+        "ec-bounded-selfishness"
       ]
     },
     {
@@ -692,7 +1960,10 @@
         "ec-choice-architecture",
         "ec-bounded-rationality",
         "ec-demerit-good",
-        "ec-negative-externality-consumption"
+        "ec-negative-externality-consumption",
+        "ec-command-and-control",
+        "ec-bounded-self-control",
+        "ec-default-choice"
       ]
     },
     {
@@ -704,7 +1975,206 @@
       "definition": "The design of the environment in which people make choices (e.g. default options, restricted or mandated choices) so as to influence the decisions they make.",
       "relatedTerms": [
         "ec-nudge",
+        "ec-bounded-rationality",
+        "ec-framing",
+        "ec-default-choice",
+        "ec-restricted-choice",
+        "ec-mandated-choice"
+      ]
+    },
+    {
+      "id": "ec-utility-maximisation",
+      "term": "Utility maximisation",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Behavioural economics",
+      "definition": "The assumption in rational consumer choice that consumers aim to gain the greatest possible satisfaction from their limited income.",
+      "relatedTerms": [
+        "ec-rational-consumer-choice",
+        "ec-marginal-utility",
         "ec-bounded-rationality"
+      ]
+    },
+    {
+      "id": "ec-imperfect-information",
+      "term": "Imperfect information",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Behavioural economics",
+      "definition": "A situation where consumers or producers lack the full information needed to make rational decisions, contradicting a key assumption of rational consumer choice.",
+      "relatedTerms": [
+        "ec-rational-consumer-choice",
+        "ec-asymmetric-information",
+        "ec-bounded-rationality"
+      ]
+    },
+    {
+      "id": "ec-bounded-self-control",
+      "term": "Bounded self-control",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Behavioural economics",
+      "definition": "The idea that individuals have limited self-control, so they may make choices that conflict with their long-term interests (e.g. overeating or under-saving).",
+      "relatedTerms": [
+        "ec-bounded-rationality",
+        "ec-bounded-selfishness",
+        "ec-nudge"
+      ]
+    },
+    {
+      "id": "ec-bounded-selfishness",
+      "term": "Bounded selfishness",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Behavioural economics",
+      "definition": "The idea that individuals are not purely self-interested and are often willing to act in the interests of others, e.g. donating to charity.",
+      "relatedTerms": [
+        "ec-bounded-rationality",
+        "ec-bounded-self-control",
+        "ec-rational-consumer-choice"
+      ]
+    },
+    {
+      "id": "ec-rule-of-thumb",
+      "term": "Rules of thumb (heuristics)",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Behavioural economics",
+      "definition": "Mental shortcuts people use to simplify decisions, which save time but can lead to biased, non-optimal choices.",
+      "relatedTerms": [
+        "ec-bounded-rationality",
+        "ec-anchoring",
+        "ec-availability-bias"
+      ]
+    },
+    {
+      "id": "ec-anchoring",
+      "term": "Anchoring",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Behavioural economics",
+      "definition": "A cognitive bias where people rely too heavily on an initial piece of information (the anchor), such as a first price seen, when making decisions.",
+      "relatedTerms": [
+        "ec-framing",
+        "ec-rule-of-thumb",
+        "ec-bounded-rationality"
+      ]
+    },
+    {
+      "id": "ec-framing",
+      "term": "Framing",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Behavioural economics",
+      "definition": "A cognitive bias where people's decisions are influenced by how information is presented rather than by the information itself (e.g. \"90% fat-free\" vs \"10% fat\").",
+      "relatedTerms": [
+        "ec-anchoring",
+        "ec-choice-architecture",
+        "ec-bounded-rationality"
+      ]
+    },
+    {
+      "id": "ec-availability-bias",
+      "term": "Availability bias",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Behavioural economics",
+      "definition": "A cognitive bias where people judge the likelihood of an event by how easily examples come to mind, so recent or vivid events are given too much weight.",
+      "relatedTerms": [
+        "ec-rule-of-thumb",
+        "ec-bounded-rationality"
+      ]
+    },
+    {
+      "id": "ec-default-choice",
+      "term": "Default choice",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Behavioural economics",
+      "definition": "A form of choice architecture where an option is pre-selected so that it applies unless the person actively chooses otherwise (e.g. automatic enrolment in a pension scheme).",
+      "relatedTerms": [
+        "ec-choice-architecture",
+        "ec-nudge",
+        "ec-restricted-choice",
+        "ec-mandated-choice"
+      ]
+    },
+    {
+      "id": "ec-restricted-choice",
+      "term": "Restricted choice",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Behavioural economics",
+      "definition": "A form of choice architecture where the number of options available is limited to help people make better decisions.",
+      "relatedTerms": [
+        "ec-choice-architecture",
+        "ec-default-choice",
+        "ec-mandated-choice"
+      ]
+    },
+    {
+      "id": "ec-mandated-choice",
+      "term": "Mandated choice",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Behavioural economics",
+      "definition": "A form of choice architecture where people are required to make a decision in advance (e.g. stating whether they wish to be an organ donor).",
+      "relatedTerms": [
+        "ec-choice-architecture",
+        "ec-default-choice",
+        "ec-restricted-choice"
+      ]
+    },
+    {
+      "id": "ec-csr",
+      "term": "Corporate social responsibility (CSR)",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Business objectives",
+      "definition": "A business objective whereby a firm aims to act ethically and consider the interests of all stakeholders, society and the environment, not only profit.",
+      "relatedTerms": [
+        "ec-profit-maximisation",
+        "ec-satisficing",
+        "bm-csr"
+      ]
+    },
+    {
+      "id": "ec-market-share",
+      "term": "Market share",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Business objectives",
+      "definition": "A firm's sales as a percentage of total sales in the market; increasing market share can be an alternative business objective to profit maximisation.",
+      "relatedTerms": [
+        "ec-profit-maximisation",
+        "ec-growth-maximisation",
+        "ec-concentration-ratio"
+      ]
+    },
+    {
+      "id": "ec-satisficing",
+      "term": "Satisficing",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Business objectives",
+      "definition": "A business objective of achieving a satisfactory level of profit to keep stakeholders content, rather than the maximum possible profit.",
+      "relatedTerms": [
+        "ec-profit-maximisation",
+        "ec-csr",
+        "ec-bounded-rationality"
+      ]
+    },
+    {
+      "id": "ec-growth-maximisation",
+      "term": "Growth maximisation",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Business objectives",
+      "definition": "A business objective of maximising the size of the firm, measured by sales revenue, output or market share, even at the expense of short-run profit.",
+      "relatedTerms": [
+        "ec-profit-maximisation",
+        "ec-market-share",
+        "ec-economies-of-scale"
       ]
     },
     {
@@ -718,7 +2188,11 @@
         "ec-monopoly",
         "ec-monopolistic-competition",
         "ec-normal-profit",
-        "ec-allocative-efficiency"
+        "ec-allocative-efficiency",
+        "ec-productive-efficiency",
+        "ec-perfectly-elastic-demand",
+        "ec-break-even-price",
+        "ec-price-taker"
       ],
       "hl": true
     },
@@ -736,7 +2210,10 @@
         "ec-abnormal-profit",
         "ec-welfare-loss",
         "ec-market-failure",
-        "ec-monopolistic-competition"
+        "ec-monopolistic-competition",
+        "ec-market-power",
+        "ec-price-maker",
+        "ec-competition-policy"
       ],
       "hl": true
     },
@@ -751,7 +2228,11 @@
         "ec-collusion",
         "ec-game-theory",
         "ec-concentration-ratio",
-        "ec-barriers-to-entry"
+        "ec-barriers-to-entry",
+        "ec-product-differentiation",
+        "ec-non-price-competition",
+        "ec-strategic-interdependence",
+        "ec-cartel"
       ],
       "hl": true
     },
@@ -765,7 +2246,9 @@
       "relatedTerms": [
         "ec-perfect-competition",
         "ec-monopoly",
-        "ec-normal-profit"
+        "ec-normal-profit",
+        "ec-product-differentiation",
+        "ec-non-price-competition"
       ],
       "hl": true
     },
@@ -779,7 +2262,8 @@
       "relatedTerms": [
         "ec-monopoly",
         "ec-oligopoly",
-        "ec-economies-of-scale"
+        "ec-economies-of-scale",
+        "ec-market-power"
       ],
       "hl": true
     },
@@ -792,7 +2276,9 @@
       "definition": "A market in which economies of scale are so large that one firm can supply the entire market at a lower average cost than two or more firms could.",
       "relatedTerms": [
         "ec-monopoly",
-        "ec-economies-of-scale"
+        "ec-economies-of-scale",
+        "ec-lrac",
+        "ec-nationalisation"
       ],
       "hl": true
     },
@@ -806,7 +2292,11 @@
       "relatedTerms": [
         "ec-barriers-to-entry",
         "ec-natural-monopoly",
-        "bm-economies-of-scale"
+        "bm-economies-of-scale",
+        "ec-growth-maximisation",
+        "ec-long-run",
+        "ec-diseconomies-of-scale",
+        "ec-lrac"
       ],
       "hl": true
     },
@@ -820,7 +2310,11 @@
       "relatedTerms": [
         "ec-abnormal-profit",
         "ec-perfect-competition",
-        "ec-monopolistic-competition"
+        "ec-monopolistic-competition",
+        "ec-entrepreneurship",
+        "ec-economic-costs",
+        "ec-economic-loss",
+        "ec-break-even-price"
       ],
       "hl": true
     },
@@ -834,7 +2328,8 @@
       "relatedTerms": [
         "ec-normal-profit",
         "ec-monopoly",
-        "ec-profit-maximisation"
+        "ec-profit-maximisation",
+        "ec-economic-loss"
       ],
       "hl": true
     },
@@ -848,7 +2343,11 @@
       "relatedTerms": [
         "ec-marginal-cost",
         "ec-marginal-revenue",
-        "ec-abnormal-profit"
+        "ec-abnormal-profit",
+        "ec-csr",
+        "ec-market-share",
+        "ec-satisficing",
+        "ec-growth-maximisation"
       ],
       "whyTested": "MC = MR is examined on every market-structure diagram.",
       "hl": true
@@ -862,7 +2361,11 @@
       "definition": "The additional cost of producing one more unit of output.",
       "relatedTerms": [
         "ec-marginal-revenue",
-        "ec-profit-maximisation"
+        "ec-profit-maximisation",
+        "ec-diminishing-marginal-returns",
+        "ec-total-costs",
+        "ec-average-variable-cost",
+        "ec-average-total-cost"
       ],
       "hl": true
     },
@@ -875,7 +2378,9 @@
       "definition": "The additional revenue gained from selling one more unit of output.",
       "relatedTerms": [
         "ec-marginal-cost",
-        "ec-profit-maximisation"
+        "ec-profit-maximisation",
+        "ec-total-revenue",
+        "ec-average-revenue"
       ],
       "hl": true
     },
@@ -888,7 +2393,10 @@
       "definition": "An agreement among firms in an oligopoly to limit competition, e.g. by fixing prices or output; formal collusion (a cartel) is illegal in most countries.",
       "relatedTerms": [
         "ec-oligopoly",
-        "ec-game-theory"
+        "ec-game-theory",
+        "ec-strategic-interdependence",
+        "ec-cartel",
+        "ec-prisoners-dilemma"
       ],
       "hl": true
     },
@@ -901,7 +2409,10 @@
       "definition": "The study of strategic decision-making where each player's outcome depends on the choices of others; used to explain interdependent behaviour in oligopoly (e.g. the prisoner's dilemma).",
       "relatedTerms": [
         "ec-oligopoly",
-        "ec-collusion"
+        "ec-collusion",
+        "ec-strategic-interdependence",
+        "ec-prisoners-dilemma",
+        "ec-dominant-strategy"
       ],
       "hl": true
     },
@@ -914,7 +2425,374 @@
       "definition": "The combined market share of the largest firms in an industry (e.g. CR4 = share of the four largest firms); a high ratio indicates oligopoly.",
       "relatedTerms": [
         "ec-oligopoly",
-        "bm-market-share"
+        "bm-market-share",
+        "ec-market-share"
+      ],
+      "hl": true
+    },
+    {
+      "id": "ec-short-run",
+      "term": "Short run",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Market power (HL)",
+      "definition": "The time period in which at least one factor of production is fixed, so firms can change output only by changing their variable factors.",
+      "relatedTerms": [
+        "ec-long-run",
+        "ec-fixed-costs",
+        "ec-diminishing-marginal-returns",
+        "ec-shut-down-price"
+      ],
+      "hl": true
+    },
+    {
+      "id": "ec-long-run",
+      "term": "Long run",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Market power (HL)",
+      "definition": "The time period in which all factors of production are variable, so firms can change the scale of production.",
+      "relatedTerms": [
+        "ec-short-run",
+        "ec-lrac",
+        "ec-economies-of-scale",
+        "ec-diseconomies-of-scale"
+      ],
+      "hl": true
+    },
+    {
+      "id": "ec-economic-costs",
+      "term": "Economic costs",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Market power (HL)",
+      "definition": "The opportunity cost of all resources used by a firm, made up of explicit costs (payments to outside factor owners) and implicit costs (the value of the owner's own resources, including normal profit).",
+      "relatedTerms": [
+        "ec-opportunity-cost",
+        "ec-normal-profit",
+        "ec-total-costs"
+      ],
+      "hl": true
+    },
+    {
+      "id": "ec-fixed-costs",
+      "term": "Fixed costs (FC)",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Market power (HL)",
+      "definition": "Costs that do not vary with the level of output in the short run, such as rent and insurance; they must be paid even when output is zero.",
+      "relatedTerms": [
+        "ec-variable-costs",
+        "ec-total-costs",
+        "ec-average-fixed-cost",
+        "ec-short-run"
+      ],
+      "hl": true
+    },
+    {
+      "id": "ec-variable-costs",
+      "term": "Variable costs (VC)",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Market power (HL)",
+      "definition": "Costs that change directly with the level of output, such as raw materials and hourly wages; they are zero when output is zero.",
+      "relatedTerms": [
+        "ec-fixed-costs",
+        "ec-total-costs",
+        "ec-average-variable-cost"
+      ],
+      "hl": true
+    },
+    {
+      "id": "ec-total-costs",
+      "term": "Total costs (TC)",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Market power (HL)",
+      "definition": "The sum of all costs of producing a given level of output: TC = TFC + TVC.",
+      "relatedTerms": [
+        "ec-fixed-costs",
+        "ec-variable-costs",
+        "ec-average-total-cost",
+        "ec-marginal-cost",
+        "ec-economic-costs"
+      ],
+      "hl": true
+    },
+    {
+      "id": "ec-average-fixed-cost",
+      "term": "Average fixed cost (AFC)",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Market power (HL)",
+      "definition": "Fixed cost per unit of output: AFC = TFC ÷ Q; it falls continuously as output rises.",
+      "relatedTerms": [
+        "ec-fixed-costs",
+        "ec-average-total-cost",
+        "ec-average-variable-cost"
+      ],
+      "hl": true
+    },
+    {
+      "id": "ec-average-variable-cost",
+      "term": "Average variable cost (AVC)",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Market power (HL)",
+      "definition": "Variable cost per unit of output: AVC = TVC ÷ Q; it is U-shaped because of diminishing marginal returns.",
+      "relatedTerms": [
+        "ec-variable-costs",
+        "ec-average-total-cost",
+        "ec-shut-down-price",
+        "ec-marginal-cost",
+        "ec-average-fixed-cost"
+      ],
+      "hl": true
+    },
+    {
+      "id": "ec-average-total-cost",
+      "term": "Average total cost (ATC)",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Market power (HL)",
+      "definition": "Total cost per unit of output: ATC = TC ÷ Q = AFC + AVC; the MC curve cuts it at its minimum point.",
+      "relatedTerms": [
+        "ec-total-costs",
+        "ec-average-variable-cost",
+        "ec-marginal-cost",
+        "ec-break-even-price",
+        "ec-productive-efficiency",
+        "ec-average-fixed-cost"
+      ],
+      "whyTested": "Profit per unit = AR − ATC; the profit/loss rectangle is drawn from ATC at the profit-maximising Q.",
+      "hl": true
+    },
+    {
+      "id": "ec-average-revenue",
+      "term": "Average revenue (AR)",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Market power (HL)",
+      "definition": "Revenue per unit sold: AR = TR ÷ Q, which equals price, so the AR curve is the firm's demand curve.",
+      "relatedTerms": [
+        "ec-total-revenue",
+        "ec-marginal-revenue",
+        "ec-demand"
+      ],
+      "hl": true
+    },
+    {
+      "id": "ec-economic-loss",
+      "term": "Economic loss",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Market power (HL)",
+      "definition": "A situation where total revenue is less than total economic costs (TR < TC, or AR < ATC), so the firm earns less than normal profit.",
+      "relatedTerms": [
+        "ec-normal-profit",
+        "ec-abnormal-profit",
+        "ec-shut-down-price"
+      ],
+      "hl": true
+    },
+    {
+      "id": "ec-break-even-price",
+      "term": "Break-even price",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Market power (HL)",
+      "definition": "The price at which a firm earns exactly normal profit, where price equals minimum average total cost (P = AR = min ATC).",
+      "relatedTerms": [
+        "ec-shut-down-price",
+        "ec-average-total-cost",
+        "ec-normal-profit",
+        "ec-perfect-competition"
+      ],
+      "hl": true
+    },
+    {
+      "id": "ec-shut-down-price",
+      "term": "Shut-down price",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Market power (HL)",
+      "definition": "The price below which a firm will shut down in the short run, where price equals minimum average variable cost (P = min AVC); below it the firm cannot cover its variable costs.",
+      "relatedTerms": [
+        "ec-break-even-price",
+        "ec-average-variable-cost",
+        "ec-economic-loss",
+        "ec-short-run"
+      ],
+      "whyTested": "Between shut-down and break-even price a firm stays open in the SR because it covers VC and part of FC.",
+      "hl": true
+    },
+    {
+      "id": "ec-diseconomies-of-scale",
+      "term": "Diseconomies of scale",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Market power (HL)",
+      "definition": "Increases in long-run average costs as a firm increases its scale of production, caused by problems such as poor coordination, communication and motivation.",
+      "relatedTerms": [
+        "ec-economies-of-scale",
+        "ec-lrac",
+        "ec-long-run",
+        "bm-diseconomies-of-scale"
+      ],
+      "hl": true
+    },
+    {
+      "id": "ec-lrac",
+      "term": "Long-run average cost (LRAC)",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Market power (HL)",
+      "definition": "The lowest possible average cost of producing each level of output when all factors are variable; it is U-shaped because of economies and then diseconomies of scale.",
+      "relatedTerms": [
+        "ec-economies-of-scale",
+        "ec-diseconomies-of-scale",
+        "ec-long-run",
+        "ec-natural-monopoly"
+      ],
+      "hl": true
+    },
+    {
+      "id": "ec-market-power",
+      "term": "Market power",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Market power (HL)",
+      "definition": "The ability of a firm (or group of firms) to influence the price of its product, typically by restricting output; it is a source of market failure because output is below the allocatively efficient level.",
+      "relatedTerms": [
+        "ec-monopoly",
+        "ec-price-maker",
+        "ec-barriers-to-entry",
+        "ec-market-failure"
+      ],
+      "hl": true
+    },
+    {
+      "id": "ec-price-taker",
+      "term": "Price taker",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Market power (HL)",
+      "definition": "A firm that has no control over the price of its product and must accept the market price, as in perfect competition; its demand curve is perfectly elastic.",
+      "relatedTerms": [
+        "ec-perfect-competition",
+        "ec-price-maker",
+        "ec-perfectly-elastic-demand"
+      ],
+      "hl": true
+    },
+    {
+      "id": "ec-price-maker",
+      "term": "Price maker",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Market power (HL)",
+      "definition": "A firm with market power that can set the price of its product, facing a downward-sloping demand (AR) curve.",
+      "relatedTerms": [
+        "ec-price-taker",
+        "ec-monopoly",
+        "ec-market-power"
+      ],
+      "hl": true
+    },
+    {
+      "id": "ec-product-differentiation",
+      "term": "Product differentiation",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Market power (HL)",
+      "definition": "Making a product distinct from rivals' products through quality, design, branding or service, giving the firm some market power.",
+      "relatedTerms": [
+        "ec-monopolistic-competition",
+        "ec-non-price-competition",
+        "ec-oligopoly"
+      ],
+      "hl": true
+    },
+    {
+      "id": "ec-non-price-competition",
+      "term": "Non-price competition",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Market power (HL)",
+      "definition": "Competition between firms using methods other than price, such as advertising, branding, product development and after-sales service.",
+      "relatedTerms": [
+        "ec-product-differentiation",
+        "ec-oligopoly",
+        "ec-monopolistic-competition"
+      ],
+      "hl": true
+    },
+    {
+      "id": "ec-strategic-interdependence",
+      "term": "Strategic interdependence",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Market power (HL)",
+      "definition": "The situation in oligopoly where each firm's decisions on price and output depend on, and affect, the decisions of its rivals.",
+      "relatedTerms": [
+        "ec-oligopoly",
+        "ec-game-theory",
+        "ec-collusion"
+      ],
+      "hl": true
+    },
+    {
+      "id": "ec-cartel",
+      "term": "Cartel",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Market power (HL)",
+      "definition": "A formal collusive agreement between firms in an oligopoly to restrict output and/or fix prices in order to maximise joint profits, acting like a monopoly.",
+      "relatedTerms": [
+        "ec-collusion",
+        "ec-oligopoly",
+        "ec-competition-policy"
+      ],
+      "hl": true
+    },
+    {
+      "id": "ec-prisoners-dilemma",
+      "term": "Prisoner's dilemma",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Market power (HL)",
+      "definition": "A game in which each player's dominant strategy leads to an outcome that is worse for both than if they had cooperated; used to explain why collusion is unstable in oligopoly.",
+      "relatedTerms": [
+        "ec-game-theory",
+        "ec-dominant-strategy",
+        "ec-collusion"
+      ],
+      "hl": true
+    },
+    {
+      "id": "ec-dominant-strategy",
+      "term": "Dominant strategy",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Market power (HL)",
+      "definition": "In game theory, the strategy that gives a player the best payoff regardless of the strategy chosen by the other player.",
+      "relatedTerms": [
+        "ec-game-theory",
+        "ec-prisoners-dilemma"
+      ],
+      "hl": true
+    },
+    {
+      "id": "ec-nationalisation",
+      "term": "Nationalisation",
+      "subject": "Economics",
+      "unit": "Microeconomics",
+      "topic": "Market power (HL)",
+      "definition": "The transfer of a firm or industry from private to government ownership, sometimes used to control the market power of a natural monopoly.",
+      "relatedTerms": [
+        "ec-privatisation",
+        "ec-natural-monopoly",
+        "ec-competition-policy"
       ],
       "hl": true
     },
@@ -931,7 +2809,12 @@
         "ec-gdp-per-capita",
         "ec-circular-flow",
         "ec-economic-growth",
-        "ec-informal-economy"
+        "ec-informal-economy",
+        "ec-nominal-gdp",
+        "ec-green-gdp",
+        "ec-expenditure-approach",
+        "ec-income-approach",
+        "ec-output-approach"
       ],
       "whyTested": "'Within a country' distinguishes GDP from GNI."
     },
@@ -945,7 +2828,9 @@
       "relatedTerms": [
         "ec-gdp",
         "ec-gdp-per-capita",
-        "ec-hdi"
+        "ec-hdi",
+        "ec-gni-per-capita",
+        "ec-primary-income"
       ]
     },
     {
@@ -958,7 +2843,10 @@
       "relatedTerms": [
         "ec-gdp",
         "ec-inflation",
-        "ec-economic-growth"
+        "ec-economic-growth",
+        "ec-actual-growth",
+        "ec-nominal-gdp",
+        "ec-gdp-deflator"
       ]
     },
     {
@@ -971,7 +2859,10 @@
       "relatedTerms": [
         "ec-gdp",
         "ec-gni",
-        "ec-hdi"
+        "ec-hdi",
+        "ec-gni-per-capita",
+        "ec-ppp",
+        "ec-better-life-index"
       ]
     },
     {
@@ -984,7 +2875,10 @@
       "relatedTerms": [
         "ec-gdp",
         "ec-aggregate-demand",
-        "ec-multiplier"
+        "ec-multiplier",
+        "ec-economic-model",
+        "ec-leakages",
+        "ec-injections"
       ]
     },
     {
@@ -998,7 +2892,8 @@
         "ec-recession",
         "ec-output-gap",
         "ec-economic-growth",
-        "ec-automatic-stabilisers"
+        "ec-automatic-stabilisers",
+        "ec-long-term-growth-trend"
       ]
     },
     {
@@ -1024,7 +2919,214 @@
       "relatedTerms": [
         "ec-business-cycle",
         "ec-deflationary-gap",
-        "ec-inflationary-gap"
+        "ec-inflationary-gap",
+        "ec-potential-output",
+        "ec-long-term-growth-trend"
+      ]
+    },
+    {
+      "id": "ec-nominal-gdp",
+      "term": "Nominal GDP",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Measuring economic activity",
+      "definition": "The value of all final goods and services produced in a country in a given time period, measured at current prices (not adjusted for inflation).",
+      "relatedTerms": [
+        "ec-gdp",
+        "ec-real-gdp",
+        "ec-gdp-deflator"
+      ]
+    },
+    {
+      "id": "ec-gdp-deflator",
+      "term": "GDP deflator",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Measuring economic activity",
+      "definition": "A price index used to convert nominal GDP into real GDP: real GDP = nominal GDP ÷ price deflator × 100.",
+      "relatedTerms": [
+        "ec-nominal-gdp",
+        "ec-real-gdp",
+        "ec-cpi"
+      ],
+      "hl": true
+    },
+    {
+      "id": "ec-gni-per-capita",
+      "term": "GNI per capita",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Measuring economic activity",
+      "definition": "Gross national income divided by the population, giving average income per person; commonly used to compare living standards and development.",
+      "relatedTerms": [
+        "ec-gni",
+        "ec-gdp-per-capita",
+        "ec-ppp",
+        "ec-hdi",
+        "ec-single-indicator"
+      ]
+    },
+    {
+      "id": "ec-ppp",
+      "term": "Purchasing power parity (PPP)",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Measuring economic activity",
+      "definition": "An adjustment to national income figures that uses exchange rates equalising the purchasing power of currencies, allowing meaningful comparisons of living standards between countries.",
+      "relatedTerms": [
+        "ec-gni-per-capita",
+        "ec-gdp-per-capita",
+        "ec-exchange-rate"
+      ]
+    },
+    {
+      "id": "ec-green-gdp",
+      "term": "Green GDP",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Measuring economic activity",
+      "definition": "GDP minus the value of environmental damage and resource depletion caused by production, giving a measure of output that accounts for sustainability.",
+      "relatedTerms": [
+        "ec-gdp",
+        "ec-sustainability",
+        "ec-negative-externality-production"
+      ]
+    },
+    {
+      "id": "ec-expenditure-approach",
+      "term": "Expenditure approach",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Measuring economic activity",
+      "definition": "A method of measuring GDP by adding all spending on final goods and services: GDP = C + I + G + (X − M).",
+      "relatedTerms": [
+        "ec-gdp",
+        "ec-income-approach",
+        "ec-output-approach",
+        "ec-aggregate-demand"
+      ]
+    },
+    {
+      "id": "ec-income-approach",
+      "term": "Income approach",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Measuring economic activity",
+      "definition": "A method of measuring GDP by adding all incomes earned by factors of production: wages, rent, interest and profit.",
+      "relatedTerms": [
+        "ec-gdp",
+        "ec-expenditure-approach",
+        "ec-output-approach",
+        "ec-factors-of-production"
+      ]
+    },
+    {
+      "id": "ec-output-approach",
+      "term": "Output approach",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Measuring economic activity",
+      "definition": "A method of measuring GDP by adding the value of final output (value added) produced by every industry in the economy.",
+      "relatedTerms": [
+        "ec-gdp",
+        "ec-expenditure-approach",
+        "ec-income-approach"
+      ]
+    },
+    {
+      "id": "ec-leakages",
+      "term": "Leakages (withdrawals)",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Measuring economic activity",
+      "definition": "Flows of income out of the circular flow that are not spent on domestic output: savings, taxes and imports.",
+      "relatedTerms": [
+        "ec-injections",
+        "ec-circular-flow",
+        "ec-mpw"
+      ]
+    },
+    {
+      "id": "ec-injections",
+      "term": "Injections",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Measuring economic activity",
+      "definition": "Additions to the circular flow of income that do not come from household spending: investment, government spending and exports.",
+      "relatedTerms": [
+        "ec-leakages",
+        "ec-circular-flow",
+        "ec-multiplier"
+      ],
+      "whyTested": "National income is in equilibrium when injections equal leakages."
+    },
+    {
+      "id": "ec-potential-output",
+      "term": "Potential output",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Measuring economic activity",
+      "definition": "The real output an economy can produce when all its resources are fully employed (at the natural rate of unemployment); the level of output on the LRAS curve.",
+      "relatedTerms": [
+        "ec-output-gap",
+        "ec-lras",
+        "ec-long-term-growth-trend",
+        "ec-natural-rate-unemployment",
+        "ec-potential-growth",
+        "ec-long-run-equilibrium",
+        "ec-full-employment"
+      ]
+    },
+    {
+      "id": "ec-long-term-growth-trend",
+      "term": "Long-term growth trend",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Measuring economic activity",
+      "definition": "The line through the business cycle showing the average rate of growth of potential output over time.",
+      "relatedTerms": [
+        "ec-business-cycle",
+        "ec-potential-output",
+        "ec-output-gap"
+      ]
+    },
+    {
+      "id": "ec-better-life-index",
+      "term": "OECD Better Life Index",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Measuring economic activity",
+      "definition": "A composite measure of well-being that rates countries across dimensions such as housing, income, jobs, community, education, environment, health and life satisfaction.",
+      "relatedTerms": [
+        "ec-happiness-index",
+        "ec-happy-planet-index",
+        "ec-gdp-per-capita"
+      ]
+    },
+    {
+      "id": "ec-happiness-index",
+      "term": "Happiness index",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Measuring economic activity",
+      "definition": "A measure of well-being based on surveys of people's own evaluations of their life satisfaction (e.g. the World Happiness Report).",
+      "relatedTerms": [
+        "ec-better-life-index",
+        "ec-happy-planet-index",
+        "ec-economic-wellbeing"
+      ]
+    },
+    {
+      "id": "ec-happy-planet-index",
+      "term": "Happy Planet Index",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Measuring economic activity",
+      "definition": "A measure of sustainable well-being that combines life expectancy and life satisfaction relative to a country's ecological footprint.",
+      "relatedTerms": [
+        "ec-better-life-index",
+        "ec-happiness-index",
+        "ec-sustainability"
       ]
     },
     {
@@ -1041,7 +3143,16 @@
         "ec-monetary-policy",
         "ec-circular-flow",
         "ec-demand-pull-inflation",
-        "ec-multiplier"
+        "ec-multiplier",
+        "ec-expenditure-approach",
+        "ec-consumption",
+        "ec-investment",
+        "ec-government-spending",
+        "ec-net-exports",
+        "ec-consumer-confidence",
+        "ec-business-confidence",
+        "ec-wealth-effect",
+        "ec-macroeconomic-equilibrium"
       ],
       "whyTested": "Write out C + I + G + (X − M) explicitly."
     },
@@ -1055,7 +3166,10 @@
       "relatedTerms": [
         "ec-aggregate-demand",
         "ec-lras",
-        "ec-cost-push-inflation"
+        "ec-cost-push-inflation",
+        "ec-supply-shock",
+        "ec-macroeconomic-equilibrium",
+        "ec-stagflation"
       ]
     },
     {
@@ -1072,7 +3186,13 @@
         "ec-keynesian",
         "ec-economic-growth",
         "ec-market-supply-side",
-        "ec-interventionist-supply-side"
+        "ec-interventionist-supply-side",
+        "ec-potential-growth",
+        "ec-potential-output",
+        "ec-long-run-equilibrium",
+        "ec-keynesian-as-curve",
+        "ec-lrpc",
+        "ec-supply-side-policies"
       ],
       "whyTested": "The two LRAS shapes are the core of the Keynesian vs Monetarist/New Classical debate."
     },
@@ -1091,7 +3211,9 @@
         "ec-crowding-out",
         "ec-positive-normative",
         "ec-phillips-curve",
-        "ec-market-supply-side"
+        "ec-market-supply-side",
+        "ec-long-run-equilibrium",
+        "ec-lrpc"
       ],
       "whyTested": "Only contrast with Keynesian; no other schools are in the IB guide."
     },
@@ -1109,7 +3231,9 @@
         "ec-fiscal-policy",
         "ec-multiplier",
         "ec-positive-normative",
-        "ec-interventionist-supply-side"
+        "ec-interventionist-supply-side",
+        "ec-keynesian-as-curve",
+        "ec-expansionary-fiscal-policy"
       ],
       "whyTested": "Only contrast with Monetarist/New Classical."
     },
@@ -1125,7 +3249,11 @@
         "ec-inflationary-gap",
         "ec-keynesian",
         "ec-recession",
-        "ec-cyclical-unemployment"
+        "ec-cyclical-unemployment",
+        "ec-keynesian-as-curve",
+        "ec-spare-capacity",
+        "ec-expansionary-monetary-policy",
+        "ec-expansionary-fiscal-policy"
       ]
     },
     {
@@ -1138,7 +3266,9 @@
       "relatedTerms": [
         "ec-output-gap",
         "ec-deflationary-gap",
-        "ec-demand-pull-inflation"
+        "ec-demand-pull-inflation",
+        "ec-contractionary-monetary-policy",
+        "ec-contractionary-fiscal-policy"
       ]
     },
     {
@@ -1153,7 +3283,13 @@
         "ec-aggregate-demand",
         "ec-keynesian",
         "ec-fiscal-policy",
-        "ec-circular-flow"
+        "ec-circular-flow",
+        "ec-injections",
+        "ec-mps",
+        "ec-mpt",
+        "ec-mpm",
+        "ec-mpw",
+        "ec-expansionary-fiscal-policy"
       ],
       "hl": true
     },
@@ -1165,8 +3301,234 @@
       "topic": "Aggregate demand and aggregate supply",
       "definition": "The fraction of additional income that is spent on consumption: MPC = ΔC / ΔY.",
       "relatedTerms": [
+        "ec-multiplier",
+        "ec-consumption",
+        "ec-mps",
+        "ec-mpt",
+        "ec-mpm",
+        "ec-mpw"
+      ],
+      "hl": true
+    },
+    {
+      "id": "ec-consumption",
+      "term": "Consumption (C)",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Aggregate demand and aggregate supply",
+      "definition": "Total spending by households on final goods and services; the largest component of aggregate demand.",
+      "relatedTerms": [
+        "ec-aggregate-demand",
+        "ec-consumer-confidence",
+        "ec-wealth-effect",
+        "ec-mpc"
+      ]
+    },
+    {
+      "id": "ec-investment",
+      "term": "Investment (I)",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Aggregate demand and aggregate supply",
+      "definition": "Spending by firms on capital goods such as machinery, equipment and buildings, which adds to aggregate demand and increases productive capacity.",
+      "relatedTerms": [
+        "ec-aggregate-demand",
+        "ec-capital",
+        "ec-business-confidence",
+        "ec-interest-rate",
+        "ec-incentive-related-policies"
+      ]
+    },
+    {
+      "id": "ec-government-spending",
+      "term": "Government spending (G)",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Aggregate demand and aggregate supply",
+      "definition": "Spending by the government on goods and services, including current and capital expenditure (but excluding transfer payments), which forms part of aggregate demand.",
+      "relatedTerms": [
+        "ec-aggregate-demand",
+        "ec-fiscal-policy",
+        "ec-current-expenditure",
+        "ec-capital-expenditure"
+      ]
+    },
+    {
+      "id": "ec-net-exports",
+      "term": "Net exports (X − M)",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Aggregate demand and aggregate supply",
+      "definition": "The value of exports minus the value of imports; the international component of aggregate demand.",
+      "relatedTerms": [
+        "ec-aggregate-demand",
+        "ec-exchange-rate",
+        "ec-balance-of-trade"
+      ]
+    },
+    {
+      "id": "ec-consumer-confidence",
+      "term": "Consumer confidence",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Aggregate demand and aggregate supply",
+      "definition": "The degree of optimism households feel about their future incomes and the economy; higher confidence increases consumption and shifts AD to the right.",
+      "relatedTerms": [
+        "ec-consumption",
+        "ec-business-confidence",
+        "ec-aggregate-demand"
+      ]
+    },
+    {
+      "id": "ec-business-confidence",
+      "term": "Business confidence",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Aggregate demand and aggregate supply",
+      "definition": "The degree of optimism firms feel about future sales and profits; higher confidence increases investment and shifts AD to the right.",
+      "relatedTerms": [
+        "ec-investment",
+        "ec-consumer-confidence",
+        "ec-aggregate-demand"
+      ]
+    },
+    {
+      "id": "ec-wealth-effect",
+      "term": "Wealth effect",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Aggregate demand and aggregate supply",
+      "definition": "The change in consumption that results from a change in the value of household assets such as housing and shares; rising wealth increases consumption.",
+      "relatedTerms": [
+        "ec-consumption",
+        "ec-aggregate-demand"
+      ]
+    },
+    {
+      "id": "ec-supply-shock",
+      "term": "Supply shock",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Aggregate demand and aggregate supply",
+      "definition": "An unexpected event that suddenly changes production costs or capacity, shifting SRAS (e.g. a rise in oil prices or a natural disaster).",
+      "relatedTerms": [
+        "ec-sras",
+        "ec-cost-push-inflation",
+        "ec-stagflation"
+      ]
+    },
+    {
+      "id": "ec-macroeconomic-equilibrium",
+      "term": "Short-run macroeconomic equilibrium",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Aggregate demand and aggregate supply",
+      "definition": "The level of real output and the average price level determined where aggregate demand equals short-run aggregate supply (AD = SRAS).",
+      "relatedTerms": [
+        "ec-aggregate-demand",
+        "ec-sras",
+        "ec-long-run-equilibrium"
+      ]
+    },
+    {
+      "id": "ec-long-run-equilibrium",
+      "term": "Long-run macroeconomic equilibrium",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Aggregate demand and aggregate supply",
+      "definition": "In the monetarist/new classical model, the point where AD and SRAS intersect on the vertical LRAS curve, so the economy produces potential output at the natural rate of unemployment.",
+      "relatedTerms": [
+        "ec-macroeconomic-equilibrium",
+        "ec-lras",
+        "ec-new-classical",
+        "ec-potential-output"
+      ]
+    },
+    {
+      "id": "ec-keynesian-as-curve",
+      "term": "Keynesian AS curve",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Aggregate demand and aggregate supply",
+      "definition": "An aggregate supply curve with three sections: horizontal at low output (spare capacity, so output rises without price rises), upward-sloping as bottlenecks appear, and vertical at full employment output.",
+      "relatedTerms": [
+        "ec-keynesian",
+        "ec-spare-capacity",
+        "ec-lras",
+        "ec-deflationary-gap"
+      ]
+    },
+    {
+      "id": "ec-spare-capacity",
+      "term": "Spare capacity",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Aggregate demand and aggregate supply",
+      "definition": "The situation where an economy (or firm) has unemployed or underused resources and could increase output without raising costs.",
+      "relatedTerms": [
+        "ec-keynesian-as-curve",
+        "ec-deflationary-gap",
+        "ec-pes-determinants"
+      ]
+    },
+    {
+      "id": "ec-mps",
+      "term": "Marginal propensity to save (MPS)",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Aggregate demand and aggregate supply",
+      "definition": "The fraction of an additional unit of income that is saved: MPS = ΔS ÷ ΔY.",
+      "relatedTerms": [
+        "ec-mpc",
+        "ec-mpw",
         "ec-multiplier"
       ],
+      "hl": true
+    },
+    {
+      "id": "ec-mpt",
+      "term": "Marginal propensity to tax (MPT)",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Aggregate demand and aggregate supply",
+      "definition": "The fraction of an additional unit of income that is paid in taxes: MPT = ΔT ÷ ΔY.",
+      "relatedTerms": [
+        "ec-mpc",
+        "ec-mpw",
+        "ec-multiplier"
+      ],
+      "hl": true
+    },
+    {
+      "id": "ec-mpm",
+      "term": "Marginal propensity to import (MPM)",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Aggregate demand and aggregate supply",
+      "definition": "The fraction of an additional unit of income that is spent on imports: MPM = ΔM ÷ ΔY.",
+      "relatedTerms": [
+        "ec-mpc",
+        "ec-mpw",
+        "ec-multiplier"
+      ],
+      "hl": true
+    },
+    {
+      "id": "ec-mpw",
+      "term": "Marginal propensity to withdraw (MPW)",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Aggregate demand and aggregate supply",
+      "definition": "The fraction of an additional unit of income that leaks out of the circular flow: MPW = MPS + MPT + MPM = 1 − MPC; the multiplier = 1 ÷ MPW.",
+      "relatedTerms": [
+        "ec-multiplier",
+        "ec-mpc",
+        "ec-mps",
+        "ec-leakages",
+        "ec-mpt",
+        "ec-mpm"
+      ],
+      "whyTested": "Multiplier = 1/(1 − MPC) = 1/MPW — both forms are accepted in calculations.",
       "hl": true
     },
     {
@@ -1182,7 +3544,8 @@
         "ec-lras",
         "ec-business-cycle",
         "ec-economic-development",
-        "ec-gdp"
+        "ec-gdp",
+        "ec-actual-growth"
       ],
       "whyTested": "Distinguish actual vs potential growth."
     },
@@ -1199,7 +3562,9 @@
         "ec-frictional-unemployment",
         "ec-seasonal-unemployment",
         "ec-natural-rate-unemployment",
-        "ec-phillips-curve"
+        "ec-phillips-curve",
+        "ec-labour-force",
+        "ec-unemployment-rate"
       ]
     },
     {
@@ -1213,7 +3578,8 @@
         "ec-unemployment",
         "ec-recession",
         "ec-deflationary-gap",
-        "ec-fiscal-policy"
+        "ec-fiscal-policy",
+        "ec-full-employment"
       ]
     },
     {
@@ -1226,7 +3592,8 @@
       "relatedTerms": [
         "ec-unemployment",
         "ec-natural-rate-unemployment",
-        "ec-interventionist-supply-side"
+        "ec-interventionist-supply-side",
+        "ec-sectoral-change"
       ]
     },
     {
@@ -1266,7 +3633,11 @@
         "ec-frictional-unemployment",
         "ec-seasonal-unemployment",
         "ec-new-classical",
-        "ec-phillips-curve"
+        "ec-phillips-curve",
+        "ec-potential-output",
+        "ec-full-employment",
+        "ec-lrpc",
+        "ec-labour-market-reforms"
       ]
     },
     {
@@ -1284,7 +3655,11 @@
         "ec-cost-push-inflation",
         "ec-real-gdp",
         "ec-monetary-policy",
-        "ec-phillips-curve"
+        "ec-phillips-curve",
+        "ec-weighted-price-index",
+        "ec-core-inflation",
+        "ec-inflation-targeting",
+        "ec-real-interest-rate"
       ],
       "whyTested": "'Sustained' and 'general price level' are both required."
     },
@@ -1321,7 +3696,12 @@
       "topic": "Macroeconomic objectives",
       "definition": "A weighted index measuring changes in the average prices of a representative basket of goods and services bought by a typical household, relative to a base year.",
       "relatedTerms": [
-        "ec-inflation"
+        "ec-inflation",
+        "ec-gdp-deflator",
+        "ec-base-year",
+        "ec-weighted-price-index",
+        "ec-core-inflation",
+        "ec-producer-price-index"
       ]
     },
     {
@@ -1335,7 +3715,8 @@
         "ec-inflation",
         "ec-aggregate-demand",
         "ec-inflationary-gap",
-        "ec-cost-push-inflation"
+        "ec-cost-push-inflation",
+        "ec-srpc"
       ]
     },
     {
@@ -1348,7 +3729,10 @@
       "relatedTerms": [
         "ec-inflation",
         "ec-sras",
-        "ec-demand-pull-inflation"
+        "ec-demand-pull-inflation",
+        "ec-supply-shock",
+        "ec-producer-price-index",
+        "ec-stagflation"
       ]
     },
     {
@@ -1362,7 +3746,229 @@
         "ec-inflation",
         "ec-unemployment",
         "ec-natural-rate-unemployment",
-        "ec-new-classical"
+        "ec-new-classical",
+        "ec-srpc"
+      ],
+      "hl": true
+    },
+    {
+      "id": "ec-government-debt",
+      "term": "Government (public) debt",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Macroeconomic objectives",
+      "definition": "The total accumulated amount owed by the government as a result of past budget deficits; often expressed as a percentage of GDP.",
+      "relatedTerms": [
+        "ec-budget-deficit",
+        "ec-debt-relief",
+        "ec-debt-to-gdp",
+        "ec-credit-rating",
+        "ec-debt-servicing"
+      ],
+      "hl": true
+    },
+    {
+      "id": "ec-labour-force",
+      "term": "Labour force",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Macroeconomic objectives",
+      "definition": "All people of working age who are either employed or unemployed and actively seeking work.",
+      "relatedTerms": [
+        "ec-unemployment-rate",
+        "ec-unemployment",
+        "ec-labour"
+      ]
+    },
+    {
+      "id": "ec-unemployment-rate",
+      "term": "Unemployment rate",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Macroeconomic objectives",
+      "definition": "The number of unemployed people as a percentage of the labour force: unemployment rate = (number unemployed ÷ labour force) × 100.",
+      "relatedTerms": [
+        "ec-unemployment",
+        "ec-labour-force",
+        "ec-hidden-unemployment",
+        "ec-underemployment"
+      ]
+    },
+    {
+      "id": "ec-hidden-unemployment",
+      "term": "Hidden unemployment",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Macroeconomic objectives",
+      "definition": "People who want to work but are not counted as unemployed in official statistics, such as discouraged workers who have stopped looking for work.",
+      "relatedTerms": [
+        "ec-unemployment-rate",
+        "ec-underemployment"
+      ]
+    },
+    {
+      "id": "ec-underemployment",
+      "term": "Underemployment",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Macroeconomic objectives",
+      "definition": "A situation where people are working fewer hours than they would like, or in jobs that do not use their skills and qualifications.",
+      "relatedTerms": [
+        "ec-hidden-unemployment",
+        "ec-unemployment-rate"
+      ]
+    },
+    {
+      "id": "ec-full-employment",
+      "term": "Full employment",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Macroeconomic objectives",
+      "definition": "A situation where the only unemployment is the natural rate (frictional, structural and seasonal), so there is no cyclical unemployment and the economy produces potential output.",
+      "relatedTerms": [
+        "ec-natural-rate-unemployment",
+        "ec-cyclical-unemployment",
+        "ec-potential-output"
+      ]
+    },
+    {
+      "id": "ec-base-year",
+      "term": "Base year",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Macroeconomic objectives",
+      "definition": "The year against which prices in other years are compared in a price index, given an index value of 100.",
+      "relatedTerms": [
+        "ec-cpi",
+        "ec-weighted-price-index"
+      ]
+    },
+    {
+      "id": "ec-weighted-price-index",
+      "term": "Weighted price index",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Macroeconomic objectives",
+      "definition": "A price index in which each good's price change is weighted by its share of household spending, so that more important items have a bigger effect on the measured rate of inflation.",
+      "relatedTerms": [
+        "ec-cpi",
+        "ec-base-year",
+        "ec-inflation"
+      ],
+      "hl": true
+    },
+    {
+      "id": "ec-core-inflation",
+      "term": "Core (underlying) inflation",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Macroeconomic objectives",
+      "definition": "A measure of inflation that excludes items with volatile prices, such as food and energy, to show the underlying trend in the price level.",
+      "relatedTerms": [
+        "ec-inflation",
+        "ec-cpi",
+        "ec-producer-price-index"
+      ],
+      "hl": true
+    },
+    {
+      "id": "ec-producer-price-index",
+      "term": "Producer price index (PPI)",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Macroeconomic objectives",
+      "definition": "A measure of changes in the prices of inputs and outputs of producers; it can act as an early indicator of future consumer price inflation.",
+      "relatedTerms": [
+        "ec-cpi",
+        "ec-core-inflation",
+        "ec-cost-push-inflation"
+      ],
+      "hl": true
+    },
+    {
+      "id": "ec-stagflation",
+      "term": "Stagflation",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Macroeconomic objectives",
+      "definition": "A situation of rising inflation combined with falling real output and rising unemployment, typically caused by a leftward shift of SRAS.",
+      "relatedTerms": [
+        "ec-cost-push-inflation",
+        "ec-supply-shock",
+        "ec-sras",
+        "ec-srpc"
+      ]
+    },
+    {
+      "id": "ec-srpc",
+      "term": "Short-run Phillips curve (SRPC)",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Macroeconomic objectives",
+      "definition": "A curve showing an inverse relationship between the rate of inflation and the rate of unemployment in the short run.",
+      "relatedTerms": [
+        "ec-phillips-curve",
+        "ec-lrpc",
+        "ec-demand-pull-inflation",
+        "ec-stagflation"
+      ],
+      "hl": true
+    },
+    {
+      "id": "ec-lrpc",
+      "term": "Long-run Phillips curve (LRPC)",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Macroeconomic objectives",
+      "definition": "A vertical curve at the natural rate of unemployment, showing that in the long run there is no trade-off between inflation and unemployment (the monetarist/new classical view).",
+      "relatedTerms": [
+        "ec-srpc",
+        "ec-natural-rate-unemployment",
+        "ec-new-classical",
+        "ec-lras"
+      ],
+      "hl": true
+    },
+    {
+      "id": "ec-debt-to-gdp",
+      "term": "Government debt-to-GDP ratio",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Macroeconomic objectives",
+      "definition": "The total government debt expressed as a percentage of GDP, used to judge whether a country's level of debt is sustainable.",
+      "relatedTerms": [
+        "ec-government-debt",
+        "ec-budget-deficit",
+        "ec-credit-rating"
+      ],
+      "hl": true
+    },
+    {
+      "id": "ec-credit-rating",
+      "term": "Credit rating",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Macroeconomic objectives",
+      "definition": "An assessment by a credit rating agency of a borrower's (e.g. a government's) ability to repay its debt; a lower rating raises the interest rate it must pay to borrow.",
+      "relatedTerms": [
+        "ec-government-debt",
+        "ec-debt-to-gdp",
+        "ec-debt-servicing"
+      ],
+      "hl": true
+    },
+    {
+      "id": "ec-debt-servicing",
+      "term": "Debt servicing",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Macroeconomic objectives",
+      "definition": "The payment of interest and repayment of principal on debt; high debt-servicing costs carry the opportunity cost of reduced government spending on other areas.",
+      "relatedTerms": [
+        "ec-government-debt",
+        "ec-credit-rating",
+        "ec-opportunity-cost",
+        "ec-unsustainable-debt"
       ],
       "hl": true
     },
@@ -1371,14 +3977,20 @@
       "term": "Equity in income distribution",
       "subject": "Economics",
       "unit": "Macroeconomics",
-      "topic": "Macroeconomic objectives",
+      "topic": "Economics of inequality and poverty",
       "definition": "The idea of fairness in the distribution of income and wealth; not the same as equality.",
       "relatedTerms": [
         "ec-lorenz-curve",
         "ec-gini-coefficient",
         "ec-progressive-tax",
         "ec-transfer-payments",
-        "ec-relative-poverty"
+        "ec-relative-poverty",
+        "ec-economic-wellbeing",
+        "ec-equality",
+        "ec-equality-of-opportunity",
+        "ec-wealth-inequality",
+        "ec-market-inequity",
+        "ec-ihdi"
       ]
     },
     {
@@ -1386,11 +3998,13 @@
       "term": "Lorenz curve",
       "subject": "Economics",
       "unit": "Macroeconomics",
-      "topic": "Macroeconomic objectives",
+      "topic": "Economics of inequality and poverty",
       "definition": "A curve showing the cumulative percentage of income received by cumulative percentages of the population; the further it lies from the line of perfect equality, the greater the inequality.",
       "relatedTerms": [
         "ec-gini-coefficient",
-        "ec-equity"
+        "ec-equity",
+        "ec-equality",
+        "ec-wealth-inequality"
       ]
     },
     {
@@ -1398,11 +4012,12 @@
       "term": "Gini coefficient",
       "subject": "Economics",
       "unit": "Macroeconomics",
-      "topic": "Macroeconomic objectives",
+      "topic": "Economics of inequality and poverty",
       "definition": "A measure of income inequality calculated as the ratio of the area between the line of perfect equality and the Lorenz curve to the total area under the line of equality; ranges from 0 (perfect equality) to 1 (perfect inequality).",
       "relatedTerms": [
         "ec-lorenz-curve",
-        "ec-equity"
+        "ec-equity",
+        "ec-wealth-inequality"
       ]
     },
     {
@@ -1410,12 +4025,13 @@
       "term": "Absolute poverty",
       "subject": "Economics",
       "unit": "Macroeconomics",
-      "topic": "Macroeconomic objectives",
+      "topic": "Economics of inequality and poverty",
       "definition": "A situation where income is below the level needed to meet basic needs; measured by the World Bank's international poverty line (income per day at PPP).",
       "relatedTerms": [
         "ec-relative-poverty",
         "ec-multidimensional-poverty",
-        "ec-economic-development"
+        "ec-economic-development",
+        "ec-universal-basic-income"
       ]
     },
     {
@@ -1423,7 +4039,7 @@
       "term": "Relative poverty",
       "subject": "Economics",
       "unit": "Macroeconomics",
-      "topic": "Macroeconomic objectives",
+      "topic": "Economics of inequality and poverty",
       "definition": "A situation where income is below a certain proportion (e.g. 50%) of the median income in a country.",
       "relatedTerms": [
         "ec-absolute-poverty",
@@ -1435,12 +4051,16 @@
       "term": "Progressive tax",
       "subject": "Economics",
       "unit": "Macroeconomics",
-      "topic": "Macroeconomic objectives",
+      "topic": "Economics of inequality and poverty",
       "definition": "A tax where the percentage of income paid in tax (the average tax rate) rises as income rises.",
       "relatedTerms": [
         "ec-regressive-tax",
         "ec-equity",
-        "ec-automatic-stabilisers"
+        "ec-automatic-stabilisers",
+        "ec-direct-tax",
+        "ec-proportional-tax",
+        "ec-average-tax-rate",
+        "ec-marginal-tax-rate"
       ]
     },
     {
@@ -1448,11 +4068,12 @@
       "term": "Regressive tax",
       "subject": "Economics",
       "unit": "Macroeconomics",
-      "topic": "Macroeconomic objectives",
+      "topic": "Economics of inequality and poverty",
       "definition": "A tax where the percentage of income paid in tax falls as income rises; indirect taxes are usually regressive.",
       "relatedTerms": [
         "ec-progressive-tax",
-        "ec-indirect-tax"
+        "ec-indirect-tax",
+        "ec-proportional-tax"
       ]
     },
     {
@@ -1460,38 +4081,142 @@
       "term": "Transfer payments",
       "subject": "Economics",
       "unit": "Macroeconomics",
-      "topic": "Macroeconomic objectives",
+      "topic": "Economics of inequality and poverty",
       "definition": "Payments made by the government to individuals for which no good or service is produced in return (e.g. unemployment benefits, pensions); they redistribute income.",
       "relatedTerms": [
         "ec-equity",
-        "ec-automatic-stabilisers"
+        "ec-automatic-stabilisers",
+        "ec-universal-basic-income",
+        "ec-market-inequity",
+        "ec-current-expenditure"
       ]
     },
     {
-      "id": "ec-fiscal-policy",
-      "term": "Fiscal policy",
+      "id": "ec-equality",
+      "term": "Equality",
       "subject": "Economics",
       "unit": "Macroeconomics",
-      "topic": "Demand-side and supply-side policies",
-      "definition": "The use of government spending and taxation to influence aggregate demand and the level of economic activity.",
+      "topic": "Economics of inequality and poverty",
+      "definition": "The state of everyone receiving the same share of income or wealth; distinct from equity, which means fairness.",
       "relatedTerms": [
-        "ec-aggregate-demand",
-        "ec-budget-deficit",
-        "ec-automatic-stabilisers",
-        "ec-crowding-out",
-        "ec-multiplier",
-        "ec-keynesian",
-        "ec-monetary-policy",
-        "ec-cyclical-unemployment"
+        "ec-equity",
+        "ec-equality-of-opportunity",
+        "ec-lorenz-curve"
+      ]
+    },
+    {
+      "id": "ec-equality-of-opportunity",
+      "term": "Equality of opportunity",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Economics of inequality and poverty",
+      "definition": "A situation where everyone has the same access to opportunities such as education, healthcare and jobs, regardless of background, even if outcomes differ.",
+      "relatedTerms": [
+        "ec-equality",
+        "ec-equity",
+        "ec-human-capital"
+      ]
+    },
+    {
+      "id": "ec-wealth-inequality",
+      "term": "Wealth inequality",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Economics of inequality and poverty",
+      "definition": "Unequal distribution of the stock of assets (e.g. property, shares and savings) owned by households; usually greater than income inequality.",
+      "relatedTerms": [
+        "ec-equity",
+        "ec-gini-coefficient",
+        "ec-lorenz-curve"
+      ]
+    },
+    {
+      "id": "ec-direct-tax",
+      "term": "Direct tax",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Economics of inequality and poverty",
+      "definition": "A tax paid directly to the government by the individual or firm on whom it is levied, usually on income, wealth or profit (e.g. income tax, corporate tax).",
+      "relatedTerms": [
+        "ec-indirect-tax",
+        "ec-progressive-tax",
+        "ec-fiscal-policy",
+        "ec-government-revenue",
+        "ec-incentive-related-policies"
+      ]
+    },
+    {
+      "id": "ec-proportional-tax",
+      "term": "Proportional tax",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Economics of inequality and poverty",
+      "definition": "A tax where the average tax rate stays the same as income rises, so everyone pays the same percentage of income in tax.",
+      "relatedTerms": [
+        "ec-progressive-tax",
+        "ec-regressive-tax",
+        "ec-average-tax-rate"
+      ]
+    },
+    {
+      "id": "ec-average-tax-rate",
+      "term": "Average tax rate",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Economics of inequality and poverty",
+      "definition": "Total tax paid as a percentage of total income: average tax rate = (tax paid ÷ income) × 100.",
+      "relatedTerms": [
+        "ec-marginal-tax-rate",
+        "ec-progressive-tax",
+        "ec-proportional-tax"
       ],
-      "whyTested": "Keynesians favour active fiscal policy; Monetarists/New Classicals stress crowding out."
+      "hl": true
+    },
+    {
+      "id": "ec-marginal-tax-rate",
+      "term": "Marginal tax rate",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Economics of inequality and poverty",
+      "definition": "The percentage of an additional unit of income that is paid in tax: marginal tax rate = (Δtax ÷ Δincome) × 100.",
+      "relatedTerms": [
+        "ec-average-tax-rate",
+        "ec-progressive-tax"
+      ],
+      "whyTested": "A progressive system has a marginal rate above the average rate.",
+      "hl": true
+    },
+    {
+      "id": "ec-universal-basic-income",
+      "term": "Universal basic income (UBI)",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Economics of inequality and poverty",
+      "definition": "A regular, unconditional payment made by the government to every individual, regardless of income or employment status.",
+      "relatedTerms": [
+        "ec-transfer-payments",
+        "ec-absolute-poverty"
+      ]
+    },
+    {
+      "id": "ec-market-inequity",
+      "term": "Inability of markets to achieve equity",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Economics of inequality and poverty",
+      "definition": "The idea that free markets distribute income according to the ownership and value of factors of production, which can result in an unequal and unfair distribution of income and wealth.",
+      "relatedTerms": [
+        "ec-equity",
+        "ec-market-failure",
+        "ec-transfer-payments"
+      ]
     },
     {
       "id": "ec-monetary-policy",
       "term": "Monetary policy",
       "subject": "Economics",
       "unit": "Macroeconomics",
-      "topic": "Demand-side and supply-side policies",
+      "topic": "Monetary policy",
       "definition": "The use of interest rates and the money supply by the central bank to influence aggregate demand, usually to achieve a low and stable inflation target.",
       "relatedTerms": [
         "ec-central-bank",
@@ -1501,7 +4226,13 @@
         "ec-inflation",
         "ec-new-classical",
         "ec-fiscal-policy",
-        "ec-monetary-union"
+        "ec-monetary-union",
+        "ec-open-market-operations",
+        "ec-reserve-requirements",
+        "ec-minimum-lending-rate",
+        "ec-inflation-targeting",
+        "ec-expansionary-monetary-policy",
+        "ec-contractionary-monetary-policy"
       ]
     },
     {
@@ -1509,12 +4240,17 @@
       "term": "Central bank",
       "subject": "Economics",
       "unit": "Macroeconomics",
-      "topic": "Demand-side and supply-side policies",
+      "topic": "Monetary policy",
       "definition": "The institution responsible for a country's monetary policy, acting as banker to the government and commercial banks and as lender of last resort.",
       "relatedTerms": [
         "ec-monetary-policy",
         "ec-interest-rate",
-        "ec-quantitative-easing"
+        "ec-quantitative-easing",
+        "ec-money-supply",
+        "ec-money-creation",
+        "ec-reserve-requirements",
+        "ec-minimum-lending-rate",
+        "ec-inflation-targeting"
       ]
     },
     {
@@ -1522,12 +4258,19 @@
       "term": "Interest rate",
       "subject": "Economics",
       "unit": "Macroeconomics",
-      "topic": "Demand-side and supply-side policies",
+      "topic": "Monetary policy",
       "definition": "The cost of borrowing money and the reward for saving, expressed as a percentage of the amount borrowed or saved.",
       "relatedTerms": [
         "ec-monetary-policy",
         "ec-central-bank",
-        "ec-exchange-rate"
+        "ec-exchange-rate",
+        "ec-investment",
+        "ec-money-supply",
+        "ec-demand-for-money",
+        "ec-minimum-lending-rate",
+        "ec-nominal-interest-rate",
+        "ec-real-interest-rate",
+        "ec-hot-money"
       ]
     },
     {
@@ -1535,51 +4278,215 @@
       "term": "Quantitative easing (QE)",
       "subject": "Economics",
       "unit": "Macroeconomics",
-      "topic": "Demand-side and supply-side policies",
+      "topic": "Monetary policy",
       "definition": "A form of monetary policy in which the central bank creates money to buy financial assets (e.g. government bonds) from commercial banks, increasing the money supply and lowering long-term interest rates.",
       "relatedTerms": [
         "ec-monetary-policy",
+        "ec-central-bank",
+        "ec-open-market-operations",
+        "ec-expansionary-monetary-policy"
+      ]
+    },
+    {
+      "id": "ec-money-supply",
+      "term": "Money supply",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Monetary policy",
+      "definition": "The total quantity of money in the economy, including currency and bank deposits; in the money market it is drawn as vertical, as it is set by the central bank.",
+      "relatedTerms": [
+        "ec-demand-for-money",
+        "ec-central-bank",
+        "ec-interest-rate",
+        "ec-money-creation",
+        "ec-open-market-operations"
+      ]
+    },
+    {
+      "id": "ec-demand-for-money",
+      "term": "Demand for money",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Monetary policy",
+      "definition": "The amount of money households and firms wish to hold; it is inversely related to the interest rate, which is the opportunity cost of holding money.",
+      "relatedTerms": [
+        "ec-money-supply",
+        "ec-interest-rate"
+      ]
+    },
+    {
+      "id": "ec-money-creation",
+      "term": "Money creation by commercial banks",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Monetary policy",
+      "definition": "The process by which commercial banks create new money by making loans from deposits, keeping only a fraction of deposits as reserves.",
+      "relatedTerms": [
+        "ec-money-supply",
+        "ec-reserve-requirements",
+        "ec-central-bank"
+      ],
+      "hl": true
+    },
+    {
+      "id": "ec-open-market-operations",
+      "term": "Open market operations",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Monetary policy",
+      "definition": "The buying and selling of government bonds by the central bank to change the money supply and interest rates: buying bonds increases the money supply.",
+      "relatedTerms": [
+        "ec-monetary-policy",
+        "ec-money-supply",
+        "ec-quantitative-easing"
+      ]
+    },
+    {
+      "id": "ec-reserve-requirements",
+      "term": "Minimum reserve requirements",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Monetary policy",
+      "definition": "The minimum proportion of deposits that commercial banks must hold as reserves; raising it reduces banks' ability to lend and so the money supply.",
+      "relatedTerms": [
+        "ec-money-creation",
+        "ec-monetary-policy",
         "ec-central-bank"
       ]
+    },
+    {
+      "id": "ec-minimum-lending-rate",
+      "term": "Central bank minimum lending rate",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Monetary policy",
+      "definition": "The interest rate at which the central bank lends to commercial banks; changing it influences the interest rates commercial banks charge their customers.",
+      "relatedTerms": [
+        "ec-central-bank",
+        "ec-interest-rate",
+        "ec-monetary-policy"
+      ]
+    },
+    {
+      "id": "ec-inflation-targeting",
+      "term": "Inflation targeting",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Monetary policy",
+      "definition": "A monetary policy framework in which the central bank sets interest rates to keep inflation within an announced target range (often around 2%).",
+      "relatedTerms": [
+        "ec-monetary-policy",
+        "ec-central-bank",
+        "ec-inflation"
+      ]
+    },
+    {
+      "id": "ec-nominal-interest-rate",
+      "term": "Nominal interest rate",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Monetary policy",
+      "definition": "The interest rate stated on a loan or deposit, not adjusted for inflation.",
+      "relatedTerms": [
+        "ec-real-interest-rate",
+        "ec-interest-rate"
+      ]
+    },
+    {
+      "id": "ec-real-interest-rate",
+      "term": "Real interest rate",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Monetary policy",
+      "definition": "The interest rate adjusted for inflation: real interest rate = nominal interest rate − inflation rate.",
+      "relatedTerms": [
+        "ec-nominal-interest-rate",
+        "ec-interest-rate",
+        "ec-inflation"
+      ]
+    },
+    {
+      "id": "ec-expansionary-monetary-policy",
+      "term": "Expansionary (easy) monetary policy",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Monetary policy",
+      "definition": "Action by the central bank to increase aggregate demand by lowering interest rates and/or increasing the money supply, used to close a deflationary gap.",
+      "relatedTerms": [
+        "ec-monetary-policy",
+        "ec-contractionary-monetary-policy",
+        "ec-deflationary-gap",
+        "ec-quantitative-easing"
+      ]
+    },
+    {
+      "id": "ec-contractionary-monetary-policy",
+      "term": "Contractionary (tight) monetary policy",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Monetary policy",
+      "definition": "Action by the central bank to reduce aggregate demand by raising interest rates and/or reducing the money supply, used to close an inflationary gap.",
+      "relatedTerms": [
+        "ec-monetary-policy",
+        "ec-expansionary-monetary-policy",
+        "ec-inflationary-gap"
+      ]
+    },
+    {
+      "id": "ec-fiscal-policy",
+      "term": "Fiscal policy",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Fiscal policy",
+      "definition": "The use of government spending and taxation to influence aggregate demand and the level of economic activity.",
+      "relatedTerms": [
+        "ec-aggregate-demand",
+        "ec-budget-deficit",
+        "ec-automatic-stabilisers",
+        "ec-crowding-out",
+        "ec-multiplier",
+        "ec-keynesian",
+        "ec-monetary-policy",
+        "ec-cyclical-unemployment",
+        "ec-government-spending",
+        "ec-direct-tax",
+        "ec-budget-surplus",
+        "ec-discretionary-fiscal-policy",
+        "ec-expansionary-fiscal-policy",
+        "ec-contractionary-fiscal-policy",
+        "ec-government-revenue"
+      ],
+      "whyTested": "Keynesians favour active fiscal policy; Monetarists/New Classicals stress crowding out."
     },
     {
       "id": "ec-budget-deficit",
       "term": "Budget deficit",
       "subject": "Economics",
       "unit": "Macroeconomics",
-      "topic": "Demand-side and supply-side policies",
+      "topic": "Fiscal policy",
       "definition": "The situation where government expenditure exceeds tax revenue in a given year.",
       "relatedTerms": [
         "ec-fiscal-policy",
         "ec-government-debt",
-        "ec-crowding-out"
+        "ec-crowding-out",
+        "ec-debt-to-gdp",
+        "ec-budget-surplus",
+        "ec-balanced-budget"
       ]
-    },
-    {
-      "id": "ec-government-debt",
-      "term": "Government (public) debt",
-      "subject": "Economics",
-      "unit": "Macroeconomics",
-      "topic": "Demand-side and supply-side policies",
-      "definition": "The total accumulated amount owed by the government as a result of past budget deficits; often expressed as a percentage of GDP.",
-      "relatedTerms": [
-        "ec-budget-deficit",
-        "ec-debt-relief"
-      ],
-      "hl": true
     },
     {
       "id": "ec-automatic-stabilisers",
       "term": "Automatic stabilisers",
       "subject": "Economics",
       "unit": "Macroeconomics",
-      "topic": "Demand-side and supply-side policies",
+      "topic": "Fiscal policy",
       "definition": "Features of fiscal policy (e.g. progressive taxes and unemployment benefits) that automatically reduce fluctuations in the business cycle without deliberate government action.",
       "relatedTerms": [
         "ec-fiscal-policy",
         "ec-progressive-tax",
         "ec-transfer-payments",
-        "ec-business-cycle"
+        "ec-business-cycle",
+        "ec-discretionary-fiscal-policy"
       ]
     },
     {
@@ -1587,7 +4494,7 @@
       "term": "Crowding out",
       "subject": "Economics",
       "unit": "Macroeconomics",
-      "topic": "Demand-side and supply-side policies",
+      "topic": "Fiscal policy",
       "definition": "The argument, made by Monetarist/New Classical economists, that increased government borrowing raises interest rates and so reduces private investment, offsetting the effect of expansionary fiscal policy.",
       "relatedTerms": [
         "ec-fiscal-policy",
@@ -1596,16 +4503,130 @@
       ]
     },
     {
+      "id": "ec-budget-surplus",
+      "term": "Budget surplus",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Fiscal policy",
+      "definition": "A situation where government revenue is greater than government expenditure in a given year.",
+      "relatedTerms": [
+        "ec-budget-deficit",
+        "ec-balanced-budget",
+        "ec-fiscal-policy"
+      ]
+    },
+    {
+      "id": "ec-balanced-budget",
+      "term": "Balanced budget",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Fiscal policy",
+      "definition": "A situation where government revenue equals government expenditure in a given year.",
+      "relatedTerms": [
+        "ec-budget-deficit",
+        "ec-budget-surplus"
+      ]
+    },
+    {
+      "id": "ec-current-expenditure",
+      "term": "Current expenditure",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Fiscal policy",
+      "definition": "Government spending on day-to-day items needed to run the public sector, such as wages of public sector workers and supplies.",
+      "relatedTerms": [
+        "ec-capital-expenditure",
+        "ec-government-spending",
+        "ec-transfer-payments"
+      ]
+    },
+    {
+      "id": "ec-capital-expenditure",
+      "term": "Capital expenditure",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Fiscal policy",
+      "definition": "Government spending on investment in physical assets such as roads, schools and hospitals, which adds to AD and to the economy's productive capacity.",
+      "relatedTerms": [
+        "ec-current-expenditure",
+        "ec-government-spending",
+        "ec-infrastructure"
+      ]
+    },
+    {
+      "id": "ec-discretionary-fiscal-policy",
+      "term": "Discretionary fiscal policy",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Fiscal policy",
+      "definition": "Deliberate changes in government spending and/or taxation made by the government to influence aggregate demand.",
+      "relatedTerms": [
+        "ec-fiscal-policy",
+        "ec-automatic-stabilisers",
+        "ec-expansionary-fiscal-policy"
+      ]
+    },
+    {
+      "id": "ec-expansionary-fiscal-policy",
+      "term": "Expansionary fiscal policy",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Fiscal policy",
+      "definition": "An increase in government spending and/or a reduction in taxes to increase aggregate demand, used to close a deflationary gap.",
+      "relatedTerms": [
+        "ec-fiscal-policy",
+        "ec-contractionary-fiscal-policy",
+        "ec-deflationary-gap",
+        "ec-keynesian",
+        "ec-multiplier",
+        "ec-discretionary-fiscal-policy"
+      ]
+    },
+    {
+      "id": "ec-contractionary-fiscal-policy",
+      "term": "Contractionary fiscal policy",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Fiscal policy",
+      "definition": "A reduction in government spending and/or an increase in taxes to reduce aggregate demand, used to close an inflationary gap.",
+      "relatedTerms": [
+        "ec-fiscal-policy",
+        "ec-expansionary-fiscal-policy",
+        "ec-inflationary-gap",
+        "ec-expenditure-reducing"
+      ]
+    },
+    {
+      "id": "ec-government-revenue",
+      "term": "Government revenue",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Fiscal policy",
+      "definition": "The income of the government, mainly from direct and indirect taxes, but also from the sale of goods and services and the privatisation of state-owned enterprises.",
+      "relatedTerms": [
+        "ec-direct-tax",
+        "ec-indirect-tax",
+        "ec-privatisation",
+        "ec-fiscal-policy"
+      ]
+    },
+    {
       "id": "ec-market-supply-side",
       "term": "Market-based supply-side policies",
       "subject": "Economics",
       "unit": "Macroeconomics",
-      "topic": "Demand-side and supply-side policies",
+      "topic": "Supply-side policies",
       "definition": "Syllabus policies that aim to increase LRAS by making markets more competitive and flexible (e.g. deregulation, privatisation, labour market reforms, lower income/corporate taxes).",
       "relatedTerms": [
         "ec-lras",
         "ec-interventionist-supply-side",
-        "ec-new-classical"
+        "ec-new-classical",
+        "ec-supply-side-policies",
+        "ec-competition-policy",
+        "ec-deregulation",
+        "ec-privatisation",
+        "ec-labour-market-reforms",
+        "ec-incentive-related-policies"
       ],
       "whyTested": "Listed in the IB guide as policy tools, not a school of thought — evaluate them through the Keynesian vs Monetarist/New Classical debate."
     },
@@ -1614,15 +4635,128 @@
       "term": "Interventionist supply-side policies",
       "subject": "Economics",
       "unit": "Macroeconomics",
-      "topic": "Demand-side and supply-side policies",
+      "topic": "Supply-side policies",
       "definition": "Syllabus policies in which the government directly invests to increase LRAS (e.g. spending on education and training, healthcare, infrastructure, R&D, industrial policy).",
       "relatedTerms": [
         "ec-lras",
         "ec-market-supply-side",
         "ec-structural-unemployment",
-        "ec-keynesian"
+        "ec-keynesian",
+        "ec-human-capital",
+        "ec-supply-side-policies",
+        "ec-infrastructure",
+        "ec-industrial-policy"
       ],
       "whyTested": "Listed in the IB guide as policy tools, not a school of thought — evaluate them through the Keynesian vs Monetarist/New Classical debate."
+    },
+    {
+      "id": "ec-supply-side-policies",
+      "term": "Supply-side policies",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Supply-side policies",
+      "definition": "Government policies that aim to increase the quantity and/or quality of factors of production, shifting LRAS to the right and increasing potential output.",
+      "relatedTerms": [
+        "ec-market-supply-side",
+        "ec-interventionist-supply-side",
+        "ec-lras",
+        "ec-potential-growth"
+      ]
+    },
+    {
+      "id": "ec-competition-policy",
+      "term": "Competition policy",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Supply-side policies",
+      "definition": "Government policies that aim to increase competition and reduce market power, e.g. by preventing mergers, breaking up monopolies and fining anti-competitive behaviour.",
+      "relatedTerms": [
+        "ec-market-supply-side",
+        "ec-monopoly",
+        "ec-cartel",
+        "ec-deregulation",
+        "ec-nationalisation"
+      ]
+    },
+    {
+      "id": "ec-deregulation",
+      "term": "Deregulation",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Supply-side policies",
+      "definition": "The removal or reduction of government rules and regulations in a market to increase competition and efficiency.",
+      "relatedTerms": [
+        "ec-market-supply-side",
+        "ec-competition-policy",
+        "ec-privatisation"
+      ]
+    },
+    {
+      "id": "ec-privatisation",
+      "term": "Privatisation",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Supply-side policies",
+      "definition": "The transfer of ownership of firms or industries from the public sector to the private sector.",
+      "relatedTerms": [
+        "ec-market-supply-side",
+        "ec-nationalisation",
+        "ec-deregulation",
+        "ec-government-revenue"
+      ]
+    },
+    {
+      "id": "ec-labour-market-reforms",
+      "term": "Labour market reforms",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Supply-side policies",
+      "definition": "Market-based supply-side policies that increase labour market flexibility, such as reducing or abolishing minimum wages, weakening trade union power and reducing unemployment benefits.",
+      "relatedTerms": [
+        "ec-market-supply-side",
+        "ec-minimum-wage",
+        "ec-natural-rate-unemployment"
+      ]
+    },
+    {
+      "id": "ec-incentive-related-policies",
+      "term": "Incentive-related policies",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Supply-side policies",
+      "definition": "Market-based supply-side policies that cut personal income taxes and business taxes to increase incentives to work, save and invest.",
+      "relatedTerms": [
+        "ec-market-supply-side",
+        "ec-direct-tax",
+        "ec-investment"
+      ]
+    },
+    {
+      "id": "ec-infrastructure",
+      "term": "Infrastructure",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Supply-side policies",
+      "definition": "The physical capital that supports economic activity, such as transport, power, water and communication networks; investment in it is an interventionist supply-side policy.",
+      "relatedTerms": [
+        "ec-interventionist-supply-side",
+        "ec-capital-expenditure",
+        "ec-economic-development"
+      ]
+    },
+    {
+      "id": "ec-industrial-policy",
+      "term": "Industrial policy",
+      "subject": "Economics",
+      "unit": "Macroeconomics",
+      "topic": "Supply-side policies",
+      "definition": "Interventionist supply-side policies in which the government supports the growth of particular industries, e.g. through subsidies, tax breaks, research grants or infant-industry support.",
+      "relatedTerms": [
+        "ec-interventionist-supply-side",
+        "ec-subsidy",
+        "ec-infant-industry",
+        "ec-diversification"
+      ]
     },
     {
       "id": "ec-free-trade",
@@ -1635,7 +4769,11 @@
         "ec-comparative-advantage",
         "ec-protectionism",
         "ec-wto",
-        "ec-free-trade-area"
+        "ec-free-trade-area",
+        "ec-international-trade",
+        "ec-gains-from-trade",
+        "ec-world-price",
+        "ec-trade-liberalisation"
       ]
     },
     {
@@ -1646,7 +4784,8 @@
       "topic": "Benefits of international trade",
       "definition": "The ability of a country to produce more of a good than another country with the same quantity of resources.",
       "relatedTerms": [
-        "ec-comparative-advantage"
+        "ec-comparative-advantage",
+        "ec-specialisation"
       ]
     },
     {
@@ -1659,7 +4798,10 @@
       "relatedTerms": [
         "ec-absolute-advantage",
         "ec-opportunity-cost",
-        "ec-free-trade"
+        "ec-free-trade",
+        "ec-specialisation",
+        "ec-gains-from-trade",
+        "ec-opportunity-cost-trade"
       ],
       "whyTested": "'Lower opportunity cost' — never 'more efficiently'.",
       "hl": true
@@ -1673,8 +4815,81 @@
       "definition": "An international organisation that sets the rules of global trade, promotes trade liberalisation and settles trade disputes between member countries.",
       "relatedTerms": [
         "ec-free-trade",
-        "ec-protectionism"
+        "ec-protectionism",
+        "ec-trade-war",
+        "ec-anti-dumping",
+        "ec-multilateral-agreement",
+        "ec-trade-liberalisation"
       ]
+    },
+    {
+      "id": "ec-international-trade",
+      "term": "International trade",
+      "subject": "Economics",
+      "unit": "International Economics",
+      "topic": "Benefits of international trade",
+      "definition": "The exchange of goods and services across national borders.",
+      "relatedTerms": [
+        "ec-free-trade",
+        "ec-gains-from-trade",
+        "ec-specialisation"
+      ]
+    },
+    {
+      "id": "ec-specialisation",
+      "term": "Specialisation",
+      "subject": "Economics",
+      "unit": "International Economics",
+      "topic": "Benefits of international trade",
+      "definition": "The concentration of a country (or firm or worker) on producing a limited range of goods or services in which it has a comparative advantage, then trading for others.",
+      "relatedTerms": [
+        "ec-comparative-advantage",
+        "ec-absolute-advantage",
+        "ec-gains-from-trade",
+        "ec-international-trade"
+      ]
+    },
+    {
+      "id": "ec-gains-from-trade",
+      "term": "Gains from trade",
+      "subject": "Economics",
+      "unit": "International Economics",
+      "topic": "Benefits of international trade",
+      "definition": "The benefits countries obtain from specialising and trading, including lower prices, greater choice, access to resources, economies of scale, increased competition and consumption beyond the PPC.",
+      "relatedTerms": [
+        "ec-free-trade",
+        "ec-comparative-advantage",
+        "ec-specialisation",
+        "ec-international-trade"
+      ]
+    },
+    {
+      "id": "ec-world-price",
+      "term": "World price",
+      "subject": "Economics",
+      "unit": "International Economics",
+      "topic": "Benefits of international trade",
+      "definition": "The price of a good determined by global demand and supply; a small country can import any quantity at this price, so world supply is drawn as perfectly elastic.",
+      "relatedTerms": [
+        "ec-free-trade",
+        "ec-tariff",
+        "ec-perfectly-elastic-supply"
+      ]
+    },
+    {
+      "id": "ec-opportunity-cost-trade",
+      "term": "Opportunity cost ratio (trade)",
+      "subject": "Economics",
+      "unit": "International Economics",
+      "topic": "Benefits of international trade",
+      "definition": "The amount of one good a country must give up to produce one more unit of another; the country with the lower opportunity cost has the comparative advantage.",
+      "relatedTerms": [
+        "ec-comparative-advantage",
+        "ec-opportunity-cost",
+        "ec-ppc"
+      ],
+      "whyTested": "Comparative advantage calculations hinge on comparing these ratios, not absolute outputs.",
+      "hl": true
     },
     {
       "id": "ec-protectionism",
@@ -1689,7 +4904,13 @@
         "ec-export-subsidy",
         "ec-free-trade",
         "ec-dumping",
-        "ec-wto"
+        "ec-wto",
+        "ec-administrative-barriers",
+        "ec-trade-war",
+        "ec-infant-industry",
+        "ec-national-security-argument",
+        "ec-expenditure-switching",
+        "ec-import-substitution"
       ]
     },
     {
@@ -1702,7 +4923,12 @@
       "relatedTerms": [
         "ec-protectionism",
         "ec-quota",
-        "ec-indirect-tax"
+        "ec-indirect-tax",
+        "ec-world-price",
+        "ec-administrative-barriers",
+        "ec-trade-war",
+        "ec-infant-industry",
+        "ec-anti-dumping"
       ]
     },
     {
@@ -1714,7 +4940,8 @@
       "definition": "A legal limit on the quantity or value of a good that can be imported over a given time period.",
       "relatedTerms": [
         "ec-protectionism",
-        "ec-tariff"
+        "ec-tariff",
+        "ec-administrative-barriers"
       ]
     },
     {
@@ -1726,7 +4953,34 @@
       "definition": "A payment by the government to domestic producers that lowers their costs, making them more competitive against imports or in export markets.",
       "relatedTerms": [
         "ec-protectionism",
-        "ec-subsidy"
+        "ec-subsidy",
+        "ec-export-promotion"
+      ]
+    },
+    {
+      "id": "ec-administrative-barriers",
+      "term": "Administrative barriers",
+      "subject": "Economics",
+      "unit": "International Economics",
+      "topic": "Types of trade protection",
+      "definition": "Forms of protection that use rules and procedures, such as complex customs procedures, licensing, health and safety and product standards, to make importing more difficult.",
+      "relatedTerms": [
+        "ec-protectionism",
+        "ec-quota",
+        "ec-tariff"
+      ]
+    },
+    {
+      "id": "ec-trade-war",
+      "term": "Retaliation (trade war)",
+      "subject": "Economics",
+      "unit": "International Economics",
+      "topic": "Types of trade protection",
+      "definition": "The imposition of protection by one country in response to protection imposed by another, which can escalate and reduce trade for both.",
+      "relatedTerms": [
+        "ec-protectionism",
+        "ec-tariff",
+        "ec-wto"
       ]
     },
     {
@@ -1737,7 +4991,48 @@
       "topic": "Arguments for and against trade control",
       "definition": "Selling goods in a foreign market at a price below their cost of production (or below the price in the domestic market).",
       "relatedTerms": [
-        "ec-protectionism"
+        "ec-protectionism",
+        "ec-anti-dumping"
+      ]
+    },
+    {
+      "id": "ec-infant-industry",
+      "term": "Infant industry argument",
+      "subject": "Economics",
+      "unit": "International Economics",
+      "topic": "Arguments for and against trade control",
+      "definition": "The argument that new domestic industries need temporary protection from foreign competition until they grow large enough to achieve economies of scale and compete internationally.",
+      "relatedTerms": [
+        "ec-protectionism",
+        "ec-tariff",
+        "ec-industrial-policy",
+        "ec-import-substitution",
+        "ec-national-security-argument"
+      ]
+    },
+    {
+      "id": "ec-anti-dumping",
+      "term": "Anti-dumping duties",
+      "subject": "Economics",
+      "unit": "International Economics",
+      "topic": "Arguments for and against trade control",
+      "definition": "Tariffs imposed on imports that are being sold below their cost of production (dumped), allowed under WTO rules to protect domestic producers from unfair competition.",
+      "relatedTerms": [
+        "ec-dumping",
+        "ec-tariff",
+        "ec-wto"
+      ]
+    },
+    {
+      "id": "ec-national-security-argument",
+      "term": "National security argument",
+      "subject": "Economics",
+      "unit": "International Economics",
+      "topic": "Arguments for and against trade control",
+      "definition": "The argument that a country should protect strategic industries, such as defence, energy and food, so that it is not dependent on other countries in times of conflict.",
+      "relatedTerms": [
+        "ec-protectionism",
+        "ec-infant-industry"
       ]
     },
     {
@@ -1751,7 +5046,11 @@
         "ec-free-trade-area",
         "ec-customs-union",
         "ec-common-market",
-        "ec-monetary-union"
+        "ec-monetary-union",
+        "ec-economic-integration",
+        "ec-multilateral-agreement",
+        "ec-trade-creation",
+        "ec-trade-diversion"
       ]
     },
     {
@@ -1764,7 +5063,8 @@
       "relatedTerms": [
         "ec-trading-bloc",
         "ec-customs-union",
-        "ec-free-trade"
+        "ec-free-trade",
+        "ec-preferential-trade-agreement"
       ]
     },
     {
@@ -1777,7 +5077,9 @@
       "relatedTerms": [
         "ec-trading-bloc",
         "ec-free-trade-area",
-        "ec-common-market"
+        "ec-common-market",
+        "ec-trade-creation",
+        "ec-trade-diversion"
       ]
     },
     {
@@ -1804,7 +5106,85 @@
         "ec-trading-bloc",
         "ec-common-market",
         "ec-monetary-policy",
-        "ec-fixed-exchange-rate"
+        "ec-fixed-exchange-rate",
+        "ec-economic-integration"
+      ]
+    },
+    {
+      "id": "ec-economic-integration",
+      "term": "Economic integration",
+      "subject": "Economics",
+      "unit": "International Economics",
+      "topic": "Economic integration",
+      "definition": "The process of countries coordinating and linking their economic policies, ranging from preferential trade agreements to full economic and monetary union.",
+      "relatedTerms": [
+        "ec-trading-bloc",
+        "ec-preferential-trade-agreement",
+        "ec-monetary-union"
+      ]
+    },
+    {
+      "id": "ec-preferential-trade-agreement",
+      "term": "Preferential trade agreement",
+      "subject": "Economics",
+      "unit": "International Economics",
+      "topic": "Economic integration",
+      "definition": "An agreement that gives member countries preferential access to each other's markets, such as reduced tariffs on certain products.",
+      "relatedTerms": [
+        "ec-economic-integration",
+        "ec-bilateral-agreement",
+        "ec-free-trade-area"
+      ]
+    },
+    {
+      "id": "ec-bilateral-agreement",
+      "term": "Bilateral trade agreement",
+      "subject": "Economics",
+      "unit": "International Economics",
+      "topic": "Economic integration",
+      "definition": "A trade agreement between two countries.",
+      "relatedTerms": [
+        "ec-multilateral-agreement",
+        "ec-preferential-trade-agreement"
+      ]
+    },
+    {
+      "id": "ec-multilateral-agreement",
+      "term": "Multilateral trade agreement",
+      "subject": "Economics",
+      "unit": "International Economics",
+      "topic": "Economic integration",
+      "definition": "A trade agreement between many countries, such as those negotiated through the WTO.",
+      "relatedTerms": [
+        "ec-bilateral-agreement",
+        "ec-wto",
+        "ec-trading-bloc"
+      ]
+    },
+    {
+      "id": "ec-trade-creation",
+      "term": "Trade creation",
+      "subject": "Economics",
+      "unit": "International Economics",
+      "topic": "Economic integration",
+      "definition": "The replacement of higher-cost domestic production or imports with lower-cost imports from a member country after a trading bloc is formed, increasing efficiency.",
+      "relatedTerms": [
+        "ec-trade-diversion",
+        "ec-trading-bloc",
+        "ec-customs-union"
+      ]
+    },
+    {
+      "id": "ec-trade-diversion",
+      "term": "Trade diversion",
+      "subject": "Economics",
+      "unit": "International Economics",
+      "topic": "Economic integration",
+      "definition": "The replacement of lower-cost imports from a non-member country with higher-cost imports from a member country after a trading bloc is formed, reducing efficiency.",
+      "relatedTerms": [
+        "ec-trade-creation",
+        "ec-trading-bloc",
+        "ec-customs-union"
       ]
     },
     {
@@ -1819,7 +5199,10 @@
         "ec-fixed-exchange-rate",
         "ec-appreciation",
         "ec-depreciation",
-        "ec-interest-rate"
+        "ec-interest-rate",
+        "ec-ppp",
+        "ec-net-exports",
+        "ec-speculation"
       ]
     },
     {
@@ -1834,7 +5217,8 @@
         "ec-fixed-exchange-rate",
         "ec-managed-exchange-rate",
         "ec-appreciation",
-        "ec-depreciation"
+        "ec-depreciation",
+        "ec-speculation"
       ]
     },
     {
@@ -1849,7 +5233,10 @@
         "ec-floating-exchange-rate",
         "ec-devaluation",
         "ec-monetary-union",
-        "ec-managed-exchange-rate"
+        "ec-managed-exchange-rate",
+        "ec-revaluation",
+        "ec-exchange-rate-intervention",
+        "ec-reserve-assets"
       ]
     },
     {
@@ -1861,7 +5248,8 @@
       "definition": "An exchange rate that floats within a range or is influenced by periodic central bank intervention to prevent large fluctuations.",
       "relatedTerms": [
         "ec-floating-exchange-rate",
-        "ec-fixed-exchange-rate"
+        "ec-fixed-exchange-rate",
+        "ec-exchange-rate-intervention"
       ]
     },
     {
@@ -1874,7 +5262,8 @@
       "relatedTerms": [
         "ec-depreciation",
         "ec-floating-exchange-rate",
-        "ec-exchange-rate"
+        "ec-exchange-rate",
+        "ec-revaluation"
       ]
     },
     {
@@ -1904,7 +5293,62 @@
       "definition": "A deliberate decrease in the value of a currency by the government or central bank under a fixed exchange rate system.",
       "relatedTerms": [
         "ec-fixed-exchange-rate",
-        "ec-depreciation"
+        "ec-depreciation",
+        "ec-revaluation",
+        "ec-expenditure-switching"
+      ]
+    },
+    {
+      "id": "ec-revaluation",
+      "term": "Revaluation",
+      "subject": "Economics",
+      "unit": "International Economics",
+      "topic": "Exchange rates",
+      "definition": "An increase in the value of a currency in a fixed exchange rate system, decided by the government or central bank.",
+      "relatedTerms": [
+        "ec-devaluation",
+        "ec-fixed-exchange-rate",
+        "ec-appreciation"
+      ]
+    },
+    {
+      "id": "ec-speculation",
+      "term": "Currency speculation",
+      "subject": "Economics",
+      "unit": "International Economics",
+      "topic": "Exchange rates",
+      "definition": "The buying and selling of currencies in order to profit from expected future changes in exchange rates, which can cause large short-term exchange rate movements.",
+      "relatedTerms": [
+        "ec-exchange-rate",
+        "ec-floating-exchange-rate",
+        "ec-hot-money"
+      ]
+    },
+    {
+      "id": "ec-hot-money",
+      "term": "Hot money",
+      "subject": "Economics",
+      "unit": "International Economics",
+      "topic": "Exchange rates",
+      "definition": "Short-term financial capital that moves quickly between countries in search of the highest interest rates or expected currency gains.",
+      "relatedTerms": [
+        "ec-speculation",
+        "ec-portfolio-investment",
+        "ec-interest-rate",
+        "ec-capital-flight"
+      ]
+    },
+    {
+      "id": "ec-exchange-rate-intervention",
+      "term": "Central bank intervention (exchange rates)",
+      "subject": "Economics",
+      "unit": "International Economics",
+      "topic": "Exchange rates",
+      "definition": "Buying or selling of foreign currency reserves, or changing interest rates, by the central bank to influence the value of the currency.",
+      "relatedTerms": [
+        "ec-fixed-exchange-rate",
+        "ec-managed-exchange-rate",
+        "ec-reserve-assets"
       ]
     },
     {
@@ -1916,7 +5360,10 @@
       "definition": "A record of all transactions between the residents of a country and the rest of the world over a given time period, made up of the current account, capital account and financial account.",
       "relatedTerms": [
         "ec-current-account",
-        "ec-financial-account"
+        "ec-financial-account",
+        "ec-capital-account",
+        "ec-errors-and-omissions",
+        "ec-imf"
       ]
     },
     {
@@ -1930,7 +5377,12 @@
         "ec-balance-of-payments",
         "ec-financial-account",
         "ec-current-account-deficit",
-        "ec-terms-of-trade"
+        "ec-terms-of-trade",
+        "ec-balance-of-trade",
+        "ec-primary-income",
+        "ec-secondary-income",
+        "ec-capital-account",
+        "ec-current-account-surplus"
       ]
     },
     {
@@ -1943,7 +5395,12 @@
       "relatedTerms": [
         "ec-balance-of-payments",
         "ec-current-account",
-        "ec-fdi"
+        "ec-fdi",
+        "ec-capital-account",
+        "ec-portfolio-investment",
+        "ec-reserve-assets",
+        "ec-current-account-surplus",
+        "ec-capital-flight"
       ]
     },
     {
@@ -1956,7 +5413,10 @@
       "relatedTerms": [
         "ec-current-account",
         "ec-depreciation",
-        "ec-marshall-lerner"
+        "ec-marshall-lerner",
+        "ec-current-account-surplus",
+        "ec-expenditure-switching",
+        "ec-expenditure-reducing"
       ]
     },
     {
@@ -1996,9 +5456,141 @@
       "definition": "The ratio of an index of average export prices to an index of average import prices, × 100.",
       "relatedTerms": [
         "ec-current-account",
-        "ec-economic-development"
+        "ec-economic-development",
+        "ec-primary-commodities",
+        "ec-commodity-dependence"
       ],
       "hl": true
+    },
+    {
+      "id": "ec-balance-of-trade",
+      "term": "Balance of trade in goods and services",
+      "subject": "Economics",
+      "unit": "International Economics",
+      "topic": "Balance of payments",
+      "definition": "Export revenues minus import expenditure on goods and services; the main component of the current account.",
+      "relatedTerms": [
+        "ec-current-account",
+        "ec-net-exports",
+        "ec-primary-income"
+      ]
+    },
+    {
+      "id": "ec-primary-income",
+      "term": "Primary income",
+      "subject": "Economics",
+      "unit": "International Economics",
+      "topic": "Balance of payments",
+      "definition": "Current account flows of income earned from factors of production abroad (wages, interest, profits and dividends) minus such income paid to foreigners.",
+      "relatedTerms": [
+        "ec-current-account",
+        "ec-secondary-income",
+        "ec-gni",
+        "ec-balance-of-trade"
+      ]
+    },
+    {
+      "id": "ec-secondary-income",
+      "term": "Secondary income",
+      "subject": "Economics",
+      "unit": "International Economics",
+      "topic": "Balance of payments",
+      "definition": "Current account transfers between countries for which nothing is received in return, such as remittances from workers abroad and foreign aid.",
+      "relatedTerms": [
+        "ec-current-account",
+        "ec-primary-income",
+        "ec-foreign-aid"
+      ]
+    },
+    {
+      "id": "ec-capital-account",
+      "term": "Capital account",
+      "subject": "Economics",
+      "unit": "International Economics",
+      "topic": "Balance of payments",
+      "definition": "The part of the balance of payments recording capital transfers (e.g. debt forgiveness) and the purchase or sale of non-produced, non-financial assets (e.g. patents).",
+      "relatedTerms": [
+        "ec-balance-of-payments",
+        "ec-financial-account",
+        "ec-current-account"
+      ]
+    },
+    {
+      "id": "ec-portfolio-investment",
+      "term": "Portfolio investment",
+      "subject": "Economics",
+      "unit": "International Economics",
+      "topic": "Balance of payments",
+      "definition": "The purchase of financial assets such as shares and bonds in another country without gaining a controlling interest; recorded in the financial account.",
+      "relatedTerms": [
+        "ec-financial-account",
+        "ec-fdi",
+        "ec-hot-money"
+      ]
+    },
+    {
+      "id": "ec-reserve-assets",
+      "term": "Reserve assets",
+      "subject": "Economics",
+      "unit": "International Economics",
+      "topic": "Balance of payments",
+      "definition": "Foreign currencies and gold held by the central bank, recorded in the financial account and used to intervene in the foreign exchange market.",
+      "relatedTerms": [
+        "ec-financial-account",
+        "ec-exchange-rate-intervention",
+        "ec-fixed-exchange-rate"
+      ]
+    },
+    {
+      "id": "ec-errors-and-omissions",
+      "term": "Errors and omissions",
+      "subject": "Economics",
+      "unit": "International Economics",
+      "topic": "Balance of payments",
+      "definition": "A balancing item in the balance of payments that ensures the accounts sum to zero, reflecting statistical discrepancies in recording transactions.",
+      "relatedTerms": [
+        "ec-balance-of-payments"
+      ]
+    },
+    {
+      "id": "ec-current-account-surplus",
+      "term": "Current account surplus",
+      "subject": "Economics",
+      "unit": "International Economics",
+      "topic": "Balance of payments",
+      "definition": "A situation where the total of credits on the current account is greater than the total of debits, matched by a deficit on the capital and financial accounts.",
+      "relatedTerms": [
+        "ec-current-account-deficit",
+        "ec-current-account",
+        "ec-financial-account"
+      ]
+    },
+    {
+      "id": "ec-expenditure-switching",
+      "term": "Expenditure-switching policies",
+      "subject": "Economics",
+      "unit": "International Economics",
+      "topic": "Balance of payments",
+      "definition": "Policies that encourage domestic and foreign consumers to switch spending from imports to domestically produced goods, such as protectionism or depreciation/devaluation.",
+      "relatedTerms": [
+        "ec-expenditure-reducing",
+        "ec-current-account-deficit",
+        "ec-devaluation",
+        "ec-protectionism"
+      ]
+    },
+    {
+      "id": "ec-expenditure-reducing",
+      "term": "Expenditure-reducing policies",
+      "subject": "Economics",
+      "unit": "International Economics",
+      "topic": "Balance of payments",
+      "definition": "Contractionary fiscal and monetary policies that reduce aggregate demand, and therefore spending on imports, to reduce a current account deficit.",
+      "relatedTerms": [
+        "ec-expenditure-switching",
+        "ec-current-account-deficit",
+        "ec-contractionary-fiscal-policy"
+      ]
     },
     {
       "id": "ec-economic-development",
@@ -2019,7 +5611,11 @@
         "ec-fdi",
         "ec-foreign-aid",
         "ec-microfinance",
-        "ec-fair-trade"
+        "ec-fair-trade",
+        "ec-human-capital",
+        "ec-economic-wellbeing",
+        "ec-infrastructure",
+        "ec-single-indicator"
       ],
       "whyTested": "Distinguish from growth: development is multidimensional."
     },
@@ -2033,7 +5629,8 @@
       "relatedTerms": [
         "ec-economic-development",
         "ec-sdgs",
-        "ec-common-pool-resource"
+        "ec-common-pool-resource",
+        "ec-sustainability"
       ],
       "whyTested": "The Brundtland definition is expected word-for-word."
     },
@@ -2059,7 +5656,12 @@
         "ec-economic-development",
         "ec-gni",
         "ec-gdp-per-capita",
-        "ec-multidimensional-poverty"
+        "ec-multidimensional-poverty",
+        "ec-economic-wellbeing",
+        "ec-gni-per-capita",
+        "ec-composite-indicator",
+        "ec-ihdi",
+        "ec-gii"
       ]
     },
     {
@@ -2072,6 +5674,59 @@
       "relatedTerms": [
         "ec-hdi",
         "ec-absolute-poverty"
+      ]
+    },
+    {
+      "id": "ec-single-indicator",
+      "term": "Single indicators of development",
+      "subject": "Economics",
+      "unit": "Development Economics",
+      "topic": "Measuring development",
+      "definition": "Individual measures of one aspect of development, such as GNI per capita (PPP), life expectancy, infant mortality, adult literacy or access to clean water.",
+      "relatedTerms": [
+        "ec-composite-indicator",
+        "ec-gni-per-capita",
+        "ec-economic-development"
+      ]
+    },
+    {
+      "id": "ec-composite-indicator",
+      "term": "Composite indicators of development",
+      "subject": "Economics",
+      "unit": "Development Economics",
+      "topic": "Measuring development",
+      "definition": "Measures that combine several indicators into one index to capture multiple dimensions of development, such as the HDI, IHDI, GII and MPI.",
+      "relatedTerms": [
+        "ec-single-indicator",
+        "ec-hdi",
+        "ec-ihdi",
+        "ec-gii"
+      ]
+    },
+    {
+      "id": "ec-ihdi",
+      "term": "Inequality-adjusted HDI (IHDI)",
+      "subject": "Economics",
+      "unit": "Development Economics",
+      "topic": "Measuring development",
+      "definition": "The Human Development Index adjusted for inequality in the distribution of health, education and income; the gap between HDI and IHDI shows the loss in human development due to inequality.",
+      "relatedTerms": [
+        "ec-hdi",
+        "ec-composite-indicator",
+        "ec-equity"
+      ]
+    },
+    {
+      "id": "ec-gii",
+      "term": "Gender Inequality Index (GII)",
+      "subject": "Economics",
+      "unit": "Development Economics",
+      "topic": "Measuring development",
+      "definition": "A composite index measuring gender-based inequality in reproductive health, empowerment and labour market participation; a higher value indicates greater inequality.",
+      "relatedTerms": [
+        "ec-composite-indicator",
+        "ec-gender-inequality",
+        "ec-hdi"
       ]
     },
     {
@@ -2096,7 +5751,100 @@
       "definition": "Economic activity that is not officially registered or regulated by the government, and so is not taxed or recorded in GDP.",
       "relatedTerms": [
         "ec-economic-development",
-        "ec-gdp"
+        "ec-gdp",
+        "ec-property-rights"
+      ]
+    },
+    {
+      "id": "ec-property-rights",
+      "term": "Property rights",
+      "subject": "Economics",
+      "unit": "Development Economics",
+      "topic": "Barriers to development",
+      "definition": "Legally enforceable rights to own, use and sell assets; their absence discourages investment and limits access to credit, acting as a barrier to development.",
+      "relatedTerms": [
+        "ec-informal-economy",
+        "ec-good-governance",
+        "ec-microfinance"
+      ]
+    },
+    {
+      "id": "ec-corruption",
+      "term": "Corruption",
+      "subject": "Economics",
+      "unit": "Development Economics",
+      "topic": "Barriers to development",
+      "definition": "The abuse of public office for private gain, which diverts resources, discourages investment and undermines trust in institutions.",
+      "relatedTerms": [
+        "ec-good-governance",
+        "ec-political-instability",
+        "ec-foreign-aid"
+      ]
+    },
+    {
+      "id": "ec-political-instability",
+      "term": "Political instability",
+      "subject": "Economics",
+      "unit": "Development Economics",
+      "topic": "Barriers to development",
+      "definition": "Frequent changes of government, conflict or civil unrest that create uncertainty, deter investment and damage physical and human capital.",
+      "relatedTerms": [
+        "ec-corruption",
+        "ec-fdi",
+        "ec-good-governance",
+        "ec-capital-flight"
+      ]
+    },
+    {
+      "id": "ec-gender-inequality",
+      "term": "Gender inequality",
+      "subject": "Economics",
+      "unit": "Development Economics",
+      "topic": "Barriers to development",
+      "definition": "Unequal treatment and opportunities for women and girls in areas such as education, health, employment and political participation, which reduces human capital and growth.",
+      "relatedTerms": [
+        "ec-gii",
+        "ec-womens-empowerment",
+        "ec-human-capital"
+      ]
+    },
+    {
+      "id": "ec-commodity-dependence",
+      "term": "Commodity dependence",
+      "subject": "Economics",
+      "unit": "Development Economics",
+      "topic": "Barriers to development",
+      "definition": "Reliance on a small number of primary commodities for most export earnings, which exposes a country to volatile prices and a possible long-term decline in its terms of trade.",
+      "relatedTerms": [
+        "ec-primary-commodities",
+        "ec-diversification",
+        "ec-terms-of-trade"
+      ]
+    },
+    {
+      "id": "ec-unsustainable-debt",
+      "term": "Unsustainable debt",
+      "subject": "Economics",
+      "unit": "Development Economics",
+      "topic": "Barriers to development",
+      "definition": "Foreign debt so large that servicing it diverts resources away from spending on health, education and infrastructure, and may lead to default.",
+      "relatedTerms": [
+        "ec-debt-relief",
+        "ec-debt-servicing",
+        "ec-imf"
+      ]
+    },
+    {
+      "id": "ec-capital-flight",
+      "term": "Capital flight",
+      "subject": "Economics",
+      "unit": "Development Economics",
+      "topic": "Barriers to development",
+      "definition": "The large-scale movement of financial capital out of a country, often due to political or economic instability, which reduces funds available for investment.",
+      "relatedTerms": [
+        "ec-political-instability",
+        "ec-financial-account",
+        "ec-hot-money"
       ]
     },
     {
@@ -2109,7 +5857,10 @@
       "relatedTerms": [
         "ec-financial-account",
         "bm-multinational",
-        "ec-economic-development"
+        "ec-economic-development",
+        "ec-portfolio-investment",
+        "ec-political-instability",
+        "ec-mnc"
       ]
     },
     {
@@ -2123,7 +5874,14 @@
         "ec-poverty-trap",
         "ec-debt-relief",
         "ec-economic-development",
-        "bm-ngo"
+        "bm-ngo",
+        "ec-secondary-income",
+        "ec-corruption",
+        "ec-humanitarian-aid",
+        "ec-development-aid",
+        "ec-tied-aid",
+        "ec-oda",
+        "ec-ngo"
       ]
     },
     {
@@ -2135,7 +5893,10 @@
       "definition": "The provision of small loans and other financial services to people on low incomes who lack access to conventional banking, to support small-scale entrepreneurship.",
       "relatedTerms": [
         "ec-poverty-trap",
-        "ec-economic-development"
+        "ec-economic-development",
+        "ec-property-rights",
+        "ec-social-enterprise",
+        "ec-womens-empowerment"
       ]
     },
     {
@@ -2147,7 +5908,8 @@
       "definition": "A certification scheme that guarantees producers in developing countries a minimum price above the market price and a premium for community investment.",
       "relatedTerms": [
         "ec-price-floor",
-        "ec-economic-development"
+        "ec-economic-development",
+        "ec-social-enterprise"
       ]
     },
     {
@@ -2159,7 +5921,219 @@
       "definition": "The partial or total cancellation of debt owed by developing countries, freeing resources for development spending.",
       "relatedTerms": [
         "ec-government-debt",
-        "ec-foreign-aid"
+        "ec-foreign-aid",
+        "ec-unsustainable-debt"
+      ]
+    },
+    {
+      "id": "ec-import-substitution",
+      "term": "Import substitution",
+      "subject": "Economics",
+      "unit": "Development Economics",
+      "topic": "Strategies for development",
+      "definition": "An inward-oriented development strategy that protects domestic industries with tariffs and quotas so that domestically produced goods replace imports.",
+      "relatedTerms": [
+        "ec-export-promotion",
+        "ec-infant-industry",
+        "ec-protectionism"
+      ]
+    },
+    {
+      "id": "ec-export-promotion",
+      "term": "Export promotion",
+      "subject": "Economics",
+      "unit": "Development Economics",
+      "topic": "Strategies for development",
+      "definition": "An outward-oriented development strategy that encourages domestic firms to produce for export markets, e.g. through export subsidies, trade liberalisation and attracting FDI.",
+      "relatedTerms": [
+        "ec-import-substitution",
+        "ec-trade-liberalisation",
+        "ec-export-subsidy",
+        "ec-diversification"
+      ]
+    },
+    {
+      "id": "ec-trade-liberalisation",
+      "term": "Trade liberalisation",
+      "subject": "Economics",
+      "unit": "Development Economics",
+      "topic": "Strategies for development",
+      "definition": "The reduction or removal of barriers to trade such as tariffs, quotas and subsidies.",
+      "relatedTerms": [
+        "ec-free-trade",
+        "ec-export-promotion",
+        "ec-wto"
+      ]
+    },
+    {
+      "id": "ec-diversification",
+      "term": "Diversification",
+      "subject": "Economics",
+      "unit": "Development Economics",
+      "topic": "Strategies for development",
+      "definition": "Expanding the range of goods and services a country produces and exports, reducing dependence on a few primary commodities.",
+      "relatedTerms": [
+        "ec-commodity-dependence",
+        "ec-export-promotion",
+        "ec-industrial-policy"
+      ]
+    },
+    {
+      "id": "ec-mnc",
+      "term": "Multinational corporation (MNC)",
+      "subject": "Economics",
+      "unit": "Development Economics",
+      "topic": "Strategies for development",
+      "definition": "A firm that owns or controls production facilities in more than one country.",
+      "relatedTerms": [
+        "ec-fdi",
+        "bm-multinational"
+      ]
+    },
+    {
+      "id": "ec-humanitarian-aid",
+      "term": "Humanitarian aid",
+      "subject": "Economics",
+      "unit": "Development Economics",
+      "topic": "Strategies for development",
+      "definition": "Short-term aid in the form of food, medical supplies and emergency relief, given in response to crises such as natural disasters and conflict.",
+      "relatedTerms": [
+        "ec-foreign-aid",
+        "ec-development-aid",
+        "ec-ngo"
+      ]
+    },
+    {
+      "id": "ec-development-aid",
+      "term": "Development aid",
+      "subject": "Economics",
+      "unit": "Development Economics",
+      "topic": "Strategies for development",
+      "definition": "Longer-term aid aimed at improving living standards, such as grants and concessional loans for health, education and infrastructure projects.",
+      "relatedTerms": [
+        "ec-foreign-aid",
+        "ec-humanitarian-aid",
+        "ec-tied-aid",
+        "ec-oda",
+        "ec-world-bank"
+      ]
+    },
+    {
+      "id": "ec-tied-aid",
+      "term": "Tied aid",
+      "subject": "Economics",
+      "unit": "Development Economics",
+      "topic": "Strategies for development",
+      "definition": "Aid given on condition that the recipient spends it on goods and services from the donor country.",
+      "relatedTerms": [
+        "ec-development-aid",
+        "ec-foreign-aid",
+        "ec-conditionality"
+      ]
+    },
+    {
+      "id": "ec-oda",
+      "term": "Official development assistance (ODA)",
+      "subject": "Economics",
+      "unit": "Development Economics",
+      "topic": "Strategies for development",
+      "definition": "Aid given by governments of developed countries to promote the economic development and welfare of developing countries, as grants or concessional loans.",
+      "relatedTerms": [
+        "ec-foreign-aid",
+        "ec-development-aid",
+        "ec-ngo"
+      ]
+    },
+    {
+      "id": "ec-ngo",
+      "term": "Non-governmental organisation (NGO)",
+      "subject": "Economics",
+      "unit": "Development Economics",
+      "topic": "Strategies for development",
+      "definition": "A non-profit organisation independent of government that delivers aid and development projects (e.g. Oxfam).",
+      "relatedTerms": [
+        "ec-foreign-aid",
+        "ec-humanitarian-aid",
+        "ec-oda"
+      ]
+    },
+    {
+      "id": "ec-world-bank",
+      "term": "World Bank",
+      "subject": "Economics",
+      "unit": "Development Economics",
+      "topic": "Strategies for development",
+      "definition": "A multilateral development institution that provides long-term loans, grants and expertise to developing countries for projects that reduce poverty and promote development.",
+      "relatedTerms": [
+        "ec-imf",
+        "ec-development-aid",
+        "ec-conditionality"
+      ]
+    },
+    {
+      "id": "ec-imf",
+      "term": "International Monetary Fund (IMF)",
+      "subject": "Economics",
+      "unit": "Development Economics",
+      "topic": "Strategies for development",
+      "definition": "A multilateral institution that promotes global financial stability and provides short-term loans to countries facing balance of payments problems, usually with conditions attached.",
+      "relatedTerms": [
+        "ec-world-bank",
+        "ec-conditionality",
+        "ec-balance-of-payments",
+        "ec-unsustainable-debt"
+      ]
+    },
+    {
+      "id": "ec-conditionality",
+      "term": "Conditionality",
+      "subject": "Economics",
+      "unit": "Development Economics",
+      "topic": "Strategies for development",
+      "definition": "The conditions attached to loans or aid from institutions such as the IMF and World Bank, often requiring market-oriented reforms such as reduced government spending, privatisation and trade liberalisation.",
+      "relatedTerms": [
+        "ec-imf",
+        "ec-world-bank",
+        "ec-tied-aid"
+      ]
+    },
+    {
+      "id": "ec-social-enterprise",
+      "term": "Social enterprise",
+      "subject": "Economics",
+      "unit": "Development Economics",
+      "topic": "Strategies for development",
+      "definition": "A business that trades to achieve social or environmental objectives, reinvesting most of its profits in that mission rather than distributing them to owners.",
+      "relatedTerms": [
+        "ec-microfinance",
+        "ec-fair-trade",
+        "bm-social-enterprise"
+      ]
+    },
+    {
+      "id": "ec-womens-empowerment",
+      "term": "Women's empowerment",
+      "subject": "Economics",
+      "unit": "Development Economics",
+      "topic": "Strategies for development",
+      "definition": "Policies and programmes that improve women's access to education, health, credit, property and political participation, raising human capital and development.",
+      "relatedTerms": [
+        "ec-gender-inequality",
+        "ec-microfinance",
+        "ec-human-capital"
+      ]
+    },
+    {
+      "id": "ec-good-governance",
+      "term": "Good governance",
+      "subject": "Economics",
+      "unit": "Development Economics",
+      "topic": "Strategies for development",
+      "definition": "Government that is accountable, transparent, effective and follows the rule of law, protecting property rights and limiting corruption.",
+      "relatedTerms": [
+        "ec-corruption",
+        "ec-property-rights",
+        "ec-political-instability"
       ]
     },
     {
@@ -2343,7 +6317,8 @@
       "relatedTerms": [
         "bm-cooperative",
         "bm-ngo",
-        "bm-csr"
+        "bm-csr",
+        "ec-social-enterprise"
       ]
     },
     {
@@ -2459,7 +6434,8 @@
       "relatedTerms": [
         "bm-stakeholder",
         "bm-social-enterprise",
-        "bm-ethical-objectives"
+        "bm-ethical-objectives",
+        "ec-csr"
       ]
     },
     {
@@ -2559,7 +6535,8 @@
       "topic": "1.5 Growth and evolution",
       "definition": "Increases in average costs of production that result when a business grows beyond its optimum scale (e.g. due to poor communication or coordination).",
       "relatedTerms": [
-        "bm-economies-of-scale"
+        "bm-economies-of-scale",
+        "ec-diseconomies-of-scale"
       ]
     },
     {
@@ -2663,7 +6640,8 @@
       "relatedTerms": [
         "ec-fdi",
         "bm-external-growth",
-        "bm-offshoring"
+        "bm-offshoring",
+        "ec-mnc"
       ]
     },
     {
