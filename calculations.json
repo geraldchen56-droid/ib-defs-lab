@@ -1,0 +1,1913 @@
+{
+  "version": 1,
+  "updated": "2026-11-03",
+  "calculations": [
+    {
+      "id": "calc-pct-change",
+      "title": "Percentage change",
+      "unit": "Introduction to Economics",
+      "topic": "Foundations of economics",
+      "formulas": ["% change = (new value − old value) ÷ old value × 100"],
+      "meaning": "The building block of almost every IB calculation: elasticities, growth rates, inflation and exchange-rate changes all start from it.",
+      "tip": "\"New minus old, over OLD.\" Always divide by the starting value — never the new one.",
+      "practice": {
+        "vars": {
+          "old": [20, 400, 5],
+          "pct": [-40, 60, 5]
+        },
+        "where": "pct !== 0",
+        "derived": {
+          "neu": "old * (1 + pct/100)"
+        },
+        "question": "A value changes from {{f(old)}} to {{f(neu)}}. Calculate the percentage change.",
+        "parts": [
+          {
+            "label": "Percentage change",
+            "answer": "pct",
+            "unit": "%",
+            "dp": 1
+          }
+        ],
+        "steps": [
+          "Change = {{f(neu)}} − {{f(old)}} = {{f(neu-old)}}",
+          "Divide by the original value: {{f(neu-old)}} ÷ {{f(old)}} = {{f((neu-old)/old, 4)}}",
+          "Multiply by 100: {{f(pct, 1)}}%"
+        ]
+      },
+      "example": {
+        "old": 80,
+        "pct": 25
+      },
+      "relatedTerms": ["ec-ped", "ec-economic-growth", "ec-inflation"]
+    },
+    {
+      "id": "calc-ped",
+      "title": "Price elasticity of demand (PED)",
+      "unit": "Microeconomics",
+      "topic": "Elasticity",
+      "formulas": ["PED = %ΔQd ÷ %ΔP"],
+      "meaning": "How responsive quantity demanded is to a change in price. |PED| > 1 elastic, < 1 inelastic, = 1 unit elastic.",
+      "tip": "\"Q on top\" — quantity always goes in the numerator. PED is negative for normal demand, so quote its absolute value.",
+      "practice": {
+        "vars": {
+          "p1": [2, 20, 1],
+          "dp": {
+            "pick": [10, 20, 25, 50]
+          },
+          "s": {
+            "pick": [-1, 1]
+          },
+          "q1": [200, 1000, 100],
+          "dqp": [4, 90, 2]
+        },
+        "derived": {
+          "p2": "p1 * (1 + s*dp/100)",
+          "q2": "q1 * (1 - s*dqp/100)",
+          "ped": "dqp / dp"
+        },
+        "where": "dqp !== dp && q2 > 0",
+        "question": "When the price of a product {{s > 0 ? \"rises\" : \"falls\"}} from {{m(p1)}} to {{m(p2)}}, quantity demanded {{s > 0 ? \"falls\" : \"rises\"}} from {{q1}} to {{q2}} units a week. Calculate the PED and state whether demand is price elastic or price inelastic.",
+        "parts": [
+          {
+            "label": "PED (absolute value)",
+            "answer": "ped"
+          },
+          {
+            "label": "Demand is",
+            "choices": ["price elastic", "price inelastic"],
+            "answer": "ped > 1 ? \"price elastic\" : \"price inelastic\""
+          }
+        ],
+        "steps": [
+          "%ΔP = ({{m(p2)}} − {{m(p1)}}) ÷ {{m(p1)}} × 100 = {{f(s*dp)}}%",
+          "%ΔQd = ({{q2}} − {{q1}}) ÷ {{q1}} × 100 = {{f(-s*dqp)}}%",
+          "PED = %ΔQd ÷ %ΔP = {{f(-s*dqp)}} ÷ {{f(s*dp)}} = {{f(-dqp/dp)}}",
+          "|PED| = {{f(ped)}}, which is {{ped > 1 ? \"greater\" : \"less\"}} than 1, so demand is {{ped > 1 ? \"price elastic\" : \"price inelastic\"}}: quantity changes by a {{ped > 1 ? \"larger\" : \"smaller\"}} percentage than price."
+        ]
+      },
+      "example": {
+        "p1": 5,
+        "dp": 20,
+        "s": 1,
+        "q1": 200,
+        "dqp": 15
+      },
+      "relatedTerms": ["ec-ped", "ec-elastic-demand", "ec-inelastic-demand"],
+      "diagrams": ["dg-ped-tr-elastic", "dg-ped-tr-inelastic"]
+    },
+    {
+      "id": "calc-ped-tr",
+      "title": "PED and total revenue",
+      "unit": "Microeconomics",
+      "topic": "Elasticity",
+      "formulas": ["TR = P × Q", "ΔTR = TR after − TR before"],
+      "meaning": "Checks the PED–revenue rule: with elastic demand price and TR move in opposite directions; with inelastic demand they move together.",
+      "tip": "\"Elastic: opposite. Inelastic: in step.\" If price rises and TR rises, demand must be inelastic.",
+      "practice": {
+        "vars": {
+          "p1": [4, 20, 1],
+          "dp": {
+            "pick": [10, 20, 25]
+          },
+          "s": {
+            "pick": [-1, 1]
+          },
+          "q1": [200, 1000, 100],
+          "dqp": [4, 60, 2]
+        },
+        "derived": {
+          "p2": "p1 * (1 + s*dp/100)",
+          "q2": "q1 * (1 - s*dqp/100)",
+          "tr1": "p1*q1",
+          "tr2": "p2*q2",
+          "ped": "dqp/dp"
+        },
+        "where": "dqp !== dp && q2 > 0",
+        "question": "A firm {{s > 0 ? \"raises\" : \"cuts\"}} its price from {{m(p1)}} to {{m(p2)}} and its sales change from {{q1}} to {{q2}} units. Calculate total revenue before and after, the change in total revenue, and say what this suggests about PED.",
+        "parts": [
+          {
+            "label": "TR before",
+            "answer": "tr1",
+            "unit": "$"
+          },
+          {
+            "label": "TR after",
+            "answer": "tr2",
+            "unit": "$"
+          },
+          {
+            "label": "Change in TR",
+            "answer": "tr2 - tr1",
+            "unit": "$"
+          },
+          {
+            "label": "Demand is",
+            "choices": ["price elastic", "price inelastic"],
+            "answer": "ped > 1 ? \"price elastic\" : \"price inelastic\""
+          }
+        ],
+        "steps": [
+          "TR before = {{m(p1)}} × {{q1}} = {{m(tr1)}}",
+          "TR after = {{m(p2)}} × {{q2}} = {{m(tr2)}}",
+          "Change in TR = {{m(tr2)}} − {{m(tr1)}} = {{m(tr2-tr1)}}",
+          "Price {{s > 0 ? \"rose\" : \"fell\"}} and TR {{tr2 > tr1 ? \"rose\" : \"fell\"}}: {{(s > 0) === (tr2 > tr1) ? \"they moved together, so demand is price inelastic\" : \"they moved in opposite directions, so demand is price elastic\"}} (PED = {{f(ped)}})."
+        ]
+      },
+      "example": {
+        "p1": 10,
+        "dp": 20,
+        "s": 1,
+        "q1": 500,
+        "dqp": 10
+      },
+      "relatedTerms": ["ec-ped-total-revenue", "ec-total-revenue", "ec-ped"],
+      "diagrams": ["dg-ped-tr-elastic", "dg-ped-tr-inelastic"]
+    },
+    {
+      "id": "calc-yed",
+      "title": "Income elasticity of demand (YED)",
+      "unit": "Microeconomics",
+      "topic": "Elasticity",
+      "formulas": ["YED = %ΔQd ÷ %ΔY"],
+      "meaning": "How demand responds to income. YED < 0 inferior; 0 < YED < 1 normal necessity; YED > 1 normal luxury.",
+      "tip": "Keep the sign! Negative = inferior. Then \"under 1 = need it, over 1 = luxury\".",
+      "practice": {
+        "vars": {
+          "y1": [20000, 60000, 5000],
+          "dy": {
+            "pick": [5, 10, 20, 25]
+          },
+          "q1": [100, 1000, 100],
+          "dqp": [-30, 60, 1]
+        },
+        "derived": {
+          "y2": "y1 * (1 + dy/100)",
+          "q2": "q1 * (1 + dqp/100)",
+          "yed": "dqp / dy"
+        },
+        "where": "dqp !== 0 && dqp !== dy",
+        "question": "Average household income rises from {{m(y1)}} to {{m(y2)}} a year, and quantity demanded of a good changes from {{q1}} to {{q2}} units. Calculate YED and classify the good.",
+        "parts": [
+          {
+            "label": "YED (keep the sign)",
+            "answer": "yed"
+          },
+          {
+            "label": "The good is",
+            "choices": ["an inferior good", "a normal good (necessity)", "a normal good (luxury)"],
+            "answer": "yed < 0 ? \"an inferior good\" : yed < 1 ? \"a normal good (necessity)\" : \"a normal good (luxury)\""
+          }
+        ],
+        "steps": [
+          "%ΔY = ({{m(y2)}} − {{m(y1)}}) ÷ {{m(y1)}} × 100 = {{f(dy)}}%",
+          "%ΔQd = ({{q2}} − {{q1}}) ÷ {{q1}} × 100 = {{f(dqp)}}%",
+          "YED = {{f(dqp)}} ÷ {{f(dy)}} = {{f(yed)}}",
+          "{{yed < 0 ? \"YED is negative, so demand falls as income rises: an inferior good.\" : yed < 1 ? \"YED is positive but less than 1: a normal good and a necessity (income inelastic).\" : \"YED is greater than 1: a normal good and a luxury (income elastic).\"}}"
+        ]
+      },
+      "example": {
+        "y1": 40000,
+        "dy": 10,
+        "q1": 500,
+        "dqp": -4
+      },
+      "relatedTerms": ["ec-yed", "ec-normal-good", "ec-inferior-good", "ec-necessity-good", "ec-luxury-good"]
+    },
+    {
+      "id": "calc-pes",
+      "title": "Price elasticity of supply (PES)",
+      "unit": "Microeconomics",
+      "topic": "Elasticity",
+      "formulas": ["PES = %ΔQs ÷ %ΔP"],
+      "meaning": "How responsive quantity supplied is to a change in price. PES is positive: > 1 elastic, < 1 inelastic.",
+      "tip": "Same shape as PED, but supply moves with price — so PES is positive, no sign to drop.",
+      "practice": {
+        "vars": {
+          "p1": [10, 50, 1],
+          "dp": {
+            "pick": [10, 20, 25, 50]
+          },
+          "s": {
+            "pick": [-1, 1]
+          },
+          "q1": [200, 1000, 100],
+          "dqp": [4, 90, 2]
+        },
+        "derived": {
+          "p2": "p1 * (1 + s*dp/100)",
+          "q2": "q1 * (1 + s*dqp/100)",
+          "pes": "dqp / dp"
+        },
+        "where": "dqp !== dp && q2 > 0",
+        "question": "The price of a good {{s > 0 ? \"rises\" : \"falls\"}} from {{m(p1)}} to {{m(p2)}} and quantity supplied changes from {{q1}} to {{q2}} units. Calculate PES and state whether supply is price elastic or price inelastic.",
+        "parts": [
+          {
+            "label": "PES",
+            "answer": "pes"
+          },
+          {
+            "label": "Supply is",
+            "choices": ["price elastic", "price inelastic"],
+            "answer": "pes > 1 ? \"price elastic\" : \"price inelastic\""
+          }
+        ],
+        "steps": [
+          "%ΔP = ({{m(p2)}} − {{m(p1)}}) ÷ {{m(p1)}} × 100 = {{f(s*dp)}}%",
+          "%ΔQs = ({{q2}} − {{q1}}) ÷ {{q1}} × 100 = {{f(s*dqp)}}%",
+          "PES = {{f(s*dqp)}} ÷ {{f(s*dp)}} = {{f(pes)}}",
+          "PES is {{pes > 1 ? \"greater\" : \"less\"}} than 1, so supply is {{pes > 1 ? \"price elastic\" : \"price inelastic\"}}."
+        ]
+      },
+      "example": {
+        "p1": 20,
+        "dp": 10,
+        "s": 1,
+        "q1": 400,
+        "dqp": 6
+      },
+      "relatedTerms": ["ec-pes", "ec-elastic-supply", "ec-inelastic-supply", "ec-pes-determinants"],
+      "diagrams": ["dg-pes-range"]
+    },
+    {
+      "id": "calc-linear-equilibrium",
+      "title": "Equilibrium from linear demand and supply functions",
+      "unit": "Microeconomics",
+      "topic": "Demand and supply",
+      "hl": true,
+      "formulas": ["Qd = a − bP", "Qs = c + dP", "At equilibrium Qd = Qs → P* = (a − c) ÷ (b + d)"],
+      "meaning": "Solves for the market-clearing price and quantity. Substitute P* back into either function to get Q*.",
+      "tip": "\"Set them equal, collect the P's.\" Then check Q* in BOTH equations — they must match.",
+      "practice": {
+        "vars": {
+          "Pstar": [5, 20, 1],
+          "b": [10, 80, 10],
+          "d": [10, 80, 10],
+          "qs": [200, 900, 50]
+        },
+        "derived": {
+          "a": "qs + b*Pstar",
+          "c": "qs - d*Pstar"
+        },
+        "question": "Qd = {{lin(a,-b)}} and Qs = {{lin(c,d)}}, where P is the price in $ and Q is in units. Calculate the equilibrium price and quantity.",
+        "parts": [
+          {
+            "label": "Equilibrium price P*",
+            "answer": "Pstar",
+            "unit": "$"
+          },
+          {
+            "label": "Equilibrium quantity Q*",
+            "answer": "qs",
+            "unit": "units",
+            "dp": 0
+          }
+        ],
+        "steps": [
+          "At equilibrium Qd = Qs: {{lin(a,-b)}} = {{lin(c,d)}}",
+          "Collect terms: {{f(a)}} {{c < 0 ? \"+\" : \"−\"}} {{f(abs(c))}} = {{b}}P + {{d}}P, so {{f(a-c)}} = {{b+d}}P",
+          "P* = {{f(a-c)}} ÷ {{b+d}} = {{m(Pstar)}}",
+          "Q* = {{a}} − {{b}} × {{Pstar}} = {{qs}} units. Check with supply: {{f(c)}} + {{d}} × {{Pstar}} = {{qs}} ✓"
+        ]
+      },
+      "example": {
+        "Pstar": 8,
+        "b": 20,
+        "d": 30,
+        "qs": 340
+      },
+      "relatedTerms": ["ec-linear-demand-function", "ec-linear-supply-function", "ec-market-equilibrium"],
+      "diagrams": ["dg-equilibrium"]
+    },
+    {
+      "id": "calc-surplus",
+      "title": "Consumer and producer surplus",
+      "unit": "Microeconomics",
+      "topic": "Demand and supply",
+      "hl": true,
+      "formulas": ["CS = ½ × Q* × (price where Qd = 0 − P*)", "PS = ½ × Q* × (P* − price where Qs = 0)"],
+      "meaning": "Both surpluses are triangles on a linear diagram. Find the price-axis intercepts by setting each function to zero.",
+      "tip": "Triangle = ½ × base × height. Base is always Q*; height is the gap between P* and the intercept.",
+      "practice": {
+        "vars": {
+          "Pstar": [6, 20, 1],
+          "pmn": [1, 5, 1],
+          "b": [10, 50, 10],
+          "d": [10, 50, 10]
+        },
+        "derived": {
+          "qs": "d*(Pstar - pmn)",
+          "c": "-d*pmn",
+          "a": "qs + b*Pstar",
+          "pmax": "a/b",
+          "cs": "0.5*qs*(pmax - Pstar)",
+          "ps": "0.5*qs*(Pstar - pmn)"
+        },
+        "where": "pmn < Pstar - 1",
+        "question": "Qd = {{lin(a,-b)}} and Qs = {{lin(c,d)}}, where P is the price in $ and Q is in units. Calculate consumer surplus and producer surplus at the equilibrium.",
+        "parts": [
+          {
+            "label": "Consumer surplus",
+            "answer": "cs",
+            "unit": "$"
+          },
+          {
+            "label": "Producer surplus",
+            "answer": "ps",
+            "unit": "$"
+          }
+        ],
+        "steps": [
+          "Equilibrium: {{lin(a,-b)}} = {{lin(c,d)}} → {{f(a-c)}} = {{b+d}}P → P* = {{m(Pstar)}}, Q* = {{a}} − {{b}} × {{Pstar}} = {{qs}}",
+          "Demand meets the price axis where Qd = 0: P = {{a}} ÷ {{b}} = {{m(pmax)}}",
+          "Supply meets the price axis where Qs = 0: P = {{f(-c)}} ÷ {{d}} = {{m(pmn)}}",
+          "CS = ½ × {{qs}} × ({{m(pmax)}} − {{m(Pstar)}}) = {{m(cs)}}",
+          "PS = ½ × {{qs}} × ({{m(Pstar)}} − {{m(pmn)}}) = {{m(ps)}}"
+        ]
+      },
+      "example": {
+        "Pstar": 10,
+        "pmn": 2,
+        "b": 20,
+        "d": 30
+      },
+      "relatedTerms": ["ec-consumer-surplus", "ec-producer-surplus", "ec-social-surplus"],
+      "diagrams": ["dg-surplus"]
+    },
+    {
+      "id": "calc-price-ceiling",
+      "title": "Price ceiling: shortage",
+      "unit": "Microeconomics",
+      "topic": "Government intervention",
+      "hl": true,
+      "formulas": ["Shortage = Qd − Qs at the maximum price"],
+      "meaning": "Substitute the maximum price into both functions; the gap between them is the excess demand.",
+      "tip": "Ceiling → plug Pmax into BOTH equations. Demand side bigger = shortage.",
+      "practice": {
+        "vars": {
+          "Pstar": [5, 20, 1],
+          "b": [10, 80, 10],
+          "d": [10, 80, 10],
+          "qs": [200, 900, 50],
+          "k": [1, 4, 1]
+        },
+        "derived": {
+          "a": "qs + b*Pstar",
+          "c": "qs - d*Pstar",
+          "pc": "Pstar - k",
+          "qd": "a - b*(Pstar - k)",
+          "qsup": "c + d*(Pstar - k)"
+        },
+        "where": "qsup > 0",
+        "question": "Qd = {{lin(a,-b)}} and Qs = {{lin(c,d)}}, where P is the price in $ and Q is in units. The government sets a maximum price of {{m(pc)}}. Calculate quantity demanded, quantity supplied and the shortage.",
+        "parts": [
+          {
+            "label": "Quantity demanded",
+            "answer": "qd",
+            "unit": "units",
+            "dp": 0
+          },
+          {
+            "label": "Quantity supplied",
+            "answer": "qsup",
+            "unit": "units",
+            "dp": 0
+          },
+          {
+            "label": "Shortage",
+            "answer": "qd - qsup",
+            "unit": "units",
+            "dp": 0
+          }
+        ],
+        "steps": [
+          "Equilibrium: {{lin(a,-b)}} = {{lin(c,d)}} → {{f(a-c)}} = {{b+d}}P → P* = {{m(Pstar)}}, Q* = {{a}} − {{b}} × {{Pstar}} = {{qs}} — the ceiling is below P*, so it is binding.",
+          "Qd = {{a}} − {{b}} × {{pc}} = {{qd}}",
+          "Qs = {{f(c)}} + {{d}} × {{pc}} = {{qsup}}",
+          "Shortage = {{qd}} − {{qsup}} = {{qd - qsup}} units"
+        ]
+      },
+      "example": {
+        "Pstar": 10,
+        "b": 20,
+        "d": 30,
+        "qs": 400,
+        "k": 2
+      },
+      "relatedTerms": ["ec-price-ceiling", "ec-excess-demand", "ec-linear-demand-function"],
+      "diagrams": ["dg-price-ceiling"]
+    },
+    {
+      "id": "calc-price-floor",
+      "title": "Price floor: surplus and cost to government",
+      "unit": "Microeconomics",
+      "topic": "Government intervention",
+      "hl": true,
+      "formulas": ["Surplus = Qs − Qd at the minimum price", "Cost of buying the surplus = surplus × minimum price"],
+      "meaning": "If the government buys the surplus to maintain the floor, it pays the minimum price for every surplus unit.",
+      "tip": "Floor → plug Pmin into both equations. Gov. spending = the rectangle: surplus × Pmin.",
+      "practice": {
+        "vars": {
+          "Pstar": [5, 20, 1],
+          "b": [10, 80, 10],
+          "d": [10, 80, 10],
+          "qs": [200, 900, 50],
+          "k": [1, 4, 1]
+        },
+        "derived": {
+          "a": "qs + b*Pstar",
+          "c": "qs - d*Pstar",
+          "pf": "Pstar + k",
+          "qd": "a - b*(Pstar + k)",
+          "qsup": "c + d*(Pstar + k)"
+        },
+        "where": "qd > 0",
+        "question": "Qd = {{lin(a,-b)}} and Qs = {{lin(c,d)}}, where P is the price in $ and Q is in units. The government sets a minimum price of {{m(pf)}} and buys any surplus. Calculate the surplus and the cost to the government.",
+        "parts": [
+          {
+            "label": "Surplus",
+            "answer": "qsup - qd",
+            "unit": "units",
+            "dp": 0
+          },
+          {
+            "label": "Cost to government",
+            "answer": "(qsup - qd) * pf",
+            "unit": "$"
+          }
+        ],
+        "steps": [
+          "Equilibrium: {{lin(a,-b)}} = {{lin(c,d)}} → {{f(a-c)}} = {{b+d}}P → P* = {{m(Pstar)}}, Q* = {{a}} − {{b}} × {{Pstar}} = {{qs}} — the floor is above P*, so it is binding.",
+          "Qd = {{a}} − {{b}} × {{pf}} = {{qd}};  Qs = {{f(c)}} + {{d}} × {{pf}} = {{qsup}}",
+          "Surplus = {{qsup}} − {{qd}} = {{qsup - qd}} units",
+          "Cost = {{qsup - qd}} × {{m(pf)}} = {{m((qsup - qd) * pf)}}"
+        ]
+      },
+      "example": {
+        "Pstar": 10,
+        "b": 20,
+        "d": 30,
+        "qs": 400,
+        "k": 2
+      },
+      "relatedTerms": ["ec-price-floor", "ec-excess-supply", "ec-price-support"],
+      "diagrams": ["dg-price-floor"]
+    },
+    {
+      "id": "calc-tax",
+      "title": "Specific tax: prices, quantity, revenue and incidence",
+      "unit": "Microeconomics",
+      "topic": "Government intervention",
+      "hl": true,
+      "formulas": [
+        "With a tax of t per unit, producers receive P − t: Qs = c + d(P − t)",
+        "Tax revenue = t × new Q",
+        "Consumer share = (Pc − P*) × new Q"
+      ],
+      "meaning": "The tax shifts supply up by t. Solve the new equilibrium for the price consumers pay; producers keep that price minus the tax.",
+      "tip": "\"Replace P with (P − t) in supply only.\" Pc − Pp must always equal the tax.",
+      "practice": {
+        "vars": {
+          "b0": [1, 5, 1],
+          "d0": [1, 5, 1],
+          "mm": [1, 2, 1],
+          "pmn": [1, 5, 1],
+          "extra": [2, 10, 1]
+        },
+        "derived": {
+          "b": "10*b0",
+          "d": "10*d0",
+          "Pstar": "pmn + mm*b0 + extra",
+          "qs": "d*(Pstar - pmn)",
+          "c": "-d*pmn",
+          "a": "qs + b*Pstar",
+          "t": "mm*(b0 + d0)",
+          "pc": "Pstar + mm*d0",
+          "pp": "Pstar - mm*b0",
+          "q2": "qs - b*mm*d0",
+          "rev": "t*q2",
+          "cshare": "(pc - Pstar)*q2"
+        },
+        "where": "q2 > 0",
+        "question": "Qd = {{lin(a,-b)}} and Qs = {{lin(c,d)}}, where P is the price in $ and Q is in units. The government imposes a specific tax of {{m(t)}} per unit. Calculate the price consumers pay, the price producers receive, the new quantity, the tax revenue and the amount of that revenue paid by consumers.",
+        "parts": [
+          {
+            "label": "Price consumers pay (Pc)",
+            "answer": "pc",
+            "unit": "$"
+          },
+          {
+            "label": "Price producers receive (Pp)",
+            "answer": "pp",
+            "unit": "$"
+          },
+          {
+            "label": "New quantity",
+            "answer": "q2",
+            "unit": "units",
+            "dp": 0
+          },
+          {
+            "label": "Tax revenue",
+            "answer": "rev",
+            "unit": "$"
+          },
+          {
+            "label": "Paid by consumers",
+            "answer": "cshare",
+            "unit": "$"
+          }
+        ],
+        "steps": [
+          "Before the tax: Equilibrium: {{lin(a,-b)}} = {{lin(c,d)}} → {{f(a-c)}} = {{b+d}}P → P* = {{m(Pstar)}}, Q* = {{a}} − {{b}} × {{Pstar}} = {{qs}}",
+          "Producers now receive P − {{t}}, so supply becomes Qs = {{f(c)}} + {{d}}(P − {{t}}) = {{lin(c - d*t, d)}}",
+          "Set equal: {{lin(a,-b)}} = {{lin(c - d*t, d)}} → {{f(a - c + d*t)}} = {{b+d}}P → Pc = {{m(pc)}}",
+          "Pp = {{m(pc)}} − {{m(t)}} = {{m(pp)}}",
+          "New Q = {{a}} − {{b}} × {{pc}} = {{q2}} units",
+          "Tax revenue = {{m(t)}} × {{q2}} = {{m(rev)}}",
+          "Consumers pay ({{m(pc)}} − {{m(Pstar)}}) × {{q2}} = {{m(cshare)}}; producers pay ({{m(Pstar)}} − {{m(pp)}}) × {{q2}} = {{m(rev - cshare)}}"
+        ]
+      },
+      "example": {
+        "b0": 2,
+        "d0": 3,
+        "mm": 1,
+        "pmn": 2,
+        "extra": 6
+      },
+      "relatedTerms": ["ec-specific-tax", "ec-tax-incidence", "ec-indirect-tax", "ec-government-revenue"],
+      "diagrams": ["dg-specific-tax"]
+    },
+    {
+      "id": "calc-welfare-loss",
+      "title": "Welfare loss from a tax",
+      "unit": "Microeconomics",
+      "topic": "Government intervention",
+      "hl": true,
+      "formulas": ["Welfare loss = ½ × tax per unit × (Q* − new Q)"],
+      "meaning": "The deadweight triangle between the old and new quantities: its height is the tax, its base is the fall in quantity.",
+      "tip": "Height = tax (the vertical gap Pc − Pp), base = lost quantity. Half of base × height.",
+      "practice": {
+        "vars": {
+          "b0": [1, 5, 1],
+          "d0": [1, 5, 1],
+          "mm": [1, 2, 1],
+          "pmn": [1, 5, 1],
+          "extra": [2, 10, 1]
+        },
+        "derived": {
+          "b": "10*b0",
+          "d": "10*d0",
+          "Pstar": "pmn + mm*b0 + extra",
+          "qs": "d*(Pstar - pmn)",
+          "c": "-d*pmn",
+          "a": "qs + b*Pstar",
+          "t": "mm*(b0 + d0)",
+          "pc": "Pstar + mm*d0",
+          "q2": "qs - b*mm*d0",
+          "wl": "0.5*t*(qs - q2)"
+        },
+        "where": "q2 > 0",
+        "question": "Qd = {{lin(a,-b)}} and Qs = {{lin(c,d)}}, where P is the price in $ and Q is in units. A specific tax of {{m(t)}} per unit is imposed, and the new equilibrium quantity is {{q2}} units. Calculate the welfare loss.",
+        "parts": [
+          {
+            "label": "Welfare loss",
+            "answer": "wl",
+            "unit": "$"
+          }
+        ],
+        "steps": [
+          "Before the tax: Equilibrium: {{lin(a,-b)}} = {{lin(c,d)}} → {{f(a-c)}} = {{b+d}}P → P* = {{m(Pstar)}}, Q* = {{a}} − {{b}} × {{Pstar}} = {{qs}}",
+          "Fall in quantity = {{qs}} − {{q2}} = {{qs - q2}} units",
+          "Welfare loss = ½ × {{m(t)}} × {{qs - q2}} = {{m(wl)}}"
+        ]
+      },
+      "example": {
+        "b0": 2,
+        "d0": 3,
+        "mm": 1,
+        "pmn": 2,
+        "extra": 6
+      },
+      "relatedTerms": ["ec-welfare-loss", "ec-specific-tax", "ec-allocative-efficiency"],
+      "diagrams": ["dg-specific-tax"]
+    },
+    {
+      "id": "calc-subsidy",
+      "title": "Subsidy: prices, quantity and cost",
+      "unit": "Microeconomics",
+      "topic": "Government intervention",
+      "hl": true,
+      "formulas": ["With a subsidy of s per unit, producers receive P + s: Qs = c + d(P + s)", "Cost to government = s × new Q"],
+      "meaning": "The subsidy shifts supply down by s. Consumers pay less, producers receive the consumer price plus the subsidy.",
+      "tip": "\"Replace P with (P + s) in supply.\" Pp − Pc must equal the subsidy.",
+      "practice": {
+        "vars": {
+          "b0": [1, 5, 1],
+          "d0": [1, 5, 1],
+          "mm": [1, 2, 1],
+          "pmn": [1, 5, 1],
+          "extra": [2, 10, 1]
+        },
+        "derived": {
+          "b": "10*b0",
+          "d": "10*d0",
+          "Pstar": "pmn + mm*b0 + extra",
+          "qs": "d*(Pstar - pmn)",
+          "c": "-d*pmn",
+          "a": "qs + b*Pstar",
+          "s": "mm*(b0 + d0)",
+          "pc": "Pstar - mm*d0",
+          "pp": "Pstar + mm*b0",
+          "q2": "qs + b*mm*d0",
+          "cost": "s*q2"
+        },
+        "where": "pc > 0",
+        "question": "Qd = {{lin(a,-b)}} and Qs = {{lin(c,d)}}, where P is the price in $ and Q is in units. The government pays producers a subsidy of {{m(s)}} per unit. Calculate the price consumers pay, the price producers receive, the new quantity and the cost of the subsidy.",
+        "parts": [
+          {
+            "label": "Price consumers pay",
+            "answer": "pc",
+            "unit": "$"
+          },
+          {
+            "label": "Price producers receive",
+            "answer": "pp",
+            "unit": "$"
+          },
+          {
+            "label": "New quantity",
+            "answer": "q2",
+            "unit": "units",
+            "dp": 0
+          },
+          {
+            "label": "Cost to government",
+            "answer": "cost",
+            "unit": "$"
+          }
+        ],
+        "steps": [
+          "Before the subsidy: Equilibrium: {{lin(a,-b)}} = {{lin(c,d)}} → {{f(a-c)}} = {{b+d}}P → P* = {{m(Pstar)}}, Q* = {{a}} − {{b}} × {{Pstar}} = {{qs}}",
+          "Producers receive P + {{s}}, so supply becomes Qs = {{f(c)}} + {{d}}(P + {{s}}) = {{lin(c + d*s, d)}}",
+          "Set equal: {{lin(a,-b)}} = {{lin(c + d*s, d)}} → {{f(a - c - d*s)}} = {{b+d}}P → Pc = {{m(pc)}}",
+          "Pp = {{m(pc)}} + {{m(s)}} = {{m(pp)}}",
+          "New Q = {{a}} − {{b}} × {{pc}} = {{q2}} units",
+          "Cost = {{m(s)}} × {{q2}} = {{m(cost)}}"
+        ]
+      },
+      "example": {
+        "b0": 2,
+        "d0": 3,
+        "mm": 1,
+        "pmn": 2,
+        "extra": 6
+      },
+      "relatedTerms": ["ec-subsidy", "ec-government-spending", "ec-opportunity-cost"],
+      "diagrams": ["dg-subsidy"]
+    },
+    {
+      "id": "calc-costs",
+      "title": "Average and marginal costs",
+      "unit": "Microeconomics",
+      "topic": "Market power (HL)",
+      "hl": true,
+      "formulas": ["AFC = TFC ÷ Q", "AVC = TVC ÷ Q", "ATC = TC ÷ Q = AFC + AVC", "MC = ΔTC ÷ ΔQ"],
+      "meaning": "Averages divide a total by output; marginal cost is the change in total cost per extra unit.",
+      "tip": "Average = total ÷ Q. Marginal = change ÷ change. Fixed costs never affect MC.",
+      "practice": {
+        "vars": {
+          "tfc": [100, 1000, 50],
+          "q1": [10, 40, 5],
+          "avc1": [4, 20, 1],
+          "dq": [1, 5, 1],
+          "mc": [5, 40, 1]
+        },
+        "derived": {
+          "q2": "q1 + dq",
+          "tvc1": "q1*avc1",
+          "tvc2": "q1*avc1 + mc*dq",
+          "tc1": "tfc + q1*avc1",
+          "afc": "tfc/q1",
+          "atc": "(tfc + q1*avc1)/q1"
+        },
+        "question": "A firm has total fixed costs of {{m(tfc)}}. At {{q1}} units of output its total variable cost is {{m(tvc1)}}; at {{q2}} units it is {{m(tvc2)}}. Calculate AFC, AVC and ATC at {{q1}} units, and the marginal cost per unit of increasing output from {{q1}} to {{q2}}.",
+        "parts": [
+          {
+            "label": "AFC",
+            "answer": "afc",
+            "unit": "$"
+          },
+          {
+            "label": "AVC",
+            "answer": "avc1",
+            "unit": "$"
+          },
+          {
+            "label": "ATC",
+            "answer": "atc",
+            "unit": "$"
+          },
+          {
+            "label": "MC",
+            "answer": "mc",
+            "unit": "$"
+          }
+        ],
+        "steps": [
+          "AFC = {{m(tfc)}} ÷ {{q1}} = {{m(afc)}}",
+          "AVC = {{m(tvc1)}} ÷ {{q1}} = {{m(avc1)}}",
+          "ATC = AFC + AVC = {{m(afc)}} + {{m(avc1)}} = {{m(atc)}}",
+          "MC = ΔTC ÷ ΔQ = ({{m(tvc2)}} − {{m(tvc1)}}) ÷ ({{q2}} − {{q1}}) = {{m(mc)}} (TFC cancels out)"
+        ]
+      },
+      "example": {
+        "tfc": 500,
+        "q1": 20,
+        "avc1": 8,
+        "dq": 5,
+        "mc": 12
+      },
+      "relatedTerms": [
+        "ec-average-fixed-cost",
+        "ec-average-variable-cost",
+        "ec-average-total-cost",
+        "ec-marginal-cost"
+      ],
+      "diagrams": ["dg-cost-curves"]
+    },
+    {
+      "id": "calc-revenue",
+      "title": "Total, average and marginal revenue",
+      "unit": "Microeconomics",
+      "topic": "Market power (HL)",
+      "hl": true,
+      "formulas": ["TR = P × Q", "AR = TR ÷ Q = P", "MR = ΔTR ÷ ΔQ"],
+      "meaning": "For a firm facing downward-sloping demand, MR is below price because the lower price applies to all units sold.",
+      "tip": "AR is just the price. MR = change in TR per extra unit — it can be negative.",
+      "practice": {
+        "vars": {
+          "p1": [20, 60, 1],
+          "q1": [10, 50, 5],
+          "dq": [1, 10, 1],
+          "dpr": [1, 6, 1]
+        },
+        "derived": {
+          "p2": "p1 - dpr",
+          "q2": "q1 + dq",
+          "tr1": "p1*q1",
+          "tr2": "(p1 - dpr)*(q1 + dq)",
+          "mr": "((p1 - dpr)*(q1 + dq) - p1*q1)/dq"
+        },
+        "question": "A firm sells {{q1}} units at {{m(p1)}} each. To sell {{q2}} units it must lower its price to {{m(p2)}}. Calculate total revenue at each output and the marginal revenue per unit.",
+        "parts": [
+          {
+            "label": "TR at {{q1}} units",
+            "answer": "tr1",
+            "unit": "$"
+          },
+          {
+            "label": "TR at {{q2}} units",
+            "answer": "tr2",
+            "unit": "$"
+          },
+          {
+            "label": "MR",
+            "answer": "mr",
+            "unit": "$"
+          }
+        ],
+        "steps": [
+          "TR₁ = {{m(p1)}} × {{q1}} = {{m(tr1)}}",
+          "TR₂ = {{m(p2)}} × {{q2}} = {{m(tr2)}}",
+          "MR = ({{m(tr2)}} − {{m(tr1)}}) ÷ ({{q2}} − {{q1}}) = {{m(mr)}} per unit — below the new price of {{m(p2)}}."
+        ]
+      },
+      "example": {
+        "p1": 30,
+        "q1": 20,
+        "dq": 5,
+        "dpr": 2
+      },
+      "relatedTerms": ["ec-total-revenue", "ec-average-revenue", "ec-marginal-revenue", "ec-price-maker"],
+      "diagrams": ["dg-revenue-curves"]
+    },
+    {
+      "id": "calc-profit",
+      "title": "Profit, normal profit and loss",
+      "unit": "Microeconomics",
+      "topic": "Market power (HL)",
+      "hl": true,
+      "formulas": ["Economic profit = TR − TC = (AR − ATC) × Q"],
+      "meaning": "Economic costs include normal profit, so zero economic profit is normal profit; positive is abnormal profit; negative is a loss.",
+      "tip": "(P − ATC) × Q. Positive → abnormal, zero → normal, negative → loss.",
+      "practice": {
+        "vars": {
+          "p": [10, 60, 1],
+          "q": [100, 2000, 100],
+          "gap": [-8, 8, 1]
+        },
+        "derived": {
+          "atc": "p + gap",
+          "tr": "p*q",
+          "tc": "(p + gap)*q",
+          "prof": "-gap*q"
+        },
+        "where": "p + gap > 0",
+        "question": "A firm sells {{q}} units at a price of {{m(p)}}. Its average total cost (including normal profit) at this output is {{m(atc)}}. Calculate total revenue, total cost and economic profit, and state what the firm is earning.",
+        "parts": [
+          {
+            "label": "Total revenue",
+            "answer": "tr",
+            "unit": "$"
+          },
+          {
+            "label": "Total cost",
+            "answer": "tc",
+            "unit": "$"
+          },
+          {
+            "label": "Economic profit",
+            "answer": "prof",
+            "unit": "$"
+          },
+          {
+            "label": "The firm earns",
+            "choices": ["abnormal profit", "normal profit", "an economic loss"],
+            "answer": "prof > 0 ? \"abnormal profit\" : prof === 0 ? \"normal profit\" : \"an economic loss\""
+          }
+        ],
+        "steps": [
+          "TR = {{m(p)}} × {{q}} = {{m(tr)}}",
+          "TC = ATC × Q = {{m(atc)}} × {{q}} = {{m(tc)}}",
+          "Economic profit = {{m(tr)}} − {{m(tc)}} = {{m(prof)}} (or ({{m(p)}} − {{m(atc)}}) × {{q}})",
+          "{{prof > 0 ? \"AR > ATC: abnormal profit.\" : prof === 0 ? \"AR = ATC: normal profit only.\" : \"AR < ATC: an economic loss.\"}}"
+        ]
+      },
+      "example": {
+        "p": 25,
+        "q": 400,
+        "gap": -5
+      },
+      "relatedTerms": ["ec-abnormal-profit", "ec-normal-profit", "ec-economic-loss", "ec-average-total-cost"],
+      "diagrams": ["dg-pc-sr-profit", "dg-monopoly-profit"]
+    },
+    {
+      "id": "calc-gdp",
+      "title": "GDP by the expenditure approach",
+      "unit": "Macroeconomics",
+      "topic": "Measuring economic activity",
+      "formulas": ["GDP = C + I + G + (X − M)"],
+      "meaning": "Adds all spending on final goods and services produced in the country. Net exports can be negative.",
+      "tip": "\"CIG-XM\": Consumption, Investment, Government, eXports minus iMports.",
+      "practice": {
+        "vars": {
+          "C": [300, 900, 10],
+          "I": [50, 300, 10],
+          "G": [100, 400, 10],
+          "X": [50, 400, 10],
+          "M": [50, 400, 10]
+        },
+        "derived": {
+          "nx": "X - M",
+          "gdp": "C + I + G + X - M"
+        },
+        "question": "An economy has consumption of {{m(C)}}bn, investment of {{m(I)}}bn, government spending of {{m(G)}}bn, exports of {{m(X)}}bn and imports of {{m(M)}}bn. Calculate net exports and GDP.",
+        "parts": [
+          {
+            "label": "Net exports",
+            "answer": "nx",
+            "unit": "$bn"
+          },
+          {
+            "label": "GDP",
+            "answer": "gdp",
+            "unit": "$bn"
+          }
+        ],
+        "steps": [
+          "Net exports = X − M = {{m(X)}}bn − {{m(M)}}bn = {{m(nx)}}bn",
+          "GDP = {{m(C)}}bn + {{m(I)}}bn + {{m(G)}}bn + ({{m(nx)}}bn) = {{m(gdp)}}bn"
+        ]
+      },
+      "example": {
+        "C": 600,
+        "I": 150,
+        "G": 200,
+        "X": 120,
+        "M": 170
+      },
+      "relatedTerms": ["ec-gdp", "ec-expenditure-approach", "ec-aggregate-demand", "ec-net-exports"],
+      "diagrams": ["dg-circular-flow"]
+    },
+    {
+      "id": "calc-gni",
+      "title": "GNI from GDP",
+      "unit": "Macroeconomics",
+      "topic": "Measuring economic activity",
+      "formulas": ["GNI = GDP + income earned abroad by residents − income earned domestically by foreigners"],
+      "meaning": "GNI measures the income of a country's residents wherever it is earned: GDP plus net primary income from abroad.",
+      "tip": "GDP is WHERE it's made; GNI is WHO earns it. Add income in, subtract income out.",
+      "practice": {
+        "vars": {
+          "gdp": [400, 3000, 10],
+          "inc": [10, 200, 5],
+          "out": [10, 200, 5]
+        },
+        "derived": {
+          "gni": "gdp + inc - out"
+        },
+        "where": "inc !== out",
+        "question": "A country's GDP is {{m(gdp)}}bn. Its residents earn {{m(inc)}}bn in profits, interest and wages from abroad, while foreign owners of factors earn {{m(out)}}bn in the country. Calculate GNI.",
+        "parts": [
+          {
+            "label": "GNI",
+            "answer": "gni",
+            "unit": "$bn"
+          }
+        ],
+        "steps": [
+          "Net income from abroad = {{m(inc)}}bn − {{m(out)}}bn = {{m(inc - out)}}bn",
+          "GNI = {{m(gdp)}}bn + ({{m(inc - out)}}bn) = {{m(gni)}}bn — {{gni > gdp ? \"higher\" : \"lower\"}} than GDP."
+        ]
+      },
+      "example": {
+        "gdp": 1200,
+        "inc": 45,
+        "out": 80
+      },
+      "relatedTerms": ["ec-gni", "ec-gdp", "ec-primary-income"]
+    },
+    {
+      "id": "calc-real-gdp",
+      "title": "Real GDP using a price deflator",
+      "unit": "Macroeconomics",
+      "topic": "Measuring economic activity",
+      "hl": true,
+      "formulas": ["Real GDP = nominal GDP ÷ price deflator × 100", "Real growth = (real GDP₂ − real GDP₁) ÷ real GDP₁ × 100"],
+      "meaning": "Removes the effect of price changes so you can compare output over time. In the base year the deflator is 100.",
+      "tip": "\"Divide by the deflator, times 100.\" Real growth is always smaller than nominal growth when prices rise.",
+      "practice": {
+        "vars": {
+          "n1": [500, 900, 10],
+          "def2": [102, 115, 1],
+          "rg": [-3, 6, 1]
+        },
+        "derived": {
+          "r2": "n1 * (1 + rg/100)",
+          "n2": "n1 * (1 + rg/100) * def2 / 100"
+        },
+        "where": "rg !== 0",
+        "question": "In year 1 (the base year, deflator = 100) nominal GDP is {{m(n1)}}bn. In year 2 nominal GDP is {{m(n2)}}bn and the GDP deflator is {{def2}}. Calculate real GDP in year 2 and the real growth rate.",
+        "parts": [
+          {
+            "label": "Real GDP in year 2",
+            "answer": "r2",
+            "unit": "$bn"
+          },
+          {
+            "label": "Real growth rate",
+            "answer": "rg",
+            "unit": "%"
+          }
+        ],
+        "steps": [
+          "Year 1 is the base year, so real GDP₁ = nominal GDP₁ = {{m(n1)}}bn",
+          "Real GDP₂ = {{m(n2)}}bn ÷ {{def2}} × 100 = {{m(r2)}}bn",
+          "Real growth = ({{m(r2)}} − {{m(n1)}}) ÷ {{m(n1)}} × 100 = {{f(rg)}}%",
+          "Nominal growth was {{f((n2 - n1)/n1*100)}}%, but most of that {{rg > 0 ? \"was\" : \"came from\"}} rising prices."
+        ]
+      },
+      "example": {
+        "n1": 800,
+        "def2": 105,
+        "rg": 2
+      },
+      "relatedTerms": ["ec-real-gdp", "ec-nominal-gdp", "ec-gdp-deflator", "ec-economic-growth"]
+    },
+    {
+      "id": "calc-gdp-per-capita",
+      "title": "GDP per capita",
+      "unit": "Macroeconomics",
+      "topic": "Measuring economic activity",
+      "formulas": ["GDP per capita = GDP ÷ population"],
+      "meaning": "Average output (income) per person — a better guide to living standards than total GDP.",
+      "tip": "Watch the units: $bn ÷ millions of people = thousands of $ per person.",
+      "practice": {
+        "vars": {
+          "gdp": [50, 2000, 10],
+          "pop": [5, 200, 1]
+        },
+        "derived": {
+          "pc": "gdp * 1e9 / (pop * 1e6)"
+        },
+        "question": "A country has GDP of {{m(gdp)}}bn and a population of {{pop}} million. Calculate GDP per capita.",
+        "parts": [
+          {
+            "label": "GDP per capita",
+            "answer": "pc",
+            "unit": "$"
+          }
+        ],
+        "steps": [
+          "GDP per capita = {{m(gdp)}} billion ÷ {{pop}} million",
+          "= {{f(gdp * 1e9)}} ÷ {{f(pop * 1e6)}} = {{m(pc)}} per person"
+        ]
+      },
+      "example": {
+        "gdp": 450,
+        "pop": 30
+      },
+      "relatedTerms": ["ec-gdp-per-capita", "ec-gni-per-capita", "ec-gdp"]
+    },
+    {
+      "id": "calc-growth",
+      "title": "Economic growth rate",
+      "unit": "Macroeconomics",
+      "topic": "Measuring economic activity",
+      "formulas": ["Growth rate = (real GDP₂ − real GDP₁) ÷ real GDP₁ × 100"],
+      "meaning": "The percentage change in real GDP. A negative rate means real output fell; two negative quarters is a recession.",
+      "tip": "Use REAL GDP. A falling growth rate that is still positive means the economy is still growing.",
+      "practice": {
+        "vars": {
+          "r1": [400, 1500, 10],
+          "g": [-4, 8, 0.5]
+        },
+        "derived": {
+          "r2": "r1 * (1 + g/100)"
+        },
+        "where": "g !== 0",
+        "question": "Real GDP rises from {{m(r1)}}bn to {{m(r2)}}bn. Calculate the economic growth rate.",
+        "parts": [
+          {
+            "label": "Growth rate",
+            "answer": "g",
+            "unit": "%",
+            "dp": 2
+          }
+        ],
+        "steps": [
+          "Change = {{m(r2)}} − {{m(r1)}} = {{m(r2 - r1)}}bn",
+          "Growth = {{f(r2 - r1)}} ÷ {{f(r1)}} × 100 = {{f(g)}}%"
+        ]
+      },
+      "example": {
+        "r1": 800,
+        "g": 2.5
+      },
+      "relatedTerms": ["ec-economic-growth", "ec-real-gdp", "ec-recession", "ec-business-cycle"],
+      "diagrams": ["dg-business-cycle"]
+    },
+    {
+      "id": "calc-unemployment",
+      "title": "Unemployment rate",
+      "unit": "Macroeconomics",
+      "topic": "Macroeconomic objectives",
+      "formulas": ["Labour force = employed + unemployed", "Unemployment rate = unemployed ÷ labour force × 100"],
+      "meaning": "The share of people who are willing and able to work and actively seeking work, but have no job.",
+      "tip": "Divide by the LABOUR FORCE, not the population — people not seeking work are not in it.",
+      "practice": {
+        "vars": {
+          "emp": [2000, 30000, 500],
+          "un": [100, 3000, 50]
+        },
+        "derived": {
+          "lf": "emp + un",
+          "rate": "un/(emp + un)*100"
+        },
+        "question": "In a country {{f(emp)}} thousand people are employed and {{f(un)}} thousand are unemployed and actively seeking work. Calculate the labour force and the unemployment rate.",
+        "parts": [
+          {
+            "label": "Labour force (thousands)",
+            "answer": "lf",
+            "dp": 0
+          },
+          {
+            "label": "Unemployment rate",
+            "answer": "rate",
+            "unit": "%"
+          }
+        ],
+        "steps": [
+          "Labour force = {{f(emp)}} + {{f(un)}} = {{f(lf)}} thousand",
+          "Unemployment rate = {{f(un)}} ÷ {{f(lf)}} × 100 = {{f(rate)}}%"
+        ]
+      },
+      "example": {
+        "emp": 9500,
+        "un": 500
+      },
+      "relatedTerms": ["ec-unemployment-rate", "ec-labour-force", "ec-unemployment"]
+    },
+    {
+      "id": "calc-inflation",
+      "title": "Inflation rate from a price index",
+      "unit": "Macroeconomics",
+      "topic": "Macroeconomic objectives",
+      "formulas": ["Inflation rate = (CPI₂ − CPI₁) ÷ CPI₁ × 100"],
+      "meaning": "The percentage change in the consumer price index. A negative result is deflation; a lower but positive result is disinflation.",
+      "tip": "CPI 120 → 126 is 5%, not 6 — divide by the earlier index, not 100.",
+      "practice": {
+        "vars": {
+          "c1": [100, 140, 0.5],
+          "inf": [-2, 9, 0.5]
+        },
+        "derived": {
+          "c2": "c1 * (1 + inf/100)"
+        },
+        "where": "inf !== 0 && c1 !== 100",
+        "question": "The consumer price index rises from {{f(c1, 2)}} to {{f(c2, 2)}}. Calculate the rate of inflation.",
+        "parts": [
+          {
+            "label": "Inflation rate",
+            "answer": "inf",
+            "unit": "%"
+          }
+        ],
+        "steps": [
+          "Change in CPI = {{f(c2, 2)}} − {{f(c1, 2)}} = {{f(c2 - c1, 2)}}",
+          "Inflation = {{f(c2 - c1, 2)}} ÷ {{f(c1, 2)}} × 100 = {{f(inf)}}%{{inf < 0 ? \" — deflation\" : \"\"}}"
+        ]
+      },
+      "example": {
+        "c1": 120,
+        "inf": 5
+      },
+      "relatedTerms": ["ec-inflation", "ec-cpi", "ec-deflation", "ec-disinflation"]
+    },
+    {
+      "id": "calc-weighted-cpi",
+      "title": "Weighted price index",
+      "unit": "Macroeconomics",
+      "topic": "Macroeconomic objectives",
+      "hl": true,
+      "formulas": [
+        "Price index for each item = current price ÷ base-year price × 100",
+        "CPI = Σ (weight × item index) ÷ Σ weights"
+      ],
+      "meaning": "Items that take a larger share of spending get a larger weight, so they affect measured inflation more.",
+      "tip": "Index each item first, then weight-average the indices. In the base year CPI = 100.",
+      "practice": {
+        "vars": {
+          "w1": [20, 60, 5],
+          "w2": [10, 40, 5],
+          "b1": [2, 10, 0.5],
+          "b2": [1, 5, 0.25],
+          "b3": [500, 1500, 50],
+          "c1": [-10, 30, 1],
+          "c2": [-10, 30, 1],
+          "c3": [-10, 30, 1]
+        },
+        "derived": {
+          "w3": "100 - w1 - w2",
+          "i1": "100 + c1",
+          "i2": "100 + c2",
+          "i3": "100 + c3",
+          "n1": "b1*(1 + c1/100)",
+          "n2": "b2*(1 + c2/100)",
+          "n3": "b3*(1 + c3/100)",
+          "cpi": "(w1*(100 + c1) + w2*(100 + c2) + (100 - w1 - w2)*(100 + c3))/100"
+        },
+        "where": "w3 >= 10",
+        "question": "A basket has three items. Food (weight {{w1}}%) cost {{m(b1)}} in the base year and {{m(n1)}} now; transport (weight {{w2}}%) cost {{m(b2)}} and now {{m(n2)}}; housing (weight {{w3}}%) cost {{m(b3)}} and now {{m(n3)}}. Calculate the weighted price index and the rate of inflation since the base year.",
+        "parts": [
+          {
+            "label": "Weighted price index",
+            "answer": "cpi"
+          },
+          {
+            "label": "Inflation since base year",
+            "answer": "cpi - 100",
+            "unit": "%"
+          }
+        ],
+        "steps": [
+          "Food index = {{m(n1)}} ÷ {{m(b1)}} × 100 = {{f(i1)}}",
+          "Transport index = {{m(n2)}} ÷ {{m(b2)}} × 100 = {{f(i2)}}",
+          "Housing index = {{m(n3)}} ÷ {{m(b3)}} × 100 = {{f(i3)}}",
+          "CPI = ({{w1}} × {{f(i1)}} + {{w2}} × {{f(i2)}} + {{w3}} × {{f(i3)}}) ÷ 100 = {{f(cpi)}}",
+          "The base year is 100, so prices rose by {{f(cpi - 100)}}%."
+        ]
+      },
+      "example": {
+        "w1": 40,
+        "w2": 25,
+        "b1": 4,
+        "b2": 2,
+        "b3": 1000,
+        "c1": 10,
+        "c2": 20,
+        "c3": -5
+      },
+      "relatedTerms": ["ec-weighted-price-index", "ec-cpi", "ec-base-year", "ec-inflation"]
+    },
+    {
+      "id": "calc-real-interest",
+      "title": "Real interest rate",
+      "unit": "Macroeconomics",
+      "topic": "Monetary policy",
+      "formulas": ["Real interest rate = nominal interest rate − inflation rate"],
+      "meaning": "The return on saving (or cost of borrowing) after allowing for inflation. It can be negative.",
+      "tip": "\"Real = nominal minus inflation.\" Negative real rates reward borrowers and punish savers.",
+      "practice": {
+        "vars": {
+          "nom": [0.5, 8, 0.25],
+          "inf": [-1, 9, 0.5]
+        },
+        "derived": {
+          "real": "nom - inf"
+        },
+        "question": "A bank pays a nominal interest rate of {{f(nom)}}% a year and the inflation rate is {{f(inf)}}%. Calculate the real interest rate.",
+        "parts": [
+          {
+            "label": "Real interest rate",
+            "answer": "real",
+            "unit": "%"
+          }
+        ],
+        "steps": [
+          "Real rate = {{f(nom)}}% − {{f(inf)}}% = {{f(real)}}%",
+          "{{real < 0 ? \"The real rate is negative: savings lose purchasing power, which encourages spending and borrowing.\" : \"Savers gain purchasing power of \" + f(real) + \"% a year.\"}}"
+        ]
+      },
+      "example": {
+        "nom": 3,
+        "inf": 4.5
+      },
+      "relatedTerms": ["ec-real-interest-rate", "ec-nominal-interest-rate", "ec-inflation"],
+      "diagrams": ["dg-money-market"]
+    },
+    {
+      "id": "calc-multiplier",
+      "title": "The Keynesian multiplier",
+      "unit": "Macroeconomics",
+      "topic": "Aggregate demand and aggregate supply",
+      "hl": true,
+      "formulas": [
+        "Multiplier = 1 ÷ (1 − MPC) = 1 ÷ MPW",
+        "MPW = MPS + MPT + MPM",
+        "ΔReal GDP = multiplier × change in injection"
+      ],
+      "meaning": "An injection becomes income for others, who spend part of it, so the final rise in real GDP is a multiple of the injection.",
+      "tip": "\"One over the leaks.\" The more leaks out (S, T, M), the smaller the multiplier.",
+      "practice": {
+        "vars": {
+          "mps": [0.05, 0.2, 0.05],
+          "mpt": [0.05, 0.2, 0.05],
+          "mpm": [0.05, 0.2, 0.05],
+          "dG": [5, 50, 5]
+        },
+        "derived": {
+          "mpw": "mps + mpt + mpm",
+          "mpc": "1 - (mps + mpt + mpm)",
+          "k": "1/(mps + mpt + mpm)",
+          "dy": "dG/(mps + mpt + mpm)"
+        },
+        "question": "In an economy the marginal propensity to save is {{f(mps)}}, to tax {{f(mpt)}} and to import {{f(mpm)}}. The government increases spending by {{m(dG)}}bn. Calculate the MPC, the multiplier and the eventual change in real GDP.",
+        "parts": [
+          {
+            "label": "MPC",
+            "answer": "mpc"
+          },
+          {
+            "label": "Multiplier",
+            "answer": "k"
+          },
+          {
+            "label": "Change in real GDP",
+            "answer": "dy",
+            "unit": "$bn"
+          }
+        ],
+        "steps": [
+          "MPW = {{f(mps)}} + {{f(mpt)}} + {{f(mpm)}} = {{f(mpw)}}",
+          "MPC = 1 − MPW = {{f(mpc)}}",
+          "Multiplier = 1 ÷ {{f(mpw)}} = {{f(k)}}",
+          "ΔReal GDP = {{f(k)}} × {{m(dG)}}bn = {{m(dy)}}bn"
+        ]
+      },
+      "example": {
+        "mps": 0.1,
+        "mpt": 0.15,
+        "mpm": 0.15,
+        "dG": 20
+      },
+      "relatedTerms": ["ec-multiplier", "ec-mpc", "ec-mpw", "ec-mps", "ec-expansionary-fiscal-policy"],
+      "diagrams": ["dg-fiscal-expansion"]
+    },
+    {
+      "id": "calc-tax-rates",
+      "title": "Average and marginal tax rates",
+      "unit": "Macroeconomics",
+      "topic": "Economics of inequality and poverty",
+      "hl": true,
+      "formulas": [
+        "Average tax rate = total tax ÷ total income × 100",
+        "Marginal tax rate = Δtax ÷ Δincome × 100 (the rate on the next $1)"
+      ],
+      "meaning": "In a progressive system each band's rate applies only to income inside that band, so the average rate is below the top marginal rate.",
+      "tip": "Tax each slice separately, then add. Progressive ⇔ marginal rate above the average rate.",
+      "practice": {
+        "vars": {
+          "t1": [10000, 20000, 1000],
+          "r1": {
+            "pick": [10, 15, 20]
+          },
+          "t2": [40000, 60000, 5000],
+          "r2": {
+            "pick": [30, 35, 40, 45]
+          },
+          "y": [25000, 120000, 1000]
+        },
+        "derived": {
+          "tax": "r1/100*(min(y, t2) - t1) + r2/100*max(0, y - t2)",
+          "avg": "(r1/100*(min(y, t2) - t1) + r2/100*max(0, y - t2))/y*100",
+          "marg": "y > t2 ? r2 : r1"
+        },
+        "where": "y > t1 && y !== t2",
+        "question": "Income tax is 0% on income up to {{m(t1)}}, {{r1}}% on income from {{m(t1)}} to {{m(t2)}}, and {{r2}}% on income above {{m(t2)}}. A person earns {{m(y)}}. Calculate the tax paid, the average tax rate and the marginal tax rate.",
+        "parts": [
+          {
+            "label": "Tax paid",
+            "answer": "tax",
+            "unit": "$"
+          },
+          {
+            "label": "Average tax rate",
+            "answer": "avg",
+            "unit": "%"
+          },
+          {
+            "label": "Marginal tax rate",
+            "answer": "marg",
+            "unit": "%"
+          }
+        ],
+        "steps": [
+          "First {{m(t1)}}: no tax",
+          "{{r1}}% band: {{r1}}% × ({{m(min(y, t2))}} − {{m(t1)}}) = {{m(r1/100*(min(y, t2) - t1))}}",
+          "{{y > t2 ? r2 + \"% band: \" + r2 + \"% × (\" + m(y) + \" − \" + m(t2) + \") = \" + m(r2/100*(y - t2)) : \"Income is below \" + m(t2) + \", so nothing is taxed at \" + r2 + \"%\"}}",
+          "Total tax = {{m(tax)}}; average rate = {{m(tax)}} ÷ {{m(y)}} × 100 = {{f(avg)}}%",
+          "The next dollar earned is taxed at {{marg}}%, the marginal rate."
+        ]
+      },
+      "example": {
+        "t1": 15000,
+        "r1": 20,
+        "t2": 50000,
+        "r2": 40,
+        "y": 70000
+      },
+      "relatedTerms": ["ec-average-tax-rate", "ec-marginal-tax-rate", "ec-progressive-tax", "ec-direct-tax"]
+    },
+    {
+      "id": "calc-budget",
+      "title": "Budget balance",
+      "unit": "Macroeconomics",
+      "topic": "Fiscal policy",
+      "formulas": ["Budget balance = government revenue − government expenditure", "As % of GDP = balance ÷ GDP × 100"],
+      "meaning": "A negative balance is a budget deficit (financed by borrowing); a positive one is a surplus.",
+      "tip": "Revenue minus spending: minus sign = deficit. Express it as % of GDP to compare countries.",
+      "practice": {
+        "vars": {
+          "rev": [100, 500, 5],
+          "ex": [100, 550, 5],
+          "gdp": [800, 3000, 50]
+        },
+        "derived": {
+          "bal": "rev - ex",
+          "pct": "(rev - ex)/gdp*100"
+        },
+        "where": "rev !== ex",
+        "question": "Government revenue is {{m(rev)}}bn and government expenditure is {{m(ex)}}bn. GDP is {{m(gdp)}}bn. Calculate the budget balance and express it as a percentage of GDP.",
+        "parts": [
+          {
+            "label": "Budget balance (negative = deficit)",
+            "answer": "bal",
+            "unit": "$bn"
+          },
+          {
+            "label": "As % of GDP",
+            "answer": "pct",
+            "unit": "%"
+          }
+        ],
+        "steps": [
+          "Balance = {{m(rev)}}bn − {{m(ex)}}bn = {{m(bal)}}bn: a budget {{bal < 0 ? \"deficit\" : \"surplus\"}}",
+          "As % of GDP = {{f(bal)}} ÷ {{f(gdp)}} × 100 = {{f(pct)}}%"
+        ]
+      },
+      "example": {
+        "rev": 380,
+        "ex": 420,
+        "gdp": 2000
+      },
+      "relatedTerms": ["ec-budget-deficit", "ec-budget-surplus", "ec-fiscal-policy", "ec-government-revenue"]
+    },
+    {
+      "id": "calc-debt-ratio",
+      "title": "Government debt-to-GDP ratio",
+      "unit": "Macroeconomics",
+      "topic": "Macroeconomic objectives",
+      "hl": true,
+      "formulas": ["Debt-to-GDP = government debt ÷ GDP × 100", "New debt = old debt + this year's deficit"],
+      "meaning": "A ratio is used to judge whether debt is sustainable: it can fall even with a deficit if GDP grows fast enough.",
+      "tip": "Deficits add to the debt (a flow into a stock). Growth in GDP shrinks the ratio.",
+      "practice": {
+        "vars": {
+          "debt": [200, 3000, 50],
+          "gdp": [500, 3000, 50],
+          "def": [10, 150, 5],
+          "g": [-2, 8, 1]
+        },
+        "derived": {
+          "r1": "debt/gdp*100",
+          "debt2": "debt + def",
+          "gdp2": "gdp*(1 + g/100)",
+          "r2": "(debt + def)/(gdp*(1 + g/100))*100"
+        },
+        "question": "Government debt is {{m(debt)}}bn and nominal GDP is {{m(gdp)}}bn. Next year the government runs a deficit of {{m(def)}}bn and nominal GDP grows by {{g}}%. Calculate the debt-to-GDP ratio now and next year.",
+        "parts": [
+          {
+            "label": "Ratio now",
+            "answer": "r1",
+            "unit": "%"
+          },
+          {
+            "label": "Ratio next year",
+            "answer": "r2",
+            "unit": "%"
+          }
+        ],
+        "steps": [
+          "Now: {{m(debt)}} ÷ {{m(gdp)}} × 100 = {{f(r1)}}%",
+          "Next year's debt = {{m(debt)}} + {{m(def)}} = {{m(debt2)}}bn; GDP = {{m(gdp)}} × {{f(1 + g/100)}} = {{m(gdp2)}}bn",
+          "Next year: {{m(debt2)}} ÷ {{m(gdp2)}} × 100 = {{f(r2)}}% — the ratio {{r2 > r1 ? \"rises\" : \"falls\"}}."
+        ]
+      },
+      "example": {
+        "debt": 1500,
+        "gdp": 2000,
+        "def": 60,
+        "g": 5
+      },
+      "relatedTerms": ["ec-debt-to-gdp", "ec-government-debt", "ec-budget-deficit"]
+    },
+    {
+      "id": "calc-comparative-advantage",
+      "title": "Opportunity cost and comparative advantage",
+      "unit": "International Economics",
+      "topic": "Benefits of international trade",
+      "hl": true,
+      "formulas": ["Opportunity cost of 1 X = units of Y given up ÷ units of X gained"],
+      "meaning": "The country with the lower opportunity cost of a good has the comparative advantage in it, and should specialise in it.",
+      "tip": "\"Lower OC wins.\" Each country has a comparative advantage in exactly one of the two goods (unless the ratios are equal).",
+      "practice": {
+        "vars": {
+          "xa": [10, 60, 5],
+          "ya": [10, 60, 5],
+          "xb": [10, 60, 5],
+          "yb": [10, 60, 5]
+        },
+        "derived": {
+          "oca": "ya/xa",
+          "ocb": "yb/xb"
+        },
+        "where": "abs(ya/xa - yb/xb) > 0.15 * min(ya/xa, yb/xb)",
+        "question": "Using all its resources, Country A can produce {{xa}} tonnes of rice or {{ya}} units of textiles; Country B can produce {{xb}} tonnes of rice or {{yb}} units of textiles. Calculate the opportunity cost of 1 tonne of rice in each country and identify the comparative advantages.",
+        "parts": [
+          {
+            "label": "OC of 1 tonne of rice in A (units of textiles)",
+            "answer": "oca"
+          },
+          {
+            "label": "OC of 1 tonne of rice in B (units of textiles)",
+            "answer": "ocb"
+          },
+          {
+            "label": "Comparative advantage in rice",
+            "choices": ["Country A", "Country B"],
+            "answer": "oca < ocb ? \"Country A\" : \"Country B\""
+          },
+          {
+            "label": "Comparative advantage in textiles",
+            "choices": ["Country A", "Country B"],
+            "answer": "oca < ocb ? \"Country B\" : \"Country A\""
+          }
+        ],
+        "steps": [
+          "A: 1 tonne of rice costs {{ya}} ÷ {{xa}} = {{f(oca)}} units of textiles",
+          "B: 1 tonne of rice costs {{yb}} ÷ {{xb}} = {{f(ocb)}} units of textiles",
+          "{{oca < ocb ? \"A\" : \"B\"}} gives up less textiles per tonne of rice, so it has the comparative advantage in rice.",
+          "Textiles: 1 unit costs A {{f(xa/ya)}} t of rice and B {{f(xb/yb)}} t — {{oca < ocb ? \"B\" : \"A\"}} has the lower opportunity cost, so the comparative advantage in textiles."
+        ]
+      },
+      "example": {
+        "xa": 40,
+        "ya": 80,
+        "xb": 60,
+        "yb": 30
+      },
+      "relatedTerms": [
+        "ec-comparative-advantage",
+        "ec-opportunity-cost-trade",
+        "ec-absolute-advantage",
+        "ec-specialisation"
+      ],
+      "diagrams": ["dg-comparative-advantage"]
+    },
+    {
+      "id": "calc-tariff",
+      "title": "Tariff: imports, revenue and welfare loss",
+      "unit": "International Economics",
+      "topic": "Types of trade protection",
+      "hl": true,
+      "formulas": [
+        "Imports = Qd − Qs at the price",
+        "Tariff revenue = tariff × imports after the tariff",
+        "Welfare loss = ½ × t × (rise in domestic output) + ½ × t × (fall in consumption)"
+      ],
+      "meaning": "A tariff raises the domestic price from Pw to Pw + t. Domestic output rises, consumption falls, and imports shrink.",
+      "tip": "Do everything twice: at Pw and at Pw + t. Revenue is the rectangle in the middle; the two triangles are the welfare loss.",
+      "practice": {
+        "vars": {
+          "Pstar": [10, 20, 1],
+          "b": [10, 50, 10],
+          "d": [10, 50, 10],
+          "qs": [300, 900, 50],
+          "k1": [4, 8, 1],
+          "t": [1, 3, 1]
+        },
+        "derived": {
+          "a": "qs + b*Pstar",
+          "c": "qs - d*Pstar",
+          "pw": "Pstar - k1",
+          "q1": "qs - d*k1",
+          "q2": "qs + b*k1",
+          "q3": "qs - d*(k1 - t)",
+          "q4": "qs + b*(k1 - t)",
+          "rev": "t*b*(k1 - t) + t*d*(k1 - t)",
+          "wl": "0.5*t*(d*t) + 0.5*t*(b*t)"
+        },
+        "where": "q1 > 0 && t < k1",
+        "question": "Domestic demand and supply are Qd = {{lin(a,-b)}} and Qs = {{lin(c,d)}} (P in $, Q in units). The world price is {{m(pw)}}. The government imposes a tariff of {{m(t)}} per unit. Calculate imports before and after the tariff, the tariff revenue and the total welfare loss.",
+        "parts": [
+          {
+            "label": "Imports before",
+            "answer": "q2 - q1",
+            "unit": "units",
+            "dp": 0
+          },
+          {
+            "label": "Imports after",
+            "answer": "q4 - q3",
+            "unit": "units",
+            "dp": 0
+          },
+          {
+            "label": "Tariff revenue",
+            "answer": "rev",
+            "unit": "$"
+          },
+          {
+            "label": "Total welfare loss",
+            "answer": "wl",
+            "unit": "$"
+          }
+        ],
+        "steps": [
+          "At Pw = {{m(pw)}}: Qs = {{f(c)}} + {{d}} × {{pw}} = {{q1}}; Qd = {{a}} − {{b}} × {{pw}} = {{q2}}; imports = {{q2 - q1}}",
+          "At Pw + t = {{m(pw + t)}}: Qs = {{q3}}; Qd = {{q4}}; imports = {{q4 - q3}}",
+          "Revenue = {{m(t)}} × {{q4 - q3}} = {{m(rev)}}",
+          "Production loss = ½ × {{t}} × ({{q3}} − {{q1}}) = {{m(0.5*t*(q3 - q1))}}; consumption loss = ½ × {{t}} × ({{q2}} − {{q4}}) = {{m(0.5*t*(q2 - q4))}}",
+          "Total welfare loss = {{m(wl)}}"
+        ]
+      },
+      "example": {
+        "Pstar": 12,
+        "b": 20,
+        "d": 30,
+        "qs": 500,
+        "k1": 5,
+        "t": 2
+      },
+      "relatedTerms": ["ec-tariff", "ec-protectionism", "ec-world-price", "ec-welfare-loss"],
+      "diagrams": ["dg-tariff"]
+    },
+    {
+      "id": "calc-quota",
+      "title": "Import quota: price and quota rent",
+      "unit": "International Economics",
+      "topic": "Types of trade protection",
+      "hl": true,
+      "formulas": ["With a quota, the price rises until Qd − Qs = quota", "Quota rent = (new price − world price) × quota"],
+      "meaning": "Imports are capped, so the domestic price rises. The gap between the new price and Pw on imported units goes to licence holders, not the government.",
+      "tip": "Set Qd − Qs equal to the quota and solve for P. Quota rent = price gap × quota.",
+      "practice": {
+        "vars": {
+          "Pstar": [10, 20, 1],
+          "b": [10, 50, 10],
+          "d": [10, 50, 10],
+          "qs": [300, 900, 50],
+          "k1": [4, 8, 1],
+          "j": [1, 3, 1]
+        },
+        "derived": {
+          "a": "qs + b*Pstar",
+          "c": "qs - d*Pstar",
+          "pw": "Pstar - k1",
+          "quota": "j*(b + d)",
+          "pq": "Pstar - j",
+          "q3": "qs - d*j",
+          "rent": "(k1 - j)*j*(b + d)"
+        },
+        "where": "qs - d*k1 > 0 && j < k1",
+        "question": "Domestic demand and supply are Qd = {{lin(a,-b)}} and Qs = {{lin(c,d)}} (P in $, Q in units). The world price is {{m(pw)}}. The government limits imports to {{quota}} units. Calculate the new domestic price, domestic production and the quota rent.",
+        "parts": [
+          {
+            "label": "New domestic price",
+            "answer": "pq",
+            "unit": "$"
+          },
+          {
+            "label": "Domestic production",
+            "answer": "q3",
+            "unit": "units",
+            "dp": 0
+          },
+          {
+            "label": "Quota rent",
+            "answer": "rent",
+            "unit": "$"
+          }
+        ],
+        "steps": [
+          "Imports at price P = Qd − Qs = ({{lin(a,-b)}}) − ({{lin(c,d)}}) = {{lin(a - c, -(b + d))}}",
+          "Set equal to the quota: {{lin(a - c, -(b + d))}} = {{quota}} → P = {{f(a - c - quota)}} ÷ {{b + d}} = {{m(pq)}}",
+          "Domestic production = {{f(c)}} + {{d}} × {{pq}} = {{q3}} units",
+          "Quota rent = ({{m(pq)}} − {{m(pw)}}) × {{quota}} = {{m(rent)}}"
+        ]
+      },
+      "example": {
+        "Pstar": 12,
+        "b": 20,
+        "d": 30,
+        "qs": 500,
+        "k1": 5,
+        "j": 2
+      },
+      "relatedTerms": ["ec-quota", "ec-protectionism", "ec-world-price"],
+      "diagrams": ["dg-quota"]
+    },
+    {
+      "id": "calc-currency-conversion",
+      "title": "Converting prices between currencies",
+      "unit": "International Economics",
+      "topic": "Exchange rates",
+      "hl": true,
+      "formulas": ["If €1 = $x: price in $ = price in € × x", "price in € = price in $ ÷ x"],
+      "meaning": "An exchange rate is the price of one currency in terms of another, so conversion is a multiplication or division.",
+      "tip": "Ask \"is the answer bigger or smaller?\" — if €1 buys more than $1, a euro price becomes a bigger dollar number.",
+      "practice": {
+        "vars": {
+          "x": [1.05, 1.6, 0.01],
+          "pe": [10, 500, 5],
+          "pd": [10, 500, 5]
+        },
+        "derived": {
+          "pd2": "pe*x",
+          "pe2": "pd/x"
+        },
+        "question": "The exchange rate is €1 = ${{fd(x)}}. Calculate the dollar price of a €{{pe}} jacket and the euro price of a ${{pd}} phone case.",
+        "parts": [
+          {
+            "label": "Jacket in $",
+            "answer": "pd2",
+            "unit": "$"
+          },
+          {
+            "label": "Phone case in €",
+            "answer": "pe2",
+            "unit": "€"
+          }
+        ],
+        "steps": [
+          "Jacket: €{{pe}} × {{fd(x)}} = {{m(pd2)}}",
+          "Phone case: ${{pd}} ÷ {{fd(x)}} = €{{fd(pe2)}}"
+        ]
+      },
+      "example": {
+        "x": 1.25,
+        "pe": 80,
+        "pd": 50
+      },
+      "relatedTerms": ["ec-exchange-rate", "ec-floating-exchange-rate"]
+    },
+    {
+      "id": "calc-exchange-change",
+      "title": "Percentage appreciation and depreciation",
+      "unit": "International Economics",
+      "topic": "Exchange rates",
+      "hl": true,
+      "formulas": ["% change in value of € = (new $ per € − old $ per €) ÷ old × 100", "Value of $ in € = 1 ÷ ($ per €)"],
+      "meaning": "If one currency appreciates the other depreciates — but not by the same percentage, because the base changes.",
+      "tip": "Flip the rate (1 ÷ rate) to see the other currency. 10% up for one is NOT 10% down for the other.",
+      "practice": {
+        "vars": {
+          "r1": [1, 1.5, 0.01],
+          "ch": {
+            "pick": [
+              -20,
+              -15,
+              -10,
+              -5,
+              5,
+              10,
+              15,
+              20
+            ]
+          }
+        },
+        "derived": {
+          "r2": "r1*(1 + ch/100)",
+          "dch": "(1/(1 + ch/100) - 1)*100"
+        },
+        "question": "The exchange rate changes from €1 = ${{fd(r1)}} to €1 = ${{fd(r2, 4)}}. Calculate the percentage change in the value of the euro and of the dollar.",
+        "parts": [
+          {
+            "label": "% change in value of €",
+            "answer": "ch",
+            "unit": "%"
+          },
+          {
+            "label": "% change in value of $",
+            "answer": "dch",
+            "unit": "%"
+          }
+        ],
+        "steps": [
+          "Euro: ({{fd(r2, 4)}} − {{fd(r1)}}) ÷ {{fd(r1)}} × 100 = {{f(ch)}}% — the euro {{ch > 0 ? \"appreciates\" : \"depreciates\"}}",
+          "Dollar in euros: before $1 = €{{f(1/r1, 4)}}, after $1 = €{{f(1/r2, 4)}}",
+          "Dollar: ({{f(1/r2, 4)}} − {{f(1/r1, 4)}}) ÷ {{f(1/r1, 4)}} × 100 = {{f(dch)}}% — the dollar {{dch > 0 ? \"appreciates\" : \"depreciates\"}}"
+        ]
+      },
+      "example": {
+        "r1": 1.2,
+        "ch": 10
+      },
+      "relatedTerms": ["ec-appreciation", "ec-depreciation", "ec-exchange-rate"],
+      "diagrams": ["dg-appreciation", "dg-depreciation"]
+    },
+    {
+      "id": "calc-bop",
+      "title": "Balance of payments accounts",
+      "unit": "International Economics",
+      "topic": "Balance of payments",
+      "hl": true,
+      "formulas": [
+        "Current account = trade in goods + trade in services + primary income + secondary income",
+        "Current + capital + financial account + errors and omissions = 0"
+      ],
+      "meaning": "A current account deficit must be matched by a surplus on the capital and financial accounts (net inflows of investment or borrowing).",
+      "tip": "All the accounts sum to zero. Deficit on the current account ⇒ surplus on the financial account.",
+      "practice": {
+        "vars": {
+          "gx": [100, 500, 5],
+          "gm": [100, 500, 5],
+          "sx": [20, 200, 5],
+          "sm": [20, 200, 5],
+          "pin": [5, 60, 1],
+          "pout": [5, 60, 1],
+          "sec": [-30, 30, 1],
+          "ka": [-10, 10, 1]
+        },
+        "derived": {
+          "goods": "gx - gm",
+          "ca": "gx - gm + sx - sm + pin - pout + sec",
+          "fa": "-(gx - gm + sx - sm + pin - pout + sec) - ka"
+        },
+        "question": "A country's data ($bn): goods exports {{gx}}, goods imports {{gm}}, service exports {{sx}}, service imports {{sm}}, primary income received {{pin}}, primary income paid {{pout}}, net secondary income {{f(sec)}}, capital account balance {{f(ka)}}. Errors and omissions are zero. Calculate the balance of trade in goods, the current account balance and the financial account balance.",
+        "parts": [
+          {
+            "label": "Balance of trade in goods",
+            "answer": "goods",
+            "unit": "$bn"
+          },
+          {
+            "label": "Current account balance",
+            "answer": "ca",
+            "unit": "$bn"
+          },
+          {
+            "label": "Financial account balance",
+            "answer": "fa",
+            "unit": "$bn"
+          }
+        ],
+        "steps": [
+          "Goods: {{gx}} − {{gm}} = {{f(goods)}}",
+          "Current account = {{f(goods)}} + ({{sx}} − {{sm}}) + ({{pin}} − {{pout}}) + ({{f(sec)}}) = {{f(ca)}}: a {{ca < 0 ? \"deficit\" : \"surplus\"}}",
+          "The accounts sum to zero: financial = −(current + capital) = −({{f(ca)}} + {{f(ka)}}) = {{f(fa)}}"
+        ]
+      },
+      "example": {
+        "gx": 300,
+        "gm": 360,
+        "sx": 120,
+        "sm": 90,
+        "pin": 20,
+        "pout": 35,
+        "sec": -10,
+        "ka": 2
+      },
+      "relatedTerms": [
+        "ec-balance-of-payments",
+        "ec-current-account",
+        "ec-financial-account",
+        "ec-capital-account",
+        "ec-balance-of-trade"
+      ],
+      "diagrams": ["dg-j-curve"]
+    },
+    {
+      "id": "calc-terms-of-trade",
+      "title": "Terms of trade",
+      "unit": "International Economics",
+      "topic": "Balance of payments",
+      "hl": true,
+      "formulas": ["Terms of trade = index of average export prices ÷ index of average import prices × 100"],
+      "meaning": "Above 100 (or rising) means each unit of exports buys more imports: an improvement. Falling means a deterioration.",
+      "tip": "\"Exports over imports.\" Up = improvement, even though it may hurt export volumes.",
+      "practice": {
+        "vars": {
+          "xp": [85, 130, 1],
+          "mp": [85, 130, 1]
+        },
+        "derived": {
+          "tot": "xp/mp*100"
+        },
+        "where": "xp !== mp",
+        "question": "From the base year (both indices = 100), the export price index rises to {{xp}} and the import price index to {{mp}}. Calculate the terms of trade and state whether they have improved or deteriorated.",
+        "parts": [
+          {
+            "label": "Terms of trade",
+            "answer": "tot"
+          },
+          {
+            "label": "The terms of trade have",
+            "choices": ["improved", "deteriorated"],
+            "answer": "tot > 100 ? \"improved\" : \"deteriorated\""
+          }
+        ],
+        "steps": [
+          "Terms of trade = {{xp}} ÷ {{mp}} × 100 = {{f(tot)}}",
+          "Base year = 100, so they have {{tot > 100 ? \"improved: export prices rose relative to import prices\" : \"deteriorated: import prices rose relative to export prices\"}}."
+        ]
+      },
+      "example": {
+        "xp": 108,
+        "mp": 120
+      },
+      "relatedTerms": ["ec-terms-of-trade", "ec-primary-commodities", "ec-commodity-dependence"]
+    }
+  ]
+}

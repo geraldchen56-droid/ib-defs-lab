@@ -296,6 +296,46 @@ input[type="search"]:focus, select:focus { border-color: var(--focus); }
 .dg-thumb .dg-svg { pointer-events: none; }
 .dg-thumb .dg-step-hint { display: none; }
 
+
+/* ---------- calculations ---------- */
+.tab-short { display: none; }
+.dg-ico.done { color: var(--known); font-weight: 700; }
+.calc-formula {
+  font: 500 clamp(18px, 2.4vw, 23px)/1.5 var(--serif); background: var(--card); border-radius: var(--radius);
+  border-left: 4px solid var(--econ); box-shadow: var(--shadow); padding: 18px 24px; margin: 0 0 16px; display: grid; gap: 4px;
+}
+.calc-tip {
+  display: flex; gap: 12px; align-items: baseline; margin: 0 0 8px; padding: 12px 16px; border-radius: 10px;
+  background: color-mix(in srgb, var(--learning) 12%, transparent); border: 1px dashed color-mix(in srgb, var(--learning) 55%, transparent);
+}
+.calc-tip b { color: var(--learning); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; white-space: nowrap; }
+.calc-block { margin-top: 30px; }
+.calc-block h3, .calc-practice-head h3 { font: 600 12px var(--sans); letter-spacing: .08em; text-transform: uppercase; color: var(--ink-3); margin: 0 0 10px; }
+.calc-practice-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+.calc-practice { background: var(--card); border: 1px solid var(--rule); border-radius: 14px; padding: 18px 22px 14px; box-shadow: var(--shadow); }
+.cq-text { font: 17px/1.55 var(--serif); margin: 0 0 14px; }
+.calc-steps { margin: 12px 0 0; padding-left: 22px; display: grid; gap: 6px; font-variant-numeric: tabular-nums; color: var(--ink-2); }
+.calc-steps li::marker { color: var(--econ); font-weight: 600; }
+.calc-answer { display: flex; flex-wrap: wrap; gap: 8px 18px; margin: 12px 0 0; padding: 10px 14px; border-radius: 8px; background: var(--econ-soft); color: var(--ink); font-size: 14px; }
+.cq-parts { display: grid; gap: 10px; }
+.cq-part { display: grid; grid-template-columns: minmax(150px, 1fr) auto minmax(90px, auto); gap: 6px 14px; align-items: center; }
+.cq-part label { font-size: 14px; color: var(--ink-2); }
+.cq-input { display: flex; align-items: center; gap: 6px; border: 1px solid var(--rule); border-radius: 8px; padding: 0 10px; background: var(--paper); }
+.cq-input:focus-within { border-color: var(--focus); }
+.cq-input input { border: 0; background: transparent; outline: none; width: 120px; padding: 8px 0; font-variant-numeric: tabular-nums; }
+.cq-input span { color: var(--ink-3); font-size: 14px; }
+.cq-choices { display: flex; flex-wrap: wrap; gap: 6px; }
+.cq-choices .btn { padding: 6px 12px; font-size: 13px; }
+.cq-choices .btn[aria-pressed="true"] { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+.cq-mark { font-weight: 600; font-variant-numeric: tabular-nums; }
+.cq-part[data-state="good"] .cq-mark { color: var(--known); }
+.cq-part[data-state="bad"] .cq-mark { color: var(--dg-loss); }
+.cq-part[data-state="shown"] .cq-mark { color: var(--ink-2); }
+.cq-part[data-state="good"] .cq-input { border-color: var(--known); }
+.cq-part[data-state="bad"] .cq-input { border-color: var(--dg-loss); }
+.calc-note { font-size: 12px; margin: 10px 0 0; }
+.calc-chip span { color: var(--econ); font-weight: 700; }
+
 /* SVG */
 .dg-svg { width: 100%; height: auto; display: block; font-family: var(--sans); }
 .dg-axis { fill: none; stroke: var(--ink); stroke-width: 1.6; }
@@ -365,9 +405,14 @@ path.dg-line { fill: none; }
   .tab { flex: 1; }
   .subject-toggle { order: 4; width: 100%; }
   .subject-toggle button { flex: 1; justify-content: center; }
-  #mode-dict, #mode-diagrams { flex-direction: column; }
+  #mode-dict, #mode-diagrams, #mode-calc { flex-direction: column; }
   .tab { padding: 7px 4px; font-size: 14px; }
-  #mode-diagrams .dict-side { max-height: 38vh; }
+  .tab-long { display: none; }
+  .tab-short { display: inline; }
+  .cq-part { grid-template-columns: 1fr auto; }
+  .cq-part label { grid-column: 1 / -1; }
+  .calc-practice { padding: 14px; }
+  #mode-diagrams .dict-side, #mode-calc .dict-side { max-height: 38vh; }
   .dg-controls .spacer { display: none; }
   .dg-thumbs { grid-template-columns: 1fr 1fr; }
   .brand-sub { display: none; }

@@ -1,4 +1,4 @@
-/* IB Definitions Lab — dictionary, flashcards, diagrams and concept graph.
+/* IB Definitions Lab — dictionary, flashcards, diagrams, calculations and concept graph.
    Plain JS, no build step. Data lives in data.json. */
 (() => {
   'use strict';
@@ -15,14 +15,15 @@
   };
 
   let DATA, TERMS = [], BY_ID = new Map(), SUBJECTS = {};
-  let DIAGRAMS = [], DG_BY_ID = new Map();
+  let DIAGRAMS = [], DG_BY_ID = new Map(), CALCS = [], CALC_BY_ID = new Map();
   let progress = store.get('ibdefs.progress', {}); // id -> 'known' | 'learning'
   let SUBJECT = store.get('ibdefs.subject', ''); // '' = both subjects
 
   /* ---------------- boot ---------------- */
   const getJSON = (u) => fetch(u).then((r) => { if (!r.ok) throw new Error(`${u}: ${r.status}`); return r.json(); });
-  Promise.all([getJSON('data.json'), getJSON('diagrams.json').catch((e) => { console.warn('[diagrams]', e.message); return { diagrams: [] }; })])
-    .then(([data, dg]) => init(data, dg))
+  const optional = (u, empty) => getJSON(u).catch((e) => { console.warn(`[${u}]`, e.message); return empty; });
+  Promise.all([getJSON('data.json'), optional('diagrams.json', { diagrams: [] }), optional('calculations.json', { calculations: [] })])
+    .then(([data, dg, calc]) => init(data, dg, calc))
     .catch((err) => {
       const box = $('#loadError');
       box.hidden = false;
@@ -30,7 +31,7 @@
         (e.g. <code>python3 -m http.server</code> in this folder, then open <code>http://localhost:8000</code>). <span class="muted">(${esc(err.message)})</span>`;
     });
 
-  function init(data, dg) {
+  function init(data, dg, calc) {
     DATA = data;
     SUBJECTS = data.subjects;
     // Keep only links that point to real terms (guards against hand-edit mistakes).
@@ -52,6 +53,8 @@
       return BY_ID.has(r);
     }) }));
     DIAGRAMS.forEach((d) => DG_BY_ID.set(d.id, d));
+    CALCS = (calc.calculations || []).map((c) => ({ ...c, relatedTerms: (c.relatedTerms || []).filter((r) => BY_ID.has(r)) }));
+    CALCS.forEach((c) => CALC_BY_ID.set(c.id, c));
 
     if (SUBJECT && !SUBJECTS[SUBJECT]) SUBJECT = '';
     setupTheme();
@@ -61,6 +64,7 @@
     Cards.init();
     Graph.init();
     Diagrams.init();
+    Calcs.init();
     route();
     window.addEventListener('hashchange', route);
   }
@@ -71,13 +75,15 @@
       const mode = b.dataset.mode;
       const cur = parseHash();
       location.hash = mode === 'dict' && cur.term ? `dict/${cur.term}`
-        : mode === 'diagrams' && Diagrams.current ? `diagrams/${Diagrams.current}` : mode;
+        : mode === 'diagrams' && Diagrams.current ? `diagrams/${Diagrams.current}`
+        : mode === 'calc' && Calcs.current ? `calc/${Calcs.current}` : mode;
     }));
   }
   function parseHash() {
     const [mode, term] = location.hash.replace(/^#/, '').split('/');
-    const m = ['dict', 'cards', 'diagrams', 'graph'].includes(mode) ? mode : 'dict';
+    const m = ['dict', 'cards', 'diagrams', 'calc', 'graph'].includes(mode) ? mode : 'dict';
     if (m === 'diagrams') return { mode: m, term: null, diagram: term && DG_BY_ID.has(term) ? term : null };
+    if (m === 'calc') return { mode: m, term: null, calc: term && CALC_BY_ID.has(term) ? term : null };
     return { mode: m, term: term && BY_ID.has(term) ? term : null };
   }
   function route() {
@@ -91,10 +97,13 @@
     }
     if (mode === 'graph') Graph.activate(term);
     if (mode === 'diagrams') Diagrams.show(parseHash().diagram);
+    if (mode === 'calc' && parseHash().calc !== Calcs.current) Calcs.show(parseHash().calc);
+    if (mode === 'calc' && !parseHash().calc) Calcs.show(null);
   }
   function goTerm(id) { location.hash = `dict/${id}`; }
   function goGraph(id) { location.hash = `graph/${id}`; }
   function goDiagram(id) { location.hash = `diagrams/${id}`; }
+  function goCalc(id) { location.hash = `calc/${id}`; }
 
   /* ---------------- subject switch (applies to every mode) ---------------- */
   function paintSubjectToggle() {
@@ -117,6 +126,7 @@
     Cards.renderBuilder();
     Graph.onSubject();
     Diagrams.onSubject();
+    Calcs.onSubject();
   }
 
   function setupTheme() {
@@ -160,9 +170,11 @@
       });
       $('#dictList').addEventListener('click', (e) => { const li = e.target.closest('li[data-id]'); if (li) goTerm(li.dataset.id); });
       $('#dictDetail').addEventListener('click', (e) => {
+        const cc0 = e.target.closest('[data-calc]'); if (cc0) return goCalc(cc0.dataset.calc);
         const c = e.target.closest('.chip'); if (c) return goTerm(c.dataset.id);
         const g = e.target.closest('[data-graph]'); if (g) return goGraph(g.dataset.graph);
         const dg = e.target.closest('[data-diagram]'); if (dg) return goDiagram(dg.dataset.diagram);
+        const cc = e.target.closest('[data-calc]'); if (cc) return goCalc(cc.dataset.calc);
       });
       this.render();
     },
@@ -231,6 +243,7 @@
       const t = BY_ID.get(id);
       const { same, cross } = relatedChips(t);
       const dgs = DIAGRAMS.filter((d) => d.relatedTerms.includes(t.id));
+      const cls = CALCS.filter((c) => c.relatedTerms.includes(t.id));
       box.innerHTML = `
         <div class="detail-inner">
           <div class="crumbs">
@@ -248,6 +261,7 @@
           </div>
           ${dgs.length ? `<div class="related"><h3>Diagrams · ${dgs.length}</h3><div class="dg-thumbs">${dgs.map((d) => `
             <button class="dg-thumb" data-diagram="${d.id}" title="${esc(d.title)}">${window.DiagramRenderer ? DiagramRenderer.render(d) : ''}<span>${esc(d.title)}</span></button>`).join('')}</div></div>` : ''}
+          ${cls.length ? `<div class="related"><h3>Calculations · ${cls.length}</h3><div class="chips">${cls.map((c) => `<button class="chip calc-chip" data-calc="${c.id}"><span aria-hidden="true">=</span>${esc(c.title)}</button>`).join('')}</div></div>` : ''}
           <div class="detail-actions">
             <button class="btn" data-graph="${t.id}">View in graph →</button>
           </div>
@@ -642,6 +656,7 @@
       });
       $('#dgList').addEventListener('click', (e) => { const li = e.target.closest('li[data-id]'); if (li) goDiagram(li.dataset.id); });
       $('#dgDetail').addEventListener('click', (e) => {
+        const cc = e.target.closest('[data-calc]'); if (cc) return goCalc(cc.dataset.calc);
         const c = e.target.closest('.chip'); if (c) return goTerm(c.dataset.id);
         const st = e.target.closest('[data-step]'); if (st) return this.go(+st.dataset.step);
         const a = e.target.closest('[data-act]'); if (!a) return;
@@ -718,6 +733,7 @@
           </div>
           <ol class="dg-steps" id="dgSteps">${(d.steps || []).map((s, i) => `<li data-step="${i}">${esc(s)}</li>`).join('')}</ol>
           ${d.examTips && d.examTips.length ? `<div class="dg-tips"><h3>Exam tips</h3><ul>${d.examTips.map((t) => `<li>${esc(t)}</li>`).join('')}</ul></div>` : ''}
+          ${CALCS.some((c) => (c.diagrams || []).includes(d.id)) ? `<div class="related"><h3>Calculations</h3><div class="chips">${CALCS.filter((c) => (c.diagrams || []).includes(d.id)).map((c) => `<button class="chip calc-chip" data-calc="${c.id}"><span aria-hidden="true">=</span>${esc(c.title)}</button>`).join('')}</div></div>` : ''}
           ${rel.length ? `<div class="related"><h3>Terms on this diagram · ${rel.length}</h3><div class="chips">${rel.map(chip).join('')}</div></div>` : ''}
         </div>`;
       box.scrollTop = 0;
@@ -768,6 +784,179 @@
       a.download = `${d.id.replace(/^dg-/, '')}.svg`;
       a.click();
       setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+    },
+  };
+
+  /* ================= CALCULATIONS ================= */
+  const pre = (u) => (u.startsWith('$') ? '<span>$</span>' : u === '€' ? '<span>€</span>' : '');
+  const suf = (u) => { const s = u === '%' ? '%' : u.startsWith('$') ? u.slice(1) : u === '€' ? '' : u; return s ? `<span>${esc(s)}</span>` : ''; };
+  const Calcs = {
+    current: null, inst: null, checked: false, streak: 0,
+    solved: store.get('ibdefs.calc', {}), // id -> number of questions answered fully correctly
+    init() {
+      fillSelect($('#calcUnit'), SUBJECTS.Economics || [], 'All units');
+      $('#calcUnit').addEventListener('change', () => this.renderList());
+      $('#calcHL').addEventListener('change', () => this.renderList());
+      $('#calcSearch').addEventListener('input', () => this.renderList());
+      $('#calcSearch').addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') { const first = $('#calcList li[data-id]'); if (first) goCalc(first.dataset.id); }
+      });
+      $('#calcList').addEventListener('click', (e) => { const li = e.target.closest('li[data-id]'); if (li) goCalc(li.dataset.id); });
+      $('#calcDetail').addEventListener('click', (e) => {
+        const c = e.target.closest('.chip'); if (c) return goTerm(c.dataset.id);
+        const dg = e.target.closest('[data-diagram]'); if (dg) return goDiagram(dg.dataset.diagram);
+        const ch = e.target.closest('[data-choice]');
+        if (ch) {
+          const row = ch.closest('.cq-part');
+          $$('[data-choice]', row).forEach((b) => b.setAttribute('aria-pressed', String(b === ch)));
+          row.dataset.value = ch.dataset.choice;
+          return;
+        }
+        const a = e.target.closest('[data-act]'); if (!a) return;
+        if (a.dataset.act === 'check') this.check();
+        else if (a.dataset.act === 'working') this.reveal();
+        else if (a.dataset.act === 'new') this.newQuestion();
+        else if (a.dataset.act === 'econ') setSubject('Economics');
+      });
+      $('#calcDetail').addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' && e.target.matches('.cq-part input')) { e.preventDefault(); this.checked ? this.newQuestion() : this.check(); }
+      });
+      this.renderList();
+    },
+    filtered() {
+      const q = $('#calcSearch').value.trim().toLowerCase(), u = $('#calcUnit').value, hl = $('#calcHL').checked;
+      return CALCS.filter((c) => (!u || c.unit === u) && (hl || !c.hl) && (!q
+        || c.title.toLowerCase().includes(q) || c.topic.toLowerCase().includes(q) || c.formulas.join(' ').toLowerCase().includes(q)
+        || c.relatedTerms.some((r) => BY_ID.get(r).term.toLowerCase().includes(q))));
+    },
+    renderList() {
+      const list = this.filtered();
+      const done = list.filter((c) => this.solved[c.id]).length;
+      $('#calcCount').textContent = `${list.length} calculation${list.length === 1 ? '' : 's'} · ${done} practised`;
+      let lastUnit = null, lastTopic = null, html = '';
+      for (const c of list) {
+        if (c.unit !== lastUnit) { html += `<li class="list-head econ" role="presentation"><span>${esc(c.unit)}</span></li>`; lastUnit = c.unit; lastTopic = null; }
+        if (c.topic !== lastTopic) { html += `<li class="dg-topic" role="presentation">${esc(c.topic)}</li>`; lastTopic = c.topic; }
+        html += `<li role="option" data-id="${c.id}" aria-selected="${c.id === this.current}">
+          <span class="dg-ico${this.solved[c.id] ? ' done' : ''}" aria-hidden="true">${this.solved[c.id] ? '✓' : '='}</span>
+          <span><span class="t-name">${esc(c.title)}</span>${c.hl ? '<span class="t-topic">HL only</span>' : ''}</span></li>`;
+      }
+      $('#calcList').innerHTML = html || '<li class="dg-topic" role="presentation">No calculations match.</li>';
+    },
+    onSubject() { this.show(this.current); },
+    show(id) {
+      this.current = id;
+      $$('#calcList li[data-id]').forEach((li) => li.setAttribute('aria-selected', String(li.dataset.id === id)));
+      const box = $('#calcDetail');
+      if (SUBJECT === 'Business Management') {
+        box.innerHTML = `<div class="detail-inner"><p class="empty">Calculations cover the Economics syllabus.</p>
+          <div class="detail-actions"><button class="btn" data-act="econ">Switch to Economics →</button></div></div>`;
+        return;
+      }
+      if (!id) {
+        const hl = CALCS.filter((c) => c.hl).length;
+        box.innerHTML = `<div class="detail-inner"><p class="empty">Pick a calculation — ${CALCS.length} in total, ${CALCS.length - hl} SL/HL and ${hl} HL-only. Each has the formula, a worked example and unlimited practice questions with new numbers every time.</p></div>`;
+        return;
+      }
+      const c = CALC_BY_ID.get(id);
+      let ex;
+      try { ex = CalcEngine.generate(c.practice, Math.random, c.example); } catch (e) { console.warn(`[calc] ${id} example`, e); }
+      const rel = c.relatedTerms.map((r) => BY_ID.get(r));
+      const dgs = (c.diagrams || []).map((d) => DG_BY_ID.get(d)).filter(Boolean);
+      box.innerHTML = `
+        <div class="detail-inner dg-inner">
+          <div class="crumbs">
+            <span class="tag econ">Economics</span>${c.hl ? '<span class="tag hl">HL only</span>' : ''}
+            <span>${esc(c.unit)}</span><span>›</span><span>${esc(c.topic)}</span>
+          </div>
+          <h2>${esc(c.title)}</h2>
+          <div class="calc-formula">${c.formulas.map((f) => `<div>${esc(f)}</div>`).join('')}</div>
+          <p class="dg-summary">${esc(c.meaning)}</p>
+          <p class="calc-tip"><b>Remember</b><span>${esc(c.tip)}</span></p>
+          ${ex ? `<section class="calc-block">
+            <h3>Worked example</h3>
+            <p class="cq-text">${esc(ex.question)}</p>
+            <ol class="calc-steps">${ex.steps.map((s) => `<li>${esc(s)}</li>`).join('')}</ol>
+            <p class="calc-answer">${ex.parts.map((p) => `<span><b>${esc(p.label)}:</b> ${esc(CalcEngine.show(p))}</span>`).join('')}</p>
+          </section>` : ''}
+          <section class="calc-block calc-practice">
+            <div class="calc-practice-head"><h3>Practice</h3><span class="muted" id="calcStreak"></span></div>
+            <div id="calcQ"></div>
+          </section>
+          ${dgs.length ? `<div class="related"><h3>Diagrams</h3><div class="dg-thumbs">${dgs.map((d) => `
+            <button class="dg-thumb" data-diagram="${d.id}" title="${esc(d.title)}">${DiagramRenderer.render(d)}<span>${esc(d.title)}</span></button>`).join('')}</div></div>` : ''}
+          ${rel.length ? `<div class="related"><h3>Related terms · ${rel.length}</h3><div class="chips">${rel.map(chip).join('')}</div></div>` : ''}
+        </div>`;
+      box.scrollTop = 0;
+      this.newQuestion(false);
+      const sel = $(`#calcList li[data-id="${id}"]`);
+      if (sel) sel.scrollIntoView({ block: 'nearest' });
+    },
+    newQuestion(focus = true) {
+      const c = CALC_BY_ID.get(this.current); if (!c) return;
+      this.inst = CalcEngine.generate(c.practice);
+      this.checked = false;
+      const q = this.inst;
+      $('#calcQ').innerHTML = `
+        <p class="cq-text">${esc(q.question)}</p>
+        <div class="cq-parts">${q.parts.map((p, i) => `
+          <div class="cq-part" data-i="${i}">
+            <label for="cq${i}">${esc(p.label)}</label>
+            ${p.choices
+              ? `<div class="cq-choices" role="group" aria-label="${esc(p.label)}">${p.choices.map((ch) => `<button type="button" class="btn ghost" data-choice="${esc(ch)}" aria-pressed="false">${esc(ch)}</button>`).join('')}</div>`
+              : `<div class="cq-input">${pre(p.unit)}<input id="cq${i}" inputmode="decimal" autocomplete="off" placeholder="?">${suf(p.unit)}</div>`}
+            <span class="cq-mark" aria-live="polite"></span>
+          </div>`).join('')}</div>
+        <div class="dg-controls">
+          <button class="btn primary" data-act="check">Check</button>
+          <button class="btn" data-act="working">Show working</button>
+          <span class="spacer"></span>
+          <button class="btn ghost" data-act="new">New question ↻</button>
+        </div>
+        <ol class="calc-steps" id="calcWorking" hidden>${q.steps.map((s) => `<li>${esc(s)}</li>`).join('')}</ol>
+        <p class="muted calc-note">Round to 2 decimal places where needed; answers within about 1% are accepted.</p>`;
+      this.paintStreak();
+      if (focus) { const first = $('#calcQ input'); if (first) first.focus(); }
+    },
+    check() {
+      const q = this.inst; if (!q) return;
+      let allRight = true, anyBlank = false;
+      $$('#calcQ .cq-part').forEach((row) => {
+        const p = q.parts[+row.dataset.i];
+        const input = p.choices ? row.dataset.value : $('input', row).value;
+        const mark = $('.cq-mark', row);
+        if (!input) { anyBlank = true; allRight = false; mark.textContent = ''; row.dataset.state = ''; return; }
+        const ok = CalcEngine.check(p, input);
+        if (ok === null) { allRight = false; mark.textContent = 'Enter a number'; row.dataset.state = 'bad'; return; }
+        row.dataset.state = ok ? 'good' : 'bad';
+        mark.textContent = ok ? '✓' : '✗';
+        if (!ok) allRight = false;
+      });
+      if (anyBlank && !$$('#calcQ .cq-part[data-state]').some((r) => r.dataset.state)) return;
+      if (!this.checked) {
+        this.checked = true;
+        if (allRight) {
+          this.streak++;
+          this.solved[this.current] = (this.solved[this.current] || 0) + 1;
+          store.set('ibdefs.calc', this.solved);
+          this.renderList();
+        } else if (!anyBlank) this.streak = 0;
+      }
+      if (allRight) { $('#calcWorking').hidden = false; }
+      this.paintStreak(allRight);
+    },
+    reveal() {
+      const q = this.inst; if (!q) return;
+      $$('#calcQ .cq-part').forEach((row) => {
+        const p = q.parts[+row.dataset.i];
+        if (row.dataset.state !== 'good') { $('.cq-mark', row).textContent = '→ ' + CalcEngine.show(p); row.dataset.state = row.dataset.state || 'shown'; }
+      });
+      $('#calcWorking').hidden = false;
+      if (!this.checked) { this.checked = true; this.streak = 0; this.paintStreak(); }
+    },
+    paintStreak(justRight) {
+      const n = this.solved[this.current] || 0;
+      $('#calcStreak').textContent = (justRight ? 'Correct! ' : '') + (this.streak > 1 ? `${this.streak} in a row · ` : '') + `${n} solved`;
     },
   };
 })();

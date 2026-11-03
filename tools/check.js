@@ -1,9 +1,11 @@
-// Validate data.json and diagrams.json. Run from the repo root: node tools/check.js
+// Validate data.json, diagrams.json and calculations.json. Run from the repo root: node tools/check.js
 const path = require('path');
 const root = path.join(__dirname, '..');
 const d = require(path.join(root, 'data.json'));
 const dg = require(path.join(root, 'diagrams.json'));
 const R = require(path.join(root, 'diagrams.js'));
+const calc = require(path.join(root, 'calculations.json'));
+const E = require(path.join(root, 'calc-engine.js'));
 const errs = [];
 
 // ---- terms ----
@@ -39,6 +41,24 @@ for (const g of dg.diagrams) {
   try { for (let s = 0; s < Math.max(1, n); s++) R.render(g, s); } catch (e) { errs.push(e.message); }
 }
 
+// ---- calculations ----
+const dgIds = new Set(dg.diagrams.map((g) => g.id)), cSeen = new Set();
+for (const c of calc.calculations) {
+  if (cSeen.has(c.id)) errs.push(`duplicate calculation ${c.id}`); cSeen.add(c.id);
+  if (!d.subjects.Economics.includes(c.unit)) errs.push(`${c.id}: unknown unit ${c.unit}`);
+  if (!d.terms.some((t) => t.unit === c.unit && t.topic === c.topic)) errs.push(`${c.id}: topic "${c.topic}" is not used by any term`);
+  for (const r of c.relatedTerms || []) if (!ids.has(r)) errs.push(`${c.id}: missing term ${r}`);
+  for (const r of c.diagrams || []) if (!dgIds.has(r)) errs.push(`${c.id}: missing diagram ${r}`);
+  try {
+    const runs = [E.generate(c.practice, Math.random, c.example)];
+    for (let i = 0; i < 200; i++) runs.push(E.generate(c.practice));
+    for (const q of runs) for (const p of q.parts) {
+      if (p.choices ? !p.choices.includes(p.answer) : !isFinite(p.answer)) errs.push(`${c.id}: bad answer for "${p.label}"`);
+      if (/NaN|undefined|Infinity|\{\{/.test(q.question + q.steps.join(' '))) errs.push(`${c.id}: broken text in a generated question`);
+    }
+  } catch (e) { errs.push(`${c.id}: ${e.message}`); }
+}
+
 if (errs.length) { console.error(errs.join('\n')); process.exit(1); }
 const ec = d.terms.filter((t) => t.subject === 'Economics');
-console.log(`OK — ${d.terms.length} terms (${ec.length} Economics), ${dg.diagrams.length} diagrams`);
+console.log(`OK — ${d.terms.length} terms (${ec.length} Economics), ${dg.diagrams.length} diagrams, ${calc.calculations.length} calculations`);

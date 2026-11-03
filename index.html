@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>IB Definitions Lab</title>
-  <meta name="description" content="AO1 definitions for IB HL Economics and HL Business Management — dictionary, flashcards, step-by-step Economics diagrams and a concept graph.">
+  <meta name="description" content="AO1 definitions for IB HL Economics and HL Business Management — dictionary, flashcards, step-by-step Economics diagrams, calculation practice and a concept graph.">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='15' fill='%231e1b15'/%3E%3Ctext x='16' y='23' font-size='20' text-anchor='middle' fill='%23f4efe4' font-family='Georgia'%3E§%3C/text%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,6 +27,7 @@
       <button role="tab" class="tab" data-mode="dict" aria-selected="true">Dictionary</button>
       <button role="tab" class="tab" data-mode="cards" aria-selected="false">Flashcards</button>
       <button role="tab" class="tab" data-mode="diagrams" aria-selected="false">Diagrams</button>
+      <button role="tab" class="tab" data-mode="calc" aria-selected="false"><span class="tab-long">Calculations</span><span class="tab-short">Calcs</span></button>
       <button role="tab" class="tab" data-mode="graph" aria-selected="false">Graph</button>
     </nav>
     <div class="subject-toggle" role="radiogroup" aria-label="Subject">
@@ -126,6 +127,22 @@
       <article class="dict-detail" id="dgDetail" aria-live="polite"></article>
     </section>
 
+    <!-- ============ CALCULATIONS ============ -->
+    <section class="mode" id="mode-calc" role="tabpanel" hidden>
+      <aside class="dict-side">
+        <div class="field">
+          <input type="search" id="calcSearch" placeholder="Search calculations, formulas or terms…" autocomplete="off" aria-label="Search calculations">
+        </div>
+        <div class="filters">
+          <select id="calcUnit" aria-label="Unit"></select>
+          <label class="check"><input type="checkbox" id="calcHL" checked> Include HL-only</label>
+        </div>
+        <p class="count" id="calcCount"></p>
+        <ul class="term-list" id="calcList" role="listbox" aria-label="Calculations"></ul>
+      </aside>
+      <article class="dict-detail" id="calcDetail" aria-live="polite"></article>
+    </section>
+
     <!-- ============ GRAPH ============ -->
     <section class="mode" id="mode-graph" role="tabpanel" hidden>
       <div class="graph-controls">
@@ -149,6 +166,7 @@
   <script defer src="/_vercel/insights/script.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
   <script src="diagrams.js"></script>
+  <script src="calc-engine.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
